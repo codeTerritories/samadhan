@@ -1,3 +1,4 @@
+import React from 'react'
 import { useLang } from '../context/LangContext'
 import { CATEGORIES } from '../data/categories'
 import { PROBLEMS } from '../data/problems'

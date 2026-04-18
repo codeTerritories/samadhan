@@ -1,3 +1,4 @@
+import React from 'react'
 import { useState, useEffect } from 'react'
 import { useLocation } from '../context/LocationContext'
 import { useLang }     from '../context/LangContext'

@@ -1,3 +1,4 @@
+import React from 'react'
 import { useState, useRef, useEffect } from 'react'
 import { useLang } from '../context/LangContext'
 import { CHAT_REPLIES, DEFAULT_REPLY } from '../data/chatReplies'

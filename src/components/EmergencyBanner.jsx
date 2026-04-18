@@ -1,3 +1,4 @@
+import React from 'react'
 import { useLang } from '../context/LangContext'
 import { EMERGENCY_NUMBERS } from '../data/emergency'
 

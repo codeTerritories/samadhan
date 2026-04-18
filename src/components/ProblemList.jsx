@@ -1,3 +1,4 @@
+import React from 'react'
 import { useMemo } from 'react'
 import { useLang } from '../context/LangContext'
 import { PROBLEMS } from '../data/problems'
