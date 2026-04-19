@@ -1,12 +1,13 @@
-# robots.txt — Samadhan (https://samadhan.in)
-# Allow all search engine crawlers
+# robots.txt — www.samadhanportal.in
+# Allow all legitimate search engine crawlers
 
 User-agent: *
 Allow: /
 
-# Point crawlers to sitemap
-Sitemap: https://samadhan.in/sitemap.xml
+# Point all crawlers to the sitemap
+Sitemap: https://www.samadhanportal.in/sitemap.xml
 
-# Disallow build artifacts and source files
+# Block raw source/config from being crawled
 Disallow: /src/
 Disallow: /.env
+Disallow: /.env.local

@@ -1,99 +1,106 @@
 import { useEffect } from 'react'
 
-// Canonical base URL — change this to match your deployed domain
-const BASE_URL = 'https://samadhan.in'
+const BASE = 'https://www.samadhanportal.in'
 
-const SEO_PAGES = {
+// Per-page SEO config — title, description, OG, canonical all differ
+const PAGES = {
   home: {
-    title: 'Samadhan — India Civic Complaint Portal | Bijli Pani Sadak Helplines',
+    title: 'Samadhan Portal — India Civic Helpline | Bijli Pani Sadak Police',
     description:
-      'Find official helplines & complaint portals for electricity (1912), water (1916), roads, police, banking & more — for every Indian state. Free, bilingual, no login.',
-    ogTitle: "Samadhan — India's One-Stop Civic Complaint Portal",
+      'Samadhan: official helplines for electricity (1912), water (1916), roads (1033), police (100) & 10 more categories — all 30 Indian states. Free, bilingual, no login.',
+    ogTitle: "Samadhan Portal — India's #1 Civic Helpline Aggregator",
     ogDescription:
-      'Bijli gul? Pani band? FIR dena hai? — Get the exact helpline & complaint portal for your problem across all 30 Indian states. Free, official, bilingual.',
-    url: BASE_URL + '/',
-    canonical: BASE_URL + '/',
+      'Bijli gul? Pani band? FIR dena hai? — Exact helpline & official complaint portal for every problem, every Indian state. Free, bilingual EN+HI.',
+    url:       BASE + '/',
+    canonical: BASE + '/',
+    path:      '/',
+    breadcrumbs: [
+      { position: 1, name: 'Home — India Civic Helplines', item: BASE + '/' },
+    ],
   },
   about: {
-    title: 'About Samadhan — हमारे बारे में | Free India Civic Helpline Portal',
+    title: 'About Samadhan Portal — हमारे बारे में | Free India Civic Helpline',
     description:
-      'Samadhan is a free, independent civic portal helping every Indian citizen find the right government helpline instantly. No data stored. No login. Official portals only.',
-    ogTitle: 'About Samadhan — Independent India Civic Helpline Aggregator',
+      'Samadhan Portal is a free, independent civic project helping every Indian citizen find the right government helpline instantly. No data stored. No login. Official portals only.',
+    ogTitle: 'About Samadhan Portal — Independent India Civic Helpline',
     ogDescription:
-      'Learn about Samadhan — a non-profit citizen project that aggregates 400+ official government helplines across all 30 Indian states. Free forever.',
-    url: BASE_URL + '/about',
-    canonical: BASE_URL + '/about',
+      'An independent, non-profit citizen project aggregating 400+ official government helplines across all 30 Indian states. Free forever, bilingual, zero data stored.',
+    url:       BASE + '/about',
+    canonical: BASE + '/about',
+    path:      '/about',
+    breadcrumbs: [
+      { position: 1, name: 'Home', item: BASE + '/' },
+      { position: 2, name: 'About Samadhan Portal', item: BASE + '/about' },
+    ],
   },
 }
 
 /**
- * useSEO — updates document head meta tags whenever the page changes.
- * Works without React Router by directly mutating DOM meta elements.
- * Also updates the browser URL via History API for proper page URLs.
+ * useSEO — synchronises all head meta tags to the current page.
+ * Works without React Router: directly mutates DOM meta elements.
+ * Also drives the History API so /about gets a real URL path.
  *
- * @param {string} page  'home' | 'about'
+ * @param {'home'|'about'} page
  */
 export function useSEO(page) {
   useEffect(() => {
-    const cfg = SEO_PAGES[page] || SEO_PAGES.home
+    const cfg = PAGES[page] ?? PAGES.home
 
-    // ── Title ───────────────────────────────────────────────────────────
+    // ── helpers ─────────────────────────────────────────────────────────
+    const setContent = (sel, val) => {
+      const el = document.querySelector(sel)
+      if (el) el.setAttribute('content', val)
+    }
+    const setHref = (sel, val) => {
+      const el = document.querySelector(sel)
+      if (el) el.setAttribute('href', val)
+    }
+
+    // ── title ────────────────────────────────────────────────────────────
     document.title = cfg.title
 
-    // ── Meta helpers ────────────────────────────────────────────────────
-    const setMeta = (selector, content) => {
-      const el = document.querySelector(selector)
-      if (el) el.setAttribute('content', content)
-    }
-    const setLink = (selector, attr, value) => {
-      const el = document.querySelector(selector)
-      if (el) el.setAttribute(attr, value)
-    }
+    // ── standard meta ────────────────────────────────────────────────────
+    setContent('meta[name="description"]', cfg.description)
 
-    // ── Standard meta ───────────────────────────────────────────────────
-    setMeta('meta[name="description"]', cfg.description)
+    // ── Open Graph ───────────────────────────────────────────────────────
+    setContent('meta[property="og:title"]',       cfg.ogTitle)
+    setContent('meta[property="og:description"]', cfg.ogDescription)
+    setContent('meta[property="og:url"]',         cfg.url)
 
-    // ── Open Graph ──────────────────────────────────────────────────────
-    setMeta('meta[property="og:title"]',       cfg.ogTitle)
-    setMeta('meta[property="og:description"]', cfg.ogDescription)
-    setMeta('meta[property="og:url"]',         cfg.url)
+    // ── Twitter Card ─────────────────────────────────────────────────────
+    setContent('meta[name="twitter:title"]',       cfg.ogTitle)
+    setContent('meta[name="twitter:description"]', cfg.ogDescription)
 
-    // ── Twitter Card ────────────────────────────────────────────────────
-    setMeta('meta[name="twitter:title"]',       cfg.ogTitle)
-    setMeta('meta[name="twitter:description"]', cfg.ogDescription)
-
-    // ── Canonical ───────────────────────────────────────────────────────
-    setLink('link[rel="canonical"]', 'href', cfg.canonical)
+    // ── Canonical ────────────────────────────────────────────────────────
+    setHref('link[rel="canonical"]', cfg.canonical)
 
     // ── Hreflang ─────────────────────────────────────────────────────────
-    setLink('link[hreflang="en-IN"]',   'href', cfg.url)
-    setLink('link[hreflang="hi-IN"]',   'href', cfg.url)
-    setLink('link[hreflang="x-default"]', 'href', cfg.url)
+    setHref('link[hreflang="en-IN"]',    cfg.url)
+    setHref('link[hreflang="hi-IN"]',    cfg.url)
+    setHref('link[hreflang="x-default"]', cfg.url)
 
-    // ── History API — gives each page a real URL path ───────────────────
-    // This lets Googlebot discover /about as a separate page, enables
-    // shareable deep-links, and makes browser back/forward work correctly.
-    const targetPath = page === 'about' ? '/about' : '/'
-    if (window.location.pathname !== targetPath) {
-      window.history.pushState({ page }, cfg.title, targetPath)
-    }
-
-    // ── JSON-LD: update BreadcrumbList dynamically ───────────────────────
-    const bcScript = document.getElementById('ld-breadcrumb')
-    if (bcScript) {
-      const bcItems =
-        page === 'about'
-          ? [
-              { '@type': 'ListItem', position: 1, name: 'Home', item: BASE_URL + '/' },
-              { '@type': 'ListItem', position: 2, name: 'About', item: BASE_URL + '/about' },
-            ]
-          : [{ '@type': 'ListItem', position: 1, name: 'Home', item: BASE_URL + '/' }]
-
-      bcScript.textContent = JSON.stringify({
+    // ── BreadcrumbList (JSON-LD, live DOM update) ─────────────────────────
+    const bcEl = document.getElementById('ld-breadcrumb')
+    if (bcEl) {
+      bcEl.textContent = JSON.stringify({
         '@context': 'https://schema.org',
         '@type': 'BreadcrumbList',
-        itemListElement: bcItems,
+        itemListElement: cfg.breadcrumbs.map(b => ({
+          '@type': 'ListItem',
+          position: b.position,
+          name: b.name,
+          item: b.item,
+        })),
       })
+    }
+
+    // ── History API ───────────────────────────────────────────────────────
+    // Gives each logical page a real URL path so:
+    //   • Googlebot indexes /about as a distinct page
+    //   • Browser back/forward work naturally
+    //   • Shareable deeplinks work (e.g. WhatsApp share of /about)
+    if (window.location.pathname !== cfg.path) {
+      window.history.pushState({ page }, cfg.title, cfg.path)
     }
   }, [page])
 }
