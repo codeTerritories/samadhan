@@ -19,7 +19,7 @@ export default function Footer() {
         </p>
         <div className="footer-bottom">
           <span>
-            {t({ en: '© 2025 Samadhan — For every Indian citizen', hi: '© 2025 समाधान — हर भारतीय नागरिक के लिए' })}
+            {t({ en: '© Samadhan — For every Indian citizen', hi: '© समाधान — हर भारतीय नागरिक के लिए' })}
           </span>
           <span className="footer-flag">🇮🇳</span>
         </div>

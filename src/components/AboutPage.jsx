@@ -1,29 +1,61 @@
 import React from 'react'
-import { useState } from 'react'
+import { useState, useRef } from 'react'
+import emailjs from '@emailjs/browser'
 import { useLang } from '../context/LangContext'
 
+// ── EmailJS config (set in .env — see .env.example) ──────────────────────────
+const EJS_SERVICE  = import.meta.env.VITE_EMAILJS_SERVICE_ID  || ''
+const EJS_TEMPLATE = import.meta.env.VITE_EMAILJS_TEMPLATE_ID || ''
+const EJS_KEY      = import.meta.env.VITE_EMAILJS_PUBLIC_KEY  || ''
+
+const CONTACT_EMAIL = 'adubey.works@gmail.com'
+
 const SUGGESTION_TYPES = [
-  { value: 'suggestion', en: 'Suggestion / Improvement',    hi: 'सुझाव / सुधार' },
-  { value: 'newproblem', en: 'Add a New Problem Category',  hi: 'नई समस्या जोड़ें' },
-  { value: 'bug',        en: 'Bug / Broken Link',           hi: 'बग / टूटा हुआ लिंक' },
-  { value: 'praise',     en: 'Just saying thanks 🙏',       hi: 'बस धन्यवाद 🙏' },
-  { value: 'other',      en: 'Other',                       hi: 'अन्य' },
+  { value: 'suggestion', en: 'Suggestion / Improvement',   hi: 'सुझाव / सुधार',       icon: 'fa-lightbulb'     },
+  { value: 'newproblem', en: 'Add a New Problem Category', hi: 'नई समस्या जोड़ें',    icon: 'fa-plus-circle'   },
+  { value: 'bug',        en: 'Bug / Broken Link',          hi: 'बग / टूटा लिंक',      icon: 'fa-bug'           },
+  { value: 'portal',     en: 'Wrong Portal / Number',      hi: 'गलत पोर्टल / नंबर',  icon: 'fa-exclamation-triangle' },
+  { value: 'praise',     en: 'Just saying thanks 🙏',      hi: 'बस धन्यवाद 🙏',       icon: 'fa-heart'         },
+  { value: 'other',      en: 'Other',                      hi: 'अन्य',                icon: 'fa-comment-dots'  },
 ]
 
-const TEAM = [
-  { icon: 'fa-bullseye',   en: 'Mission',   hi: 'मिशन',   desc: { en: 'Make every government service discoverable in under 10 seconds for any Indian citizen.', hi: 'हर भारतीय नागरिक के लिए हर सरकारी सेवा को 10 सेकंड में खोजने योग्य बनाना।' } },
-  { icon: 'fa-eye',        en: 'Vision',    hi: 'विजन',   desc: { en: 'A jaagruk (aware) citizen base that knows exactly which door to knock on for any problem.', hi: 'एक जागरूक नागरिक वर्ग जो हर समस्या के लिए सही दरवाज़ा जानता हो।' } },
-  { icon: 'fa-shield-alt', en: 'Privacy',   hi: 'गोपनीयता', desc: { en: 'Zero personal data stored. No login required. All links go directly to official government portals.', hi: 'कोई व्यक्तिगत डेटा संग्रहीत नहीं। कोई लॉगिन नहीं। सभी लिंक सीधे सरकारी पोर्टल पर जाते हैं।' } },
-  { icon: 'fa-heart',      en: 'Free Forever', hi: 'सदा मुफ़्त', desc: { en: 'No ads, no subscriptions, no paywalls. Built for every citizen — from villages to metros.', hi: 'कोई विज्ञापन नहीं, कोई सदस्यता नहीं। गाँव से महानगर तक — हर नागरिक के लिए।' } },
+const MISSION_CARDS = [
+  {
+    icon: 'fa-bullseye', color: '#EF9F27', bg: '#FAEEDA',
+    en: 'Mission', hi: 'मिशन',
+    desc: { en: 'Make every government service discoverable in under 10 seconds for any Indian citizen.', hi: 'हर भारतीय नागरिक के लिए हर सरकारी सेवा को 10 सेकंड में खोजने योग्य बनाना।' },
+  },
+  {
+    icon: 'fa-eye', color: '#1D9E75', bg: '#E1F5EE',
+    en: 'Vision', hi: 'विजन',
+    desc: { en: 'A jaagruk (aware) citizen base that knows exactly which door to knock on for any problem.', hi: 'एक जागरूक नागरिक वर्ग जो हर समस्या के लिए सही दरवाज़ा जानता हो।' },
+  },
+  {
+    icon: 'fa-shield-alt', color: '#7F77DD', bg: '#EEEDFE',
+    en: 'Privacy', hi: 'गोपनीयता',
+    desc: { en: 'Zero personal data stored. No login required. All links go directly to official government portals.', hi: 'कोई व्यक्तिगत डेटा संग्रहीत नहीं। कोई लॉगिन नहीं। सभी लिंक सीधे सरकारी पोर्टल पर।' },
+  },
+  {
+    icon: 'fa-heart', color: '#E24B4A', bg: '#FCEBEB',
+    en: 'Free Forever', hi: 'सदा मुफ़्त',
+    desc: { en: 'No ads, no subscriptions, no paywalls. Built for every citizen — from villages to metros.', hi: 'कोई विज्ञापन नहीं, कोई सदस्यता नहीं। गाँव से महानगर तक — हर नागरिक के लिए।' },
+  },
+]
+
+const HOW_STEPS = [
+  { n: '01', en: 'Search or pick your problem category',           hi: 'अपनी समस्या खोजें या श्रेणी चुनें' },
+  { n: '02', en: 'See all resolution paths — Local → State → Central', hi: 'सभी समाधान रास्ते देखें — स्थानीय → राज्य → केंद्र' },
+  { n: '03', en: 'Tap Call / Visit / Open to reach the official portal', hi: 'आधिकारिक पोर्टल तक पहुँचने के लिए Call / Visit / Open दबाएं' },
+  { n: '04', en: 'Samadhan never stores your data or takes any fee', hi: 'समाधान कभी आपका डेटा नहीं रखता और कोई शुल्क नहीं लेता' },
 ]
 
 export default function AboutPage() {
   const { t } = useLang()
+  const formRef = useRef(null)
 
-  const [form, setForm]       = useState({ name: '', email: '', type: 'suggestion', message: '' })
-  const [submitted, setSubmitted] = useState(false)
-  const [loading, setLoading] = useState(false)
-  const [errors, setErrors]   = useState({})
+  const [form, setForm]   = useState({ name: '', email: '', type: 'suggestion', message: '' })
+  const [status, setStatus] = useState('idle') // idle | loading | success | error
+  const [errors, setErrors] = useState({})
 
   const set = (k, v) => {
     setForm(f => ({ ...f, [k]: v }))
@@ -34,24 +66,61 @@ export default function AboutPage() {
     const e = {}
     if (!form.name.trim())    e.name    = t({ en: 'Please enter your name',    hi: 'कृपया नाम दर्ज करें' })
     if (!form.message.trim()) e.message = t({ en: 'Please write your message', hi: 'कृपया संदेश लिखें' })
+    if (form.message.length > 500) e.message = t({ en: 'Max 500 characters', hi: 'अधिकतम 500 अक्षर' })
     if (form.email && !/^[^\s@]+@[^\s@]+\.[^\s@]+$/.test(form.email))
       e.email = t({ en: 'Enter a valid email', hi: 'सही ईमेल दर्ज करें' })
     return e
   }
 
-  const handleSubmit = (e) => {
+  const handleSubmit = async (e) => {
     e.preventDefault()
     const errs = validate()
     if (Object.keys(errs).length) { setErrors(errs); return }
-    setLoading(true)
-    // Simulate submission (replace with Formspree/EmailJS in production)
-    setTimeout(() => { setLoading(false); setSubmitted(true) }, 1200)
+
+    setStatus('loading')
+
+    const typeLabel = SUGGESTION_TYPES.find(s => s.value === form.type)?.en || form.type
+
+    // ── If EmailJS is configured use it; otherwise open mailto as fallback ──
+    if (EJS_SERVICE && EJS_TEMPLATE && EJS_KEY) {
+      try {
+        await emailjs.send(
+          EJS_SERVICE,
+          EJS_TEMPLATE,
+          {
+            from_name:    form.name,
+            from_email:   form.email || 'not provided',
+            message_type: typeLabel,
+            message:      form.message,
+            to_email:     CONTACT_EMAIL,
+          },
+          EJS_KEY,
+        )
+        setStatus('success')
+      } catch {
+        setStatus('error')
+      }
+    } else {
+      // Fallback: open mailto so message still reaches the inbox
+      const subject = encodeURIComponent(`[Samadhan] ${typeLabel} — from ${form.name}`)
+      const body    = encodeURIComponent(
+        `Name: ${form.name}\nEmail: ${form.email || 'not provided'}\nType: ${typeLabel}\n\n${form.message}`
+      )
+      window.open(`mailto:${CONTACT_EMAIL}?subject=${subject}&body=${body}`, '_blank')
+      setStatus('success')
+    }
+  }
+
+  const reset = () => {
+    setForm({ name: '', email: '', type: 'suggestion', message: '' })
+    setErrors({})
+    setStatus('idle')
   }
 
   return (
     <div className="about-page">
 
-      {/* ── Hero banner ── */}
+      {/* ── Hero ───────────────────────────────────────────────────────────── */}
       <section className="about-hero">
         <span className="hero-blob hero-blob-1" aria-hidden />
         <span className="hero-blob hero-blob-2" aria-hidden />
@@ -69,16 +138,17 @@ export default function AboutPage() {
               hi: 'आधिकारिक भारतीय सरकारी पोर्टलों का एक स्वतंत्र, गैर-लाभकारी संग्रहकर्ता — ताकि हर नागरिक जान सके कि कहाँ जाना है।',
             })}
           </p>
-          <div className="about-slogans">
-            <span className="about-slogan-chip saffron">🇮🇳 जागरूक जनता</span>
-            <span className="about-slogan-chip green">✦ विकसित भारत 2047</span>
+          <div className="about-hero-pills">
+            <span className="about-pill pill-saffron"><i className="fas fa-flag" /> {t({ en: 'Free Forever', hi: 'सदा मुफ़्त' })}</span>
+            <span className="about-pill pill-green"><i className="fas fa-lock" /> {t({ en: 'No Data Stored', hi: 'कोई डेटा नहीं' })}</span>
+            <span className="about-pill pill-blue"><i className="fas fa-check-circle" /> {t({ en: 'Official Portals Only', hi: 'केवल सरकारी पोर्टल' })}</span>
           </div>
         </div>
       </section>
 
       <div className="about-body">
 
-        {/* ── Mission / Vision cards ── */}
+        {/* ── Mission cards ─────────────────────────────────────────────────── */}
         <section className="about-section">
           <div className="about-sec-hd">
             <span className="about-sec-accent" />
@@ -88,10 +158,10 @@ export default function AboutPage() {
             </div>
           </div>
           <div className="about-cards">
-            {TEAM.map(card => (
+            {MISSION_CARDS.map(card => (
               <div key={card.en} className="about-card">
-                <div className="about-card-icon">
-                  <i className={`fas ${card.icon}`} />
+                <div className="about-card-icon" style={{ background: card.bg }}>
+                  <i className={`fas ${card.icon}`} style={{ color: card.color }} />
                 </div>
                 <div className="about-card-body">
                   <h3 className="about-card-title">{t(card)}</h3>
@@ -102,7 +172,7 @@ export default function AboutPage() {
           </div>
         </section>
 
-        {/* ── How it works ── */}
+        {/* ── How it works ──────────────────────────────────────────────────── */}
         <section className="about-section">
           <div className="about-sec-hd">
             <span className="about-sec-accent green" />
@@ -112,12 +182,7 @@ export default function AboutPage() {
             </div>
           </div>
           <div className="howit-list">
-            {[
-              { n: '01', en: 'Search or pick your problem category',  hi: 'अपनी समस्या खोजें या श्रेणी चुनें' },
-              { n: '02', en: 'See all resolution paths — Local → State → Central', hi: 'सभी समाधान रास्ते देखें — स्थानीय → राज्य → केंद्र' },
-              { n: '03', en: 'Tap Call / Visit / Open to reach the official portal', hi: 'आधिकारिक पोर्टल तक पहुँचने के लिए Call / Visit / Open दबाएं' },
-              { n: '04', en: 'Samadhan never stores your data or takes any fee', hi: 'समाधान कभी आपका डेटा नहीं रखता और कोई शुल्क नहीं लेता' },
-            ].map(s => (
+            {HOW_STEPS.map(s => (
               <div key={s.n} className="howit-item">
                 <span className="howit-num">{s.n}</span>
                 <span className="howit-text">{t(s)}</span>
@@ -126,7 +191,7 @@ export default function AboutPage() {
           </div>
         </section>
 
-        {/* ── Write to us form ── */}
+        {/* ── Write to us ───────────────────────────────────────────────────── */}
         <section className="about-section" id="contact">
           <div className="about-sec-hd">
             <span className="about-sec-accent saffron" />
@@ -136,22 +201,56 @@ export default function AboutPage() {
             </div>
           </div>
 
-          {submitted ? (
+          {/* Direct contact strip */}
+          <div className="contact-direct-strip">
+            <img className="cds-avatar" src="/avatar.png" alt="Aman Dubey" />
+            <div className="cds-body">
+              <span className="cds-label">{t({ en: 'Reach the creator directly', hi: 'सीधे संपर्क करें' })}</span>
+              <span className="cds-name">Aditya Dubey</span>
+              <a className="cds-email" href={`mailto:${CONTACT_EMAIL}`}>{CONTACT_EMAIL}</a>
+            </div>
+            <a className="cds-btn" href={`mailto:${CONTACT_EMAIL}`} aria-label="Send email">
+              <i className="fas fa-paper-plane" />
+            </a>
+          </div>
+
+          {/* ── Success ── */}
+          {status === 'success' && (
             <div className="form-success">
               <div className="form-success-icon"><i className="fas fa-check-circle" /></div>
-              <h3>{t({ en: 'Thank you! 🙏', hi: 'धन्यवाद! 🙏' })}</h3>
-              <p>{t({ en: 'Your message has been received. We will use your feedback to make Samadhan better.', hi: 'आपका संदेश मिल गया। हम आपके सुझाव से समाधान को और बेहतर बनाएंगे।' })}</p>
-              <button className="form-again-btn" onClick={() => { setSubmitted(false); setForm({ name: '', email: '', type: 'suggestion', message: '' }) }}>
+              <h3>{t({ en: 'Message sent! 🙏', hi: 'संदेश भेजा गया! 🙏' })}</h3>
+              <p>{t({ en: 'Thank you for writing to us. We will use your feedback to make Samadhan better.', hi: 'हमें लिखने के लिए धन्यवाद। आपके सुझाव से समाधान को और बेहतर बनाएंगे।' })}</p>
+              <button className="form-again-btn" onClick={reset}>
                 {t({ en: 'Send another message', hi: 'एक और संदेश भेजें' })}
               </button>
             </div>
-          ) : (
-            <form className="contact-form" onSubmit={handleSubmit} noValidate>
+          )}
+
+          {/* ── Error ── */}
+          {status === 'error' && (
+            <div className="form-error-banner">
+              <i className="fas fa-exclamation-circle" />
+              <div>
+                <strong>{t({ en: 'Could not send right now', hi: 'अभी नहीं भेजा जा सका' })}</strong>
+                <p>{t({ en: 'Please email us directly at ', hi: 'कृपया सीधे ईमेल करें: ' })}
+                  <a href={`mailto:${CONTACT_EMAIL}`}>{CONTACT_EMAIL}</a>
+                </p>
+              </div>
+              <button className="form-err-close" onClick={() => setStatus('idle')}>
+                <i className="fas fa-times" />
+              </button>
+            </div>
+          )}
+
+          {/* ── Form ── */}
+          {status !== 'success' && (
+            <form ref={formRef} className="contact-form" onSubmit={handleSubmit} noValidate>
 
               <div className="form-row">
                 {/* Name */}
                 <div className={`form-field ${errors.name ? 'has-error' : ''}`}>
                   <label className="form-label">
+                    <i className="fas fa-user" />
                     {t({ en: 'Your Name', hi: 'आपका नाम' })}
                     <span className="form-required">*</span>
                   </label>
@@ -161,29 +260,36 @@ export default function AboutPage() {
                     value={form.name}
                     onChange={e => set('name', e.target.value)}
                     placeholder={t({ en: 'e.g. Rahul Sharma', hi: 'जैसे राहुल शर्मा' })}
+                    maxLength={80}
                   />
-                  {errors.name && <span className="form-error">{errors.name}</span>}
+                  {errors.name && <span className="form-error"><i className="fas fa-exclamation-circle" /> {errors.name}</span>}
                 </div>
 
                 {/* Email */}
                 <div className={`form-field ${errors.email ? 'has-error' : ''}`}>
                   <label className="form-label">
-                    {t({ en: 'Email (optional)', hi: 'ईमेल (वैकल्पिक)' })}
+                    <i className="fas fa-envelope" />
+                    {t({ en: 'Your Email', hi: 'आपका ईमेल' })}
+                    <span className="form-optional">{t({ en: '(optional)', hi: '(वैकल्पिक)' })}</span>
                   </label>
                   <input
                     className="form-input"
                     type="email"
                     value={form.email}
                     onChange={e => set('email', e.target.value)}
-                    placeholder={t({ en: 'you@example.com', hi: 'आप@उदाहरण.com' })}
+                    placeholder="you@example.com"
+                    maxLength={100}
                   />
-                  {errors.email && <span className="form-error">{errors.email}</span>}
+                  {errors.email && <span className="form-error"><i className="fas fa-exclamation-circle" /> {errors.email}</span>}
                 </div>
               </div>
 
-              {/* Type */}
+              {/* Type chips */}
               <div className="form-field">
-                <label className="form-label">{t({ en: 'Type of feedback', hi: 'फ़ीडबैक का प्रकार' })}</label>
+                <label className="form-label">
+                  <i className="fas fa-tag" />
+                  {t({ en: 'Type of feedback', hi: 'फ़ीडबैक का प्रकार' })}
+                </label>
                 <div className="form-chips">
                   {SUGGESTION_TYPES.map(opt => (
                     <button
@@ -192,6 +298,7 @@ export default function AboutPage() {
                       className={`form-chip ${form.type === opt.value ? 'selected' : ''}`}
                       onClick={() => set('type', opt.value)}
                     >
+                      <i className={`fas ${opt.icon}`} />
                       {t(opt)}
                     </button>
                   ))}
@@ -201,6 +308,7 @@ export default function AboutPage() {
               {/* Message */}
               <div className={`form-field ${errors.message ? 'has-error' : ''}`}>
                 <label className="form-label">
+                  <i className="fas fa-comment-alt" />
                   {t({ en: 'Your Message', hi: 'आपका संदेश' })}
                   <span className="form-required">*</span>
                 </label>
@@ -213,26 +321,33 @@ export default function AboutPage() {
                     en: 'Tell us what is missing, what could be better, or any portal we should add...',
                     hi: 'बताएं कि क्या कमी है, क्या बेहतर हो सकता है, या कोई सरकारी पोर्टल जो जोड़ना चाहिए…',
                   })}
+                  maxLength={500}
                 />
-                {errors.message && <span className="form-error">{errors.message}</span>}
-                <span className="form-hint">
+                {errors.message && <span className="form-error"><i className="fas fa-exclamation-circle" /> {errors.message}</span>}
+                <span className={`form-hint ${form.message.length >= 480 ? 'warn' : ''}`}>
                   {form.message.length}/500 {t({ en: 'characters', hi: 'अक्षर' })}
                 </span>
               </div>
 
-              <button type="submit" className="form-submit" disabled={loading}>
-                {loading ? (
-                  <><i className="fas fa-circle-notch fa-spin" /> {t({ en: 'Sending…', hi: 'भेज रहे हैं…' })}</>
-                ) : (
-                  <><i className="fas fa-paper-plane" /> {t({ en: 'Send Message', hi: 'संदेश भेजें' })}</>
-                )}
-              </button>
+              <div className="form-footer">
+                <p className="form-privacy-note">
+                  <i className="fas fa-lock" />
+                  {t({ en: 'Your data is only used to respond to you — never stored or shared.', hi: 'आपका डेटा केवल जवाब देने के लिए उपयोग होता है — कभी संग्रहीत या साझा नहीं किया जाता।' })}
+                </p>
+                <button type="submit" className="form-submit" disabled={status === 'loading'}>
+                  {status === 'loading' ? (
+                    <><i className="fas fa-circle-notch fa-spin" /> {t({ en: 'Sending…', hi: 'भेज रहे हैं…' })}</>
+                  ) : (
+                    <><i className="fas fa-paper-plane" /> {t({ en: 'Send Message', hi: 'संदेश भेजें' })}</>
+                  )}
+                </button>
+              </div>
 
             </form>
           )}
         </section>
 
-        {/* ── Disclaimer ── */}
+        {/* ── Disclaimer ─────────────────────────────────────────────────────── */}
         <div className="about-disclaimer">
           <i className="fas fa-info-circle" />
           <p>{t({ en: 'Samadhan is an independent citizen project. It is not affiliated with any government body. All links redirect to official government websites.', hi: 'समाधान एक स्वतंत्र नागरिक परियोजना है। यह किसी सरकारी संस्था से संबद्ध नहीं है। सभी लिंक आधिकारिक सरकारी वेबसाइटों पर जाते हैं।' })}</p>

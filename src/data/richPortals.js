@@ -633,26 +633,67 @@ export const STATE_PORTALS = {
     pani: [
       {
         badge: 'first',
-        name: 'BMC Complaint Portal — Water Supply (Mumbai)',
-        desc: { en: 'Brihanmumbai Municipal Corporation water complaint portal', hi: 'BMC water supply complaint — Mumbai residents ke liye' },
+        name: 'BMC MyBMC Portal — Water Supply Complaint (Mumbai)',
+        desc: { en: 'Brihanmumbai Municipal Corporation — 1916 helpline and MyBMC portal', hi: 'Mumbai water supply complaint — BMC 1916 ya MyBMC portal' },
         url: 'https://portal.mcgm.gov.in',
         phone: '1916',
         howto: [
-          { en: 'Open portal.mcgm.gov.in → click "Complaints"', hi: 'portal.mcgm.gov.in → "Complaints" पर click करें' },
-          { en: 'Register with mobile → select "Water Supply" category', hi: 'Mobile se register karein → "Water Supply" category chune' },
-          { en: 'Enter your ward/area and describe the issue', hi: 'Ward/area enter karein aur problem describe karein' },
-          { en: 'Note the complaint ID for tracking', hi: 'Complaint ID note kar lein — tracking ke liye zaroori hai' },
+          { en: 'Dial 1916 (24×7 free) OR 1800-229-222 — BMC water helpline', hi: '1916 dial karein (24×7 free) ya 1800-229-222 — BMC water helpline' },
+          { en: 'Online: portal.mcgm.gov.in → Civic Complaints → select "Water Supply"', hi: 'portal.mcgm.gov.in → Civic Complaints → "Water Supply" select karein' },
+          { en: 'WhatsApp: 8999-228-999 — send area, ward and issue description', hi: 'WhatsApp: 8999-228-999 — ward, area aur issue description bhejein' },
+          { en: 'Enter your property / ward details → describe issue → submit → note complaint ID', hi: 'Property/ward details enter karein → issue describe karein → submit → complaint ID note karein' },
+        ],
+      },
+      {
+        badge: 'first',
+        name: 'PMC — Pune Water Supply Complaint Portal',
+        desc: { en: 'Pune Municipal Corporation — dedicated water grievance portal', hi: 'Pune water supply complaint — PMC grievance portal' },
+        url: 'https://complaint.pmc.gov.in',
+        phone: '1533',
+        howto: [
+          { en: 'Dial 1533 (PMC water supply helpline) OR 1800-1030-222', hi: '1533 dial karein (PMC water helpline) ya 1800-1030-222' },
+          { en: 'Online: complaint.pmc.gov.in → register complaint', hi: 'complaint.pmc.gov.in → complaint register karein' },
+          { en: 'Select "Water Supply" as department → enter consumer ID and address', hi: '"Water Supply" department select karein → consumer ID aur address enter karein' },
+          { en: 'For other Maharashtra cities: contact your local municipal corporation water dept', hi: 'Other Maharashtra cities ke liye: apne local municipal corporation water dept se contact karein' },
         ],
       },
       {
         badge: 'state',
-        name: 'MWRRA — Maharashtra Water Resources Regulatory Authority',
-        desc: { en: 'Water allocation, supply dispute escalation — state authority', hi: 'Water supply dispute escalation — Maharashtra state authority' },
-        url: 'https://mwrra.org',
+        name: 'MJP — Maharashtra Jeevan Pradhikaran Grievance',
+        desc: { en: 'MJP supplies water to Nagpur, Nashik, Aurangabad, Amravati regions', hi: 'MJP — Nagpur, Nashik, Aurangabad, Amravati ke liye water supply authority' },
+        url: 'https://mjp.maharashtra.gov.in/grievance',
         phone: '020-22880577',
         howto: [
-          { en: 'Open mwrra.org → Grievance section', hi: 'mwrra.org → Grievance section में जाएं' },
-          { en: 'For cities other than Mumbai: approach your local municipal corporation first', hi: 'Mumbai ke alava: pehle apne local municipal corporation ko try karein' },
+          { en: 'Open mjp.maharashtra.gov.in/grievance → submit grievance online', hi: 'mjp.maharashtra.gov.in/grievance → online grievance submit karein' },
+          { en: 'Select your region: Pune / Konkan / Aurangabad / Amravati / Nagpur / Nashik', hi: 'Region select karein: Pune / Konkan / Aurangabad / Amravati / Nagpur / Nashik' },
+          { en: 'Fill name, connection details, area and describe issue', hi: 'Naam, connection details, area enter karein aur issue describe karein' },
+        ],
+      },
+    ],
+    sadak: [
+      {
+        badge: 'first',
+        name: 'BMC — Mumbai Pothole & Road Complaint (1916)',
+        desc: { en: 'Mumbai BMC road pothole, cave-in, broken road — 1916 helpline and portal', hi: 'Mumbai pothole, road damage — BMC 1916 helpline ya portal par complaint' },
+        url: 'https://portal.mcgm.gov.in',
+        phone: '1916',
+        howto: [
+          { en: 'Dial 1916 (24×7 free) — BMC road complaint helpline Mumbai', hi: '1916 dial karein (24×7 free) — BMC Mumbai road complaint helpline' },
+          { en: 'Online: portal.mcgm.gov.in → Complaints → "Roads" department', hi: 'portal.mcgm.gov.in → Complaints → "Roads" department select karein' },
+          { en: 'WhatsApp: 8999-228-999 — send photo of pothole with location', hi: 'WhatsApp: 8999-228-999 — pothole ki photo aur location bhejein' },
+          { en: 'Enter ward/zone, describe road damage type and exact location', hi: 'Ward/zone enter karein, road damage type aur exact location describe karein' },
+        ],
+      },
+      {
+        badge: 'state',
+        name: 'Maharashtra PWD — State Road Grievance',
+        desc: { en: 'Maharashtra PWD for state highways and inter-city roads', hi: 'Maharashtra PWD — state highway aur inter-city road complaints' },
+        url: 'https://pwd.maharashtra.gov.in/en/grievance-redressal/',
+        phone: '1800-120-8040',
+        howto: [
+          { en: 'Dial 1800-120-8040 OR open pwd.maharashtra.gov.in → Grievance Redressal', hi: '1800-120-8040 dial karein ya pwd.maharashtra.gov.in → Grievance Redressal' },
+          { en: 'Select road type: State Highway / District Road / Village Road', hi: 'Road type select: State Highway / District Road / Village Road' },
+          { en: 'For National Highways in Maharashtra: NHAI 1033', hi: 'Maharashtra mein National Highways ke liye: NHAI 1033 dial karein' },
         ],
       },
     ],
@@ -767,15 +808,32 @@ export const STATE_PORTALS = {
     pani: [
       {
         badge: 'first',
-        name: 'Delhi Jal Board — Online Complaint Portal',
-        desc: { en: 'Delhi Jal Board official complaint portal for water supply issues', hi: 'Delhi Jal Board official complaint portal — water supply issues' },
-        url: 'https://delhijalboard.in/complaint',
+        name: 'Delhi Jal Board — Complaint Helpline & Portal',
+        desc: { en: 'Delhi Jal Board — 1916 helpline, WhatsApp and online complaint portal', hi: 'Delhi Jal Board — 1916 helpline, WhatsApp ya online complaint' },
+        url: 'https://delhijalboard.delhi.gov.in',
         phone: '1916',
         howto: [
-          { en: 'Open delhijalboard.in → "Lodge a Complaint"', hi: 'delhijalboard.in → "Lodge a Complaint" karein' },
-          { en: 'Register with mobile number → fill complaint form', hi: 'Mobile number se register karein → complaint form bharein' },
-          { en: 'Select issue: No Supply / Leakage / Water Quality / Bill Dispute', hi: 'Issue select karein: No Supply / Leakage / Water Quality / Bill' },
-          { en: 'DJB complaint officer must contact within 24 hours', hi: 'DJB complaint officer ko 24 ghante mein contact karna hota hai' },
+          { en: 'Dial 1916 (24×7 free) OR 1800-117-118 — DJB helpline', hi: '1916 dial karein (24×7 free) ya 1800-117-118 — DJB helpline' },
+          { en: 'WhatsApp: 9650291021 — send your area and problem', hi: 'WhatsApp: 9650291021 — apna area aur problem send karein' },
+          { en: 'Online: delhijalboard.delhi.gov.in → "Lodge Complaint" → register with mobile OTP', hi: 'delhijalboard.delhi.gov.in → "Lodge Complaint" → mobile OTP se register karein' },
+          { en: 'Select issue: No Supply / Leakage / Water Quality / Billing → submit → note complaint number', hi: 'Issue select karein → submit karein → complaint number note karein' },
+          { en: 'Water logging emergency: WhatsApp 8383068300', hi: 'Water logging emergency ke liye: WhatsApp 8383068300' },
+        ],
+      },
+    ],
+    sadak: [
+      {
+        badge: 'first',
+        name: 'Delhi PWD — Road & Pothole Complaint Portal',
+        desc: { en: 'Delhi PWD Sewa — 1908 helpline and pwdsewa.pwddelhi.gov.in portal', hi: 'Delhi PWD — road pothole complaint 1908 helpline ya online portal' },
+        url: 'https://pwdsewa.pwddelhi.gov.in/Home/SubmitComplaint/',
+        phone: '1908',
+        howto: [
+          { en: 'Dial 1908 (toll-free) OR open pwdsewa.pwddelhi.gov.in → Submit Complaint', hi: '1908 dial karein (toll-free) ya pwdsewa.pwddelhi.gov.in → Submit Complaint' },
+          { en: 'WhatsApp: 8130188222 — send pothole photo with exact location', hi: 'WhatsApp: 8130188222 — pothole photo exact location ke saath bhejein' },
+          { en: 'Select complaint: Pothole / Road Damage / Waterlogging / Broken Divider', hi: 'Complaint: Pothole / Road Damage / Waterlogging / Broken Divider select karein' },
+          { en: 'Delhi PWD targets 24–48 hr repair — "Pothole Free Delhi" initiative', hi: 'Delhi PWD 24–48 ghante mein repair target karta hai — "Pothole Free Delhi" initiative' },
+          { en: 'For local colony roads: file with your MCD ward office (mcdonline.nic.in)', hi: 'Colony roads ke liye: MCD ward office — mcdonline.nic.in par complaint dein' },
         ],
       },
     ],
@@ -879,15 +937,55 @@ export const STATE_PORTALS = {
     pani: [
       {
         badge: 'first',
-        name: 'BWSSB — Bangalore Water Supply Complaint Portal',
-        desc: { en: 'Bangalore Water Supply and Sewerage Board — online complaint', hi: 'Bangalore water supply complaint — BWSSB portal' },
-        url: 'https://bwssb.gov.in/eServices/OnlineComplaint',
+        name: 'BWSSB — Bangalore Water Supply Complaint (CMS Portal)',
+        desc: { en: 'BWSSB serves Bengaluru — 1916 / 1902 helpline and CMS complaint portal', hi: 'Bangalore water supply complaint — BWSSB 1916 ya CMS portal' },
+        url: 'https://cms.bwssb.gov.in/module/complain/new_complaint',
         phone: '1916',
         howto: [
-          { en: 'Open bwssb.gov.in → "eServices" → "Online Complaint"', hi: 'bwssb.gov.in → "eServices" → "Online Complaint" karein' },
-          { en: 'Enter your BWSSB RR number from water bill', hi: 'Water bill se BWSSB RR number enter karein' },
-          { en: 'Select complaint: No Water / Low Pressure / Leakage / Bill', hi: 'Complaint chune: No Water / Low Pressure / Leakage / Bill' },
-          { en: 'BWSSB confirms resolution within 24-48 hours', hi: 'BWSSB 24-48 ghante mein resolution confirm karta hai' },
+          { en: 'Dial 1916 (24×7) OR 1902 OR 080-2223-8888 — BWSSB helpline', hi: '1916 (24×7) ya 1902 ya 080-2223-8888 — BWSSB helpline' },
+          { en: 'Online CMS portal: cms.bwssb.gov.in → "New Complaint" → login with consumer number', hi: 'cms.bwssb.gov.in → "New Complaint" → consumer number se login karein' },
+          { en: 'WhatsApp: 87622-28888 | Email: bwssbcallcenter@gmail.com', hi: 'WhatsApp: 87622-28888 | Email: bwssbcallcenter@gmail.com' },
+          { en: 'Enter RR Number (from water bill) → select issue type → submit → note complaint ID', hi: 'Bill se RR Number enter karein → issue type select karein → submit → complaint ID note karein' },
+          { en: 'BWSSB resolves supply complaints within 24-48 hours', hi: 'BWSSB supply complaints 24-48 ghante mein resolve karta hai' },
+        ],
+      },
+      {
+        badge: 'first',
+        name: 'KUWSDB — Other Karnataka Urban Areas (Non-Bengaluru)',
+        desc: { en: 'Karnataka Urban Water Supply and Drainage Board — 213 towns outside Bengaluru', hi: 'Bengaluru ke alava 213 Karnataka towns ke liye — KUWSDB complaint' },
+        url: 'https://ocr.kuwsdb.org',
+        phone: '080-4000-1000',
+        howto: [
+          { en: 'Control Room: 080-4000-1000 (24×7)', hi: 'Control Room: 080-4000-1000 (24×7)' },
+          { en: 'SMS: Text "WATER" to 9220092200 | WhatsApp: 9880655555', hi: 'SMS: 9220092200 par "WATER" bhejein | WhatsApp: 9880655555' },
+          { en: 'Online: ocr.kuwsdb.org → complaint docket tracking', hi: 'ocr.kuwsdb.org → complaint docket track karein' },
+          { en: 'Enter consumer ID, location and issue details', hi: 'Consumer ID, location aur issue details enter karein' },
+        ],
+      },
+    ],
+    sadak: [
+      {
+        badge: 'first',
+        name: 'BBMP — Bangalore Pothole & Road Complaint (1533)',
+        desc: { en: 'BBMP Sahaya portal / Fix Pothole app — 1533 helpline for Bengaluru roads', hi: 'Bangalore pothole, road damage — BBMP 1533 helpline ya Sahaya portal' },
+        url: 'https://bbmpsahaya.karnataka.gov.in',
+        phone: '1533',
+        howto: [
+          { en: 'Dial 1533 OR WhatsApp: +91 94806-85700 — BBMP Bengaluru road complaint', hi: '1533 dial karein ya WhatsApp +91 94806-85700 — BBMP road complaint' },
+          { en: 'Online: bbmpsahaya.karnataka.gov.in → "New Complaint" → "Roads"', hi: 'bbmpsahaya.karnataka.gov.in → "New Complaint" → "Roads" select karein' },
+          { en: 'App: "Fix My Street" / "BBMP Fix Pothole" on Play Store/App Store', hi: 'App: "Fix My Street" ya "BBMP Fix Pothole" — Play Store/App Store se download karein' },
+          { en: 'Upload photo with GPS location — BBMP pothole map tracks repair status', hi: 'GPS location ke saath photo upload karein — BBMP pothole map par status track karein' },
+        ],
+      },
+      {
+        badge: 'state',
+        name: 'Karnataka PWD — State Highway Road Complaint',
+        desc: { en: 'Karnataka PWD for state highways outside Bengaluru city', hi: 'Karnataka PWD — Bengaluru ke bahar state highway road complaint' },
+        url: 'https://pwd.karnataka.gov.in',
+        phone: '080-22032200',
+        howto: [
+          { en: 'Open pwd.karnataka.gov.in → Citizen Services → Grievance', hi: 'pwd.karnataka.gov.in → Citizen Services → Grievance mein jaayein' },
+          { en: 'For NHAI (National Highways in Karnataka): dial 1033', hi: 'Karnataka mein National Highways ke liye: NHAI 1033 dial karein' },
         ],
       },
     ],
@@ -977,14 +1075,42 @@ export const STATE_PORTALS = {
     pani: [
       {
         badge: 'first',
-        name: 'CMWSSB — Chennai Metro Water Complaint',
-        desc: { en: 'Chennai Metropolitan Water Supply and Sewerage Board', hi: 'Chennai water supply complaint — CMWSSB official portal' },
-        url: 'https://www.chennaimetrowater.tn.gov.in',
-        phone: '044-45674567',
+        name: 'CMWSSB — Chennai Metro Water Complaint Portal',
+        desc: { en: 'Chennai Metropolitan Water Supply & Sewerage Board — 14420 helpline', hi: 'Chennai water supply complaint — CMWSSB 14420 ya online portal' },
+        url: 'https://cmwssb.tn.gov.in/complaint-redressal',
+        phone: '14420',
         howto: [
-          { en: 'Open chennaimetrowater.tn.gov.in → Complaints section', hi: 'chennaimetrowater.tn.gov.in → Complaints section mein jaayein' },
-          { en: 'Enter your Consumer Number and complaint details', hi: 'Consumer Number enter karein aur complaint details dein' },
-          { en: 'For areas outside Chennai: contact your local municipality', hi: 'Chennai ke bahar ke areas: apne local municipality se contact karein' },
+          { en: 'Dial 14420 (24×7 call centre) OR 1916 OR 044-4567-4567', hi: '14420 dial karein (24×7) ya 1916 ya 044-4567-4567' },
+          { en: 'Online: cmwssb.tn.gov.in/complaint-redressal → "Register New Complaint"', hi: 'cmwssb.tn.gov.in/complaint-redressal → "Register New Complaint" karein' },
+          { en: 'WhatsApp: 8144930308 | App: "Metro Water" on Google Play', hi: 'WhatsApp: 8144930308 | App: Google Play par "Metro Water" app download karein' },
+          { en: 'Enter Consumer Number from bill → select issue type → submit', hi: 'Bill se Consumer Number enter karein → issue type select karein → submit karein' },
+          { en: 'For areas outside Chennai: TWAD Board — 044-2841-6420', hi: 'Chennai ke bahar: TWAD Board — 044-2841-6420 call karein' },
+        ],
+      },
+    ],
+    sadak: [
+      {
+        badge: 'first',
+        name: 'GCC — Chennai Road & Pothole Complaint (1913)',
+        desc: { en: 'Greater Chennai Corporation — 1913 helpline for roads, potholes, waterlogging', hi: 'Chennai road pothole, waterlogging — GCC 1913 helpline ya portal' },
+        url: 'https://gccservices.in/pgr',
+        phone: '1913',
+        howto: [
+          { en: 'Dial 1913 (24×7) OR WhatsApp: +91 94450-61913', hi: '1913 dial karein (24×7) ya WhatsApp: +91 94450-61913' },
+          { en: 'Online: gccservices.in/pgr → register complaint → select "Roads"', hi: 'gccservices.in/pgr → complaint register karein → "Roads" select karein' },
+          { en: 'Select complaint: Pothole / Road Damage / Damaged Footpath / Road Digging', hi: 'Complaint: Pothole / Road Damage / Damaged Footpath / Road Digging select karein' },
+          { en: 'Upload geotagged photo — zone-wise nodal officer assigned within 24 hrs', hi: 'Geotagged photo upload karein — zone-wise nodal officer 24 ghante mein assign hoga' },
+        ],
+      },
+      {
+        badge: 'state',
+        name: 'TN PWD — Tamil Nadu State Highway Complaint',
+        desc: { en: 'Tamil Nadu PWD for state highways and district roads', hi: 'TN PWD — state highway aur district road complaints' },
+        url: 'https://www.tn.gov.in/dept/pwd',
+        phone: '044-25672480',
+        howto: [
+          { en: 'Open tn.gov.in → department PWD → Grievance submission', hi: 'tn.gov.in → PWD department → Grievance submit karein' },
+          { en: 'Escalation: TN CM Grievance Cell — cmcell.tn.gov.in', hi: 'Escalation ke liye: TN CM Grievance Cell — cmcell.tn.gov.in' },
         ],
       },
     ],
@@ -1075,14 +1201,41 @@ export const STATE_PORTALS = {
     pani: [
       {
         badge: 'first',
-        name: 'Jal Nigam UP — Consumer Complaint',
-        desc: { en: 'Uttar Pradesh Jal Nigam — water supply grievance portal', hi: 'UP water supply complaint — Jal Nigam portal' },
-        url: 'https://upjn.org',
-        phone: '1916',
+        name: 'Jal Samadhan UP — Water Complaint Portal',
+        desc: { en: 'UP Jal Nigam official online complaint portal — jalsamadhan.in', hi: 'UP water supply complaint — Jal Samadhan portal' },
+        url: 'https://jalsamadhan.in/Consumer/FileComplain_hi',
+        phone: '18001212164',
         howto: [
-          { en: 'Open upjn.org → Consumer Services → Complaint', hi: 'upjn.org → Consumer Services → Complaint mein jaayein' },
-          { en: 'For city-level: contact your Nagar Nigam (Lucknow: 0522-2622300)', hi: 'City level ke liye: apne Nagar Nigam ko contact karein' },
-          { en: 'Mention connection ID / locality and problem type', hi: 'Connection ID / locality aur problem type mention karein' },
+          { en: 'Dial 18001212164 (toll-free) — UP Jal Nigam helpline', hi: '18001212164 dial karein (toll-free) — UP Jal Nigam helpline' },
+          { en: 'Online: jalsamadhan.in → "File Complaint" → enter consumer/connection ID', hi: 'jalsamadhan.in → "File Complaint" → consumer/connection ID enter karein' },
+          { en: 'Select your district and describe issue: No Supply / Leakage / Quality', hi: 'District select karein aur issue describe karein: No Supply / Leakage / Quality' },
+          { en: 'Lucknow city (Jal Kal): 81770-54003 | 0522-2620172', hi: 'Lucknow city (Jal Kal): 81770-54003 ya 0522-2620172' },
+        ],
+      },
+    ],
+    sadak: [
+      {
+        badge: 'first',
+        name: 'UP PWD — Road & Pothole Complaint Portal',
+        desc: { en: 'UP Public Works Department — 1800-121-5707 helpline and uppwd.gov.in', hi: 'UP PWD — road pothole complaint 1800-121-5707 helpline ya portal' },
+        url: 'https://uppwd.gov.in',
+        phone: '1800-121-5707',
+        howto: [
+          { en: 'Dial 1800-121-5707 (toll-free) — UP PWD road complaint helpline', hi: '1800-121-5707 dial karein (toll-free) — UP PWD road complaint helpline' },
+          { en: 'WhatsApp: 79919-95566 — send pothole photo with location details', hi: 'WhatsApp: 79919-95566 — pothole photo aur location details bhejein' },
+          { en: 'Online: uppwd.gov.in → Grievance → select district and road type', hi: 'uppwd.gov.in → Grievance → district aur road type select karein' },
+          { en: 'For National Highways (NH) in UP: NHAI 1033', hi: 'UP mein National Highways ke liye: NHAI 1033 dial karein' },
+        ],
+      },
+      {
+        badge: 'state',
+        name: 'UP Jansunwai 1076 — Road Escalation',
+        desc: { en: 'UP PWD not acting? Escalate via CM Helpline 1076 / Jansunwai', hi: 'UP PWD action nahi? CM Helpline 1076 / Jansunwai se escalate karein' },
+        url: 'https://jansunwai.up.nic.in',
+        phone: '1076',
+        howto: [
+          { en: 'Dial 1076 OR open jansunwai.up.nic.in → select PWD department', hi: '1076 dial karein ya jansunwai.up.nic.in → PWD department select karein' },
+          { en: 'Attach UP PWD complaint reference number — CM office monitors strictly', hi: 'UP PWD complaint reference number attach karein — CM office strictly monitor karta hai' },
         ],
       },
     ],
@@ -1173,14 +1326,53 @@ export const STATE_PORTALS = {
     pani: [
       {
         badge: 'first',
-        name: 'PHED Rajasthan — Water Complaint Portal',
-        desc: { en: 'Public Health Engineering Department — rural and urban water supply', hi: 'Rajasthan water supply complaint — PHED official portal' },
-        url: 'https://phed.rajasthan.gov.in',
-        phone: '1916',
+        name: 'PHED Rajasthan — Water Supply Complaint Portal',
+        desc: { en: 'Public Health Engineering Dept Rajasthan — 1800-180-6088 helpline and online portal', hi: 'Rajasthan PHED — pani supply complaint ke liye 1800-180-6088 ya online portal' },
+        url: 'https://phedubm.rajasthan.gov.in/Complaint.aspx?Type=2',
+        phone: '1800-180-6088',
         howto: [
-          { en: 'Open phed.rajasthan.gov.in → Grievance/Complaint section', hi: 'phed.rajasthan.gov.in → Grievance/Complaint section mein jaayein' },
-          { en: 'Select district and enter complaint with connection number', hi: 'District select karein, connection number ke saath complaint karein' },
-          { en: 'For Jaipur city: contact JMC (Jaipur Municipal Corporation)', hi: 'Jaipur city ke liye: JMC (Jaipur Municipal Corporation) ko contact karein' },
+          { en: 'Dial 1800-180-6088 (toll-free) — PHED Rajasthan water helpline', hi: '1800-180-6088 dial karein (toll-free) — PHED Rajasthan water helpline' },
+          { en: 'Online: phedubm.rajasthan.gov.in → "Register Complaint" → select your district & zone', hi: 'phedubm.rajasthan.gov.in → "Register Complaint" → district & zone select karein' },
+          { en: 'Select complaint: No Water Supply / Low Pressure / Leakage / Water Quality', hi: 'Complaint type: No Water / Low Pressure / Leakage / Water Quality select karein' },
+          { en: 'Enter connection number from water bill → describe problem → submit → note ID', hi: 'Water bill se connection number enter karein → problem describe karein → submit → ID note karein' },
+        ],
+      },
+      {
+        badge: 'state',
+        name: 'Rajasthan Sampark 181 — Water Escalation',
+        desc: { en: 'Chief Minister Sampark 181 — escalate unresolved PHED water complaints', hi: 'CM Sampark 181 — PHED se resolve nahi hua to 181 se escalate karein' },
+        url: 'https://sampark.rajasthan.gov.in',
+        phone: '181',
+        howto: [
+          { en: 'Dial 181 OR open sampark.rajasthan.gov.in', hi: '181 dial karein ya sampark.rajasthan.gov.in kholen' },
+          { en: 'Select department: "PHED" or "Nagar Palika"', hi: 'Department: "PHED" ya "Nagar Palika" select karein' },
+          { en: 'Describe water problem with PHED complaint reference number — 7-day SLA', hi: 'PHED complaint reference number ke saath problem describe karein — 7 din mein response' },
+        ],
+      },
+    ],
+    sadak: [
+      {
+        badge: 'first',
+        name: 'Rajasthan PWD — Road & Pothole Complaint',
+        desc: { en: 'Rajasthan PWD — 1800-110-093 helpline and OTP-based complaint system', hi: 'Rajasthan road pothole complaint — PWD 1800-110-093 helpline ya portal' },
+        url: 'https://pwdrajsewa.rajasthan.gov.in',
+        phone: '1800-110-093',
+        howto: [
+          { en: 'Dial 1800-110-093 (toll-free) — Rajasthan PWD road helpline', hi: '1800-110-093 dial karein (toll-free) — Rajasthan PWD road helpline' },
+          { en: 'Online: pwdrajsewa.rajasthan.gov.in → Submit Complaint Step 1 (OTP login)', hi: 'pwdrajsewa.rajasthan.gov.in → Submit Complaint → OTP se login karein' },
+          { en: 'Select road type: State Highway / District Road → enter km marker or landmark', hi: 'Road type: State Highway / District Road → km marker ya landmark enter karein' },
+          { en: 'Upload photo and describe damage — complaint tracked till resolution', hi: 'Photo upload karein, damage describe karein — resolution tak tracked rehti hai' },
+        ],
+      },
+      {
+        badge: 'state',
+        name: 'Rajasthan Sampark 181 — Road Escalation',
+        desc: { en: 'PWD not acting? Escalate via Rajasthan CM Helpline 181', hi: 'PWD action nahi? Rajasthan CM Helpline 181 par escalate karein' },
+        url: 'https://sampark.rajasthan.gov.in',
+        phone: '181',
+        howto: [
+          { en: 'Dial 181 OR open sampark.rajasthan.gov.in → select "PWD"', hi: '181 dial karein ya sampark.rajasthan.gov.in → "PWD" select karein' },
+          { en: 'Describe road damage with previous PWD complaint reference number', hi: 'PWD complaint reference ke saath road damage describe karein' },
         ],
       },
     ],
@@ -1270,14 +1462,52 @@ export const STATE_PORTALS = {
     pani: [
       {
         badge: 'first',
-        name: 'AMC — Ahmedabad Municipal Water Complaint',
-        desc: { en: 'Ahmedabad Municipal Corporation — water supply complaints', hi: 'Ahmedabad water supply complaint — AMC portal' },
-        url: 'https://ahmedabadcity.gov.in',
-        phone: '079-25391800',
+        name: 'AMC — Ahmedabad Municipal Water Complaint (155303)',
+        desc: { en: 'Ahmedabad Municipal Corporation — water supply 155303 helpline and amccrs.com', hi: 'Ahmedabad water complaint — AMC 155303 ya amccrs.com portal' },
+        url: 'https://www.amccrs.com',
+        phone: '155303',
         howto: [
-          { en: 'Open ahmedabadcity.gov.in → Citizens Services → Complaint', hi: 'ahmedabadcity.gov.in → Citizens Services → Complaint mein jaayein' },
-          { en: 'Select "Water Supply" and enter ward/area details', hi: '"Water Supply" select karein, ward/area details enter karein' },
-          { en: 'For other Gujarat cities: contact your municipal corporation', hi: 'Gujarat ke dusre cities ke liye: apne municipal corporation ko contact karein' },
+          { en: 'Dial 155303 (AMC citizen helpline) OR open amccrs.com', hi: '155303 dial karein (AMC helpline) ya amccrs.com kholen' },
+          { en: 'Online: amccrs.com → Lodge Complaint → select "Water Supply"', hi: 'amccrs.com → Lodge Complaint → "Water Supply" select karein' },
+          { en: 'Enter ward/zone, consumer ID, and describe the water problem', hi: 'Ward/zone, consumer ID enter karein aur water problem describe karein' },
+          { en: 'For Surat: SMC helpline 0261-2222333 | Rajkot: RMC 1800-1200-2333', hi: 'Surat: SMC 0261-2222333 | Rajkot: RMC 1800-1200-2333' },
+        ],
+      },
+      {
+        badge: 'state',
+        name: 'GWSSB — Gujarat Rural Water Supply Complaint',
+        desc: { en: 'Gujarat Water Supply & Sewerage Board — covers rural/non-municipal Gujarat', hi: 'GWSSB — Gujarat ke rural/non-municipal areas mein water supply complaint' },
+        url: 'https://gwssb.guj.nic.in',
+        phone: '079-23252400',
+        howto: [
+          { en: 'Online: gwssb.guj.nic.in → Citizen Services → Complaint', hi: 'gwssb.guj.nic.in → Citizen Services → Complaint mein jaayein' },
+          { en: 'Select your district and taluka → describe water supply problem', hi: 'District aur taluka select karein → water supply problem describe karein' },
+          { en: 'GWSSB helpline: 079-23252400 (9 AM – 6 PM)', hi: 'GWSSB helpline: 079-23252400 (9 AM – 6 PM)' },
+        ],
+      },
+    ],
+    sadak: [
+      {
+        badge: 'first',
+        name: 'AMC — Ahmedabad Road & Pothole Complaint (155303)',
+        desc: { en: 'Ahmedabad Municipal Corporation — 155303 for road/pothole complaints', hi: 'Ahmedabad road pothole complaint — AMC 155303 helpline ya amccrs.com' },
+        url: 'https://www.amccrs.com',
+        phone: '155303',
+        howto: [
+          { en: 'Dial 155303 (AMC helpline) OR open amccrs.com → Lodge Complaint', hi: '155303 dial karein ya amccrs.com → Lodge Complaint select karein' },
+          { en: 'Select complaint: Pothole / Road Damage / Broken Footpath', hi: 'Complaint: Pothole / Road Damage / Broken Footpath select karein' },
+          { en: 'Upload photo with location — AMC aims to repair within 48 hours', hi: 'Location ke saath photo upload karein — AMC 48 ghante mein repair karta hai' },
+        ],
+      },
+      {
+        badge: 'state',
+        name: 'Gujarat R&B Dept — State Highway Road Complaint',
+        desc: { en: 'Gujarat Roads & Buildings Dept for state highways and inter-city roads', hi: 'Gujarat R&B Dept — state highway aur inter-city road complaints' },
+        url: 'https://rnb.gujarat.gov.in',
+        phone: '079-23251801',
+        howto: [
+          { en: 'Open rnb.gujarat.gov.in → Citizen Services → Grievance', hi: 'rnb.gujarat.gov.in → Citizen Services → Grievance mein jaayein' },
+          { en: 'For Surat: SMC road 0261-2222333 | Vadodara: VMC 0265-2425599', hi: 'Surat: SMC road 0261-2222333 | Vadodara: VMC 0265-2425599' },
         ],
       },
     ],
@@ -1377,14 +1607,42 @@ export const STATE_PORTALS = {
     pani: [
       {
         badge: 'first',
-        name: 'KMC Water Supply Complaint (Kolkata)',
-        desc: { en: 'Kolkata Municipal Corporation — water supply complaint portal', hi: 'Kolkata water supply complaint — KMC portal' },
+        name: 'KMC — Kolkata Water Supply Complaint (1916)',
+        desc: { en: 'Kolkata Municipal Corporation — 1916 helpline and kmcgov.in online portal', hi: 'Kolkata water supply complaint — KMC 1916 helpline ya kmcgov.in' },
         url: 'https://www.kmcgov.in',
         phone: '1916',
         howto: [
-          { en: 'Open kmcgov.in → e-Services → Complaint Registration', hi: 'kmcgov.in → e-Services → Complaint Registration mein jaayein' },
-          { en: 'Select "Water Supply" and fill your ward/borough details', hi: '"Water Supply" select karein, ward/borough details bharein' },
-          { en: 'For KMDA areas outside KMC: contact KMDA 033-22861212', hi: 'KMC ke bahar KMDA areas ke liye: 033-22861212 call karein' },
+          { en: 'Dial 1916 (24×7) — KMC water helpline Kolkata', hi: '1916 dial karein (24×7) — Kolkata KMC water helpline' },
+          { en: 'Online: kmcgov.in → e-Services → Complaint Registration → select "Water Supply"', hi: 'kmcgov.in → e-Services → Complaint Registration → "Water Supply" select karein' },
+          { en: 'Enter your Borough and Ward number with consumer ID from bill', hi: 'Borough aur Ward number aur bill se consumer ID enter karein' },
+          { en: 'WhatsApp: 9831001234 (KMC civic complaints)', hi: 'WhatsApp: 9831001234 — KMC civic complaints ke liye' },
+        ],
+      },
+      {
+        badge: 'state',
+        name: 'WBPHED — West Bengal Water Supply (Non-Kolkata)',
+        desc: { en: 'WB Public Health Engineering Dept — rural and town water supply outside Kolkata', hi: 'Kolkata ke bahar WB water supply — PHED complaint portal' },
+        url: 'https://phed.wb.gov.in',
+        phone: '1916',
+        howto: [
+          { en: 'Dial 1916 — WB water helpline (works in most districts)', hi: '1916 dial karein — WB water helpline (most districts mein kaam karta hai)' },
+          { en: 'Online: phed.wb.gov.in → Citizen Services → Lodge Complaint', hi: 'phed.wb.gov.in → Citizen Services → Lodge Complaint karein' },
+          { en: 'Select district → describe issue: No Supply / Leakage / Quality', hi: 'District select karein → describe: No Supply / Leakage / Quality' },
+        ],
+      },
+    ],
+    sadak: [
+      {
+        badge: 'first',
+        name: 'WB PWD — Road Complaint Portal & WhatsApp',
+        desc: { en: 'West Bengal PWD — 1800-3456-179 helpline and WhatsApp 9088822111', hi: 'WB road pothole complaint — PWD 1800-3456-179 ya WhatsApp 9088822111' },
+        url: 'https://pwd.wb.gov.in/general/login?module=grievance',
+        phone: '1800-3456-179',
+        howto: [
+          { en: 'Dial 1800-3456-179 (toll-free) — WB PWD road complaint helpline', hi: '1800-3456-179 dial karein (toll-free) — WB PWD road complaint helpline' },
+          { en: 'WhatsApp: 9088822111 — send pothole photo with exact location (48-hr promise)', hi: 'WhatsApp: 9088822111 — pothole photo exact location ke saath — 48 ghante mein repair promise' },
+          { en: 'Online: pwd.wb.gov.in → Grievance Module → register complaint', hi: 'pwd.wb.gov.in → Grievance Module → complaint register karein' },
+          { en: 'For Kolkata city roads: KMC — kmcgov.in → e-Services → Roads', hi: 'Kolkata city roads ke liye: KMC — kmcgov.in → e-Services → Roads' },
         ],
       },
     ],
@@ -1486,14 +1744,65 @@ export const STATE_PORTALS = {
     pani: [
       {
         badge: 'first',
-        name: 'HSVP / PHD Haryana — Water Complaint',
-        desc: { en: 'Haryana water supply complaint — Public Health Department', hi: 'Haryana water supply complaint — PHD portal' },
-        url: 'https://phdharyana.gov.in',
-        phone: '1916',
+        name: 'PHED Haryana — Urban & Rural Water Complaint',
+        desc: { en: 'Public Health Engineering Dept Haryana — 1800-2000-023 helpline & online portal', hi: 'Haryana PHED — pani supply complaint ke liye 1800-2000-023 ya online portal' },
+        url: 'https://services.phedharyana.gov.in',
+        phone: '1800-2000-023',
         howto: [
-          { en: 'Open phdharyana.gov.in → Grievances section', hi: 'phdharyana.gov.in → Grievances section mein jaayein' },
-          { en: 'Enter your district and complaint details', hi: 'District enter karein aur complaint details dein' },
-          { en: 'For Gurugram: contact GMDA Water Department: 0124-4060000', hi: 'Gurugram ke liye: GMDA Water Department: 0124-4060000' },
+          { en: 'Dial 1800-2000-023 (toll-free) — PHED Haryana water helpline', hi: '1800-2000-023 dial karein (toll-free) — PHED Haryana water helpline' },
+          { en: 'Online: services.phedharyana.gov.in → Register Complaint → select district', hi: 'services.phedharyana.gov.in → Register Complaint → district select karein' },
+          { en: 'Enter your connection number from water bill → describe issue → submit', hi: 'Water bill se connection number enter karein → issue describe karein → submit' },
+          { en: 'Complaint is assigned to local PHED JE (Junior Engineer) — 48-hr response target', hi: 'Complaint local PHED JE ko assign hoti hai — 48 ghante mein response target' },
+        ],
+      },
+      {
+        badge: 'first',
+        name: 'GMDA — Gurugram Water Supply Complaint',
+        desc: { en: 'Gurugram Metropolitan Development Authority — 1800-180-1817 helpline', hi: 'Gurugram water complaint — GMDA 1800-180-1817 ya services.gmda.gov.in' },
+        url: 'https://services.gmda.gov.in',
+        phone: '1800-180-1817',
+        howto: [
+          { en: 'Dial 1800-180-1817 (toll-free) — GMDA Gurugram helpline', hi: '1800-180-1817 dial karein (toll-free) — GMDA Gurugram helpline' },
+          { en: 'Online: services.gmda.gov.in → Complaint Registration → "Water Supply"', hi: 'services.gmda.gov.in → Complaint Registration → "Water Supply" select karein' },
+          { en: 'Enter sector/colony/house number → describe water issue → submit', hi: 'Sector/colony/house number → water issue describe → submit karein' },
+        ],
+      },
+      {
+        badge: 'state',
+        name: 'CM Window Haryana — Water Escalation',
+        desc: { en: 'PHED/GMDA not resolving? Escalate via CM Window 1100', hi: 'PHED/GMDA resolve nahi? CM Window 1100 par escalate karein' },
+        url: 'https://cmwindow.haryana.gov.in',
+        phone: '1100',
+        howto: [
+          { en: 'Dial 1100 OR open cmwindow.haryana.gov.in', hi: '1100 dial karein ya cmwindow.haryana.gov.in kholen' },
+          { en: 'Select department: "PHED" or "Urban Local Bodies"', hi: 'Department: "PHED" ya "Urban Local Bodies" select karein' },
+          { en: 'Describe with previous reference number — CM Window has strict SLA monitoring', hi: 'Pichle PHED reference number ke saath describe karein — strict SLA monitoring' },
+        ],
+      },
+    ],
+    sadak: [
+      {
+        badge: 'first',
+        name: 'Haryana PWD — Road & Pothole Complaint',
+        desc: { en: 'Haryana PWD — haryanapwd.gov.in for state road/pothole complaints', hi: 'Haryana road pothole complaint — haryanapwd.gov.in ya 1800-8900-929' },
+        url: 'https://haryanapwd.gov.in',
+        phone: '1800-8900-929',
+        howto: [
+          { en: 'Open haryanapwd.gov.in → Citizen Services → Lodge Complaint', hi: 'haryanapwd.gov.in → Citizen Services → Lodge Complaint mein jaayein' },
+          { en: 'eSAMADHAN toll-free: 1800-8900-929 — for all PWD road complaints', hi: 'eSAMADHAN toll-free: 1800-8900-929 — PWD road complaints ke liye' },
+          { en: 'Gurugram roads: GMDA — services.gmda.gov.in → Roads section', hi: 'Gurugram roads ke liye: services.gmda.gov.in → Roads section' },
+          { en: 'For National Highways: NHAI 1033', hi: 'National Highways ke liye: NHAI 1033 dial karein' },
+        ],
+      },
+      {
+        badge: 'state',
+        name: 'CM Window Haryana — Road Escalation',
+        desc: { en: 'PWD not repairing? Escalate via Haryana CM Window 1100', hi: 'PWD repair nahi kar raha? CM Window 1100 par escalate karein' },
+        url: 'https://cmwindow.haryana.gov.in',
+        phone: '1100',
+        howto: [
+          { en: 'Dial 1100 OR open cmwindow.haryana.gov.in → select "PWD"', hi: '1100 dial karein ya cmwindow.haryana.gov.in → "PWD" select karein' },
+          { en: 'Add previous PWD complaint reference — CM Window SLA is strict', hi: 'Pichla PWD complaint reference add karein — CM Window ka SLA strict hai' },
         ],
       },
     ],
@@ -1593,6 +1902,48 @@ export const STATE_PORTALS = {
         ],
       },
     ],
+    pani: [
+      {
+        badge: 'first',
+        name: 'PWSSB — Punjab Water Supply & Sewerage Complaint',
+        desc: { en: 'Punjab Water Supply & Sewerage Board — 1800-1800-0172 helpline and online', hi: 'Punjab PWSSB — pani supply complaint ke liye 1800-1800-0172 ya online portal' },
+        url: 'https://pwssb.punjab.gov.in',
+        phone: '1800-1800-0172',
+        howto: [
+          { en: 'Dial 1800-1800-0172 (toll-free) — PWSSB Punjab water helpline', hi: '1800-1800-0172 dial karein (toll-free) — PWSSB Punjab water helpline' },
+          { en: 'Online: pwssb.punjab.gov.in → Consumer Services → Register Complaint', hi: 'pwssb.punjab.gov.in → Consumer Services → Register Complaint karein' },
+          { en: 'Enter consumer/connection ID → select complaint: No Supply / Leakage / Quality', hi: 'Consumer/connection ID enter karein → complaint select: No Supply / Leakage / Quality' },
+          { en: 'For Amritsar: AMC water dept 0183-2220000 | Ludhiana: LMC 0161-2444444', hi: 'Amritsar: AMC 0183-2220000 | Ludhiana: LMC 0161-2444444' },
+        ],
+      },
+      {
+        badge: 'state',
+        name: 'Punjab Grievance Portal — Water Escalation',
+        desc: { en: 'PWSSB not resolving? Escalate via Punjab state grievance portal', hi: 'PWSSB resolve nahi? Punjab state grievance portal par escalate karein' },
+        url: 'https://punjabpgrs.gov.in',
+        phone: '0172-2970125',
+        howto: [
+          { en: 'Open punjabpgrs.gov.in → Register/Login', hi: 'punjabpgrs.gov.in → Register/Login karein' },
+          { en: 'Select department: "PWSSB" and attach previous complaint reference', hi: 'Department: "PWSSB" select karein aur pichla complaint reference attach karein' },
+          { en: 'Complaint escalated to divisional level within 48 hours', hi: 'Complaint 48 ghante mein divisional level par escalate hoti hai' },
+        ],
+      },
+    ],
+    sadak: [
+      {
+        badge: 'first',
+        name: 'Punjab PWD — Road & Pothole Complaint',
+        desc: { en: 'Punjab PWD B&R — pwdpunjab.gov.in road complaint portal', hi: 'Punjab road pothole complaint — Punjab PWD portal ya CM helpline' },
+        url: 'https://pwdpunjab.gov.in',
+        phone: '0175-2360003',
+        howto: [
+          { en: 'Call Punjab PWD: 0175-2360003 (Patiala) or 0175-2360039', hi: 'Punjab PWD call karein: 0175-2360003 ya 0175-2360039 (Patiala)' },
+          { en: 'Online: pwdpunjab.gov.in → Contact/Complaint → select division', hi: 'pwdpunjab.gov.in → Contact/Complaint → apna division select karein' },
+          { en: 'CM Punjab 24×7 toll-free: 08000-02345 for road complaint escalation', hi: 'CM Punjab 24×7 toll-free: 08000-02345 — road complaint escalation ke liye' },
+          { en: 'For city roads (Amritsar/Ludhiana): contact municipal corporation', hi: 'City roads (Amritsar/Ludhiana) ke liye: municipal corporation se contact karein' },
+        ],
+      },
+    ],
     safai: [
       {
         badge: 'first',
@@ -1674,6 +2025,48 @@ export const STATE_PORTALS = {
           { en: 'Open mperc.in → "Consumer Grievance Redressal Forum"', hi: 'mperc.in → "Consumer Grievance Redressal Forum" mein jaayein' },
           { en: 'File with your DISCOM complaint number and documents', hi: 'DISCOM complaint number aur documents ke saath file karein' },
           { en: 'CGRF at each DISCOM circle level — 45-day resolution mandate', hi: 'Har DISCOM circle par CGRF hai — 45 din mein resolution mandatory' },
+        ],
+      },
+    ],
+    pani: [
+      {
+        badge: 'first',
+        name: 'PHED MP — Water Supply Complaint Portal',
+        desc: { en: 'MP Public Health Engineering Dept — water supply complaints via 181 / phedmp.gov.in', hi: 'MP water supply complaint — PHED 181 ya phedmp.gov.in portal' },
+        url: 'https://phedmp.gov.in',
+        phone: '181',
+        howto: [
+          { en: 'Dial 181 (MP CM Helpline) → select "PHED" for water complaints', hi: '181 dial karein (MP CM Helpline) → "PHED" select karein — water complaint ke liye' },
+          { en: 'Online: phedmp.gov.in → Complaint Registration → select district', hi: 'phedmp.gov.in → Complaint Registration → district select karein' },
+          { en: 'Enter connection number → select issue: No Supply / Leakage / Quality / Billing', hi: 'Connection number enter karein → issue select: No Supply / Leakage / Quality' },
+          { en: 'For Bhopal: BMC water dept 0755-2776222 | Indore: IMC 0731-2543440', hi: 'Bhopal: BMC water dept 0755-2776222 | Indore: IMC 0731-2543440' },
+        ],
+      },
+      {
+        badge: 'state',
+        name: 'MP Samadhan Portal — Water Escalation',
+        desc: { en: 'PHED not resolving? Escalate via MP CM Helpline / Samadhan portal', hi: 'PHED resolve nahi? samadhan.mp.gov.in ya 181 se escalate karein' },
+        url: 'https://samadhan.mp.gov.in',
+        phone: '181',
+        howto: [
+          { en: 'Open samadhan.mp.gov.in → "Lodge Complaint" → select PHED department', hi: 'samadhan.mp.gov.in → "Lodge Complaint" → PHED department select karein' },
+          { en: 'Describe water problem with previous PHED reference number', hi: 'PHED reference number ke saath water problem describe karein' },
+          { en: 'CM Helpline 181 strictly monitors PHED resolutions — 7-day SLA', hi: 'CM Helpline 181 PHED resolution strictly monitor karta hai — 7 din ka SLA' },
+        ],
+      },
+    ],
+    sadak: [
+      {
+        badge: 'first',
+        name: 'MP PWD — Road & Pothole Complaint (181)',
+        desc: { en: 'Madhya Pradesh PWD — CM Helpline 181 or mppwd.gov.in for road complaints', hi: 'MP road pothole complaint — CM Helpline 181 ya mppwd.gov.in portal' },
+        url: 'https://mppwd.gov.in',
+        phone: '181',
+        howto: [
+          { en: 'Dial 181 (MP CM Helpline) → select "PWD" for road complaint', hi: '181 dial karein (MP CM Helpline) → "PWD" select karein — road complaint ke liye' },
+          { en: 'Online: mppwd.gov.in → Citizen Services → Complaint Registration', hi: 'mppwd.gov.in → Citizen Services → Complaint Registration karein' },
+          { en: 'For Bhopal city roads: BMC 0755-2776222 | Indore: IMC 0731-2543440', hi: 'Bhopal city roads: BMC 0755-2776222 | Indore city: IMC 0731-2543440' },
+          { en: 'Enter road name / km marker / landmark and upload pothole photo', hi: 'Road name / km marker / landmark enter karein aur pothole photo upload karein' },
         ],
       },
     ],
@@ -1759,17 +2152,44 @@ export const STATE_PORTALS = {
         ],
       },
     ],
+    sadak: [
+      {
+        badge: 'first',
+        name: 'Kerala PWD — Road & Pothole Complaint (1800-425-7771)',
+        desc: { en: 'Kerala Public Works Department — PWD4U app and 1800-425-7771 helpline', hi: 'Kerala road pothole complaint — PWD4U app ya 1800-425-7771 helpline' },
+        url: 'https://www.pwd.kerala.gov.in',
+        phone: '1800-425-7771',
+        howto: [
+          { en: 'Dial 1800-425-7771 (9:30 AM – 7:30 PM, working days) — Kerala PWD helpline', hi: '1800-425-7771 dial karein (9:30 AM–7:30 PM, working days) — Kerala PWD helpline' },
+          { en: 'App: "PWD4U" on Play Store/App Store — geo-tagged pothole complaint with tracking', hi: 'App: "PWD4U" — Play Store/App Store se download karein — geotagged pothole complaint' },
+          { en: 'Online: pwd.kerala.gov.in → Citizen Services → Lodge Complaint', hi: 'pwd.kerala.gov.in → Citizen Services → Lodge Complaint karein' },
+          { en: 'Upload pothole photo with GPS location — repair status trackable in app', hi: 'GPS ke saath pothole photo upload karein — app mein repair status track kar sakte ho' },
+        ],
+      },
+      {
+        badge: 'state',
+        name: 'Kerala CM Grievance — Road Escalation',
+        desc: { en: 'PWD not repairing? Escalate via Kerala CM Grievance Cell', hi: 'PWD repair nahi? Kerala CM Grievance Cell ke through escalate karein' },
+        url: 'https://grievance.kerala.gov.in',
+        phone: '0471-2333100',
+        howto: [
+          { en: 'Kerala CM Grievance: grievance.kerala.gov.in → Lodge Complaint → select PWD', hi: 'grievance.kerala.gov.in → Lodge Complaint → PWD select karein' },
+          { en: 'CM Office phone: 0471-2333100 (Thiruvananthapuram)', hi: 'CM Office: 0471-2333100 (Thiruvananthapuram)' },
+        ],
+      },
+    ],
     pani: [
       {
         badge: 'first',
-        name: 'Kerala Water Authority — Consumer Complaint',
-        desc: { en: 'KWA official complaint portal for water supply issues in Kerala', hi: 'Kerala water supply complaint — KWA official portal' },
-        url: 'https://www.kwa.kerala.gov.in',
-        phone: '0471-2738300',
+        name: 'KWA — Kerala Water Authority Consumer Complaint',
+        desc: { en: 'Kerala Water Authority — 1916 / 1800-425-5313 helpline and KWA online portal', hi: 'Kerala Water Authority — 1916 helpline, WhatsApp ya KWA online portal' },
+        url: 'https://aqualoomnew.kwa.kerala.gov.in',
+        phone: '1916',
         howto: [
-          { en: 'Open kwa.kerala.gov.in → Consumer Services → Complaint', hi: 'kwa.kerala.gov.in → Consumer Services → Complaint mein jaayein' },
-          { en: 'Enter Connection Number from water bill', hi: 'Water bill se Connection Number enter karein' },
-          { en: 'Describe water supply issue: No Supply / Leakage / Quality', hi: 'Water supply issue describe karein: No Supply / Leakage / Quality' },
+          { en: 'Dial 1916 (24×7 toll-free) OR 1800-425-5313 — KWA water helpline Kerala', hi: '1916 dial karein (24×7 toll-free) ya 1800-425-5313 — KWA Kerala water helpline' },
+          { en: 'WhatsApp: 9495998258 — send consumer number, area and issue description', hi: 'WhatsApp: 9495998258 — consumer number, area aur issue description bhejein' },
+          { en: 'Online: aqualoomnew.kwa.kerala.gov.in → Consumer Services → Complaints', hi: 'aqualoomnew.kwa.kerala.gov.in → Consumer Services → Complaints mein jaayein' },
+          { en: 'Enter Connection Number from water bill → select issue: No Supply / Leakage / Quality / Billing', hi: 'Water bill se Connection Number enter karein → issue select karein → submit' },
         ],
       },
     ],
@@ -1839,6 +2259,59 @@ export const STATE_PORTALS = {
           { en: 'Open cgrf.bsphcl.co.in → register complaint with NBPDCL/SBPDCL reference', hi: 'cgrf.bsphcl.co.in → NBPDCL/SBPDCL reference ke saath complaint register karein' },
           { en: 'CGRF circle offices in 11 SBPDCL + 9 NBPDCL circles', hi: 'CGRF offices 11 SBPDCL aur 9 NBPDCL circles mein hain' },
           { en: 'Decision within 45 days — appeal to Electricity Ombudsman after', hi: '45 din mein decision — baad mein Electricity Ombudsman ko appeal karein' },
+        ],
+      },
+    ],
+    pani: [
+      {
+        badge: 'first',
+        name: 'PHED Bihar — Water Supply Complaint (phedcgrc.in)',
+        desc: { en: 'Bihar PHED — 1800-123-1121 helpline and phedcgrc.in complaint portal', hi: 'Bihar water supply complaint — PHED 1800-123-1121 helpline ya phedcgrc.in' },
+        url: 'https://phedcgrc.in',
+        phone: '1800-123-1121',
+        howto: [
+          { en: 'Dial 1800-123-1121 (toll-free) — PHED Bihar water complaint helpline', hi: '1800-123-1121 dial karein (toll-free) — PHED Bihar water helpline' },
+          { en: 'Online: phedcgrc.in → Register Complaint → select your district', hi: 'phedcgrc.in → Register Complaint → apna district select karein' },
+          { en: 'Enter your consumer/connection number → describe issue → submit', hi: 'Consumer/connection number enter karein → issue describe karein → submit' },
+          { en: 'For Patna city: PHED Patna Division: 0612-2677008', hi: 'Patna city ke liye: PHED Patna Division: 0612-2677008' },
+        ],
+      },
+      {
+        badge: 'state',
+        name: 'Bihar CM Helpline 15545 — Water Escalation',
+        desc: { en: 'PHED not resolving? Escalate via Bihar CM Helpline 15545', hi: 'PHED resolve nahi? Bihar CM Helpline 15545 par escalate karein' },
+        url: 'https://jansampark.bihar.gov.in',
+        phone: '15545',
+        howto: [
+          { en: 'Dial 15545 OR open jansampark.bihar.gov.in', hi: '15545 dial karein ya jansampark.bihar.gov.in kholen' },
+          { en: 'Select department: "PHED" → describe complaint with reference number', hi: 'Department: "PHED" → reference number ke saath complaint describe karein' },
+          { en: 'CM Helpline forwards to DM level — 7-day resolution monitoring', hi: 'CM Helpline DM level par forward karta hai — 7 din mein resolution monitoring' },
+        ],
+      },
+    ],
+    sadak: [
+      {
+        badge: 'first',
+        name: 'Bihar RWD — Road & Pothole Complaint Portal',
+        desc: { en: 'Bihar Rural Works Department — 1800-3456-284 helpline and rwdbihar.gov.in', hi: 'Bihar road pothole complaint — RWD 1800-3456-284 helpline ya rwdbihar.gov.in' },
+        url: 'https://rwdbihar.gov.in',
+        phone: '1800-3456-284',
+        howto: [
+          { en: 'Dial 1800-3456-284 (toll-free) — Bihar RWD road grievance helpline', hi: '1800-3456-284 dial karein (toll-free) — Bihar RWD road grievance helpline' },
+          { en: 'Online: rwdbihar.gov.in → Complaint → select district and road type', hi: 'rwdbihar.gov.in → Complaint → district aur road type select karein' },
+          { en: 'For Patna city roads: Patna Municipal Corporation — 0612-2232101', hi: 'Patna city roads ke liye: Patna Municipal Corporation — 0612-2232101' },
+          { en: 'For state/national highways: Bihar NHAI team / NHAI 1033', hi: 'State/national highways ke liye: NHAI 1033 dial karein' },
+        ],
+      },
+      {
+        badge: 'state',
+        name: 'Bihar CM Helpline 15545 — Road Escalation',
+        desc: { en: 'RWD not responding? Escalate via Bihar CM Helpline 15545', hi: 'RWD response nahi? Bihar CM Helpline 15545 par escalate karein' },
+        url: 'https://jansampark.bihar.gov.in',
+        phone: '15545',
+        howto: [
+          { en: 'Dial 15545 OR open jansampark.bihar.gov.in → select "RWD/PWD"', hi: '15545 dial karein ya jansampark.bihar.gov.in → "RWD/PWD" select karein' },
+          { en: 'Attach previous RWD complaint reference — DM level escalation in 7 days', hi: 'Pichla RWD complaint reference attach karein — 7 din mein DM level escalation' },
         ],
       },
     ],
@@ -1923,6 +2396,46 @@ export const STATE_PORTALS = {
         ],
       },
     ],
+    pani: [
+      {
+        badge: 'first',
+        name: 'GVMC — Visakhapatnam Water Supply Complaint',
+        desc: { en: 'GVMC Visakhapatnam water supply — 1800-4250-0009 helpline', hi: 'Vizag water supply complaint — GVMC 1800-4250-0009 ya gvmc.gov.in' },
+        url: 'https://www.gvmc.gov.in',
+        phone: '1800-4250-0009',
+        howto: [
+          { en: 'Dial 1800-4250-0009 (toll-free) — GVMC Visakhapatnam water helpline', hi: '1800-4250-0009 dial karein (toll-free) — GVMC Vizag water helpline' },
+          { en: 'Online: gvmc.gov.in → Citizen Services → Water Supply Complaint', hi: 'gvmc.gov.in → Citizen Services → Water Supply Complaint mein jaayein' },
+          { en: 'Enter property/consumer ID → select issue type → submit', hi: 'Property/consumer ID enter karein → issue type select karein → submit' },
+        ],
+      },
+      {
+        badge: 'state',
+        name: 'AP CRDA / Municipal Water — Other AP Cities',        desc: { en: 'Amaravati: APCRDA | Vijayawada: VMC 0866-2421026 | Tirupati: TMC', hi: 'Amaravati: APCRDA | Vijayawada: VMC 0866-2421026 | Tirupati: TMC se contact karein' },
+        url: 'https://apcrda.ap.gov.in',
+        phone: '0866-2421026',
+        howto: [
+          { en: 'Vijayawada Municipal Corporation water: 0866-2421026', hi: 'Vijayawada Municipal Corporation water: 0866-2421026' },
+          { en: 'Tirupati: TMC water dept 0877-2236201', hi: 'Tirupati: TMC water dept 0877-2236201' },
+          { en: 'AP CM Helpline: 1902 — for all water supply escalations', hi: 'AP CM Helpline: 1902 — water supply escalation ke liye' },
+        ],
+      },
+    ],
+    sadak: [
+      {
+        badge: 'first',
+        name: 'AP R&B Dept — State Road & Pothole Complaint',
+        desc: { en: 'Andhra Pradesh Roads & Buildings Dept — 1902 CM helpline for road complaints', hi: 'AP road pothole complaint — R&B Dept ya CM Helpline 1902' },
+        url: 'https://pgr.ap.gov.in',
+        phone: '1902',
+        howto: [
+          { en: 'Dial 1902 (AP CM Helpline) → select "R&B" for state road complaints', hi: '1902 dial karein (AP CM Helpline) → "R&B" select karein — state road complaints ke liye' },
+          { en: 'Online: pgr.ap.gov.in → Lodge Grievance → select Roads & Buildings', hi: 'pgr.ap.gov.in → Lodge Grievance → Roads & Buildings select karein' },
+          { en: 'GVMC Vizag road: 1800-4250-0009 | Vijayawada: VMC 0866-2421026', hi: 'GVMC Vizag road: 1800-4250-0009 | Vijayawada: VMC 0866-2421026' },
+          { en: 'For National Highways in AP: NHAI 1033', hi: 'AP mein National Highways ke liye: NHAI 1033' },
+        ],
+      },
+    ],
   },
 
   // ── Telangana ─────────────────────────────────────────────────────────────
@@ -1991,6 +2504,60 @@ export const STATE_PORTALS = {
         ],
       },
     ],
+    pani: [
+      {
+        badge: 'first',
+        name: 'HMWSSB — Hyderabad Metro Water Supply Complaint',
+        desc: { en: 'Hyderabad Metro Water Supply & Sewerage Board — 155313 helpline', hi: 'Hyderabad water supply complaint — HMWSSB 155313 helpline ya hyderabadwater.gov.in' },
+        url: 'https://www.hyderabadwater.gov.in',
+        phone: '155313',
+        howto: [
+          { en: 'Dial 155313 (24×7) — HMWSSB Hyderabad water helpline', hi: '155313 dial karein (24×7) — HMWSSB Hyderabad water helpline' },
+          { en: 'WhatsApp: +91 91541 70968 — send consumer number, area and problem', hi: 'WhatsApp: +91 91541 70968 — consumer number, area aur problem bhejein' },
+          { en: 'Online: hyderabadwater.gov.in → Consumer Services → Lodge Complaint', hi: 'hyderabadwater.gov.in → Consumer Services → Lodge Complaint karein' },
+          { en: 'Enter Consumer Number from water bill → select issue → submit → note complaint ID', hi: 'Water bill se Consumer Number enter karein → issue select karein → submit' },
+          { en: 'For areas outside HMWSSB: TSMDP / local Municipal water dept', hi: 'HMWSSB ke bahar: TSMDP ya local Municipal water dept se contact karein' },
+        ],
+      },
+      {
+        badge: 'state',
+        name: 'TS CM Helpline 1100 — Water Escalation',
+        desc: { en: 'HMWSSB not resolving? Escalate via Telangana CM Helpline 1100', hi: 'HMWSSB resolve nahi? Telangana CM Helpline 1100 par escalate karein' },
+        url: 'https://pgportal.telangana.gov.in',
+        phone: '1100',
+        howto: [
+          { en: 'Dial 1100 (TS CM Helpline) for water supply complaints', hi: '1100 dial karein (TS CM Helpline) — water supply complaint ke liye' },
+          { en: 'Online: pgportal.telangana.gov.in → Lodge Grievance → select HMWSSB', hi: 'pgportal.telangana.gov.in → Lodge Grievance → HMWSSB select karein' },
+          { en: 'Describe water problem with HMWSSB complaint reference number', hi: 'HMWSSB complaint reference number ke saath water problem describe karein' },
+        ],
+      },
+    ],
+    sadak: [
+      {
+        badge: 'first',
+        name: 'GHMC — Hyderabad Road & Pothole Complaint',
+        desc: { en: 'GHMC Hyderabad — 040-21111111 helpline and My GHMC app for roads', hi: 'Hyderabad road pothole complaint — GHMC 040-21111111 ya My GHMC app' },
+        url: 'https://www.ghmc.gov.in',
+        phone: '040-21111111',
+        howto: [
+          { en: 'Dial 040-21111111 (GHMC 24×7) for road/pothole complaints Hyderabad', hi: '040-21111111 dial karein (GHMC 24×7) — Hyderabad road/pothole complaint ke liye' },
+          { en: 'App: "My GHMC" on Play Store/App Store — report pothole with GPS photo', hi: 'App: "My GHMC" — Play Store/App Store se download karein — GPS photo ke saath pothole report karein' },
+          { en: 'Online: ghmc.gov.in → Citizen Services → Complaint → select "Roads"', hi: 'ghmc.gov.in → Citizen Services → Complaint → "Roads" select karein' },
+          { en: 'For areas outside GHMC (Warangal/Karimnagar): contact district municipal corporation', hi: 'GHMC ke bahar (Warangal/Karimnagar) ke liye: district municipal corporation' },
+        ],
+      },
+      {
+        badge: 'state',
+        name: 'TS R&B Dept — State Highway Road Complaint',
+        desc: { en: 'Telangana Roads & Buildings Dept for highways and state roads', hi: 'Telangana R&B Dept — state highway aur inter-city road complaints' },
+        url: 'https://pgportal.telangana.gov.in',
+        phone: '1100',
+        howto: [
+          { en: 'Dial 1100 (TS CM Helpline) → select R&B for state road complaints', hi: '1100 (TS CM Helpline) → R&B select karein — state road complaints ke liye' },
+          { en: 'Online: pgportal.telangana.gov.in → Lodge Grievance → Roads & Buildings', hi: 'pgportal.telangana.gov.in → Lodge Grievance → Roads & Buildings select karein' },
+        ],
+      },
+    ],
     safai: [
       {
         badge: 'first',
@@ -2008,6 +2575,47 @@ export const STATE_PORTALS = {
   },
   // ── Odisha ────────────────────────────────────────────────────────────────
   Odisha: {
+    sadak: [
+      {
+        badge: 'first',
+        name: 'Odisha Works Dept — Road & Pothole Complaint',
+        desc: { en: 'Odisha Works Department — 1967 helpline and works.odisha.gov.in', hi: 'Odisha road pothole complaint — Works Dept 1967 helpline ya portal' },
+        url: 'https://works.odisha.gov.in',
+        phone: '1967',
+        howto: [
+          { en: 'Dial 1967 (Odisha Grievance Redressal System) for road complaints', hi: '1967 dial karein (Odisha Grievance Redressal) — road complaint ke liye' },
+          { en: 'Online: works.odisha.gov.in → Complaint/Grievance section', hi: 'works.odisha.gov.in → Complaint/Grievance section mein jaayein' },
+          { en: 'Bhubaneswar city: BDA / BMC — bmc.gov.in → Complaints → Roads', hi: 'Bhubaneswar city ke liye: BMC — bmc.gov.in → Complaints → Roads' },
+          { en: 'For National Highways: NHAI 1033', hi: 'National Highways ke liye: NHAI 1033 dial karein' },
+        ],
+      },
+    ],
+    pani: [
+      {
+        badge: 'first',
+        name: 'PHEO Odisha — Water Supply Complaint',
+        desc: { en: 'Public Health Engineering Org Odisha — 1916 helpline and state portal', hi: 'Odisha water supply complaint — PHEO 1916 helpline ya state portal' },
+        url: 'https://phed.odisha.gov.in',
+        phone: '1916',
+        howto: [
+          { en: 'Dial 1916 (24×7) — Odisha water supply helpline', hi: '1916 dial karein (24×7) — Odisha water supply helpline' },
+          { en: 'Online: phed.odisha.gov.in → Grievance → Register Complaint', hi: 'phed.odisha.gov.in → Grievance → Register Complaint karein' },
+          { en: 'Select district and describe: No Supply / Leakage / Quality', hi: 'District select karein → describe: No Supply / Leakage / Quality' },
+          { en: 'For Bhubaneswar city: BMC water — bmc.gov.in | 0674-2432010', hi: 'Bhubaneswar: BMC water — bmc.gov.in | 0674-2432010' },
+        ],
+      },
+      {
+        badge: 'state',
+        name: 'Odisha CM Helpline 14545 — Water Escalation',
+        desc: { en: 'PHEO not resolving? Escalate via Odisha CM Helpline 14545', hi: 'PHEO resolve nahi? Odisha CM Helpline 14545 par escalate karein' },
+        url: 'https://cmhelpline.odisha.gov.in',
+        phone: '14545',
+        howto: [
+          { en: 'Dial 14545 (Odisha CM Helpline) for water supply escalation', hi: '14545 dial karein (Odisha CM Helpline) — water supply escalation ke liye' },
+          { en: 'Select department: "PHEO" and describe problem with previous reference', hi: 'Department: "PHEO" select karein — pichle reference ke saath describe karein' },
+        ],
+      },
+    ],
     bijli: [
       {
         badge: 'first',
@@ -2075,6 +2683,47 @@ export const STATE_PORTALS = {
 
   // ── Assam ─────────────────────────────────────────────────────────────────
   Assam: {
+    sadak: [
+      {
+        badge: 'first',
+        name: 'Assam PWD Roads — Road & Pothole Complaint',
+        desc: { en: 'Assam PWD Roads Division — pwdroads.assam.gov.in and helpline', hi: 'Assam road pothole complaint — PWD Roads Division portal ya helpline' },
+        url: 'https://pwdroads.assam.gov.in',
+        phone: '0361-2237378',
+        howto: [
+          { en: 'Call Assam PWD Roads: 0361-2237378 (Guwahati)', hi: 'Assam PWD Roads: 0361-2237378 — Guwahati call karein' },
+          { en: 'Online: pwdroads.assam.gov.in → Contact → Complaint submission', hi: 'pwdroads.assam.gov.in → Contact → Complaint submit karein' },
+          { en: 'Guwahati city roads: GMC — 0361-2636200', hi: 'Guwahati city roads ke liye: GMC — 0361-2636200' },
+          { en: 'Assam CM Helpline: 15100 for road complaint escalation', hi: 'Escalation ke liye: Assam CM Helpline 15100' },
+        ],
+      },
+    ],
+    pani: [
+      {
+        badge: 'first',
+        name: 'PHED Assam — Water Supply Complaint',
+        desc: { en: 'Assam PHED — water supply complaint 1916 and online portal', hi: 'Assam water supply complaint — PHED 1916 helpline ya online portal' },
+        url: 'https://www.phed.assam.gov.in',
+        phone: '1916',
+        howto: [
+          { en: 'Dial 1916 (24×7) — Assam water supply helpline', hi: '1916 dial karein (24×7) — Assam water supply helpline' },
+          { en: 'Online: phed.assam.gov.in → Citizen Services → Lodge Complaint', hi: 'phed.assam.gov.in → Citizen Services → Lodge Complaint karein' },
+          { en: 'Select district → describe issue: No Supply / Leakage / Quality', hi: 'District select karein → issue describe karein: No Supply / Leakage / Quality' },
+          { en: 'For Guwahati city: GMC water — 0361-2638200', hi: 'Guwahati city ke liye: GMC water — 0361-2638200' },
+        ],
+      },
+      {
+        badge: 'state',
+        name: 'Assam CM Helpline 15100 — Water Escalation',
+        desc: { en: 'PHED not resolving? Escalate via Assam CM Helpline 15100', hi: 'PHED resolve nahi? Assam CM Helpline 15100 par escalate karein' },
+        url: 'https://www.phed.assam.gov.in',
+        phone: '15100',
+        howto: [
+          { en: 'Dial 15100 (Assam CM Helpline) for water complaint escalation', hi: '15100 dial karein (Assam CM Helpline) — water complaint escalation ke liye' },
+          { en: 'Select "PHED" department and add previous complaint reference', hi: '"PHED" department select karein aur pichla complaint reference dein' },
+        ],
+      },
+    ],
     bijli: [
       {
         badge: 'first',
@@ -2141,6 +2790,47 @@ export const STATE_PORTALS = {
 
   // ── Jharkhand ─────────────────────────────────────────────────────────────
   Jharkhand: {
+    sadak: [
+      {
+        badge: 'first',
+        name: 'Jharkhand PGMS — Road & Pothole Complaint',
+        desc: { en: 'Jharkhand Public Grievance Management System — 1800-1202929 helpline', hi: 'Jharkhand road pothole complaint — PGMS 1800-1202929 helpline ya portal' },
+        url: 'https://pgms.jharkhand.gov.in',
+        phone: '1800-1202929',
+        howto: [
+          { en: 'Dial 1800-1202929 (Mon–Sat, 10 AM–5 PM) — Jharkhand PGMS helpline', hi: '1800-1202929 dial karein (Mon-Sat, 10 AM-5 PM) — Jharkhand PGMS helpline' },
+          { en: 'Citizen call centre: 155300 | WhatsApp/SMS: 7633928444', hi: 'Citizen call centre: 155300 | WhatsApp/SMS: 7633928444' },
+          { en: 'Online: pgms.jharkhand.gov.in → Submit Grievance → select "Roads/PWD"', hi: 'pgms.jharkhand.gov.in → Submit Grievance → "Roads/PWD" select karein' },
+          { en: 'Ranchi city: Ranchi Municipal Corporation — 0651-2331000', hi: 'Ranchi city roads ke liye: Ranchi Municipal Corporation — 0651-2331000' },
+        ],
+      },
+    ],
+    pani: [
+      {
+        badge: 'first',
+        name: 'JUSNL / PHED Jharkhand — Water Supply Complaint',
+        desc: { en: 'Jharkhand Urban Infrastructure — JUSNL + PHED for water supply complaints', hi: 'Jharkhand water supply complaint — JUSNL / PHED helpline ya portal' },
+        url: 'https://phed.jharkhand.gov.in',
+        phone: '1916',
+        howto: [
+          { en: 'Dial 1916 (24×7) — Jharkhand water supply helpline', hi: '1916 dial karein (24×7) — Jharkhand water supply helpline' },
+          { en: 'Online: phed.jharkhand.gov.in → Complaint → select district', hi: 'phed.jharkhand.gov.in → Complaint → district select karein' },
+          { en: 'For Ranchi city: RUIDP / Ranchi Nagar Nigam water — 0651-2331000', hi: 'Ranchi city ke liye: Ranchi Nagar Nigam water — 0651-2331000' },
+          { en: 'Describe issue: No Supply / Leakage / Quality → submit → note complaint ID', hi: 'Issue: No Supply / Leakage / Quality describe karein → submit → ID note karein' },
+        ],
+      },
+      {
+        badge: 'state',
+        name: 'Jharkhand CM Helpline 181 — Water Escalation',
+        desc: { en: 'PHED not resolving? Escalate via Jharkhand CM Helpline 181', hi: 'PHED resolve nahi? Jharkhand CM Helpline 181 par escalate karein' },
+        url: 'https://phed.jharkhand.gov.in',
+        phone: '181',
+        howto: [
+          { en: 'Dial 181 (Jharkhand CM Helpline) for water supply escalation', hi: '181 dial karein (Jharkhand CM Helpline) — water supply escalation ke liye' },
+          { en: 'Select "PHED" department — add previous PHED complaint reference', hi: '"PHED" department select karein — pichla complaint reference add karein' },
+        ],
+      },
+    ],
     bijli: [
       {
         badge: 'first',
@@ -2207,6 +2897,47 @@ export const STATE_PORTALS = {
 
   // ── Chhattisgarh ──────────────────────────────────────────────────────────
   Chhattisgarh: {
+    sadak: [
+      {
+        badge: 'first',
+        name: 'CG PWD — Road & Pothole Complaint',
+        desc: { en: 'Chhattisgarh PWD — pwd.cg.nic.in and 1100 (Nidaan helpline)', hi: 'CG road pothole complaint — PWD portal ya Nidaan 1100 helpline' },
+        url: 'https://pwd.cg.nic.in',
+        phone: '1100',
+        howto: [
+          { en: 'Dial 1100 (CG Nidaan CM Helpline) → select "PWD" for road complaints', hi: '1100 (Nidaan CM Helpline) → "PWD" select karein — road complaints ke liye' },
+          { en: 'Online: pwd.cg.nic.in → Citizen Services → Complaint', hi: 'pwd.cg.nic.in → Citizen Services → Complaint mein jaayein' },
+          { en: 'Raipur city roads: Raipur Nagar Nigam — 0771-2236521', hi: 'Raipur city roads ke liye: Raipur Nagar Nigam — 0771-2236521' },
+          { en: 'PWD direct: 0771-2512703 (Raipur)', hi: 'PWD direct: 0771-2512703 (Raipur)' },
+        ],
+      },
+    ],
+    pani: [
+      {
+        badge: 'first',
+        name: 'PHE Dept Chhattisgarh — Water Supply Complaint',
+        desc: { en: 'CG Public Health Engineering Dept — water supply helpline 1916 / portal', hi: 'Chhattisgarh water supply complaint — PHE Dept 1916 helpline ya portal' },
+        url: 'https://phe.cg.gov.in',
+        phone: '1916',
+        howto: [
+          { en: 'Dial 1916 (24×7) — Chhattisgarh water supply helpline', hi: '1916 dial karein (24×7) — CG water supply helpline' },
+          { en: 'Online: phe.cg.gov.in → Complaint Registration → select district', hi: 'phe.cg.gov.in → Complaint Registration → district select karein' },
+          { en: 'For Raipur city: Raipur Nagar Nigam water — 0771-2236521', hi: 'Raipur city ke liye: Raipur Nagar Nigam water — 0771-2236521' },
+          { en: 'Select issue: No Supply / Leakage / Quality → submit', hi: 'Issue: No Supply / Leakage / Quality → submit karein' },
+        ],
+      },
+      {
+        badge: 'state',
+        name: 'CG CM Helpline 181 — Water Escalation',
+        desc: { en: 'PHE Dept not resolving? Escalate via CG CM Helpline 181', hi: 'PHE resolve nahi? CG CM Helpline 181 par escalate karein' },
+        url: 'https://samadhan.mp.gov.in',
+        phone: '181',
+        howto: [
+          { en: 'Dial 181 (CG CM Helpline) for water supply escalation', hi: '181 dial karein (CG CM Helpline) — water supply escalation ke liye' },
+          { en: 'Select "PHE" department with previous complaint reference number', hi: '"PHE" department select karein — pichla complaint reference number dein' },
+        ],
+      },
+    ],
     bijli: [
       {
         badge: 'first',
@@ -2273,6 +3004,47 @@ export const STATE_PORTALS = {
 
   // ── Uttarakhand ───────────────────────────────────────────────────────────
   Uttarakhand: {
+    sadak: [
+      {
+        badge: 'first',
+        name: 'UK CM Helpline — Road & Pothole Complaint (1905)',
+        desc: { en: 'Uttarakhand CM Helpline 1905 — fastest channel for PWD road complaints', hi: 'Uttarakhand road pothole complaint — CM Helpline 1905 ya PWD portal' },
+        url: 'https://cmhelpline.uk.gov.in',
+        phone: '1905',
+        howto: [
+          { en: 'Dial 1905 (UK CM Helpline, 8 AM–10 PM) — for road/pothole complaints', hi: '1905 dial karein (UK CM Helpline, 8 AM-10 PM) — road/pothole complaint ke liye' },
+          { en: 'Online: cmhelpline.uk.gov.in → OTP login → Lodge Complaint → select PWD', hi: 'cmhelpline.uk.gov.in → OTP login → Lodge Complaint → PWD select karein' },
+          { en: 'UK PWD portal: mis.pwduk.in for project and road status', hi: 'UK PWD portal: mis.pwduk.in — project aur road status ke liye' },
+          { en: 'Dehradun city roads: Dehradun Nagar Nigam — 0135-2653213', hi: 'Dehradun city roads ke liye: Dehradun Nagar Nigam — 0135-2653213' },
+        ],
+      },
+    ],
+    pani: [
+      {
+        badge: 'first',
+        name: 'UK Jal Sansthan / Jal Nigam — Water Complaint',
+        desc: { en: 'Uttarakhand Jal Sansthan (urban) and Jal Nigam (rural) — water supply helpline', hi: 'Uttarakhand water supply complaint — Jal Sansthan / Jal Nigam helpline' },
+        url: 'https://www.ujn.uk.gov.in',
+        phone: '1916',
+        howto: [
+          { en: 'Dial 1916 (24×7) — Uttarakhand water supply helpline', hi: '1916 dial karein (24×7) — Uttarakhand water supply helpline' },
+          { en: 'UK Jal Sansthan (urban areas): ujn.uk.gov.in → Complaint', hi: 'UK Jal Sansthan (urban): ujn.uk.gov.in → Complaint karein' },
+          { en: 'Dehradun Jal Sansthan: 0135-2716064 (Dehradun city water supply)', hi: 'Dehradun Jal Sansthan: 0135-2716064 — Dehradun city water supply' },
+          { en: 'Haridwar / Rishikesh: contact HMB or local Jal Sansthan', hi: 'Haridwar / Rishikesh ke liye: HMB ya local Jal Sansthan se contact karein' },
+        ],
+      },
+      {
+        badge: 'state',
+        name: 'UK CM Helpline 1905 — Water Escalation',
+        desc: { en: 'Jal Sansthan not resolving? Escalate via UK CM Helpline 1905', hi: 'Jal Sansthan resolve nahi? UK CM Helpline 1905 par escalate karein' },
+        url: 'https://uttarakhandpolice.uk.gov.in',
+        phone: '1905',
+        howto: [
+          { en: 'Dial 1905 (UK CM Helpline) → select water department for escalation', hi: '1905 dial karein (UK CM Helpline) → water department select karein' },
+          { en: 'Describe problem with previous Jal Sansthan reference number', hi: 'Pichle Jal Sansthan reference number ke saath describe karein' },
+        ],
+      },
+    ],
     bijli: [
       {
         badge: 'first',
@@ -2339,6 +3111,47 @@ export const STATE_PORTALS = {
 
   // ── Himachal Pradesh ──────────────────────────────────────────────────────
   'Himachal Pradesh': {
+    sadak: [
+      {
+        badge: 'first',
+        name: 'HP PWD — Road & Pothole Complaint Portal',
+        desc: { en: 'Himachal Pradesh PWD — hppwd.hp.gov.in/complaint-redressal-system', hi: 'HP road pothole complaint — PWD portal 0177-2621401 ya complaint system' },
+        url: 'https://hppwd.hp.gov.in/complaint-redressal-system',
+        phone: '0177-2621401',
+        howto: [
+          { en: 'Open hppwd.hp.gov.in/complaint-redressal-system → register complaint', hi: 'hppwd.hp.gov.in/complaint-redressal-system → complaint register karein' },
+          { en: 'Call PWD HP: 0177-2621401 (Shimla)', hi: 'PWD HP call karein: 0177-2621401 (Shimla)' },
+          { en: 'CM Sewa Sankalp: 1100 — for road complaint escalation', hi: 'CM Sewa Sankalp: 1100 — road complaint escalation ke liye dial karein' },
+          { en: 'Describe road type, location (district/village), and damage type', hi: 'Road type, location (district/village) aur damage type describe karein' },
+        ],
+      },
+    ],
+    pani: [
+      {
+        badge: 'first',
+        name: 'IPH Himachal Pradesh — Water Supply Complaint',
+        desc: { en: 'HP Irrigation & Public Health Dept — water supply 1916 helpline and portal', hi: 'HP IPH Dept — water supply complaint 1916 helpline ya portal' },
+        url: 'https://www.iph.hp.gov.in',
+        phone: '1916',
+        howto: [
+          { en: 'Dial 1916 (24×7) — Himachal Pradesh water supply helpline', hi: '1916 dial karein (24×7) — HP water supply helpline' },
+          { en: 'Online: iph.hp.gov.in → Citizen Services → Grievance / Complaint', hi: 'iph.hp.gov.in → Citizen Services → Grievance / Complaint mein jaayein' },
+          { en: 'Select your district → describe issue: No Supply / Leakage / Quality', hi: 'District select karein → issue describe: No Supply / Leakage / Quality' },
+          { en: 'Shimla city (SADA): 0177-2621490 | Dharamshala: 01892-224900', hi: 'Shimla (SADA): 0177-2621490 | Dharamshala: 01892-224900' },
+        ],
+      },
+      {
+        badge: 'state',
+        name: 'HP CM Helpline — Water Escalation',
+        desc: { en: 'IPH not resolving? Contact HP Chief Minister Office for escalation', hi: 'IPH resolve nahi? HP CM Office ke through escalate karein' },
+        url: 'https://www.iph.hp.gov.in',
+        phone: '1800-180-8066',
+        howto: [
+          { en: 'HP state grievance portal: grievance.hp.gov.in', hi: 'HP state grievance portal: grievance.hp.gov.in use karein' },
+          { en: 'Select department: "IPH" and add previous complaint reference', hi: '"IPH" department select karein — pichla complaint reference add karein' },
+        ],
+      },
+    ],
     bijli: [
       {
         badge: 'first',
@@ -2404,6 +3217,47 @@ export const STATE_PORTALS = {
 
   // ── Goa ───────────────────────────────────────────────────────────────────
   Goa: {
+    sadak: [
+      {
+        badge: 'first',
+        name: 'Goa PWD — Road & Pothole Complaint',
+        desc: { en: 'Goa Public Works Department — pwd.goa.gov.in and 1533 helpline', hi: 'Goa road pothole complaint — PWD portal 1533 ya PWD app' },
+        url: 'https://pwd.goa.gov.in',
+        phone: '1533',
+        howto: [
+          { en: 'Dial 1533 OR use "PWD Goa" mobile app for road/pothole complaints', hi: '1533 dial karein ya "PWD Goa" mobile app use karein — road/pothole complaint ke liye' },
+          { en: 'Online: pwd.goa.gov.in → Citizen Services → Grievance', hi: 'pwd.goa.gov.in → Citizen Services → Grievance mein jaayein' },
+          { en: 'Public Grievances Directorate: 9319-334-335 (9:30 AM – 5:45 PM, Mon–Fri)', hi: 'Public Grievances Directorate: 9319-334-335 (9:30 AM – 5:45 PM, Mon-Fri)' },
+          { en: 'North Goa (Panaji): 0832-2438801 | South Goa (Margao): 0832-2715560', hi: 'North Goa (Panaji): 0832-2438801 | South Goa (Margao): 0832-2715560' },
+        ],
+      },
+    ],
+    pani: [
+      {
+        badge: 'first',
+        name: 'PWD Water Supply Goa — Consumer Complaint',
+        desc: { en: 'Goa Public Works Department (Water Supply) — 1916 helpline and portal', hi: 'Goa water supply complaint — PWD 1916 helpline ya portal' },
+        url: 'https://pwd.goa.gov.in',
+        phone: '1916',
+        howto: [
+          { en: 'Dial 1916 (24×7) — Goa water supply helpline', hi: '1916 dial karein (24×7) — Goa water supply helpline' },
+          { en: 'Online: pwd.goa.gov.in → Citizen Services → Water Supply Complaint', hi: 'pwd.goa.gov.in → Citizen Services → Water Supply Complaint mein jaayein' },
+          { en: 'Panaji / North Goa: 0832-2438801 | South Goa (Margao): 0832-2715560', hi: 'Panaji / North Goa: 0832-2438801 | South Goa (Margao): 0832-2715560' },
+          { en: 'Enter your connection ID → describe issue → submit', hi: 'Connection ID enter karein → issue describe karein → submit' },
+        ],
+      },
+      {
+        badge: 'state',
+        name: 'Goa CM Helpline — Water Escalation',
+        desc: { en: 'PWD Water not resolving? Escalate via Goa CM Helpline', hi: 'PWD Water resolve nahi? Goa CM Helpline se escalate karein' },
+        url: 'https://www.goa.gov.in',
+        phone: '1800-233-0022',
+        howto: [
+          { en: 'Goa toll-free helpline: 1800-233-0022', hi: 'Goa toll-free helpline: 1800-233-0022' },
+          { en: 'Or approach PWD Executive Engineer (Water) for your region', hi: 'Ya apne region ke PWD Executive Engineer (Water) se milein' },
+        ],
+      },
+    ],
     bijli: [
       {
         badge: 'first',
@@ -2470,6 +3324,47 @@ export const STATE_PORTALS = {
 
   // ── Jammu & Kashmir ───────────────────────────────────────────────────────
   'Jammu and Kashmir': {
+    sadak: [
+      {
+        badge: 'first',
+        name: 'J&K PWD R&B — Road Complaint & SAMADHAN Helpline',
+        desc: { en: 'J&K PWD Roads & Buildings — JK SAMADHAN helpline and jkpwdoms portal', hi: 'J&K road pothole complaint — JK SAMADHAN helpline ya jkpwdoms.jk.gov.in' },
+        url: 'https://jkpwdoms.jk.gov.in',
+        phone: '1800-5722327',
+        howto: [
+          { en: 'Jammu region: JK SAMADHAN toll-free 1800-5722327', hi: 'Jammu region: JK SAMADHAN toll-free 1800-5722327' },
+          { en: 'Kashmir region: JK SAMADHAN toll-free 1800-5722328', hi: 'Kashmir region: JK SAMADHAN toll-free 1800-5722328' },
+          { en: 'Online: jkpwdoms.jk.gov.in → Complaint Registration', hi: 'jkpwdoms.jk.gov.in → Complaint Registration karein' },
+          { en: 'Jammu PWD: 0191-2560109 | Srinagar PWD: 0194-2502596', hi: 'Jammu PWD: 0191-2560109 | Srinagar PWD: 0194-2502596' },
+        ],
+      },
+    ],
+    pani: [
+      {
+        badge: 'first',
+        name: 'PHE Dept J&K — Water Supply Complaint',
+        desc: { en: 'J&K Public Health Engineering Dept — Jal Shakti 1916 helpline', hi: 'J&K water supply complaint — PHE Dept / Jal Shakti 1916 helpline' },
+        url: 'https://phe.jk.gov.in',
+        phone: '1916',
+        howto: [
+          { en: 'Dial 1916 (24×7) — J&K water supply helpline (Jal Shakti)', hi: '1916 dial karein (24×7) — J&K water supply helpline (Jal Shakti)' },
+          { en: 'Online: phe.jk.gov.in → Citizen Corner → Grievance', hi: 'phe.jk.gov.in → Citizen Corner → Grievance mein jaayein' },
+          { en: 'Srinagar: PHE Executive Engineer 0194-2463090', hi: 'Srinagar: PHE Executive Engineer 0194-2463090' },
+          { en: 'Jammu: PHE Executive Engineer 0191-2546005', hi: 'Jammu: PHE Executive Engineer 0191-2546005' },
+        ],
+      },
+      {
+        badge: 'state',
+        name: 'J&K LG Grievance Portal — Water Escalation',
+        desc: { en: 'PHE not resolving? Escalate via J&K LG Grievance portal', hi: 'PHE resolve nahi? J&K LG Grievance portal par escalate karein' },
+        url: 'https://lgraj.jk.gov.in',
+        phone: '0194-2473000',
+        howto: [
+          { en: 'Open lgraj.jk.gov.in → Citizen Grievance → Lodge Complaint', hi: 'lgraj.jk.gov.in → Citizen Grievance → Lodge Complaint karein' },
+          { en: 'Select "PHE" department → describe water problem with previous reference', hi: '"PHE" department select karein → pichle reference ke saath describe karein' },
+        ],
+      },
+    ],
     bijli: [
       {
         badge: 'first',
@@ -2537,6 +3432,35 @@ export const STATE_PORTALS = {
 
   // ── Manipur ───────────────────────────────────────────────────────────────
   Manipur: {
+    sadak: [
+      {
+        badge: 'first',
+        name: 'Manipur PWD — Road Complaint & CM Da Haisi',
+        desc: { en: 'Manipur PWD — pwdmanipur.mn.gov.in and CM Da Haisi grievance portal', hi: 'Manipur road pothole complaint — PWD portal ya CM Da Haisi grievance' },
+        url: 'https://pwdmanipur.mn.gov.in',
+        phone: '1800-345-3818',
+        howto: [
+          { en: 'Manipur toll-free: 1800-345-3818 for road/infrastructure complaints', hi: '1800-345-3818 dial karein (toll-free) — road/infrastructure complaint ke liye' },
+          { en: 'Online: pwdmanipur.mn.gov.in → Citizen Services → Complaint', hi: 'pwdmanipur.mn.gov.in → Citizen Services → Complaint karein' },
+          { en: 'CM Da Haisi grievance: cmdahaisi.mn.gov.in → Lodge Grievance → PWD', hi: 'CM Da Haisi: cmdahaisi.mn.gov.in → Lodge Grievance → PWD select karein' },
+        ],
+      },
+    ],
+    pani: [
+      {
+        badge: 'first',
+        name: 'PHED Manipur — Water Supply Complaint',
+        desc: { en: 'Manipur PHED — water supply complaint helpline and state portal', hi: 'Manipur water supply complaint — PHED helpline ya state portal' },
+        url: 'https://phed.mn.gov.in',
+        phone: '1916',
+        howto: [
+          { en: 'Dial 1916 (24×7) — Manipur water supply helpline', hi: '1916 dial karein (24×7) — Manipur water supply helpline' },
+          { en: 'Online: phed.mn.gov.in → Citizen Services → Complaint', hi: 'phed.mn.gov.in → Citizen Services → Complaint mein jaayein' },
+          { en: 'Imphal East / West water: IMCL — 0385-2420033', hi: 'Imphal East/West water: IMCL — 0385-2420033' },
+          { en: 'Describe issue with connection details → submit → note complaint ID', hi: 'Connection details ke saath issue describe karein → submit → complaint ID note' },
+        ],
+      },
+    ],
     bijli: [
       {
         badge: 'first',
@@ -2592,6 +3516,36 @@ export const STATE_PORTALS = {
 
   // ── Tripura ───────────────────────────────────────────────────────────────
   Tripura: {
+    sadak: [
+      {
+        badge: 'first',
+        name: 'Tripura PWD — Road & Pothole Complaint',
+        desc: { en: 'Tripura PWD — pwd.tripura.gov.in and CM Helpline for road complaints', hi: 'Tripura road pothole complaint — PWD portal ya CM Helpline' },
+        url: 'https://pwd.tripura.gov.in',
+        phone: '0381-2415058',
+        howto: [
+          { en: 'Call Tripura PWD: 0381-2415058 or 0381-2324625', hi: 'Tripura PWD: 0381-2415058 ya 0381-2324625 call karein' },
+          { en: 'Online: pwd.tripura.gov.in → Citizen Services → Complaint/Grievance', hi: 'pwd.tripura.gov.in → Citizen Services → Complaint/Grievance karein' },
+          { en: 'Agartala city roads: AMC — 0381-2325606', hi: 'Agartala city roads ke liye: AMC — 0381-2325606' },
+          { en: 'CM Helpline Tripura: cmhelpline.tripura.gov.in for escalation', hi: 'Escalation ke liye: cmhelpline.tripura.gov.in — Tripura CM Helpline' },
+        ],
+      },
+    ],
+    pani: [
+      {
+        badge: 'first',
+        name: 'TWDB / PHED Tripura — Water Supply Complaint',
+        desc: { en: 'Tripura Water Development Board & PHED — water supply 1916 helpline', hi: 'Tripura water supply complaint — TWDB/PHED 1916 helpline ya portal' },
+        url: 'https://twdb.tripura.gov.in',
+        phone: '1916',
+        howto: [
+          { en: 'Dial 1916 (24×7) — Tripura water supply helpline', hi: '1916 dial karein (24×7) — Tripura water supply helpline' },
+          { en: 'Online: twdb.tripura.gov.in → Citizen Services → Grievance', hi: 'twdb.tripura.gov.in → Citizen Services → Grievance mein jaayein' },
+          { en: 'Agartala city: AMC water — 0381-2325606', hi: 'Agartala city: AMC water — 0381-2325606' },
+          { en: 'Describe issue: No Supply / Leakage / Quality → submit', hi: 'Issue describe: No Supply / Leakage / Quality → submit karein' },
+        ],
+      },
+    ],
     bijli: [
       {
         badge: 'first',
@@ -2658,6 +3612,36 @@ export const STATE_PORTALS = {
 
   // ── Meghalaya ─────────────────────────────────────────────────────────────
   Meghalaya: {
+    sadak: [
+      {
+        badge: 'first',
+        name: 'Meghalaya PWD — Road Complaint & WhatsApp',
+        desc: { en: 'Meghalaya PWD — megpwd.gov.in and WhatsApp 9436394363 for road complaints', hi: 'Meghalaya road pothole complaint — megpwd.gov.in ya WhatsApp 9436394363' },
+        url: 'https://megpwd.gov.in',
+        phone: '0364-2591000',
+        howto: [
+          { en: 'WhatsApp: 9436394363 — send road damage photo with location for quick response', hi: 'WhatsApp: 9436394363 — road damage photo aur location bhejein — quick response milega' },
+          { en: 'Online: megpwd.gov.in → Citizen Services → Complaint', hi: 'megpwd.gov.in → Citizen Services → Complaint mein jaayein' },
+          { en: 'Shillong city roads: SMB — 0364-2211266', hi: 'Shillong city roads ke liye: SMB — 0364-2211266' },
+          { en: 'CM Helpline Meghalaya: meghalaya.gov.in/helpline for escalation', hi: 'Escalation ke liye: meghalaya.gov.in/helpline — CM Helpline use karein' },
+        ],
+      },
+    ],
+    pani: [
+      {
+        badge: 'first',
+        name: 'PHED Meghalaya — Water Supply Complaint',
+        desc: { en: 'Meghalaya PHED — water supply complaint helpline and online portal', hi: 'Meghalaya water supply complaint — PHED helpline ya portal' },
+        url: 'https://phed.meghalaya.gov.in',
+        phone: '1916',
+        howto: [
+          { en: 'Dial 1916 (24×7) — Meghalaya water supply helpline', hi: '1916 dial karein (24×7) — Meghalaya water supply helpline' },
+          { en: 'Online: phed.meghalaya.gov.in → Grievance → Register Complaint', hi: 'phed.meghalaya.gov.in → Grievance → Register Complaint karein' },
+          { en: 'Shillong: SMB (Shillong Municipal Board) — 0364-2211266', hi: 'Shillong: SMB (Shillong Municipal Board) — 0364-2211266' },
+          { en: 'Describe issue with connection/area details → submit', hi: 'Connection/area details ke saath issue describe karein → submit karein' },
+        ],
+      },
+    ],
     bijli: [
       {
         badge: 'first',
@@ -2724,6 +3708,36 @@ export const STATE_PORTALS = {
 
   // ── Nagaland ──────────────────────────────────────────────────────────────
   Nagaland: {
+    sadak: [
+      {
+        badge: 'first',
+        name: 'Nagaland PWD — Road Complaint Portal',
+        desc: { en: 'Nagaland PWD — npwd.nagaland.gov.in for road complaints', hi: 'Nagaland road pothole complaint — npwd.nagaland.gov.in portal' },
+        url: 'https://npwd.nagaland.gov.in',
+        phone: '0370-2290017',
+        howto: [
+          { en: 'Online: npwd.nagaland.gov.in → Citizen Services → Complaint', hi: 'npwd.nagaland.gov.in → Citizen Services → Complaint karein' },
+          { en: 'Kohima PWD: 0370-2290017 | Dimapur PWD: 0386-2223580', hi: 'Kohima PWD: 0370-2290017 | Dimapur PWD: 0386-2223580' },
+          { en: 'Mention road name, district, and nearest landmark with damage description', hi: 'Road name, district aur nearest landmark ke saath damage description dein' },
+          { en: 'For National Highways in Nagaland: NHAI 1033', hi: 'Nagaland mein National Highways ke liye: NHAI 1033' },
+        ],
+      },
+    ],
+    pani: [
+      {
+        badge: 'first',
+        name: 'PHED Nagaland — Water Supply Complaint',
+        desc: { en: 'Nagaland PHED — water supply complaint via state helpline', hi: 'Nagaland water supply complaint — PHED state helpline ya portal' },
+        url: 'https://phed.nagaland.gov.in',
+        phone: '0370-2290027',
+        howto: [
+          { en: 'Call PHED Nagaland: 0370-2290027 (Kohima, business hours)', hi: 'PHED Nagaland: 0370-2290027 (Kohima, business hours mein call karein)' },
+          { en: 'Online: phed.nagaland.gov.in → Citizen Services → Complaint', hi: 'phed.nagaland.gov.in → Citizen Services → Complaint mein jaayein' },
+          { en: 'Kohima: PHED HQ 0370-2270016 | Dimapur: PHED 0386-2224120', hi: 'Kohima: PHED HQ 0370-2270016 | Dimapur: PHED 0386-2224120' },
+          { en: 'Note: 1916 may not be active in Nagaland — use state-specific numbers', hi: 'Note: Nagaland mein 1916 active nahi — state-specific numbers use karein' },
+        ],
+      },
+    ],
     bijli: [
       {
         badge: 'first',
@@ -2779,6 +3793,36 @@ export const STATE_PORTALS = {
 
   // ── Mizoram ───────────────────────────────────────────────────────────────
   Mizoram: {
+    sadak: [
+      {
+        badge: 'first',
+        name: 'Mizoram PWD — Road Complaint Portal',
+        desc: { en: 'Mizoram PWD — pwd.mizoram.gov.in and state grievance for road complaints', hi: 'Mizoram road pothole complaint — pwd.mizoram.gov.in portal ya state grievance' },
+        url: 'https://pwd.mizoram.gov.in',
+        phone: '0389-2322200',
+        howto: [
+          { en: 'Online: pwd.mizoram.gov.in → Contact/Grievance → Complaint', hi: 'pwd.mizoram.gov.in → Contact/Grievance → Complaint karein' },
+          { en: 'PWD Mizoram (Aizawl): 0389-2322200 or 0389-2321528', hi: 'PWD Mizoram Aizawl: 0389-2322200 ya 0389-2321528' },
+          { en: 'For Aizawl city roads: AMDA — 0389-2340760', hi: 'Aizawl city roads ke liye: AMDA — 0389-2340760' },
+          { en: 'Use CPGRAMS (pgportal.gov.in) if state portal is unresponsive', hi: 'State portal unresponsive ho to: CPGRAMS pgportal.gov.in use karein' },
+        ],
+      },
+    ],
+    pani: [
+      {
+        badge: 'first',
+        name: 'PHE Dept Mizoram — Water Supply Complaint',
+        desc: { en: 'Mizoram Public Health & Engineering Dept — water supply helpline', hi: 'Mizoram water supply complaint — PHE Dept helpline ya portal' },
+        url: 'https://phe.mizoram.gov.in',
+        phone: '0389-2323468',
+        howto: [
+          { en: 'Call PHE Mizoram: 0389-2323468 (Aizawl, business hours)', hi: 'PHE Mizoram: 0389-2323468 (Aizawl, business hours mein call karein)' },
+          { en: 'Online: phe.mizoram.gov.in → Citizen Services → Complaint', hi: 'phe.mizoram.gov.in → Citizen Services → Complaint karein' },
+          { en: 'Aizawl: AMDA water supply — 0389-2340760', hi: 'Aizawl: AMDA water supply — 0389-2340760' },
+          { en: 'Describe issue with your area/zone and connection details', hi: 'Area/zone aur connection details ke saath issue describe karein' },
+        ],
+      },
+    ],
     bijli: [
       {
         badge: 'first',
@@ -2844,6 +3888,36 @@ export const STATE_PORTALS = {
 
   // ── Sikkim ────────────────────────────────────────────────────────────────
   Sikkim: {
+    sadak: [
+      {
+        badge: 'first',
+        name: 'Sikkim PWD — Road Complaint (SSO Portal)',
+        desc: { en: 'Sikkim PWD — SSO grievance portal and state helpline for road complaints', hi: 'Sikkim road pothole complaint — SSO grievance portal ya state helpline' },
+        url: 'https://sikkim.gov.in/departments/roads-and-bridges',
+        phone: '03592-202455',
+        howto: [
+          { en: 'Sikkim SSO grievance portal: sso.sikkim.gov.in → Lodge Complaint → PWD', hi: 'Sikkim SSO portal: sso.sikkim.gov.in → Lodge Complaint → PWD select karein' },
+          { en: 'Roads & Bridges Dept Sikkim: 03592-202455 (Gangtok)', hi: 'Roads & Bridges Dept Sikkim: 03592-202455 (Gangtok)' },
+          { en: 'Gangtok city roads: Gangtok Municipal Corporation — 03592-207060', hi: 'Gangtok city roads ke liye: Gangtok Municipal Corporation — 03592-207060' },
+          { en: 'For National Highways (NH10 etc.): NHAI 1033', hi: 'National Highways (NH10 etc.) ke liye: NHAI 1033 dial karein' },
+        ],
+      },
+    ],
+    pani: [
+      {
+        badge: 'first',
+        name: 'PHE Dept Sikkim — Water Supply Complaint',
+        desc: { en: 'Sikkim PHE & Water Security Dept — water supply helpline and portal', hi: 'Sikkim water supply complaint — PHE Dept helpline ya portal' },
+        url: 'https://phe.sikkim.gov.in',
+        phone: '03592-202455',
+        howto: [
+          { en: 'Call PHE Sikkim: 03592-202455 (Gangtok)', hi: 'PHE Sikkim: 03592-202455 (Gangtok) — call karein' },
+          { en: 'Online: phe.sikkim.gov.in → Citizen Services → Complaint', hi: 'phe.sikkim.gov.in → Citizen Services → Complaint karein' },
+          { en: 'Gangtok city: PHE East Sikkim — 03592-232087', hi: 'Gangtok city: PHE East Sikkim — 03592-232087' },
+          { en: 'Describe issue: No Supply / Leakage / Quality → submit with area details', hi: 'Issue: No Supply / Leakage / Quality describe karein → area details ke saath submit' },
+        ],
+      },
+    ],
     bijli: [
       {
         badge: 'first',
@@ -2910,6 +3984,36 @@ export const STATE_PORTALS = {
 
   // ── Arunachal Pradesh ─────────────────────────────────────────────────────
   'Arunachal Pradesh': {
+    sadak: [
+      {
+        badge: 'first',
+        name: 'Arunachal Pradesh PWD — Road Complaint',
+        desc: { en: 'AP PWD — arunachalpwd.org and CM E-Jansunwai for road complaints', hi: 'Arunachal Pradesh road pothole complaint — PWD portal ya CM E-Jansunwai' },
+        url: 'https://www.arunachalpwd.org',
+        phone: '0360-2211170',
+        howto: [
+          { en: 'Call AP PWD: 0360-2211170 (Itanagar, Civil Secretariat)', hi: 'AP PWD call karein: 0360-2211170 (Itanagar, Civil Secretariat)' },
+          { en: 'Online: arunachalpwd.org → Contact → Complaint submission', hi: 'arunachalpwd.org → Contact → Complaint submit karein' },
+          { en: 'CM E-Jansunwai portal for escalation — integrated grievance system', hi: 'Escalation ke liye: CM E-Jansunwai portal — integrated grievance system' },
+          { en: 'For National Highways (NH-415 etc.): NHAI 1033', hi: 'National Highways (NH-415 etc.) ke liye: NHAI 1033 dial karein' },
+        ],
+      },
+    ],
+    pani: [
+      {
+        badge: 'first',
+        name: 'PHE & WS Dept Arunachal — Water Supply Complaint',
+        desc: { en: 'Arunachal Pradesh PHE & Water Supply Dept — helpline and state portal', hi: 'Arunachal Pradesh water supply complaint — PHE WS Dept helpline ya portal' },
+        url: 'https://phews.arunachal.gov.in',
+        phone: '0360-2213200',
+        howto: [
+          { en: 'Call PHE WS Arunachal: 0360-2213200 (Itanagar)', hi: 'PHE WS Arunachal: 0360-2213200 (Itanagar) — call karein' },
+          { en: 'Online: phews.arunachal.gov.in → Grievance → Register Complaint', hi: 'phews.arunachal.gov.in → Grievance → Register Complaint karein' },
+          { en: 'Itanagar: IMCL water — 0360-2212006', hi: 'Itanagar: IMCL water — 0360-2212006' },
+          { en: 'Describe issue with your district, area and connection details', hi: 'District, area aur connection details ke saath issue describe karein' },
+        ],
+      },
+    ],
     bijli: [
       {
         badge: 'first',
