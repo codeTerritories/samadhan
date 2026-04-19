@@ -2193,6 +2193,32 @@ export const STATE_PORTALS = {
         ],
       },
     ],
+    safai: [
+      {
+        badge: 'first',
+        name: 'Kerala LSG — Urban Local Body Garbage Complaint',
+        desc: { en: 'Kerala Local Self Government — city ULB portal for solid waste complaints', hi: 'Kerala garbage complaint — apne city ke ULB/municipality portal par complaint karein' },
+        url: 'https://lsgkerala.gov.in',
+        phone: '1800-425-6882',
+        howto: [
+          { en: 'Dial 1800-425-6882 (Thiruvananthapuram) OR 0484-2390000 (Kochi) — city waste helpline', hi: 'Thiruvananthapuram: 1800-425-6882 | Kochi: 0484-2390000 — garbage complaint helpline' },
+          { en: 'WhatsApp: 9446700800 — Kerala Suchitwa Mission waste complaint', hi: 'WhatsApp: 9446700800 — Kerala Suchitwa Mission waste complaint' },
+          { en: 'Online: lsgkerala.gov.in → your municipality → Grievance/Complaint', hi: 'lsgkerala.gov.in → apni municipality select karein → Grievance/Complaint karein' },
+          { en: 'Kochi: mykochi.lsgkerala.gov.in → complaint registration → select "Solid Waste"', hi: 'Kochi: mykochi.lsgkerala.gov.in → complaint registration → "Solid Waste" select karein' },
+        ],
+      },
+      {
+        badge: 'state',
+        name: 'Kerala CM Grievance — Garbage Escalation',
+        desc: { en: 'ULB not acting? Escalate via Kerala CM Grievance Cell', hi: 'ULB action nahi? Kerala CM Grievance Cell par escalate karein' },
+        url: 'https://grievance.kerala.gov.in',
+        phone: '0471-2333100',
+        howto: [
+          { en: 'Open grievance.kerala.gov.in → Lodge Complaint → select Local Body', hi: 'grievance.kerala.gov.in → Lodge Complaint → Local Body select karein' },
+          { en: 'CM Grievance Cell: 0471-2333100 | Swachhata app: 1969 (national)', hi: 'CM Grievance: 0471-2333100 | Swachhata national app: 1969' },
+        ],
+      },
+    ],
   },
 
   // ── Bihar ─────────────────────────────────────────────────────────────────
@@ -2433,6 +2459,21 @@ export const STATE_PORTALS = {
           { en: 'Online: pgr.ap.gov.in → Lodge Grievance → select Roads & Buildings', hi: 'pgr.ap.gov.in → Lodge Grievance → Roads & Buildings select karein' },
           { en: 'GVMC Vizag road: 1800-4250-0009 | Vijayawada: VMC 0866-2421026', hi: 'GVMC Vizag road: 1800-4250-0009 | Vijayawada: VMC 0866-2421026' },
           { en: 'For National Highways in AP: NHAI 1033', hi: 'AP mein National Highways ke liye: NHAI 1033' },
+        ],
+      },
+    ],
+    safai: [
+      {
+        badge: 'first',
+        name: 'AP CDMA — Urban Sanitation & Garbage Complaint',
+        desc: { en: 'AP Commissioner & Director of Municipal Administration — cdma.ap.gov.in', hi: 'AP urban garbage complaint — cdma.ap.gov.in ya GVMC helpline' },
+        url: 'https://cdma.ap.gov.in/en/complaintregistration',
+        phone: '1902',
+        howto: [
+          { en: 'Dial 1902 (AP CM Helpline) → select "Municipal Administration" for garbage', hi: '1902 dial karein (AP CM Helpline) → "Municipal Administration" select karein — garbage ke liye' },
+          { en: 'Online: cdma.ap.gov.in/en/complaintregistration → register complaint → select "Solid Waste"', hi: 'cdma.ap.gov.in/en/complaintregistration → complaint register → "Solid Waste" select karein' },
+          { en: 'GVMC Visakhapatnam: gvmc.gov.in → Citizen Services → Solid Waste', hi: 'GVMC Vizag: gvmc.gov.in → Citizen Services → Solid Waste' },
+          { en: 'App: Swachhata-MoHUA (1969) — works across all AP municipalities', hi: 'App: Swachhata-MoHUA (1969) — AP ke sabhi municipalities mein kaam karta hai' },
         ],
       },
     ],
@@ -2679,6 +2720,32 @@ export const STATE_PORTALS = {
         ],
       },
     ],
+    safai: [
+      {
+        badge: 'first',
+        name: 'BMC Bhubaneswar — Garbage Complaint (1929)',
+        desc: { en: 'Bhubaneswar Municipal Corporation — 1929 helpline and bmc.gov.in portal', hi: 'Bhubaneswar garbage complaint — BMC 1929 helpline ya bmc.gov.in' },
+        url: 'https://www.bmc.gov.in',
+        phone: '1929',
+        howto: [
+          { en: 'Dial 1929 (24×7) — BMC Bhubaneswar solid waste helpline', hi: '1929 dial karein (24×7) — BMC Bhubaneswar solid waste helpline' },
+          { en: 'WhatsApp: 8280282000 — send garbage photo with your ward/area', hi: 'WhatsApp: 8280282000 — ward/area ke saath garbage photo bhejein' },
+          { en: 'Online: bmc.gov.in → Citizen Services → Complaint → Solid Waste Management', hi: 'bmc.gov.in → Citizen Services → Complaint → Solid Waste Management karein' },
+          { en: 'For other Odisha cities: janasunani.odisha.gov.in → select Urban Local Body', hi: 'Other Odisha cities ke liye: janasunani.odisha.gov.in → Urban Local Body select karein' },
+        ],
+      },
+      {
+        badge: 'state',
+        name: 'Odisha CM Helpline 14545 — Garbage Escalation',
+        desc: { en: 'ULB not acting? Escalate via Odisha CM Helpline 14545', hi: 'ULB action nahi? Odisha CM Helpline 14545 par escalate karein' },
+        url: 'https://cmhelpline.odisha.gov.in',
+        phone: '14545',
+        howto: [
+          { en: 'Dial 14545 OR open cmhelpline.odisha.gov.in → select "Urban Local Bodies"', hi: '14545 dial karein ya cmhelpline.odisha.gov.in → "Urban Local Bodies" select karein' },
+          { en: 'App: Swachhata-MoHUA (1969) — works across all Odisha ULBs', hi: 'App: Swachhata-MoHUA (1969) — sabhi Odisha ULBs mein kaam karta hai' },
+        ],
+      },
+    ],
   },
 
   // ── Assam ─────────────────────────────────────────────────────────────────
@@ -2783,6 +2850,32 @@ export const STATE_PORTALS = {
         howto: [
           { en: 'Dial 15100 (Assam CM Helpline) for police inaction complaints', hi: 'Assam CM Helpline: 15100 — police inaction ke liye' },
           { en: 'Or approach SP of your district with written application', hi: 'Ya apne district ke SP ko written application dein' },
+        ],
+      },
+    ],
+    safai: [
+      {
+        badge: 'first',
+        name: 'GMC Guwahati — Garbage Complaint (8811007000)',
+        desc: { en: 'Guwahati Municipal Corporation — 8811007000 WhatsApp/call for garbage complaints', hi: 'Guwahati garbage complaint — GMC 8811007000 WhatsApp ya call' },
+        url: 'https://gmc.assam.gov.in',
+        phone: '8811007000',
+        howto: [
+          { en: 'WhatsApp/Call 8811007000 — GMC Guwahati solid waste helpline', hi: '8811007000 WhatsApp ya call karein — GMC Guwahati solid waste helpline' },
+          { en: 'Online: gmc.assam.gov.in → Citizen Services → Complaint → Solid Waste', hi: 'gmc.assam.gov.in → Citizen Services → Complaint → Solid Waste karein' },
+          { en: 'Other Assam cities: contact your local Municipal Board / Town Committee', hi: 'Other Assam cities ke liye: local Municipal Board ya Town Committee se contact karein' },
+          { en: 'State grievance: assam.gov.in → Citizen Services for escalation', hi: 'Escalation ke liye: assam.gov.in → Citizen Services use karein' },
+        ],
+      },
+      {
+        badge: 'state',
+        name: 'Assam CM Helpline 15100 — Garbage Escalation',
+        desc: { en: 'ULB not acting? Escalate via Assam CM Helpline 15100', hi: 'ULB action nahi? Assam CM Helpline 15100 par escalate karein' },
+        url: 'https://cm.assam.gov.in',
+        phone: '15100',
+        howto: [
+          { en: 'Dial 15100 (Assam CM Helpline) — select "Urban Local Bodies" for garbage issue', hi: '15100 dial karein — "Urban Local Bodies" select karein garbage issue ke liye' },
+          { en: 'App: Swachhata-MoHUA (1969) — works across all Assam ULBs', hi: 'App: Swachhata-MoHUA (1969) — sabhi Assam ULBs mein kaam karta hai' },
         ],
       },
     ],
@@ -2893,6 +2986,32 @@ export const STATE_PORTALS = {
         ],
       },
     ],
+    safai: [
+      {
+        badge: 'first',
+        name: 'RMC / Jharkhand ULB — Garbage Complaint (1800-5701235)',
+        desc: { en: 'Ranchi Municipal Corporation — 1800-5701235 toll-free for garbage complaints', hi: 'Ranchi garbage complaint — RMC 1800-5701235 ya WhatsApp 89866-27070' },
+        url: 'https://rmc.jharkhand.gov.in',
+        phone: '1800-5701235',
+        howto: [
+          { en: 'Toll-free: 1800-5701235 (RMC Ranchi) for garbage/solid waste complaints', hi: '1800-5701235 (toll-free) — RMC Ranchi garbage/solid waste complaint ke liye' },
+          { en: 'WhatsApp: 89866-27070 — send photo of garbage/dump with your ward/area', hi: 'WhatsApp: 89866-27070 — ward/area ke saath garbage photo bhejein' },
+          { en: 'Jharkhand PGMS: pgms.jharkhand.gov.in → Submit Grievance → select Urban/Sanitation', hi: 'pgms.jharkhand.gov.in → Submit Grievance → Urban/Sanitation select karein' },
+          { en: 'Other Jharkhand cities: contact local Nagar Nigam / Nagar Panchayat', hi: 'Other cities ke liye: local Nagar Nigam ya Nagar Panchayat se contact karein' },
+        ],
+      },
+      {
+        badge: 'state',
+        name: 'Jharkhand CM Helpline 181 — Garbage Escalation',
+        desc: { en: 'ULB not acting? Escalate via Jharkhand CM Helpline 181', hi: 'ULB action nahi? Jharkhand CM Helpline 181 par escalate karein' },
+        url: 'https://pgms.jharkhand.gov.in',
+        phone: '181',
+        howto: [
+          { en: 'Dial 181 (Jharkhand CM Helpline) — select "Urban Local Bodies/Sanitation"', hi: '181 dial karein — "Urban Local Bodies/Sanitation" select karein' },
+          { en: 'App: Swachhata-MoHUA (1969) — works across all Jharkhand ULBs', hi: 'App: Swachhata-MoHUA (1969) — sabhi Jharkhand ULBs mein kaam karta hai' },
+        ],
+      },
+    ],
   },
 
   // ── Chhattisgarh ──────────────────────────────────────────────────────────
@@ -2997,6 +3116,32 @@ export const STATE_PORTALS = {
         howto: [
           { en: 'Open cgpolice.gov.in → "Grievance" → submit with complaint history', hi: 'cgpolice.gov.in → "Grievance" → complaint history ke saath submit karein' },
           { en: 'Write to SP with CrPC Section 154(3) — SP must order FIR', hi: 'SP ko CrPC Section 154(3) mention karte hue likhein — SP ko FIR order karna hoga' },
+        ],
+      },
+    ],
+    safai: [
+      {
+        badge: 'first',
+        name: 'Raipur Nagar Nigam — Garbage Complaint (cgnidaan.com / 1100)',
+        desc: { en: 'Raipur Nagar Nigam — cgnidaan.com or Nidaan 1100 helpline for garbage complaints', hi: 'Raipur garbage complaint — Nidaan 1100 helpline ya cgnidaan.com portal' },
+        url: 'https://www.cgnidaan.com',
+        phone: '1100',
+        howto: [
+          { en: 'Dial 1100 (CG Nidaan CM Helpline) → select "Urban Local Bodies/Swachh Bharat"', hi: '1100 (Nidaan CM Helpline) → "Urban Local Bodies/Swachh Bharat" select karein' },
+          { en: 'Online: cgnidaan.com → Lodge Complaint → select Sanitation/Solid Waste', hi: 'cgnidaan.com → Lodge Complaint → Sanitation/Solid Waste select karein' },
+          { en: 'Raipur direct: Raipur Nagar Nigam — 0771-2535780', hi: 'Raipur direct: Raipur Nagar Nigam — 0771-2535780' },
+          { en: 'App: Swachhata-MoHUA (1969) — works across all CG ULBs', hi: 'App: Swachhata-MoHUA (1969) — sabhi CG ULBs mein kaam karta hai' },
+        ],
+      },
+      {
+        badge: 'state',
+        name: 'CG CM Helpline 181 — Garbage Escalation',
+        desc: { en: 'ULB not acting? Escalate via Chhattisgarh CM Helpline 181', hi: 'ULB action nahi? CG CM Helpline 181 par escalate karein' },
+        url: 'https://www.cgnidaan.com',
+        phone: '181',
+        howto: [
+          { en: 'Dial 181 (CG CM Helpline) → select "Urban Bodies" for garbage escalation', hi: '181 (CG CM Helpline) → "Urban Bodies" select karein — garbage escalation ke liye' },
+          { en: 'Add previous complaint reference from Nagar Nigam/ULB', hi: 'Nagar Nigam/ULB ka pichla complaint reference add karein' },
         ],
       },
     ],
@@ -3107,6 +3252,32 @@ export const STATE_PORTALS = {
         ],
       },
     ],
+    safai: [
+      {
+        badge: 'first',
+        name: 'Dehradun Nagar Nigam — Garbage Complaint (0135-2653213)',
+        desc: { en: 'Dehradun Nagar Nigam — 0135-2653213 and CM Helpline 1905 for garbage complaints', hi: 'Dehradun garbage complaint — Nagar Nigam 0135-2653213 ya CM Helpline 1905' },
+        url: 'https://www.dehradunnagarnigam.com',
+        phone: '0135-2653213',
+        howto: [
+          { en: 'Call Dehradun Nagar Nigam: 0135-2653213 for garbage/solid waste complaint', hi: 'Dehradun Nagar Nigam: 0135-2653213 — garbage/solid waste complaint ke liye' },
+          { en: 'Other UK cities: contact local Nagar Nigam / Nagar Palika Parishad', hi: 'Other UK cities ke liye: local Nagar Nigam ya Nagar Palika Parishad se contact karein' },
+          { en: 'CM Helpline 1905: cmhelpline.uk.gov.in → Lodge Complaint → "Urban/Sanitation"', hi: 'CM Helpline 1905: cmhelpline.uk.gov.in → Lodge Complaint → "Urban/Sanitation"' },
+          { en: 'App: Swachhata-MoHUA (1969) — works across all Uttarakhand ULBs', hi: 'App: Swachhata-MoHUA (1969) — sabhi Uttarakhand ULBs mein kaam karta hai' },
+        ],
+      },
+      {
+        badge: 'state',
+        name: 'Uttarakhand CM Helpline 1905 — Garbage Escalation',
+        desc: { en: 'ULB not acting? Escalate via UK CM Helpline 1905', hi: 'ULB action nahi? UK CM Helpline 1905 par escalate karein' },
+        url: 'https://cmhelpline.uk.gov.in',
+        phone: '1905',
+        howto: [
+          { en: 'Dial 1905 OR cmhelpline.uk.gov.in → OTP login → Lodge Complaint', hi: '1905 dial karein ya cmhelpline.uk.gov.in → OTP login → Lodge Complaint' },
+          { en: 'Select department: "Urban Development/Sanitation" with ULB complaint reference', hi: '"Urban Development/Sanitation" select karein — ULB complaint reference dein' },
+        ],
+      },
+    ],
   },
 
   // ── Himachal Pradesh ──────────────────────────────────────────────────────
@@ -3210,6 +3381,32 @@ export const STATE_PORTALS = {
         howto: [
           { en: 'Open hppolice.gov.in → "Grievance" section', hi: 'hppolice.gov.in → "Grievance" section mein jaayein' },
           { en: 'Write to SP with previous complaint details and FIR refusal', hi: 'SP ko previous complaint details aur FIR refusal ke saath likhein' },
+        ],
+      },
+    ],
+    safai: [
+      {
+        badge: 'first',
+        name: 'HP Nagar Nigam — Garbage Complaint (CM Sewa Sankalp 1100)',
+        desc: { en: 'HP municipalities — CM Sewa Sankalp 1100 or edistrict.hp.gov.in for garbage complaints', hi: 'HP garbage complaint — CM Sewa Sankalp 1100 ya edistrict.hp.gov.in' },
+        url: 'https://edistrict.hp.gov.in',
+        phone: '1100',
+        howto: [
+          { en: 'Dial 1100 (HP CM Sewa Sankalp) → select "Urban Local Bodies" for garbage issue', hi: '1100 (CM Sewa Sankalp) → "Urban Local Bodies" select karein — garbage issue ke liye' },
+          { en: 'Online: edistrict.hp.gov.in → Lodge Grievance → Sanitation/Solid Waste', hi: 'edistrict.hp.gov.in → Lodge Grievance → Sanitation/Solid Waste select karein' },
+          { en: 'Shimla Municipal Corporation: 0177-2813700 (Shimla city garbage)', hi: 'Shimla Municipal Corporation: 0177-2813700 — Shimla city garbage complaint' },
+          { en: 'App: Swachhata-MoHUA (1969) — works across all HP ULBs', hi: 'App: Swachhata-MoHUA (1969) — sabhi HP ULBs mein kaam karta hai' },
+        ],
+      },
+      {
+        badge: 'state',
+        name: 'HP State Grievance — Garbage Escalation',
+        desc: { en: 'ULB not acting? Escalate via HP state grievance portal', hi: 'ULB action nahi? HP state grievance portal par escalate karein' },
+        url: 'https://grievance.hp.gov.in',
+        phone: '1800-180-8066',
+        howto: [
+          { en: 'Open grievance.hp.gov.in → Lodge Grievance → select "Urban Local Bodies"', hi: 'grievance.hp.gov.in → Lodge Grievance → "Urban Local Bodies" select karein' },
+          { en: 'Toll-free: 1800-180-8066 with previous ULB complaint reference', hi: '1800-180-8066 dial karein — pichla ULB complaint reference rakhein' },
         ],
       },
     ],
@@ -3317,6 +3514,32 @@ export const STATE_PORTALS = {
         howto: [
           { en: 'Open goapolice.gov.in → "Grievance" section', hi: 'goapolice.gov.in → "Grievance" section mein jaayein' },
           { en: 'Visit or write to SP North Goa (Panaji) or SP South Goa (Margao)', hi: 'SP North Goa (Panaji) ya SP South Goa (Margao) ko visit karein ya likhein' },
+        ],
+      },
+    ],
+    safai: [
+      {
+        badge: 'first',
+        name: 'Goa ULB Service — Garbage Complaint (goaulbservice.gov.in)',
+        desc: { en: 'Goa ULB integrated service — goaulbservice.gov.in/Complaints.aspx and 1533 helpline', hi: 'Goa garbage complaint — goaulbservice.gov.in portal ya 1533 helpline' },
+        url: 'https://goaulbservice.gov.in/Complaints.aspx',
+        phone: '1533',
+        howto: [
+          { en: 'Online: goaulbservice.gov.in/Complaints.aspx → select your municipality → Solid Waste', hi: 'goaulbservice.gov.in/Complaints.aspx → municipality select karein → Solid Waste' },
+          { en: 'Dial 1533 (Goa state helpline) for garbage and civic complaints', hi: '1533 dial karein (Goa state helpline) — garbage aur civic complaints ke liye' },
+          { en: 'Panaji CCP: 0832-2420522 | Margao (Salcete): 0832-2700039', hi: 'Panaji CCP: 0832-2420522 | Margao (Salcete): 0832-2700039' },
+          { en: 'App: Swachhata-MoHUA (1969) — works across all Goa municipalities', hi: 'App: Swachhata-MoHUA (1969) — sabhi Goa municipalities mein kaam karta hai' },
+        ],
+      },
+      {
+        badge: 'state',
+        name: 'Goa CM Helpline — Garbage Escalation',
+        desc: { en: 'Municipality not acting? Escalate via Goa state grievance', hi: 'Municipality action nahi? Goa state grievance se escalate karein' },
+        url: 'https://www.goa.gov.in',
+        phone: '1800-233-0022',
+        howto: [
+          { en: 'Goa toll-free helpline: 1800-233-0022 for ULB inaction escalation', hi: 'Goa toll-free: 1800-233-0022 — ULB inaction escalation ke liye' },
+          { en: 'Or approach Director of Municipal Administration, Panaji with complaint', hi: 'Ya Director of Municipal Administration, Panaji ko complaint dein' },
         ],
       },
     ],
@@ -3428,6 +3651,32 @@ export const STATE_PORTALS = {
         ],
       },
     ],
+    safai: [
+      {
+        badge: 'first',
+        name: 'JMC / SMC — J&K Garbage Complaint (myjammu.in / 1800-180-7207)',
+        desc: { en: 'Jammu: JMC 1800-180-7207 | Kashmir: SMC — garbage/solid waste complaints', hi: 'Jammu garbage: JMC 1800-180-7207 | Kashmir: SMC — solid waste complaint' },
+        url: 'https://myjammu.in',
+        phone: '1800-180-7207',
+        howto: [
+          { en: 'Jammu city: myjammu.in → Citizen Services → Complaint → Solid Waste', hi: 'Jammu city: myjammu.in → Citizen Services → Complaint → Solid Waste' },
+          { en: 'JMC Jammu toll-free: 1800-180-7207 | Direct: 0191-2570570', hi: 'JMC Jammu toll-free: 1800-180-7207 | Direct: 0191-2570570' },
+          { en: 'Srinagar: Srinagar Municipal Corporation (SMC) — 0194-2452024', hi: 'Srinagar: SMC — 0194-2452024 contact karein' },
+          { en: 'App: Swachhata-MoHUA (1969) — works across all J&K ULBs', hi: 'App: Swachhata-MoHUA (1969) — sabhi J&K ULBs mein kaam karta hai' },
+        ],
+      },
+      {
+        badge: 'state',
+        name: 'J&K LG Grievance Portal — Garbage Escalation',
+        desc: { en: 'ULB not acting? Escalate via J&K LG Grievance portal lgraj.jk.gov.in', hi: 'ULB action nahi? J&K LG Grievance portal lgraj.jk.gov.in se escalate karein' },
+        url: 'https://lgraj.jk.gov.in',
+        phone: '0194-2473000',
+        howto: [
+          { en: 'Open lgraj.jk.gov.in → Citizen Grievance → select "Urban Local Bodies"', hi: 'lgraj.jk.gov.in → Citizen Grievance → "Urban Local Bodies" select karein' },
+          { en: 'Add previous JMC/SMC complaint reference for faster resolution', hi: 'Faster resolution ke liye pichla JMC/SMC complaint reference add karein' },
+        ],
+      },
+    ],
   },
 
   // ── Manipur ───────────────────────────────────────────────────────────────
@@ -3509,6 +3758,21 @@ export const STATE_PORTALS = {
         howto: [
           { en: 'Manipur toll-free helpline: 1800-345-3818', hi: 'Manipur toll-free helpline: 1800-345-3818' },
           { en: 'Or write to SP of your district with complaint details', hi: 'Ya apne district ke SP ko complaint details ke saath likhein' },
+        ],
+      },
+    ],
+    safai: [
+      {
+        badge: 'first',
+        name: 'IMCL / Manipur ULB — Garbage Complaint (CM Da Haisi)',
+        desc: { en: 'Imphal Municipal Council and ULBs — CM Da Haisi for garbage/sanitation complaints', hi: 'Imphal garbage complaint — IMCL ya CM Da Haisi cmdahaisi.mn.gov.in' },
+        url: 'https://cmdahaisi.mn.gov.in',
+        phone: '1800-345-3818',
+        howto: [
+          { en: 'Online: cmdahaisi.mn.gov.in → Lodge Grievance → select "Urban/Sanitation"', hi: 'cmdahaisi.mn.gov.in → Lodge Grievance → "Urban/Sanitation" select karein' },
+          { en: 'Imphal city: IMCL — 0385-2420033 for garbage/solid waste complaint', hi: 'Imphal city: IMCL — 0385-2420033 — garbage/solid waste complaint ke liye' },
+          { en: 'Manipur toll-free: 1800-345-3818 for civic complaints including garbage', hi: 'Manipur toll-free: 1800-345-3818 — garbage including civic complaints ke liye' },
+          { en: 'App: Swachhata-MoHUA (1969) — works across all Manipur ULBs', hi: 'App: Swachhata-MoHUA (1969) — sabhi Manipur ULBs mein kaam karta hai' },
         ],
       },
     ],
@@ -3608,6 +3872,32 @@ export const STATE_PORTALS = {
         ],
       },
     ],
+    safai: [
+      {
+        badge: 'first',
+        name: 'AMC Agartala — Garbage Complaint (0381-2325606)',
+        desc: { en: 'Agartala Municipal Corporation — 0381-2325606 for garbage/solid waste complaints', hi: 'Agartala garbage complaint — AMC 0381-2325606 ya CM Helpline 1905' },
+        url: 'https://agartala.gov.in',
+        phone: '0381-2325606',
+        howto: [
+          { en: 'Call AMC Agartala: 0381-2325606 for garbage/solid waste complaints', hi: 'AMC Agartala: 0381-2325606 — garbage/solid waste complaints ke liye' },
+          { en: 'Other Tripura towns: contact local Municipal Council / Nagar Panchayat', hi: 'Other Tripura towns ke liye: local Municipal Council ya Nagar Panchayat se contact karein' },
+          { en: 'CM Helpline Tripura: cmhelpline.tripura.gov.in → "Urban/Sanitation" for escalation', hi: 'CM Helpline Tripura: cmhelpline.tripura.gov.in → "Urban/Sanitation" escalation ke liye' },
+          { en: 'App: Swachhata-MoHUA (1969) — works across all Tripura ULBs', hi: 'App: Swachhata-MoHUA (1969) — sabhi Tripura ULBs mein kaam karta hai' },
+        ],
+      },
+      {
+        badge: 'state',
+        name: 'Tripura CM Helpline 1905 — Garbage Escalation',
+        desc: { en: 'AMC/ULB not acting? Escalate via Tripura CM Helpline 1905', hi: 'AMC/ULB action nahi? Tripura CM Helpline 1905 par escalate karein' },
+        url: 'https://cmhelpline.tripura.gov.in',
+        phone: '1905',
+        howto: [
+          { en: 'Dial 1905 OR cmhelpline.tripura.gov.in → Lodge Complaint → "Urban Local Bodies"', hi: '1905 dial karein ya cmhelpline.tripura.gov.in → "Urban Local Bodies" select karein' },
+          { en: 'Add previous AMC/ULB complaint reference for faster resolution', hi: 'Faster resolution ke liye pichla AMC/ULB complaint reference add karein' },
+        ],
+      },
+    ],
   },
 
   // ── Meghalaya ─────────────────────────────────────────────────────────────
@@ -3704,6 +3994,32 @@ export const STATE_PORTALS = {
         ],
       },
     ],
+    safai: [
+      {
+        badge: 'first',
+        name: 'SMB Shillong — Garbage Complaint (CM Connect 1971)',
+        desc: { en: 'Shillong Municipal Board — CM Connect 1971 and WhatsApp 9436394363 for garbage', hi: 'Shillong garbage complaint — CM Connect 1971 ya WhatsApp 9436394363' },
+        url: 'https://meghalaya.gov.in',
+        phone: '1971',
+        howto: [
+          { en: 'Dial 1971 (Meghalaya CM Connect) → select "Urban/Sanitation" for garbage issue', hi: '1971 (CM Connect) → "Urban/Sanitation" select karein — garbage issue ke liye' },
+          { en: 'Toll-free CM Connect: 1800-3456-851 | WhatsApp: 9436394363', hi: 'CM Connect toll-free: 1800-3456-851 | WhatsApp: 9436394363' },
+          { en: 'Shillong Municipal Board: 0364-2211266 (SMB office, Shillong city)', hi: 'Shillong Municipal Board: 0364-2211266 — Shillong city garbage complaint' },
+          { en: 'App: Swachhata-MoHUA (1969) — works across all Meghalaya ULBs', hi: 'App: Swachhata-MoHUA (1969) — sabhi Meghalaya ULBs mein kaam karta hai' },
+        ],
+      },
+      {
+        badge: 'state',
+        name: 'Meghalaya CM Connect 1971 — Garbage Escalation',
+        desc: { en: 'ULB not acting? Escalate via Meghalaya CM Connect 1971', hi: 'ULB action nahi? Meghalaya CM Connect 1971 par escalate karein' },
+        url: 'https://meghalaya.gov.in',
+        phone: '1971',
+        howto: [
+          { en: 'Dial 1971 (CM Connect, 24×7) OR toll-free 1800-3456-851', hi: '1971 dial karein (CM Connect, 24×7) ya toll-free 1800-3456-851' },
+          { en: 'Add previous ULB/SMB complaint reference number for escalation', hi: 'Escalation ke liye pichla ULB/SMB complaint reference number add karein' },
+        ],
+      },
+    ],
   },
 
   // ── Nagaland ──────────────────────────────────────────────────────────────
@@ -3786,6 +4102,21 @@ export const STATE_PORTALS = {
         howto: [
           { en: 'Write to SP of your district with previous complaint details', hi: 'District ke SP ko pichle complaint details ke saath likhein' },
           { en: 'Or use Nagaland CM Helpline for further escalation', hi: 'Aur escalation ke liye Nagaland CM Helpline use karein' },
+        ],
+      },
+    ],
+    safai: [
+      {
+        badge: 'first',
+        name: 'Nagaland ULB — Garbage Complaint (Kohima / Dimapur Municipal)',
+        desc: { en: 'Nagaland ULBs — Kohima Town Council 0370-2290048 / Dimapur for garbage complaints', hi: 'Nagaland garbage complaint — Kohima Town Council ya Dimapur Municipal Council' },
+        url: 'https://nagaland.gov.in',
+        phone: '0370-2290048',
+        howto: [
+          { en: 'Kohima Town Council: 0370-2290048 for garbage/solid waste complaints', hi: 'Kohima Town Council: 0370-2290048 — garbage/solid waste complaints ke liye' },
+          { en: 'Dimapur Municipal Council: 0386-2230073 for Dimapur city garbage', hi: 'Dimapur Municipal Council: 0386-2230073 — Dimapur city garbage complaints' },
+          { en: 'State grievance: nagaland.gov.in → Citizen Services → Lodge Complaint', hi: 'nagaland.gov.in → Citizen Services → Lodge Complaint karein' },
+          { en: 'App: Swachhata-MoHUA (1969) — works across all Nagaland ULBs', hi: 'App: Swachhata-MoHUA (1969) — sabhi Nagaland ULBs mein kaam karta hai' },
         ],
       },
     ],
@@ -3881,6 +4212,32 @@ export const STATE_PORTALS = {
         howto: [
           { en: 'Open mizorampolice.gov.in → "Grievance" section', hi: 'mizorampolice.gov.in → "Grievance" section mein jaayein' },
           { en: 'Write to SP of your district with complaint history', hi: 'District ke SP ko complaint history ke saath likhein' },
+        ],
+      },
+    ],
+    safai: [
+      {
+        badge: 'first',
+        name: 'AMDA Aizawl — Garbage Complaint (udpa.mizoram.gov.in)',
+        desc: { en: 'Aizawl Municipal Council — udpa.mizoram.gov.in and 0389-2340760 for garbage complaints', hi: 'Aizawl garbage complaint — udpa.mizoram.gov.in ya 0389-2340760' },
+        url: 'https://udpa.mizoram.gov.in',
+        phone: '0389-2340760',
+        howto: [
+          { en: 'Online: udpa.mizoram.gov.in → Citizen Grievance → Sanitation/Solid Waste', hi: 'udpa.mizoram.gov.in → Citizen Grievance → Sanitation/Solid Waste select karein' },
+          { en: 'AMDA Aizawl: 0389-2340760 for Aizawl city garbage complaints', hi: 'AMDA Aizawl: 0389-2340760 — Aizawl city garbage complaints ke liye' },
+          { en: 'Other Mizoram towns: contact local Town Committee / Municipal Council', hi: 'Other Mizoram towns ke liye: local Town Committee ya Municipal Council se contact karein' },
+          { en: 'App: Swachhata-MoHUA (1969) — works across all Mizoram ULBs', hi: 'App: Swachhata-MoHUA (1969) — sabhi Mizoram ULBs mein kaam karta hai' },
+        ],
+      },
+      {
+        badge: 'state',
+        name: 'Mizoram CPGRAMS / State Grievance — Garbage Escalation',
+        desc: { en: 'ULB not acting? Use Mizoram state grievance or CPGRAMS for escalation', hi: 'ULB action nahi? Mizoram state grievance ya CPGRAMS se escalate karein' },
+        url: 'https://pgportal.gov.in',
+        phone: '0389-2322200',
+        howto: [
+          { en: 'State grievance: mizoram.gov.in → Citizen Services → Lodge Grievance', hi: 'mizoram.gov.in → Citizen Services → Lodge Grievance karein' },
+          { en: 'Or use CPGRAMS: pgportal.gov.in → select "Urban Development" department', hi: 'Ya CPGRAMS: pgportal.gov.in → "Urban Development" department select karein' },
         ],
       },
     ],
@@ -3980,6 +4337,32 @@ export const STATE_PORTALS = {
         ],
       },
     ],
+    safai: [
+      {
+        badge: 'first',
+        name: 'GMC Gangtok — Garbage Complaint (03592-207060)',
+        desc: { en: 'Gangtok Municipal Corporation — 03592-207060 for garbage/solid waste complaints', hi: 'Gangtok garbage complaint — GMC 03592-207060 ya SSO portal' },
+        url: 'https://sso.sikkim.gov.in',
+        phone: '03592-207060',
+        howto: [
+          { en: 'Call GMC Gangtok: 03592-207060 for garbage/solid waste complaints', hi: 'GMC Gangtok: 03592-207060 — garbage/solid waste complaints ke liye call karein' },
+          { en: 'Online: sso.sikkim.gov.in → Lodge Complaint → "Urban/Sanitation"', hi: 'sso.sikkim.gov.in → Lodge Complaint → "Urban/Sanitation" select karein' },
+          { en: 'Other Sikkim towns: contact local Nagar Panchayat / Municipal Body', hi: 'Other Sikkim towns ke liye: local Nagar Panchayat ya Municipal Body se contact karein' },
+          { en: 'App: Swachhata-MoHUA (1969) — works across all Sikkim ULBs', hi: 'App: Swachhata-MoHUA (1969) — sabhi Sikkim ULBs mein kaam karta hai' },
+        ],
+      },
+      {
+        badge: 'state',
+        name: 'Sikkim State Grievance — Garbage Escalation',
+        desc: { en: 'Municipal body not acting? Escalate via Sikkim SSO portal', hi: 'Municipal body action nahi? Sikkim SSO portal se escalate karein' },
+        url: 'https://sso.sikkim.gov.in',
+        phone: '03592-231800',
+        howto: [
+          { en: 'Open sso.sikkim.gov.in → Lodge Complaint → "Urban Local Bodies"', hi: 'sso.sikkim.gov.in → Lodge Complaint → "Urban Local Bodies" select karein' },
+          { en: 'Call Chief Minister Grievance Cell: 03592-231800 for further escalation', hi: 'CM Grievance Cell: 03592-231800 — aur escalation ke liye call karein' },
+        ],
+      },
+    ],
   },
 
   // ── Arunachal Pradesh ─────────────────────────────────────────────────────
@@ -4072,6 +4455,32 @@ export const STATE_PORTALS = {
         howto: [
           { en: 'Write to SP of your district with complaint history and FIR refusal proof', hi: 'SP ko complaint history aur FIR refusal proof ke saath likhein' },
           { en: 'SP must order FIR under CrPC Section 154(3)', hi: 'SP ko CrPC Section 154(3) ke tahat FIR order karni hogi' },
+        ],
+      },
+    ],
+    safai: [
+      {
+        badge: 'first',
+        name: 'IMCL Itanagar — Garbage Complaint (0360-2212006)',
+        desc: { en: 'Itanagar Municipal Council — 0360-2212006 for garbage/solid waste complaints', hi: 'Itanagar garbage complaint — IMCL 0360-2212006 ya CM E-Jansunwai' },
+        url: 'https://imc.arunachal.gov.in',
+        phone: '0360-2212006',
+        howto: [
+          { en: 'Call IMCL Itanagar: 0360-2212006 for garbage/solid waste complaints', hi: 'IMCL Itanagar: 0360-2212006 — garbage/solid waste complaints ke liye call karein' },
+          { en: 'Online: imc.arunachal.gov.in → Citizen Services → Complaint', hi: 'imc.arunachal.gov.in → Citizen Services → Complaint karein' },
+          { en: 'Other AP towns: contact local Municipal Board / Town Committee', hi: 'Other AP towns ke liye: local Municipal Board ya Town Committee se contact karein' },
+          { en: 'App: Swachhata-MoHUA (1969) — works across all Arunachal ULBs', hi: 'App: Swachhata-MoHUA (1969) — sabhi Arunachal ULBs mein kaam karta hai' },
+        ],
+      },
+      {
+        badge: 'state',
+        name: 'Arunachal CM E-Jansunwai — Garbage Escalation',
+        desc: { en: 'ULB not acting? Escalate via Arunachal Pradesh CM E-Jansunwai portal', hi: 'ULB action nahi? AP CM E-Jansunwai portal se escalate karein' },
+        url: 'https://arunachal.gov.in',
+        phone: '0360-2211170',
+        howto: [
+          { en: 'CM E-Jansunwai portal → Lodge Grievance → select "Urban Local Bodies"', hi: 'CM E-Jansunwai portal → Lodge Grievance → "Urban Local Bodies" select karein' },
+          { en: 'Add previous IMCL/ULB complaint reference for faster resolution', hi: 'Faster resolution ke liye pichla IMCL/ULB complaint reference add karein' },
         ],
       },
     ],

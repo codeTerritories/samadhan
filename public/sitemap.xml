@@ -1,0 +1,35 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9"
+        xmlns:xhtml="http://www.w3.org/1999/xhtml"
+        xmlns:image="http://www.google.com/schemas/sitemap-image/1.1">
+
+  <!-- Home page — highest priority, updated frequently as new state portals added -->
+  <url>
+    <loc>https://samadhan.in/</loc>
+    <lastmod>2025-04-19</lastmod>
+    <changefreq>weekly</changefreq>
+    <priority>1.0</priority>
+    <!-- Hreflang alternates for bilingual content -->
+    <xhtml:link rel="alternate" hreflang="en-IN" href="https://samadhan.in/" />
+    <xhtml:link rel="alternate" hreflang="hi-IN" href="https://samadhan.in/" />
+    <xhtml:link rel="alternate" hreflang="x-default" href="https://samadhan.in/" />
+    <!-- OG image for rich results -->
+    <image:image>
+      <image:loc>https://samadhan.in/og-image.png</image:loc>
+      <image:title>Samadhan — India's Civic Complaint Portal</image:title>
+      <image:caption>Official helplines for electricity, water, roads, police and more across all Indian states</image:caption>
+    </image:image>
+  </url>
+
+  <!-- About page -->
+  <url>
+    <loc>https://samadhan.in/about</loc>
+    <lastmod>2025-04-19</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.7</priority>
+    <xhtml:link rel="alternate" hreflang="en-IN" href="https://samadhan.in/about" />
+    <xhtml:link rel="alternate" hreflang="hi-IN" href="https://samadhan.in/about" />
+    <xhtml:link rel="alternate" hreflang="x-default" href="https://samadhan.in/about" />
+  </url>
+
+</urlset>

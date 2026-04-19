@@ -1,21 +1,332 @@
 <!DOCTYPE html>
-<html lang="en">
+<html lang="en" dir="ltr">
   <head>
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <meta name="description" content="Samadhan — India's one-stop portal for all civic problems: electricity, water, police, health, banking and more." />
-    <meta name="theme-color" content="#1D9E75" />
-    <title>Samadhan — समाधान</title>
 
-    <!-- Google Fonts -->
+    <!-- ═══════════════════════════════════════════════════════════════════
+         PRIMARY SEO — Title & Description
+         Title: ≤60 chars for SERP, front-loaded with primary keywords
+         Description: ≤155 chars, action-driven, with helpline numbers as proof
+    ═══════════════════════════════════════════════════════════════════ -->
+    <title>Samadhan — India Civic Complaint Portal | Bijli Pani Sadak Helplines</title>
+    <meta name="description" content="Find official helplines &amp; complaint portals for electricity (1912), water (1916), roads, police, banking &amp; more — for every Indian state. Free, bilingual, no login." />
+    <meta name="keywords" content="government helpline India, bijli complaint 1912, pani complaint 1916, electricity helpline India, water supply helpline India, police complaint online India, FIR online India, road pothole complaint, civic complaint portal India, CPGRAMS, samadhan, sarkari helpline, state government portals India" />
+    <meta name="author" content="Samadhan" />
+    <meta name="robots" content="index, follow, max-snippet:-1, max-image-preview:large, max-video-preview:-1" />
+    <meta name="googlebot" content="index, follow, max-snippet:-1, max-image-preview:large" />
+
+    <!-- ═══════════════════════════════════════════════════════════════════
+         CANONICAL & HREFLANG
+         Both EN and HI serve the same URL (client-side language toggle)
+         x-default signals the primary/default URL to Google
+    ═══════════════════════════════════════════════════════════════════ -->
+    <link rel="canonical" href="https://samadhan.in/" />
+    <link rel="alternate" hreflang="en-IN" href="https://samadhan.in/" />
+    <link rel="alternate" hreflang="hi-IN" href="https://samadhan.in/" />
+    <link rel="alternate" hreflang="x-default" href="https://samadhan.in/" />
+
+    <!-- ═══════════════════════════════════════════════════════════════════
+         OPEN GRAPH — Controls how page looks when shared on
+         WhatsApp, Facebook, LinkedIn, Telegram, etc.
+    ═══════════════════════════════════════════════════════════════════ -->
+    <meta property="og:type" content="website" />
+    <meta property="og:site_name" content="Samadhan — समाधान" />
+    <meta property="og:title" content="Samadhan — India's One-Stop Civic Complaint Portal" />
+    <meta property="og:description" content="Bijli gul? Pani band? FIR dena hai? — Get the exact helpline &amp; complaint portal for your problem across all 30 Indian states. Free, official, bilingual." />
+    <meta property="og:url" content="https://samadhan.in/" />
+    <meta property="og:image" content="https://samadhan.in/og-image.png" />
+    <meta property="og:image:secure_url" content="https://samadhan.in/og-image.png" />
+    <meta property="og:image:width" content="1200" />
+    <meta property="og:image:height" content="630" />
+    <meta property="og:image:alt" content="Samadhan — India's civic complaint portal showing helplines for electricity, water, roads, police and more" />
+    <meta property="og:locale" content="en_IN" />
+    <meta property="og:locale:alternate" content="hi_IN" />
+
+    <!-- ═══════════════════════════════════════════════════════════════════
+         TWITTER CARD — Controls Twitter/X link previews
+    ═══════════════════════════════════════════════════════════════════ -->
+    <meta name="twitter:card" content="summary_large_image" />
+    <meta name="twitter:site" content="@samadhanin" />
+    <meta name="twitter:creator" content="@samadhanin" />
+    <meta name="twitter:title" content="Samadhan — India's One-Stop Civic Complaint Portal" />
+    <meta name="twitter:description" content="Find official helplines for electricity (1912), water (1916), police (100), roads &amp; more across all Indian states. Free, no login, bilingual EN+HI." />
+    <meta name="twitter:image" content="https://samadhan.in/og-image.png" />
+    <meta name="twitter:image:alt" content="Samadhan civic complaint portal — helplines for every Indian state" />
+
+    <!-- ═══════════════════════════════════════════════════════════════════
+         GEO & REGIONAL — Signals India-specific content to search engines
+    ═══════════════════════════════════════════════════════════════════ -->
+    <meta name="geo.region" content="IN" />
+    <meta name="geo.placename" content="India" />
+    <meta name="geo.position" content="20.5937;78.9629" />
+    <meta name="ICBM" content="20.5937, 78.9629" />
+    <meta name="DC.language" content="en-IN, hi-IN" />
+    <meta name="DC.coverage" content="India" />
+    <meta name="language" content="English, Hindi" />
+    <meta name="content-language" content="en-IN, hi-IN" />
+    <meta name="rating" content="general" />
+    <meta name="revisit-after" content="7 days" />
+
+    <!-- ═══════════════════════════════════════════════════════════════════
+         APP / THEME META
+    ═══════════════════════════════════════════════════════════════════ -->
+    <meta name="theme-color" content="#1D9E75" />
+    <meta name="application-name" content="Samadhan" />
+    <meta name="apple-mobile-web-app-capable" content="yes" />
+    <meta name="apple-mobile-web-app-status-bar-style" content="black-translucent" />
+    <meta name="apple-mobile-web-app-title" content="Samadhan" />
+    <meta name="mobile-web-app-capable" content="yes" />
+    <meta name="msapplication-TileColor" content="#1D9E75" />
+    <meta name="msapplication-tap-highlight" content="no" />
+
+    <!-- ═══════════════════════════════════════════════════════════════════
+         FAVICON & ICONS
+    ═══════════════════════════════════════════════════════════════════ -->
+    <link rel="icon" type="image/svg+xml" href="/favicon.svg" />
+    <link rel="icon" type="image/x-icon" href="/favicon.ico" sizes="any" />
+    <link rel="apple-touch-icon" href="/apple-touch-icon.png" />
+    <link rel="manifest" href="/manifest.json" />
+
+    <!-- ═══════════════════════════════════════════════════════════════════
+         PERFORMANCE — preconnect reduces DNS/TLS handshake time for
+         third-party origins, directly improving Core Web Vitals (LCP/FID)
+    ═══════════════════════════════════════════════════════════════════ -->
     <link rel="preconnect" href="https://fonts.googleapis.com" />
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link rel="dns-prefetch" href="https://cdnjs.cloudflare.com" />
+    <link rel="dns-prefetch" href="https://api.emailjs.com" />
+
+    <!-- Google Fonts — display=swap prevents render-blocking (CLS benefit) -->
     <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700&family=Noto+Sans+Devanagari:wght@300;400;500;600;700&display=swap" rel="stylesheet" />
 
     <!-- Font Awesome -->
-    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css" />
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css" crossorigin="anonymous" referrerpolicy="no-referrer" />
+
+    <!-- ═══════════════════════════════════════════════════════════════════
+         STRUCTURED DATA — JSON-LD
+         Google uses these to generate rich results (FAQ boxes, sitelinks
+         searchbox, knowledge panel). This is the highest-impact SEO lever
+         for a civic information site.
+    ═══════════════════════════════════════════════════════════════════ -->
+
+    <!-- 1. Organization — Enables Knowledge Panel in Google Search -->
+    <script type="application/ld+json">
+    {
+      "@context": "https://schema.org",
+      "@type": "Organization",
+      "name": "Samadhan",
+      "alternateName": ["समाधान", "Samadhan India", "Samadhan Civic Portal"],
+      "description": "India's independent, free civic complaint portal that aggregates official government helplines and portals for electricity, water, roads, sanitation, police, banking, health and more across all 30 Indian states.",
+      "url": "https://samadhan.in",
+      "logo": {
+        "@type": "ImageObject",
+        "url": "https://samadhan.in/logo.png",
+        "width": 512,
+        "height": 512
+      },
+      "image": "https://samadhan.in/og-image.png",
+      "foundingDate": "2024",
+      "inLanguage": ["en-IN", "hi-IN"],
+      "areaServed": {
+        "@type": "Country",
+        "name": "India",
+        "sameAs": "https://www.wikidata.org/wiki/Q668"
+      },
+      "knowsAbout": [
+        "Electricity complaint India",
+        "Water supply complaint India",
+        "Road pothole complaint India",
+        "Police complaint FIR India",
+        "Banking grievance India",
+        "Government services India",
+        "CPGRAMS grievance portal",
+        "State helplines India"
+      ],
+      "contactPoint": {
+        "@type": "ContactPoint",
+        "contactType": "customer support",
+        "email": "adubey.works@gmail.com",
+        "availableLanguage": ["English", "Hindi"]
+      },
+      "sameAs": [
+        "https://samadhan.in"
+      ]
+    }
+    </script>
+
+    <!-- 2. WebSite with SearchAction — Enables Google Sitelinks Searchbox -->
+    <script type="application/ld+json">
+    {
+      "@context": "https://schema.org",
+      "@type": "WebSite",
+      "name": "Samadhan — समाधान",
+      "alternateName": "Samadhan India Civic Helpline Portal",
+      "description": "Find official helplines and complaint portals for any civic problem in India — electricity, water, roads, police, banking, health, telecom and more. Covers all 30 Indian states, bilingual English and Hindi.",
+      "url": "https://samadhan.in",
+      "inLanguage": ["en-IN", "hi-IN"],
+      "isAccessibleForFree": true,
+      "potentialAction": {
+        "@type": "SearchAction",
+        "target": {
+          "@type": "EntryPoint",
+          "urlTemplate": "https://samadhan.in/?q={search_term_string}"
+        },
+        "query-input": "required name=search_term_string"
+      },
+      "publisher": {
+        "@type": "Organization",
+        "name": "Samadhan",
+        "url": "https://samadhan.in"
+      }
+    }
+    </script>
+
+    <!-- 3. FAQPage — Highest-impact for "People Also Ask" boxes in Google.
+         Targets the most-searched civic helpline queries in India. -->
+    <script type="application/ld+json">
+    {
+      "@context": "https://schema.org",
+      "@type": "FAQPage",
+      "mainEntity": [
+        {
+          "@type": "Question",
+          "name": "What is the electricity complaint helpline number in India?",
+          "acceptedAnswer": {
+            "@type": "Answer",
+            "text": "Dial 1912 (24×7, toll-free) — the national electricity complaint helpline (DISCOM). State-specific numbers: Delhi BSES/BYPL 19123, Mumbai MSEDCL 1800-200-3435, Maharashtra MSEDCL 1800-102-3435, Karnataka BESCOM 1912, Tamil Nadu TANGEDCO 1912. For unresolved complaints escalate to your State Electricity Regulatory Commission (SERC) or file on CPGRAMS at pgportal.gov.in."
+          }
+        },
+        {
+          "@type": "Question",
+          "name": "What is the water supply complaint helpline number in India?",
+          "acceptedAnswer": {
+            "@type": "Answer",
+            "text": "Dial 1916 (24×7, toll-free) — the national Jal Shakti / Jal Board water supply helpline. State-specific portals: Delhi Jal Board djb.gov.in, Maharashtra MJP 1800-233-0033, UP Jal Nigam 1800-180-5555. For rural water supply under Jal Jeevan Mission, call 1916. Escalate persistent issues to state PHE/PHED department or CPGRAMS."
+          }
+        },
+        {
+          "@type": "Question",
+          "name": "How do I file a police complaint or FIR online in India?",
+          "acceptedAnswer": {
+            "@type": "Answer",
+            "text": "Dial 100 for police emergency or 112 for all emergencies. To file an FIR online, visit your state police portal (e.g., delhipolice.gov.in, citizenportal.mahapolice.gov.in, ksp.karnataka.gov.in). Under CrPC Section 154(3), police must register your FIR — if refused, approach the SP of your district in writing. For cyber crime complaints dial 1930 or visit cybercrime.gov.in."
+          }
+        },
+        {
+          "@type": "Question",
+          "name": "How do I complain about a road pothole in India?",
+          "acceptedAnswer": {
+            "@type": "Answer",
+            "text": "For National Highways call NHAI helpline 1033 or use the NHAI One portal. For state roads contact your state PWD portal or dial the CM helpline (varies by state — e.g., Delhi PWD 1908, Maharashtra PWD, UP Setu Helpline 1800-180-4167). For city roads file a complaint with your Municipal Corporation (Nagar Nigam). You can also report potholes via the Swachhata-MoHUA app (1969)."
+          }
+        },
+        {
+          "@type": "Question",
+          "name": "What is the garbage and sanitation complaint number in India?",
+          "acceptedAnswer": {
+            "@type": "Answer",
+            "text": "Dial 1969 or use the Swachhata-MoHUA app to report garbage dumping, missed garbage collection, blocked drains, or open defecation under the Swachh Bharat Mission. You can also contact your local Municipal Corporation (Nagar Nigam/Nagar Palika) directly. For city-specific: Delhi MCD mcdonline.nic.in, Mumbai BMC 1916, Bengaluru BBMP 080-22660000."
+          }
+        },
+        {
+          "@type": "Question",
+          "name": "What is CPGRAMS and how do I file a complaint on it?",
+          "acceptedAnswer": {
+            "@type": "Answer",
+            "text": "CPGRAMS (Centralised Public Grievance Redress and Monitoring System) at pgportal.gov.in is India's official national online grievance portal. To file: 1) Go to pgportal.gov.in 2) Register or login with mobile OTP 3) Click 'Lodge Public Grievance' 4) Select Ministry/Department 5) Describe your problem 6) Submit — you get a tracking registration number. The nodal officer must respond within 30 days."
+          }
+        },
+        {
+          "@type": "Question",
+          "name": "How do I escalate a civic complaint that has not been resolved in India?",
+          "acceptedAnswer": {
+            "@type": "Answer",
+            "text": "Follow this escalation path: 1) Local level — File with DISCOM/Jal Board/Municipal body 2) State level — File with State Electricity/Water Regulatory Commission or State CM Helpline 3) Central level — File on CPGRAMS at pgportal.gov.in 4) RTI — File RTI at rtionline.gov.in to get information on your complaint status. For consumer disputes, approach State Consumer Disputes Redressal Commission or National Consumer Helpline 1800-11-4000."
+          }
+        },
+        {
+          "@type": "Question",
+          "name": "What is the banking fraud or UPI fraud complaint helpline in India?",
+          "acceptedAnswer": {
+            "@type": "Answer",
+            "text": "For UPI fraud or banking fraud: immediately call National Cyber Crime Helpline 1930 (24×7) or file at cybercrime.gov.in. Also call your bank's 24×7 customer care to block your card/account. For banking service complaints: RBI Integrated Ombudsman Scheme helpline 14448, or file at bankingombudsman.rbi.org.in. NPCI helpline for UPI: 1800-120-1740."
+          }
+        },
+        {
+          "@type": "Question",
+          "name": "How do I apply for a ration card or fix ration issues in India?",
+          "acceptedAnswer": {
+            "@type": "Answer",
+            "text": "For ration card issues: Contact your state Food &amp; Civil Supplies Department portal, or your District Supply Officer (DSO). National Food Security Helpline: 14445. You can check ration card status on mera.pmgsy.nic.in or your state's PDS portal (e.g., ration.jharkhand.gov.in, epds.tn.gov.in). For urgent ration denial, contact your Block Development Officer (BDO) or file on CPGRAMS."
+          }
+        },
+        {
+          "@type": "Question",
+          "name": "Is Samadhan an official government website?",
+          "acceptedAnswer": {
+            "@type": "Answer",
+            "text": "No. Samadhan is an independent, non-profit citizen project. It is not affiliated with any government body. Samadhan aggregates information about official government helplines and portals to help citizens find the right channel quickly. All helpline numbers and portal links on Samadhan point directly to official government websites. The service is completely free, requires no login, and stores no personal data."
+          }
+        }
+      ]
+    }
+    </script>
+
+    <!-- 4. BreadcrumbList — Signals page hierarchy to Google (updated dynamically by useSEO hook) -->
+    <script type="application/ld+json" id="ld-breadcrumb">
+    {
+      "@context": "https://schema.org",
+      "@type": "BreadcrumbList",
+      "itemListElement": [
+        {
+          "@type": "ListItem",
+          "position": 1,
+          "name": "Home",
+          "item": "https://samadhan.in/"
+        }
+      ]
+    }
+    </script>
+
+    <!-- 5. ItemList — Signals the 13 problem categories to Google -->
+    <script type="application/ld+json">
+    {
+      "@context": "https://schema.org",
+      "@type": "ItemList",
+      "name": "Civic Problem Categories — Samadhan India",
+      "description": "Official government helplines and complaint portals for 13 civic problem categories across all Indian states",
+      "url": "https://samadhan.in",
+      "numberOfItems": 13,
+      "itemListElement": [
+        { "@type": "ListItem", "position": 1,  "name": "Electricity (Bijli) Complaints", "url": "https://samadhan.in/?cat=bijli" },
+        { "@type": "ListItem", "position": 2,  "name": "Water Supply (Pani) Complaints", "url": "https://samadhan.in/?cat=pani" },
+        { "@type": "ListItem", "position": 3,  "name": "Road & Pothole (Sadak) Complaints", "url": "https://samadhan.in/?cat=sadak" },
+        { "@type": "ListItem", "position": 4,  "name": "Garbage & Sanitation (Safai) Complaints", "url": "https://samadhan.in/?cat=safai" },
+        { "@type": "ListItem", "position": 5,  "name": "Banking & Finance Complaints", "url": "https://samadhan.in/?cat=bank" },
+        { "@type": "ListItem", "position": 6,  "name": "Police & Law Complaints", "url": "https://samadhan.in/?cat=police" },
+        { "@type": "ListItem", "position": 7,  "name": "Health Services Complaints", "url": "https://samadhan.in/?cat=health" },
+        { "@type": "ListItem", "position": 8,  "name": "Transport Complaints", "url": "https://samadhan.in/?cat=transport" },
+        { "@type": "ListItem", "position": 9,  "name": "Government Services Complaints", "url": "https://samadhan.in/?cat=govt" },
+        { "@type": "ListItem", "position": 10, "name": "Telecom & Internet Complaints", "url": "https://samadhan.in/?cat=telecom" },
+        { "@type": "ListItem", "position": 11, "name": "Environment Complaints", "url": "https://samadhan.in/?cat=env" },
+        { "@type": "ListItem", "position": 12, "name": "Education Complaints", "url": "https://samadhan.in/?cat=edu" }
+      ]
+    }
+    </script>
+
   </head>
   <body>
+    <!-- Noscript fallback for crawlers and users without JS -->
+    <noscript>
+      <div style="font-family:sans-serif;max-width:700px;margin:40px auto;padding:20px;line-height:1.6">
+        <h1>Samadhan — India's Civic Complaint Portal</h1>
+        <p>Find official government helplines and complaint portals for electricity (1912), water (1916), roads, police, banking, and more — for every Indian state.</p>
+        <p>Key helplines: <strong>Electricity: 1912</strong> | <strong>Water: 1916</strong> | <strong>Police: 100</strong> | <strong>Emergency: 112</strong> | <strong>Cyber Crime: 1930</strong> | <strong>Garbage: 1969</strong> | <strong>NHAI Roads: 1033</strong> | <strong>CPGRAMS: pgportal.gov.in</strong></p>
+        <p>This site requires JavaScript to load. Please enable JavaScript or visit <a href="https://pgportal.gov.in">pgportal.gov.in</a> directly to file a grievance.</p>
+      </div>
+    </noscript>
+
     <div id="root"></div>
     <script type="module" src="/src/main.jsx"></script>
   </body>

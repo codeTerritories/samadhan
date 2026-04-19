@@ -1,0 +1,12 @@
+# robots.txt — Samadhan (https://samadhan.in)
+# Allow all search engine crawlers
+
+User-agent: *
+Allow: /
+
+# Point crawlers to sitemap
+Sitemap: https://samadhan.in/sitemap.xml
+
+# Disallow build artifacts and source files
+Disallow: /src/
+Disallow: /.env
