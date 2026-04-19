@@ -38,7 +38,7 @@ export default function Hero({ onSearch }) {
         {/* top tag row */}
         <div className="hero-tags-row">
           <span className="hero-pill hero-pill-saffron">
-            🇮🇳 विकसित भारत 2047
+            🇮🇳 विकसित भारत
           </span>
           <span className="hero-pill hero-pill-green">
             {t({ en: '✦ Citizen First', hi: '✦ नागरिक प्रथम' })}
