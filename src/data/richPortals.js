@@ -564,30 +564,69 @@ export const STATE_PORTALS = {
 
   // ── Maharashtra ──────────────────────────────────────────────────────────
   Maharashtra: {
+    police: [
+      {
+        badge: 'first',
+        name: 'Maharashtra Police — Emergency & Helpline',
+        desc: { en: 'Dial 100 for emergency. Maharashtra Police 24×7 control room.', hi: 'Emergency ke liye 100 dial karein — Maharashtra Police 24×7 control room.' },
+        url: null, phone: '100', callOnly: true,
+        howto: [
+          { en: 'Dial 100 for any police emergency — available 24×7', hi: 'Kisi bhi emergency mein 100 dial karein — 24×7 available' },
+          { en: 'Women in danger: Dial 1091 (Women Helpline)', hi: 'Mahila suraksha ke liye: 1091 dial karein' },
+          { en: 'For cyber fraud: Dial 1930 immediately', hi: 'Cyber fraud ke liye: turant 1930 dial karein' },
+        ],
+      },
+      {
+        badge: 'first',
+        name: 'Maharashtra Police Citizen Portal — Online Complaint',
+        desc: { en: 'File online FIR, missing person report, lost article report — official Maharashtra Police portal', hi: 'Online FIR, missing person, lost article report — Maharashtra Police official portal' },
+        url: 'https://citizen.mahapolice.gov.in',
+        phone: '100',
+        howto: [
+          { en: 'Open citizen.mahapolice.gov.in → Click "Register Complaint"', hi: 'citizen.mahapolice.gov.in kholen → "Register Complaint" click karein' },
+          { en: 'Select complaint type: FIR / Non-Cognizable / Lost Article / Missing Person', hi: 'Complaint type chunein: FIR / Non-Cognizable / Lost Article / Missing Person' },
+          { en: 'Login with mobile OTP → fill complaint details with date, place, description', hi: 'Mobile OTP se login karein → date, jagah, description ke saath complaint bharein' },
+          { en: 'Submit → download the acknowledgment receipt (important document)', hi: 'Submit karein → acknowledgment receipt download karein — yeh zaroori document hai' },
+        ],
+      },
+      {
+        badge: 'state',
+        name: 'Police Not Registering FIR? — Approach SP / SSP',
+        desc: { en: 'If local police refuses to register FIR — escalate to Superintendent of Police', hi: 'Agar local police FIR nahi likh rahi — SP / SSP se milein ya online complaint karein' },
+        url: 'https://citizen.mahapolice.gov.in',
+        phone: null,
+        howto: [
+          { en: 'Write application to SP (Superintendent of Police) of your district', hi: 'Apne district ke SP (Superintendent of Police) ko application likhein' },
+          { en: 'OR file complaint online at citizen.mahapolice.gov.in → SP Complaint', hi: 'Ya citizen.mahapolice.gov.in → SP Complaint section par online file karein' },
+          { en: 'SP is legally bound to order FIR registration — Section 154(3) CrPC', hi: 'SP legally FIR register karane ke liye bound hai — CrPC Section 154(3)' },
+          { en: 'Still refused? File complaint before Judicial Magistrate under Section 156(3)', hi: 'Phir bhi mana karein? Judicial Magistrate ke paas Section 156(3) ke tahat petition dein' },
+        ],
+      },
+    ],
     bijli: [
       {
         badge: 'first',
-        name: 'MSEDCL — Maha Vitaran Complaint Portal',
-        desc: { en: 'Maharashtra State Electricity Distribution — official complaint portal', hi: 'MSEDCL official complaint portal — Maharashtra' },
-        url: 'https://www.mahadiscom.in/consumer/index.aspx#',
+        name: 'MSEDCL — Consumer Self-Service & Complaint Portal',
+        desc: { en: 'Maharashtra State Electricity Distribution — official online complaint', hi: 'MSEDCL official complaint portal — Maha Vitaran, Maharashtra' },
+        url: 'https://wss.mahadiscom.in/wss/wss',
         phone: '1912',
         howto: [
-          { en: 'Open mahadiscom.in → "Consumer Services" → "Complaint"', hi: 'mahadiscom.in → "Consumer Services" → "Complaint" में जाएं' },
-          { en: 'Enter your CA Number (consumer account number from bill)', hi: 'अपना CA Number (bill पर होता है) enter करें' },
-          { en: 'Select complaint type and describe the problem', hi: 'Complaint type select करें और problem describe करें' },
-          { en: 'Submit — you will receive SMS confirmation', hi: 'Submit करें — SMS confirmation आएगा' },
+          { en: 'Dial 1912 (free, 24×7) OR visit wss.mahadiscom.in', hi: '1912 dial karein (24×7 free) YA wss.mahadiscom.in kholen' },
+          { en: 'Click "Consumer Self Service" → "Complaint Registration"', hi: '"Consumer Self Service" → "Complaint Registration" par click karein' },
+          { en: 'Enter your CA Number (from electricity bill) and login via OTP', hi: 'Bill pe CA Number enter karein → OTP se login karein' },
+          { en: 'Select complaint type: No Supply / Low Voltage / Bill / Meter → submit', hi: 'Complaint type select karein → submit karein — SMS confirmation aayega' },
         ],
       },
       {
         badge: 'state',
         name: 'MERC — Maharashtra Electricity Regulatory Commission',
-        desc: { en: 'Escalate unresolved MSEDCL complaints to state regulator', hi: 'MSEDCL से हल न हो — MERC में escalate करें' },
-        url: 'https://www.mercindia.org.in/consumer-grievance',
+        desc: { en: 'MSEDCL did not resolve in 30 days? Escalate to MERC — state regulator', hi: '30 din mein resolve nahi hua? MERC mein escalate karein — state regulator' },
+        url: 'https://merc.gov.in',
         phone: '1800-200-4500',
         howto: [
-          { en: 'Open mercindia.org.in → "Consumer Grievance" section', hi: 'mercindia.org.in → "Consumer Grievance" में जाएं' },
-          { en: 'Fill the complaint form with your MSEDCL reference number', hi: 'MSEDCL reference number के साथ form भरें' },
-          { en: 'MERC is the appellate authority — decision in 60 days', hi: 'MERC appellate authority है — 60 दिन में decision आता है' },
+          { en: 'Open merc.gov.in → "Consumer" → "Grievance Redressal"', hi: 'merc.gov.in → "Consumer" → "Grievance Redressal" mein jaayein' },
+          { en: 'Fill grievance form with your MSEDCL complaint reference number', hi: 'MSEDCL complaint reference number ke saath grievance form bharein' },
+          { en: 'MERC is the appellate authority — binding decision within 60 days', hi: 'MERC appellate authority hai — 60 din mein binding decision aata hai' },
         ],
       },
     ],
@@ -636,41 +675,92 @@ export const STATE_PORTALS = {
 
   // ── Delhi ────────────────────────────────────────────────────────────────
   Delhi: {
-    bijli: [
+    police: [
       {
         badge: 'first',
-        name: 'BSES Rajdhani / BSES Yamuna — Online Complaint',
-        desc: { en: 'South & West Delhi (BSES Rajdhani) / East Delhi (BSES Yamuna)', hi: 'South/West Delhi: BSES Rajdhani | East Delhi: BSES Yamuna' },
-        url: 'https://www.bsesdelhi.com/web/bses/lodge-complaint',
-        phone: '19123',
+        name: 'Delhi Police — Emergency',
+        desc: { en: 'Delhi Police 24×7 emergency and control room helpline', hi: 'Delhi Police 24×7 emergency — control room helpline' },
+        url: null, phone: '100', callOnly: true,
         howto: [
-          { en: 'Open bsesdelhi.com → "Lodge Complaint" button', hi: 'bsesdelhi.com → "Lodge Complaint" button click karein' },
-          { en: 'Enter CA number (on your bill) and select complaint type', hi: 'Bill par CA number enter karein → complaint type select karein' },
-          { en: 'BSES must resolve outage complaints within 4 hours (as per DERC)', hi: 'BSES ko outage 4 ghante mein resolve karna hota hai (DERC rule)' },
+          { en: 'Dial 100 for police emergency anywhere in Delhi', hi: 'Delhi mein kisi bhi jagah police emergency ke liye 100 dial karein' },
+          { en: 'PCR (Police Control Room) Delhi: 011-23490000', hi: 'Delhi PCR (Police Control Room): 011-23490000' },
+          { en: 'Women helpline Delhi: 1091 | Anti-Stalking: 1096', hi: 'Delhi women helpline: 1091 | Anti-Stalking: 1096' },
         ],
       },
       {
         badge: 'first',
-        name: 'TPDDL — Tata Power Delhi Complaint Portal',
-        desc: { en: 'North & North-West Delhi (Tata Power Delhi Distribution)', hi: 'North Delhi / North-West Delhi: Tata Power complaint portal' },
-        url: 'https://www.tatapower-ddl.com/Customer-Care/complaint',
+        name: 'Delhi Police — Online FIR & Complaint Portal',
+        desc: { en: 'File e-FIR, lost property report, domestic violence complaint online', hi: 'Delhi Police — e-FIR, lost property, domestic violence — online complaint' },
+        url: 'https://www.delhipolice.gov.in',
+        phone: '011-23490000',
+        howto: [
+          { en: 'Open delhipolice.gov.in → "Online Services" → select complaint type', hi: 'delhipolice.gov.in → "Online Services" → complaint type select karein' },
+          { en: 'For lost items/documents: select "Loss Report" — get police certificate instantly', hi: 'Khoyi cheez/document ke liye: "Loss Report" select karein — police certificate turant milega' },
+          { en: 'For serious crime FIR: fill FIR form with incident details, time, location', hi: 'Serious crime FIR ke liye: FIR form mein incident details, time, location bharein' },
+          { en: 'Submit → note FIR number / complaint number for tracking', hi: 'Submit karein → FIR number / complaint number note karein — tracking ke liye' },
+        ],
+      },
+      {
+        badge: 'state',
+        name: 'Delhi Police Commissioner — Escalation',
+        desc: { en: 'Police not acting? Escalate to Delhi Police Commissioner or vigilance', hi: 'Police action nahi le rahi? Delhi Police Commissioner ya vigilance ko escalate karein' },
+        url: 'https://www.delhipolice.gov.in',
+        phone: '011-23490000',
+        howto: [
+          { en: 'Write to DCP (Deputy Commissioner of Police) of your district', hi: 'Apne district ke DCP (Deputy Commissioner of Police) ko written complaint dein' },
+          { en: 'Online: delhipolice.gov.in → "Public Grievance" section', hi: 'Online: delhipolice.gov.in → "Public Grievance" section mein jaayein' },
+          { en: 'For police misconduct: Anti-Corruption Branch: 011-23490000', hi: 'Police misconduct ke liye: Anti-Corruption Branch: 011-23490000' },
+        ],
+      },
+    ],
+    bijli: [
+      {
+        badge: 'first',
+        name: 'BSES Rajdhani (BRPL) — South & West Delhi Complaint',
+        desc: { en: 'BSES Rajdhani serves South & West Delhi — helpline 19123, 24×7', hi: 'South Delhi / West Delhi: BSES Rajdhani — 19123 ya online complaint' },
+        url: 'https://www.bsesdelhi.com/web/brpl/no-supply-complaint',
+        phone: '19123',
+        howto: [
+          { en: 'Dial 19123 (24×7 free) for South/West Delhi power complaints', hi: 'South/West Delhi bijli complaint ke liye 19123 dial karein (24×7)' },
+          { en: 'Online: bsesdelhi.com/web/brpl/no-supply-complaint → "Lodge Complaint"', hi: 'Online: bsesdelhi.com → brpl → "No Supply Complaint" par click karein' },
+          { en: 'Enter your CA Number from the bill → describe issue → submit', hi: 'Bill se CA Number enter karein → issue describe karein → submit karein' },
+          { en: 'BRPL must restore supply within 4 hours (DERC regulation)', hi: 'BRPL ko 4 ghante mein supply restore karni hoti hai — DERC ka rule hai' },
+        ],
+      },
+      {
+        badge: 'first',
+        name: 'BSES Yamuna (BYPL) — East Delhi Complaint',
+        desc: { en: 'BSES Yamuna serves East Delhi — helpline 19122, 24×7', hi: 'East Delhi bijli: BSES Yamuna — 19122 ya online complaint' },
+        url: 'https://www.bsesdelhi.com/web/bypl/contact-customer-care',
+        phone: '19122',
+        howto: [
+          { en: 'Dial 19122 (24×7 free) for East Delhi power complaints', hi: 'East Delhi bijli complaint ke liye 19122 dial karein (24×7)' },
+          { en: 'Online: bsesdelhi.com/web/bypl → "Lodge Complaint"', hi: 'Online: bsesdelhi.com/web/bypl → "Lodge Complaint" par click karein' },
+          { en: 'Enter CA Number from bill → select complaint type → submit', hi: 'Bill se CA Number enter karein → complaint type select karein → submit karein' },
+        ],
+      },
+      {
+        badge: 'first',
+        name: 'Tata Power DDL (TPDDL) — North & NW Delhi Complaint',
+        desc: { en: 'Tata Power Delhi serves North & North-West Delhi — helpline 19124', hi: 'North Delhi / North-West Delhi: Tata Power DDL — 19124 ya online' },
+        url: 'https://www.tatapower-ddl.com/CustomerCare',
         phone: '19124',
         howto: [
-          { en: 'Open tatapower-ddl.com → "Customer Care" → "Lodge Complaint"', hi: 'tatapower-ddl.com → "Customer Care" → "Lodge Complaint" karein' },
-          { en: 'Enter your account number from the bill', hi: 'Bill se account number enter karein' },
-          { en: 'Select issue type and submit — get complaint reference number', hi: 'Issue type select karein, submit karein — complaint reference number lein' },
+          { en: 'Dial 19124 (24×7) OR 011-66404040 for North/NW Delhi complaints', hi: 'North/NW Delhi ke liye 19124 (24×7) ya 011-66404040 dial karein' },
+          { en: 'Online: tatapower-ddl.com → "Customer Care" → "Lodge a Complaint"', hi: 'tatapower-ddl.com → "Customer Care" → "Lodge a Complaint" karein' },
+          { en: 'Enter your Account Number from bill → select issue → submit', hi: 'Bill se Account Number enter karein → issue select karein → submit' },
         ],
       },
       {
         badge: 'state',
         name: 'DERC — Delhi Electricity Regulatory Commission',
-        desc: { en: 'Escalate if BSES/TPDDL fail to resolve within 30 days', hi: '30 dino mein haal na ho — DERC mein escalate karein' },
-        url: 'https://www.derc.gov.in/ConsumerGrievance.aspx',
+        desc: { en: 'BSES/TPDDL not resolving? Escalate to DERC — state regulator', hi: 'BSES/TPDDL resolve nahi kar raha? DERC mein escalate karein' },
+        url: 'https://www.derc.gov.in',
         phone: '1800-200-1200',
         howto: [
-          { en: 'Open derc.gov.in → "Consumer Grievance"', hi: 'derc.gov.in → "Consumer Grievance" mein jaayein' },
-          { en: 'Fill the grievance form with your distributor complaint number', hi: 'Distributor complaint number ke saath grievance form bharein' },
-          { en: 'DERC is the appellate authority — legally binding decision', hi: 'DERC appellate authority hai — legally binding decision deta hai' },
+          { en: 'Open derc.gov.in → "Consumer Grievance" section', hi: 'derc.gov.in → "Consumer Grievance" section mein jaayein' },
+          { en: 'File with your DISCOM complaint number + all correspondence', hi: 'DISCOM complaint number aur saari correspondence ke saath file karein' },
+          { en: 'DERC gives legally binding decision — DISCOMs must comply', hi: 'DERC ka decision legally binding hota hai — DISCOM ko manna padta hai' },
         ],
       },
     ],
@@ -708,29 +798,81 @@ export const STATE_PORTALS = {
 
   // ── Karnataka ────────────────────────────────────────────────────────────
   Karnataka: {
+    police: [
+      {
+        badge: 'first',
+        name: 'Karnataka Police — Emergency & Helpline',
+        desc: { en: 'Dial 100 for emergency. Women helpline: 1091. Bengaluru City Police: 080-22943322', hi: 'Emergency: 100 | Women: 1091 | Bengaluru City Police: 080-22943322' },
+        url: null, phone: '100', callOnly: true,
+        howto: [
+          { en: 'Dial 100 for police emergency — 24×7 across Karnataka', hi: 'Police emergency ke liye 100 dial karein — 24×7 puri Karnataka mein' },
+          { en: 'Bengaluru City Police control room: 080-22943322', hi: 'Bengaluru City Police control room: 080-22943322' },
+          { en: 'Women helpline: 1091 | Cyber crime: 1930', hi: 'Women helpline: 1091 | Cyber crime: 1930' },
+        ],
+      },
+      {
+        badge: 'first',
+        name: 'Karnataka State Police — Online Complaint Portal',
+        desc: { en: 'File FIR, complaint, missing person report online — KSP citizen portal', hi: 'Online FIR, complaint, missing person — KSP citizen portal Karnataka' },
+        url: 'https://ksp.gov.in/grievances/',
+        phone: '100',
+        howto: [
+          { en: 'Open ksp.gov.in → click "Citizen Services" → "Online Complaint"', hi: 'ksp.gov.in → "Citizen Services" → "Online Complaint" click karein' },
+          { en: 'Register with mobile number → select complaint category', hi: 'Mobile number se register karein → complaint category select karein' },
+          { en: 'Fill: incident date, place, description, your contact details', hi: 'Bharein: incident date, jagah, description, apni contact details' },
+          { en: 'Submit → receive complaint number via SMS — track at ksp.gov.in', hi: 'Submit karein → SMS mein complaint number milega — ksp.gov.in par track karein' },
+        ],
+      },
+      {
+        badge: 'state',
+        name: 'Karnataka Police — Escalation: SP / IGP',
+        desc: { en: 'Complaint ignored by local police? Escalate to SP or IGP of the range', hi: 'Local police ne complaint ignore ki? SP ya IGP ko escalate karein' },
+        url: 'https://ksp.gov.in',
+        phone: '080-22943322',
+        howto: [
+          { en: 'Open ksp.gov.in → "Grievance" → "Grievance to SP/IGP"', hi: 'ksp.gov.in → "Grievance" → "Grievance to SP/IGP" mein jaayein' },
+          { en: 'Attach your previous complaint number and police response (or silence)', hi: 'Pichla complaint number aur police ka response (ya koi reply nahi) attach karein' },
+          { en: 'IGP (Inspector General of Police) must respond within 15 days', hi: 'IGP ko 15 din mein respond karna hota hai' },
+        ],
+      },
+    ],
     bijli: [
       {
         badge: 'first',
-        name: 'BESCOM — Online Complaint Portal',
-        desc: { en: 'Bangalore Electricity Supply Company — official complaint portal', hi: 'Bangalore electricity complaint — BESCOM official portal' },
+        name: 'BESCOM — Online Complaint (Bangalore & 5 districts)',
+        desc: { en: 'Bangalore Electricity Supply Company — Bengaluru, Tumkur, Chitradurga, Davanagere, Shivamogga', hi: 'BESCOM — Bengaluru aur surrounding 5 districts ke liye complaint portal' },
         url: 'https://bescom.karnataka.gov.in/page/Consumer+Helpdesk/Complaint+Registration/en',
         phone: '1912',
         howto: [
-          { en: 'Open BESCOM portal → "Complaint Registration"', hi: 'BESCOM portal → "Complaint Registration" mein jaayein' },
-          { en: 'Enter your RR Number (on your electricity bill)', hi: 'Electricity bill par RR Number enter karein' },
-          { en: 'Select complaint type: Power Failure / Voltage / Bill / Meter', hi: 'Complaint type: Power Failure / Voltage / Bill / Meter chune' },
-          { en: 'Submit and get complaint number via SMS', hi: 'Submit karein — SMS mein complaint number aayega' },
+          { en: 'Dial 1912 (24×7 free) OR open BESCOM portal', hi: '1912 dial karein (24×7) ya BESCOM portal kholen' },
+          { en: 'Click "Complaint Registration" → enter RR Number from bill', hi: '"Complaint Registration" → bill se RR Number enter karein' },
+          { en: 'Select complaint: Power Failure / Low Voltage / Bill / Meter / New Connection', hi: 'Complaint select: Power Failure / Low Voltage / Bill / Meter chune' },
+          { en: 'Submit → SMS confirmation with complaint number', hi: 'Submit karein → SMS mein complaint number milega' },
+        ],
+      },
+      {
+        badge: 'first',
+        name: 'HESCOM / GESCOM / MESCOM / CESC — Other Districts',
+        desc: { en: 'HESCOM (Hubli/North KA) | GESCOM (Gulbarga) | MESCOM (Mangalore) | CESC (Mysore)', hi: 'Hubli/North KA: HESCOM | Gulbarga: GESCOM | Mangalore: MESCOM | Mysore: CESC' },
+        url: 'https://hescom.karnataka.gov.in',
+        phone: '1912',
+        howto: [
+          { en: 'Dial 1912 — routes to your area DISCOM automatically', hi: '1912 dial karein — automatically aapke area ke DISCOM par connect hoga' },
+          { en: 'HESCOM (Hubli): hescom.karnataka.gov.in | GESCOM: gescom.in', hi: 'HESCOM (Hubli): hescom.karnataka.gov.in | GESCOM: gescom.in' },
+          { en: 'MESCOM (Mangalore): mescom.in | CESC Mysore: cescmysore.karnataka.gov.in', hi: 'MESCOM (Mangalore): mescom.in | CESC Mysore: cescmysore.karnataka.gov.in' },
+          { en: 'Go to your DISCOM website → Consumer Services → Complaint', hi: 'Apne DISCOM website → Consumer Services → Complaint mein jaayein' },
         ],
       },
       {
         badge: 'state',
         name: 'KERC — Karnataka Electricity Regulatory Commission',
-        desc: { en: 'Escalate unresolved BESCOM/HESCOM/GESCOM complaints here', hi: 'BESCOM/HESCOM/GESCOM se haal na ho — KERC mein escalate karein' },
+        desc: { en: 'DISCOM not resolving? Escalate to KERC — state regulator', hi: 'DISCOM resolve nahi kar raha? KERC — state regulator mein escalate karein' },
         url: 'https://kerc.karnataka.gov.in',
         phone: '080-22208456',
         howto: [
-          { en: 'Open kerc.karnataka.gov.in → Consumer Grievance', hi: 'kerc.karnataka.gov.in → Consumer Grievance mein jaayein' },
-          { en: 'File with BESCOM complaint number + date of filing', hi: 'BESCOM complaint number aur filing date ke saath file karein' },
+          { en: 'Open kerc.karnataka.gov.in → "Consumer Grievance Redressal"', hi: 'kerc.karnataka.gov.in → "Consumer Grievance Redressal" mein jaayein' },
+          { en: 'File with your DISCOM complaint reference number', hi: 'Apne DISCOM ke complaint reference number ke saath file karein' },
+          { en: 'KERC is appellate authority — binding decision within 60 days', hi: 'KERC appellate authority hai — 60 din mein binding decision' },
         ],
       },
     ],
@@ -768,18 +910,67 @@ export const STATE_PORTALS = {
 
   // ── Tamil Nadu ───────────────────────────────────────────────────────────
   'Tamil Nadu': {
+    police: [
+      {
+        badge: 'first',
+        name: 'Tamil Nadu Police — Emergency',
+        desc: { en: 'TN Police emergency — 100 or Chennai City Police: 044-28447777', hi: 'TN Police emergency — 100 ya Chennai City Police: 044-28447777' },
+        url: null, phone: '100', callOnly: true,
+        howto: [
+          { en: 'Dial 100 for police emergency anywhere in Tamil Nadu', hi: 'Tamil Nadu mein kisi bhi jagah police emergency ke liye 100 dial karein' },
+          { en: 'Chennai City Police: 044-28447777 (24×7)', hi: 'Chennai City Police: 044-28447777 (24×7)' },
+          { en: 'Women helpline: 1091 | TNSAFE app for women safety in TN', hi: 'Women helpline: 1091 | Women safety ke liye TNSAFE app use karein' },
+        ],
+      },
+      {
+        badge: 'first',
+        name: 'Tamil Nadu Police — e-Complaint Portal',
+        desc: { en: 'File online FIR, lost property, cyber complaint — TN Police citizen services', hi: 'Online FIR, lost property, cyber complaint — TN Police citizen services' },
+        url: 'https://eservices.tnpolice.gov.in/CCTNSNICSDC/Index.aspx',
+        phone: '100',
+        howto: [
+          { en: 'Open eservices.tnpolice.gov.in → select your complaint type', hi: 'eservices.tnpolice.gov.in kholen → complaint type select karein' },
+          { en: 'Register with Aadhaar-linked mobile → fill incident details', hi: 'Aadhaar-linked mobile se register karein → incident details bharein' },
+          { en: 'Select the nearest police station for your area', hi: 'Apne area ka nearest police station select karein' },
+          { en: 'Submit → you will receive a complaint reference number via SMS', hi: 'Submit karein → SMS mein complaint reference number milega' },
+        ],
+      },
+      {
+        badge: 'state',
+        name: 'TN Police — Superintendent of Police (District Escalation)',
+        desc: { en: 'Escalate to SP if station-level complaint is ignored', hi: 'Station level par ignore ho to SP (Superintendent of Police) ko escalate karein' },
+        url: 'https://www.tnpolice.gov.in',
+        phone: null,
+        howto: [
+          { en: 'Open tnpolice.gov.in → "Grievance" → submit with previous complaint details', hi: 'tnpolice.gov.in → "Grievance" → pichli complaint details ke saath submit karein' },
+          { en: 'Or visit SP office of your district with written complaint', hi: 'Ya apne district ke SP office mein written complaint lekar jaayein' },
+        ],
+      },
+    ],
     bijli: [
       {
         badge: 'first',
-        name: 'TANGEDCO — Online Consumer Complaint',
-        desc: { en: 'Tamil Nadu Generation & Distribution Corporation — official complaint', hi: 'Tamil Nadu electricity complaint — TANGEDCO official portal' },
-        url: 'https://www.tangedco.gov.in/consumer_grievance.html',
+        name: 'TANGEDCO — Consumer Complaint Online Portal',
+        desc: { en: 'Tamil Nadu Generation & Distribution Corporation — official complaint portal', hi: 'Tamil Nadu electricity complaint — TANGEDCO official portal' },
+        url: 'https://app1.tangedco.org/nsconline/grievancestatus.xhtml',
         phone: '1912',
         howto: [
-          { en: 'Open tangedco.gov.in → "Consumer Grievance"', hi: 'tangedco.gov.in → "Consumer Grievance" mein jaayein' },
-          { en: 'Enter your Service Connection Number from the bill', hi: 'Bill se Service Connection Number enter karein' },
-          { en: 'Select complaint type and describe the issue', hi: 'Complaint type select karein, issue describe karein' },
-          { en: 'Note the reference number for follow-up', hi: 'Reference number note karein — follow-up ke liye' },
+          { en: 'Dial 1912 (24×7 free) OR open app1.tangedco.org', hi: '1912 dial karein (24×7) ya app1.tangedco.org kholen' },
+          { en: 'Click "Grievance Registration" → enter your Service Connection Number', hi: '"Grievance Registration" → bill se Service Connection Number enter karein' },
+          { en: 'Select complaint: No Supply / Low Voltage / Bill Dispute / Meter Issue', hi: 'Complaint: No Supply / Low Voltage / Bill / Meter select karein' },
+          { en: 'Submit and note complaint reference — check status at same portal', hi: 'Submit karein, reference note karein — status usi portal par track karein' },
+        ],
+      },
+      {
+        badge: 'state',
+        name: 'TNERC — Tamil Nadu Electricity Regulatory Commission',
+        desc: { en: 'TANGEDCO not resolving? Escalate to TNERC — state regulator', hi: 'TANGEDCO se haal nahi? TNERC — TN state electricity regulator mein jaayein' },
+        url: 'https://www.tnerc.gov.in',
+        phone: '044-28411376',
+        howto: [
+          { en: 'Open tnerc.gov.in → "Consumer Grievance Redressal" section', hi: 'tnerc.gov.in → "Consumer Grievance Redressal" mein jaayein' },
+          { en: 'File petition with TANGEDCO complaint number and all evidence', hi: 'TANGEDCO complaint number aur evidence ke saath petition file karein' },
+          { en: 'TNERC holds hearings — final decision is legally binding', hi: 'TNERC hearing karta hai — final decision legally binding hota hai' },
         ],
       },
     ],
@@ -815,29 +1006,69 @@ export const STATE_PORTALS = {
 
   // ── Uttar Pradesh ────────────────────────────────────────────────────────
   'Uttar Pradesh': {
-    bijli: [
+    police: [
       {
         badge: 'first',
-        name: 'UPPCL — Consumer Complaint Portal',
-        desc: { en: 'UP Power Corporation Limited — official complaint portal', hi: 'Uttar Pradesh bijli complaint — UPPCL official portal' },
-        url: 'https://www.uppcl.org/consumer/complaint',
-        phone: '1912',
+        name: 'UP Police — Emergency & Helplines',
+        desc: { en: 'UP Police 100 emergency | Women: 1090 | Anti-Corruption: 1064', hi: 'UP Police emergency: 100 | Women Helpline: 1090 | Anti-Corruption: 1064' },
+        url: null, phone: '100', callOnly: true,
         howto: [
-          { en: 'Open uppcl.org → "Consumer Services" → "Complaint Registration"', hi: 'uppcl.org → "Consumer Services" → "Complaint Registration" karein' },
-          { en: 'Login with your Account Number and registered mobile', hi: 'Account Number aur registered mobile se login karein' },
-          { en: 'Select complaint type: Power Cut / Bill / Meter / New Connection', hi: 'Complaint type: Power Cut / Bill / Meter / New Connection chune' },
-          { en: 'Submit — UPPCL must resolve within 24 hrs (outage) or 30 days (bill)', hi: 'Submit karein — UPPCL 24 ghante (outage) ya 30 din (bill) mein resolve karta hai' },
+          { en: 'Dial 100 for police emergency anywhere in UP', hi: 'UP mein kisi bhi jagah police emergency ke liye 100 dial karein' },
+          { en: 'Women Power Line UP: 1090 (women specific helpline, very effective in UP)', hi: 'Women Power Line UP: 1090 — yeh UP ki mahila-vishesh helpline hai, bahut effective hai' },
+          { en: 'Anti-Corruption Helpline UP: 1064', hi: 'Anti-Corruption Helpline UP: 1064' },
+        ],
+      },
+      {
+        badge: 'first',
+        name: 'UPCOP — UP Police Citizen Portal',
+        desc: { en: 'Online FIR, e-challan, missing person, character certificate — UP Police official portal', hi: 'Online FIR, missing person, character certificate — UP Police official portal' },
+        url: 'https://upcop.gov.in',
+        phone: '100',
+        howto: [
+          { en: 'Open upcop.gov.in → select "Citizen Services"', hi: 'upcop.gov.in kholen → "Citizen Services" select karein' },
+          { en: 'For FIR: click "Register FIR" → login with mobile OTP', hi: 'FIR ke liye: "Register FIR" click karein → mobile OTP se login karein' },
+          { en: 'Fill: complainant details, incident details, accused description (if known)', hi: 'Bharein: complainant details, incident details, accused ka description (agar pata ho)' },
+          { en: 'Submit → FIR number milega — use to track at upcop.gov.in', hi: 'Submit karein → FIR number milega — upcop.gov.in par track karo' },
         ],
       },
       {
         badge: 'state',
-        name: 'UPERC — UP Electricity Regulatory Commission',
-        desc: { en: 'Escalate unresolved UPPCL complaints to state regulator', hi: 'UPPCL se haal na ho — UPERC mein escalate karein' },
-        url: 'https://www.uperc.org',
+        name: 'UP Jan Sunwai 1076 — Police Escalation',
+        desc: { en: 'Police not registering FIR or taking action? Escalate via CM Helpline 1076', hi: 'FIR nahi likh rahi police? CM Helpline 1076 par escalate karein' },
+        url: 'https://jansunwai.up.nic.in',
+        phone: '1076',
+        howto: [
+          { en: 'Dial 1076 OR open jansunwai.up.nic.in', hi: '1076 dial karein ya jansunwai.up.nic.in kholen' },
+          { en: 'Select department: "Uttar Pradesh Police"', hi: 'Department: "Uttar Pradesh Police" select karein' },
+          { en: 'Describe police inaction with dates and station name — CM office monitors this', hi: 'Police ki inaction dates aur station name ke saath describe karein — CM office monitor karta hai' },
+          { en: 'Complaint is escalated to SSP/DIG level within 24 hours', hi: 'Complaint 24 ghante mein SSP/DIG level par escalate hoti hai' },
+        ],
+      },
+    ],
+    bijli: [
+      {
+        badge: 'first',
+        name: 'UPPCL — Consumer Self-Service & Complaint Portal',
+        desc: { en: 'UP Power Corporation Limited — online complaint, bill, outage 24×7', hi: 'Uttar Pradesh bijli complaint — UPPCL official portal, 24×7' },
+        url: 'https://consumer.uppcl.org/wss/contact',
+        phone: '1912',
+        howto: [
+          { en: 'Dial 1912 (24×7 free) — works for all UP DISCOMs (PaVVNL/PuVVNL/DVVNL/MVVNL)', hi: '1912 dial karein (24×7) — sabhi UP DISCOMs ke liye kaam karta hai' },
+          { en: 'Online: consumer.uppcl.org → login with Account Number + mobile OTP', hi: 'consumer.uppcl.org → Account Number + mobile OTP se login karein' },
+          { en: 'Select: Power Cut / Billing / Meter / New Connection → submit', hi: 'Power Cut / Billing / Meter / New Connection select karein → submit' },
+          { en: 'UPPCL resolves outage within 24 hrs, billing in 30 days', hi: 'UPPCL outage 24 ghante mein, billing complaint 30 din mein resolve karta hai' },
+        ],
+      },
+      {
+        badge: 'state',
+        name: 'UPERC — Consumer Grievance Redressal Forum',
+        desc: { en: 'UPPCL unresolved in 30 days? Escalate to CGRF at your DISCOM circle', hi: '30 din mein resolve nahi? UPERC Consumer Grievance Forum mein jaayein' },
+        url: 'https://cgrf.uppcl.org',
         phone: '0522-2204540',
         howto: [
-          { en: 'Open uperc.org → Consumer Grievance Redressal Forum', hi: 'uperc.org → Consumer Grievance Redressal Forum mein jaayein' },
-          { en: 'File petition with UPPCL reference number and all documents', hi: 'UPPCL reference number aur saare documents ke saath petition file karein' },
+          { en: 'Open cgrf.uppcl.org → "File a Complaint" with UPPCL reference number', hi: 'cgrf.uppcl.org → "File a Complaint" → UPPCL reference number ke saath bharein' },
+          { en: 'CGRF (Consumer Grievance Redressal Forum) must decide in 45 days', hi: 'CGRF 45 din mein decision deta hai' },
+          { en: 'Still unresolved? Appeal to Electricity Ombudsman at uperc.org', hi: 'Phir bhi nahi? uperc.org par Electricity Ombudsman ko appeal karein' },
         ],
       },
     ],
@@ -874,17 +1105,68 @@ export const STATE_PORTALS = {
 
   // ── Rajasthan ────────────────────────────────────────────────────────────
   Rajasthan: {
+    police: [
+      {
+        badge: 'first',
+        name: 'Rajasthan Police — Emergency',
+        desc: { en: 'Dial 100 | Women helpline: 1090 | Anti-Rowdy: 0141-2744000', hi: 'Emergency: 100 | Women helpline: 1090 | Anti-Rowdy: 0141-2744000' },
+        url: null, phone: '100', callOnly: true,
+        howto: [
+          { en: 'Dial 100 for police emergency anywhere in Rajasthan', hi: 'Rajasthan mein kisi bhi jagah emergency ke liye 100 dial karein' },
+          { en: 'Women helpline Rajasthan: 1090 (dedicated women cell)', hi: 'Rajasthan women helpline: 1090 (dedicated women cell)' },
+          { en: 'Jaipur City Police: 0141-2744000', hi: 'Jaipur City Police: 0141-2744000' },
+        ],
+      },
+      {
+        badge: 'first',
+        name: 'Rajasthan Police — Online Complaint Portal',
+        desc: { en: 'File FIR, complaint, missing report — official Rajasthan Police portal', hi: 'FIR, complaint, missing report — Rajasthan Police official portal' },
+        url: 'https://police.rajasthan.gov.in',
+        phone: '100',
+        howto: [
+          { en: 'Open police.rajasthan.gov.in → "Citizen Services" → "Online Complaint"', hi: 'police.rajasthan.gov.in → "Citizen Services" → "Online Complaint" par click karein' },
+          { en: 'Login with mobile OTP → fill complaint form with full incident details', hi: 'Mobile OTP se login karein → puri incident details ke saath complaint form bharein' },
+          { en: 'Upload evidence if available (photo/video)', hi: 'Evidence available ho to upload karein (photo/video)' },
+          { en: 'Submit → note complaint ID — track at police.rajasthan.gov.in', hi: 'Submit karein → complaint ID note karein — police.rajasthan.gov.in par track karein' },
+        ],
+      },
+      {
+        badge: 'state',
+        name: 'Rajasthan Sampark 181 — Police Escalation',
+        desc: { en: 'Police inaction? Escalate via Rajasthan CM Helpline 181 — strictly monitored', hi: 'Police action nahi? Rajasthan CM Helpline 181 par escalate karein — strictly monitored' },
+        url: 'https://sampark.rajasthan.gov.in',
+        phone: '181',
+        howto: [
+          { en: 'Dial 181 OR open sampark.rajasthan.gov.in', hi: '181 dial karein ya sampark.rajasthan.gov.in kholen' },
+          { en: 'Select department: "Police" → describe complaint with station name and date', hi: 'Department: "Police" → station name aur date ke saath complaint describe karein' },
+          { en: 'Complaint forwarded to district SP level — response within 7 days', hi: 'Complaint district SP level par forward hoti hai — 7 din mein response' },
+        ],
+      },
+    ],
     bijli: [
       {
         badge: 'first',
-        name: 'JVVNL / AVVNL / JdVVNL — Rajasthan Bijli Complaint',
-        desc: { en: 'Jaipur/Ajmer/Jodhpur Vidyut Vitran Nigam — online complaint portal', hi: 'Rajasthan bijli complaint — JVVNL/AVVNL/JdVVNL portal' },
-        url: 'https://energy.rajasthan.gov.in/content/raj/energy-department/en/consumer-services.html',
+        name: 'JVVNL — Jaipur Vidyut Vitran Nigam (Jaipur Division)',
+        desc: { en: 'JVVNL serves Jaipur, Bharatpur, Kota — helpline 1912 / 1800-180-6507', hi: 'Jaipur, Bharatpur, Kota: JVVNL — 1912 ya 1800-180-6507' },
+        url: 'https://jvvnl.in',
         phone: '1912',
         howto: [
-          { en: 'Open energy.rajasthan.gov.in → Consumer Services → Online Complaint', hi: 'energy.rajasthan.gov.in → Consumer Services → Online Complaint karein' },
-          { en: 'Select your DISCOM: Jaipur (JVVNL) / Ajmer (AVVNL) / Jodhpur (JdVVNL)', hi: 'Apna DISCOM select karein: Jaipur (JVVNL) / Ajmer (AVVNL) / Jodhpur (JdVVNL)' },
-          { en: 'Enter K No. (consumer number from bill) and describe complaint', hi: 'Bill se K No. enter karein aur complaint describe karein' },
+          { en: 'Dial 1912 (24×7 free) — works for all 3 Rajasthan DISCOMs', hi: '1912 dial karein (24×7 free) — teen DISCOM mein se koi bhi ho' },
+          { en: 'JVVNL helpline: 1800-180-6507 | AVVNL: 1800-180-6565 | JdVVNL: 1800-180-6045', hi: 'JVVNL: 1800-180-6507 | AVVNL (Ajmer): 1800-180-6565 | JdVVNL (Jodhpur): 1800-180-6045' },
+          { en: 'Online: energy.rajasthan.gov.in → Consumer Services → Complaint', hi: 'energy.rajasthan.gov.in → Consumer Services → Complaint mein jaayein' },
+          { en: 'Enter K No. (from bill) → select complaint type → submit', hi: 'Bill se K No. enter karein → complaint type → submit karein' },
+        ],
+      },
+      {
+        badge: 'state',
+        name: 'RERC — Rajasthan Electricity Regulatory Commission',
+        desc: { en: 'DISCOM not resolving? Escalate to RERC CGRF or Electricity Ombudsman', hi: 'DISCOM resolve nahi? RERC CGRF ya Electricity Ombudsman ko escalate karein' },
+        url: 'https://www.rerc.rajasthan.gov.in',
+        phone: '0141-2741956',
+        howto: [
+          { en: 'Open rerc.rajasthan.gov.in → "Consumer Grievance" → CGRF complaint', hi: 'rerc.rajasthan.gov.in → "Consumer Grievance" → CGRF complaint bharein' },
+          { en: 'CGRF (Jaipur/Ajmer/Jodhpur) hears complaints within 45 days', hi: 'CGRF 45 din mein complaint sunti hai' },
+          { en: 'For Ombudsman: appeal after CGRF order within 30 days', hi: 'Ombudsman ke liye: CGRF order ke 30 din ke andar appeal karein' },
         ],
       },
     ],
@@ -921,18 +1203,67 @@ export const STATE_PORTALS = {
 
   // ── Gujarat ──────────────────────────────────────────────────────────────
   Gujarat: {
+    police: [
+      {
+        badge: 'first',
+        name: 'Gujarat Police — Emergency',
+        desc: { en: 'Dial 100 | Women: 1091 | Ahmedabad City Police: 079-25630100', hi: 'Emergency: 100 | Women: 1091 | Ahmedabad City Police: 079-25630100' },
+        url: null, phone: '100', callOnly: true,
+        howto: [
+          { en: 'Dial 100 for police emergency anywhere in Gujarat', hi: 'Gujarat mein emergency ke liye 100 dial karein' },
+          { en: 'Ahmedabad City Police: 079-25630100', hi: 'Ahmedabad City Police: 079-25630100' },
+          { en: 'Women helpline: 1091 | Cyber crime: 1930', hi: 'Women helpline: 1091 | Cyber crime: 1930' },
+        ],
+      },
+      {
+        badge: 'first',
+        name: 'Gujarat Police — e-Complaint Portal',
+        desc: { en: 'Online FIR, lost article report, missing person — Gujarat Police citizen services', hi: 'Online FIR, lost article, missing person — Gujarat Police citizen services' },
+        url: 'https://eservices.gujaratpolice.gov.in',
+        phone: '100',
+        howto: [
+          { en: 'Open eservices.gujaratpolice.gov.in → select service type', hi: 'eservices.gujaratpolice.gov.in kholen → service type select karein' },
+          { en: 'Register with mobile → fill FIR / complaint form', hi: 'Mobile se register karein → FIR / complaint form bharein' },
+          { en: 'For lost documents (Aadhaar, DL, passport) — select "Loss Report"', hi: 'Khoye documents (Aadhaar, DL, passport) ke liye "Loss Report" select karein' },
+          { en: 'Submit → get complaint number via SMS', hi: 'Submit karein → SMS mein complaint number milega' },
+        ],
+      },
+      {
+        badge: 'state',
+        name: 'Gujarat Police — SP Level Escalation',
+        desc: { en: 'Complaint not addressed? Reach SP office or Gujarat Police HQ grievance', hi: 'Complaint address nahi hui? SP office ya Gujarat Police HQ grievance mein jaayein' },
+        url: 'https://www.gujaratpolice.gov.in',
+        phone: null,
+        howto: [
+          { en: 'Open gujaratpolice.gov.in → "Citizen Corner" → "Grievance"', hi: 'gujaratpolice.gov.in → "Citizen Corner" → "Grievance" mein jaayein' },
+          { en: 'Fill grievance form with your previous complaint number', hi: 'Pichle complaint number ke saath grievance form bharein' },
+        ],
+      },
+    ],
     bijli: [
       {
         badge: 'first',
-        name: 'PGVCL / MGVCL / UGVCL / DGVCL — Gujarat Bijli Complaint',
-        desc: { en: 'Find your distribution company and file complaint online', hi: 'Gujarat bijli complaint — apna DISCOM dhundhen aur complaint karein' },
-        url: 'https://ugvcl.com/consumer-services',
+        name: 'GUVNL e-Vidhyut Seva — Unified Gujarat Bijli Portal',
+        desc: { en: 'Single portal for all Gujarat DISCOMs: PGVCL/MGVCL/UGVCL/DGVCL', hi: 'Gujarat ke sabhi 4 DISCOMs ke liye ek unified portal — portal.guvnl.in' },
+        url: 'https://portal.guvnl.in',
         phone: '1912',
         howto: [
-          { en: 'Surat / South Gujarat: PGVCL → pgvcl.com | Ahmedabad / Central: MGVCL → mgvcl.com', hi: 'Surat/South Gujarat: pgvcl.com | Ahmedabad/Central: mgvcl.com' },
-          { en: 'North Gujarat: UGVCL → ugvcl.com | Vadodara/South: DGVCL → dgvcl.com', hi: 'North Gujarat: ugvcl.com | Vadodara/South: dgvcl.com' },
-          { en: 'Go to respective portal → Consumer Services → Complaint', hi: 'Apne portal par jaayein → Consumer Services → Complaint karein' },
-          { en: 'Enter Consumer Number from bill and describe complaint', hi: 'Bill se Consumer Number enter karein aur complaint describe karein' },
+          { en: 'Open portal.guvnl.in → Register/Login with mobile OTP', hi: 'portal.guvnl.in kholen → mobile OTP se register/login karein' },
+          { en: 'Go to "Complaint Registration" → enter Consumer Number from bill', hi: '"Complaint Registration" → bill se Consumer Number enter karein' },
+          { en: 'Select complaint type → submit', hi: 'Complaint type select karein → submit karein' },
+          { en: 'Helplines: PGVCL (Surat): 19122 | MGVCL (Ahmedabad): 19124 | UGVCL (North): 19121 | DGVCL (Vadodara): 19123', hi: 'Helplines: PGVCL (Surat): 19122 | MGVCL (Ahmedabad): 19124 | UGVCL (North): 19121 | DGVCL (Vadodara): 19123' },
+        ],
+      },
+      {
+        badge: 'state',
+        name: 'GERC — Gujarat Electricity Regulatory Commission',
+        desc: { en: 'DISCOM complaint unresolved? Escalate to GERC grievance portal', hi: 'DISCOM resolve nahi? GERC — Gujarat state electricity regulator mein jaayein' },
+        url: 'https://gercin.org/register-your-complaint-here',
+        phone: '079-27661370',
+        howto: [
+          { en: 'Open gercin.org → "Register Your Complaint Here"', hi: 'gercin.org → "Register Your Complaint Here" par click karein' },
+          { en: 'File with your DISCOM complaint number and documents', hi: 'DISCOM complaint number aur documents ke saath file karein' },
+          { en: 'GERC binding decision — DISCOM must comply within 30 days', hi: 'GERC ka binding decision — DISCOM ko 30 din mein comply karna hota hai' },
         ],
       },
     ],
@@ -968,18 +1299,78 @@ export const STATE_PORTALS = {
 
   // ── West Bengal ──────────────────────────────────────────────────────────
   'West Bengal': {
+    police: [
+      {
+        badge: 'first',
+        name: 'West Bengal Police — Emergency',
+        desc: { en: 'Dial 100 | Kolkata Police: 100 / 1090 | Women: 1091', hi: 'Emergency: 100 | Kolkata Police: 100 / 1090 | Women: 1091' },
+        url: null, phone: '100', callOnly: true,
+        howto: [
+          { en: 'Dial 100 for police emergency anywhere in West Bengal', hi: 'West Bengal mein police emergency ke liye 100 dial karein' },
+          { en: 'Kolkata Police helpline: 1090', hi: 'Kolkata Police helpline: 1090' },
+          { en: 'Women helpline: 1091 | Cyber crime: 1930', hi: 'Women helpline: 1091 | Cyber crime: 1930' },
+        ],
+      },
+      {
+        badge: 'first',
+        name: 'West Bengal Police — Online Complaint',
+        desc: { en: 'File FIR, missing person, online complaint — WB Police citizen portal', hi: 'FIR, missing person, online complaint — WB Police citizen portal' },
+        url: 'https://wbpolice.gov.in/citizen-services',
+        phone: '100',
+        howto: [
+          { en: 'Open wbpolice.gov.in → "Citizen Services" → select complaint type', hi: 'wbpolice.gov.in → "Citizen Services" → complaint type select karein' },
+          { en: 'Fill online complaint form with incident date, place, details', hi: 'Online complaint form mein incident date, jagah, details bharein' },
+          { en: 'For Kolkata: Kolkata Police portal: kolkatapolice.gov.in', hi: 'Kolkata ke liye: Kolkata Police portal: kolkatapolice.gov.in' },
+          { en: 'Submit → note acknowledgment number for follow-up', hi: 'Submit karein → follow-up ke liye acknowledgment number note karein' },
+        ],
+      },
+      {
+        badge: 'state',
+        name: 'WB Police — SP / DIG Level Escalation',
+        desc: { en: 'Police ignoring complaint? Approach SP of district or file online grievance', hi: 'Police complaint ignore kar rahi? SP se milein ya online grievance karein' },
+        url: 'https://wbpolice.gov.in',
+        phone: null,
+        howto: [
+          { en: 'Open wbpolice.gov.in → "Grievance" → submit with previous reference', hi: 'wbpolice.gov.in → "Grievance" → pichle reference ke saath submit karein' },
+          { en: 'Or visit SP (Superintendent of Police) office of your district', hi: 'Ya apne district ke SP office mein visit karein' },
+        ],
+      },
+    ],
     bijli: [
       {
         badge: 'first',
-        name: 'WBSEDCL — Online Consumer Complaint',
-        desc: { en: 'West Bengal State Electricity Distribution — official complaint', hi: 'West Bengal electricity complaint — WBSEDCL official portal' },
-        url: 'https://www.wbsedcl.in/irj/portal/anonymous/complaintlogin',
+        name: 'WBSEDCL — Online Complaint Portal (Non-Kolkata Areas)',
+        desc: { en: 'WB State Electricity Distribution — serves rest of WB excluding Kolkata', hi: 'West Bengal (Kolkata ke bahar) electricity complaint — WBSEDCL portal' },
+        url: 'https://portal.wbsedcl.in/irj/go/km/docs/bills/IFRAME/ComplaintRegistrationWithoutLogin.html',
         phone: '19121',
         howto: [
-          { en: 'Open wbsedcl.in → "Lodge Complaint" / "Complaint Login"', hi: 'wbsedcl.in → "Lodge Complaint" / "Complaint Login" karein' },
-          { en: 'Enter Consumer ID from your bill', hi: 'Bill se Consumer ID enter karein' },
-          { en: 'Select complaint type and describe the issue', hi: 'Complaint type select karein aur issue describe karein' },
-          { en: 'For CESC Kolkata area: cesc.co.in/complaintlogin.aspx', hi: 'Kolkata CESC area ke liye: cesc.co.in/complaintlogin.aspx' },
+          { en: 'Dial 19121 (24×7 free) OR open WBSEDCL portal above', hi: '19121 dial karein (24×7) ya WBSEDCL portal kholen' },
+          { en: 'Click "Complaint Registration" → enter Consumer ID from bill', hi: '"Complaint Registration" → bill se Consumer ID enter karein' },
+          { en: 'Select complaint: No Supply / Low Voltage / Bill / Meter → submit', hi: 'No Supply / Low Voltage / Bill / Meter select karein → submit karein' },
+          { en: 'WhatsApp complaints: +91 84337 19121', hi: 'WhatsApp par complaint: +91 84337 19121 par message karein' },
+        ],
+      },
+      {
+        badge: 'first',
+        name: 'CESC — Complaint Portal (Kolkata City & Suburbs)',
+        desc: { en: 'CESC serves Kolkata city and adjoining areas — helpline 19125', hi: 'Kolkata city aur adjoining areas: CESC complaint portal' },
+        url: 'https://www.cesc.co.in/complaintlogin.aspx',
+        phone: '19125',
+        howto: [
+          { en: 'Dial 19125 (24×7) for Kolkata electricity complaints', hi: 'Kolkata electricity complaint ke liye 19125 dial karein (24×7)' },
+          { en: 'Online: cesc.co.in/complaintlogin.aspx → enter Consumer ID', hi: 'cesc.co.in/complaintlogin.aspx → Consumer ID se login karein' },
+          { en: 'Select complaint type → submit → note complaint number', hi: 'Complaint type select karein → submit → complaint number note karein' },
+        ],
+      },
+      {
+        badge: 'state',
+        name: 'WBERC — West Bengal Electricity Regulatory Commission',
+        desc: { en: 'DISCOM not resolving? Escalate to WBERC CGRF', hi: 'DISCOM resolve nahi? WBERC — WB state electricity regulator mein jaayein' },
+        url: 'https://www.wberc.gov.in',
+        phone: '033-23390344',
+        howto: [
+          { en: 'Open wberc.gov.in → "Consumer Grievance" section', hi: 'wberc.gov.in → "Consumer Grievance" section mein jaayein' },
+          { en: 'File with WBSEDCL/CESC complaint number and correspondence', hi: 'WBSEDCL/CESC complaint number aur correspondence ke saath file karein' },
         ],
       },
     ],
@@ -1015,17 +1406,80 @@ export const STATE_PORTALS = {
 
   // ── Haryana ──────────────────────────────────────────────────────────────
   Haryana: {
+    police: [
+      {
+        badge: 'first',
+        name: 'Haryana Police — Emergency & Helplines',
+        desc: { en: 'Dial 100 | Women: 1091 | Faridabad/Gurugram: 0124-2580100', hi: 'Emergency: 100 | Women: 1091 | Gurugram Police: 0124-2580100' },
+        url: null, phone: '100', callOnly: true,
+        howto: [
+          { en: 'Dial 100 for police emergency anywhere in Haryana', hi: 'Haryana mein police emergency ke liye 100 dial karein' },
+          { en: 'Women helpline: 1091 | Cyber crime: 1930', hi: 'Women helpline: 1091 | Cyber crime helpline: 1930' },
+          { en: 'Anti-Corruption Helpline Haryana: 1064', hi: 'Haryana Anti-Corruption Helpline: 1064' },
+        ],
+      },
+      {
+        badge: 'first',
+        name: 'Haryana Police — Online Complaint Portal',
+        desc: { en: 'File FIR, missing person, lost article, e-complaint — Haryana Police online', hi: 'FIR, missing person, lost article — Haryana Police online complaint portal' },
+        url: 'https://haryanapolice.gov.in',
+        phone: '100',
+        howto: [
+          { en: 'Open haryanapolice.gov.in → "Citizen Services" → "Online Complaint"', hi: 'haryanapolice.gov.in → "Citizen Services" → "Online Complaint" par click karein' },
+          { en: 'Register with mobile OTP → select complaint type', hi: 'Mobile OTP se register karein → complaint type select karein' },
+          { en: 'Fill: incident date, location, description, your contact details', hi: 'Bharein: incident date, jagah, description, contact details' },
+          { en: 'Submit → note complaint reference number via SMS', hi: 'Submit karein → SMS mein complaint reference number note karein' },
+        ],
+      },
+      {
+        badge: 'state',
+        name: 'CM Window Haryana — Police Escalation',
+        desc: { en: 'Police not acting? Escalate via CM Window 1100 — strictly monitored', hi: 'Police action nahi? CM Window 1100 par escalate karein — strictly monitored' },
+        url: 'https://cmwindow.haryana.gov.in',
+        phone: '1100',
+        howto: [
+          { en: 'Dial 1100 OR open cmwindow.haryana.gov.in', hi: '1100 dial karein ya cmwindow.haryana.gov.in kholen' },
+          { en: 'Select department: "Home / Police"', hi: 'Department: "Home / Police" select karein' },
+          { en: 'Describe police inaction with station name and date', hi: 'Police station name aur date ke saath inaction describe karein' },
+          { en: 'CM Window escalates to SP level within 24 hours — very effective', hi: 'CM Window 24 ghante mein SP level par escalate karta hai — bahut effective hai' },
+        ],
+      },
+    ],
     bijli: [
       {
         badge: 'first',
-        name: 'UHBVN / DHBVN — Haryana Bijli Complaint',
-        desc: { en: 'Uttar/Dakshin Haryana Bijli Vitran Nigam — official complaint portal', hi: 'Haryana bijli complaint — UHBVN/DHBVN official portal' },
-        url: 'https://uhbvn.org.in/web/portal/consumer-complaint',
+        name: 'UHBVN — North Haryana Bijli Complaint (Ambala/Karnal/Hisar)',
+        desc: { en: 'Uttar Haryana Bijli Vitran Nigam — serves North Haryana', hi: 'UHBVN — North Haryana (Ambala, Karnal, Hisar, Rohtak) ke liye' },
+        url: 'https://chs.uhbvn.org.in',
         phone: '1912',
         howto: [
-          { en: 'North Haryana (Ambala/Karnal): uhbvn.org.in | South (Gurugram/Faridabad): dhbvn.org.in', hi: 'North (Ambala/Karnal): uhbvn.org.in | South (Gurugram/Faridabad): dhbvn.org.in' },
-          { en: 'Go to Consumer Services → Online Complaint', hi: 'Consumer Services → Online Complaint mein jaayein' },
-          { en: 'Enter Account No. from bill → select complaint type → submit', hi: 'Bill se Account No. enter karein → complaint type → submit karein' },
+          { en: 'Dial 1912 (24×7 free) for North Haryana electricity complaints', hi: 'North Haryana bijli complaint ke liye 1912 dial karein (24×7)' },
+          { en: 'Online: chs.uhbvn.org.in → Consumer Services → Complaint', hi: 'chs.uhbvn.org.in → Consumer Services → Complaint mein jaayein' },
+          { en: 'Enter Account Number from bill → select complaint type → submit', hi: 'Bill se Account Number enter karein → complaint type → submit karein' },
+          { en: 'Power theft complaint: 1800-180-7332', hi: 'Bijli chori ki complaint: 1800-180-7332' },
+        ],
+      },
+      {
+        badge: 'first',
+        name: 'DHBVN — South Haryana Bijli Complaint (Gurugram/Faridabad)',
+        desc: { en: 'Dakshin Haryana Bijli Vitran Nigam — serves South Haryana', hi: 'DHBVN — South Haryana (Gurugram, Faridabad, Rewari) ke liye' },
+        url: 'https://dhbvn.org.in',
+        phone: '1912',
+        howto: [
+          { en: 'Dial 1912 (24×7 free) for South Haryana electricity complaints', hi: 'South Haryana bijli complaint ke liye 1912 dial karein' },
+          { en: 'Online: dhbvn.org.in → Consumer Services → Complaint Registration', hi: 'dhbvn.org.in → Consumer Services → Complaint Registration karein' },
+          { en: 'Enter Account Number from bill and describe the issue', hi: 'Bill se Account Number enter karein aur issue describe karein' },
+        ],
+      },
+      {
+        badge: 'state',
+        name: 'HERC — Haryana Electricity Regulatory Commission',
+        desc: { en: 'DISCOM not resolving? Escalate to HERC or CGRF', hi: 'DISCOM resolve nahi? HERC ya CGRF mein escalate karein' },
+        url: 'https://herc.gov.in',
+        phone: '0172-2704934',
+        howto: [
+          { en: 'Open herc.gov.in → "Consumer Grievance" / CGRF section', hi: 'herc.gov.in → "Consumer Grievance" / CGRF section mein jaayein' },
+          { en: 'File with UHBVN/DHBVN complaint reference number', hi: 'UHBVN/DHBVN complaint reference number ke saath file karein' },
         ],
       },
     ],
@@ -1075,17 +1529,67 @@ export const STATE_PORTALS = {
 
   // ── Punjab ────────────────────────────────────────────────────────────────
   Punjab: {
+    police: [
+      {
+        badge: 'first',
+        name: 'Punjab Police — Emergency & Helplines',
+        desc: { en: 'Dial 100 | Women: 1091 | Amritsar/Ludhiana city police: 112', hi: 'Emergency: 100 | Women: 1091 | Punjab Police 112 — unified emergency' },
+        url: null, phone: '100', callOnly: true,
+        howto: [
+          { en: 'Dial 100 or 112 for police emergency anywhere in Punjab', hi: 'Punjab mein police emergency ke liye 100 ya 112 dial karein' },
+          { en: 'Women Helpline Punjab: 1091', hi: 'Punjab women helpline: 1091' },
+          { en: 'Anti-Gangster Helpline Punjab: 9041013521', hi: 'Anti-Gangster Helpline Punjab: 9041013521' },
+        ],
+      },
+      {
+        badge: 'first',
+        name: 'Punjab Police — Online Complaint Portal',
+        desc: { en: 'File FIR, e-complaint, missing person, lost property — Punjab Police online', hi: 'FIR, e-complaint, missing person — Punjab Police online portal' },
+        url: 'https://punjabpolice.gov.in',
+        phone: '100',
+        howto: [
+          { en: 'Open punjabpolice.gov.in → "Citizen Corner" → "Online Complaint"', hi: 'punjabpolice.gov.in → "Citizen Corner" → "Online Complaint" karein' },
+          { en: 'Select complaint type: FIR / Complaint / Missing Person / Lost Property', hi: 'Type select karein: FIR / Complaint / Missing Person / Lost Property' },
+          { en: 'Login with mobile OTP and fill complete incident details', hi: 'Mobile OTP se login karein aur puri incident details bharein' },
+          { en: 'Submit → note acknowledgment number — track at punjabpolice.gov.in', hi: 'Submit → acknowledgment number note karein — punjabpolice.gov.in par track karein' },
+        ],
+      },
+      {
+        badge: 'state',
+        name: 'Punjab Police — SP Level Escalation',
+        desc: { en: 'Police station not responding? Escalate to SP or Punjab Police HQ', hi: 'Police station respond nahi kar raha? SP ya Punjab Police HQ ko escalate karein' },
+        url: 'https://punjabpolice.gov.in',
+        phone: null,
+        howto: [
+          { en: 'Open punjabpolice.gov.in → "Grievance" section', hi: 'punjabpolice.gov.in → "Grievance" section mein jaayein' },
+          { en: 'Or write directly to SP (Superintendent of Police) of your district', hi: 'Ya apne district ke SP (Superintendent of Police) ko directly likhein' },
+          { en: 'SP is bound to order FIR under CrPC Section 154(3) if refused', hi: 'SP ko CrPC Section 154(3) ke tahat FIR register karwani hogi' },
+        ],
+      },
+    ],
     bijli: [
       {
         badge: 'first',
-        name: 'PSPCL — Punjab State Power Corporation Complaint',
-        desc: { en: 'PSPCL official consumer complaint portal for Punjab', hi: 'Punjab electricity complaint — PSPCL official portal' },
-        url: 'https://www.pspcl.in/consumer-services',
+        name: 'PSPCL — Consumer Grievance Management System',
+        desc: { en: 'Punjab State Power Corporation Ltd — official complaint portal (GRMS)', hi: 'Punjab electricity complaint — PSPCL GRMS official portal' },
+        url: 'https://grms.pspcl.in',
         phone: '1912',
         howto: [
-          { en: 'Open pspcl.in → "Consumer Services" → "Complaint Registration"', hi: 'pspcl.in → "Consumer Services" → "Complaint Registration" karein' },
-          { en: 'Enter Account ID from your electricity bill', hi: 'Electricity bill se Account ID enter karein' },
-          { en: 'Select complaint category and describe the issue', hi: 'Complaint category select karein aur issue describe karein' },
+          { en: 'Dial 1912 (24×7 free) — PSPCL helpline Punjab', hi: '1912 dial karein (24×7 free) — Punjab PSPCL ka official helpline' },
+          { en: 'Online: grms.pspcl.in → Register/Login → file complaint', hi: 'grms.pspcl.in → Register/Login → complaint file karein' },
+          { en: 'Enter Account ID from bill → select complaint type → submit', hi: 'Bill se Account ID enter karein → complaint type → submit karein' },
+          { en: 'Missed call callback: 1800-180-1512 | WhatsApp: 9646101912', hi: 'Missed call callback: 1800-180-1512 | WhatsApp: 9646101912' },
+        ],
+      },
+      {
+        badge: 'state',
+        name: 'PSERC — Punjab State Electricity Regulatory Commission',
+        desc: { en: 'PSPCL unresolved? Escalate to PSERC CGRF or Ombudsman', hi: 'PSPCL resolve nahi? PSERC CGRF ya Ombudsman ko escalate karein' },
+        url: 'https://pserc.gov.in',
+        phone: '0172-2703096',
+        howto: [
+          { en: 'Open pserc.gov.in → "Consumer Grievance" → CGRF complaint', hi: 'pserc.gov.in → "Consumer Grievance" → CGRF complaint bharein' },
+          { en: 'CGRF decides within 45 days — Ombudsman within 60 days', hi: 'CGRF 45 din mein, Ombudsman 60 din mein decision deta hai' },
         ],
       },
     ],
@@ -1107,17 +1611,69 @@ export const STATE_PORTALS = {
 
   // ── Madhya Pradesh ────────────────────────────────────────────────────────
   'Madhya Pradesh': {
+    police: [
+      {
+        badge: 'first',
+        name: 'Madhya Pradesh Police — Emergency',
+        desc: { en: 'Dial 100 | Women: 1091 | Bhopal City Police: 0755-2443200', hi: 'Emergency: 100 | Women: 1091 | Bhopal City Police: 0755-2443200' },
+        url: null, phone: '100', callOnly: true,
+        howto: [
+          { en: 'Dial 100 for police emergency anywhere in Madhya Pradesh', hi: 'MP mein police emergency ke liye 100 dial karein' },
+          { en: 'MP Women Helpline: 1090 (dedicated women cell)', hi: 'MP Women Helpline: 1090 — dedicated women cell' },
+          { en: 'Bhopal City Police: 0755-2443200', hi: 'Bhopal City Police: 0755-2443200' },
+        ],
+      },
+      {
+        badge: 'first',
+        name: 'MP Police — Online Complaint / e-FIR Portal',
+        desc: { en: 'File e-FIR, complaint, missing person — Madhya Pradesh Police citizen portal', hi: 'e-FIR, complaint, missing person — MP Police citizen portal' },
+        url: 'https://mppolice.gov.in',
+        phone: '100',
+        howto: [
+          { en: 'Open mppolice.gov.in → "Citizen Services" → select complaint type', hi: 'mppolice.gov.in → "Citizen Services" → complaint type select karein' },
+          { en: 'For e-FIR: click "Register FIR" → login with mobile OTP', hi: 'e-FIR ke liye: "Register FIR" → mobile OTP se login karein' },
+          { en: 'Fill incident date, location, full description of crime/complaint', hi: 'Incident date, jagah, crime/complaint ka pura description bharein' },
+          { en: 'Submit → FIR number milega — track at mppolice.gov.in', hi: 'Submit → FIR number milega — mppolice.gov.in par track karein' },
+        ],
+      },
+      {
+        badge: 'state',
+        name: 'MP CM Helpline 181 — Police Escalation',
+        desc: { en: 'Police not registering FIR? Escalate via MP CM Helpline 181', hi: 'FIR nahi likh rahi police? MP CM Helpline 181 par escalate karein' },
+        url: 'https://samadhan.mp.gov.in',
+        phone: '181',
+        howto: [
+          { en: 'Dial 181 OR open samadhan.mp.gov.in', hi: '181 dial karein ya samadhan.mp.gov.in kholen' },
+          { en: 'Select department: "Police"', hi: 'Department: "Police" select karein' },
+          { en: 'Describe police inaction with station name, date, and complaint details', hi: 'Station name, date aur complaint details ke saath police inaction describe karein' },
+          { en: 'CM Helpline 181 escalates to SP level — response within 7 days', hi: 'CM Helpline 181 SP level par escalate karta hai — 7 din mein response' },
+        ],
+      },
+    ],
     bijli: [
       {
         badge: 'first',
-        name: 'MPEZ / MPWZ / MPMZ — MP Bijli Complaint',
-        desc: { en: 'MP East / West / Middle Zone — file electricity complaint online', hi: 'MP electricity complaint — zone wise portal' },
-        url: 'https://www.mpcz.co.in/ConsumerPortal',
+        name: 'MPCZ — Central Zone Bijli Complaint (Bhopal/Narmadapuram)',
+        desc: { en: 'MP Central Zone Power Distribution — serves Bhopal, Narmadapuram, Raisen, Sehore', hi: 'MPCZ — Bhopal, Narmadapuram ke liye bijli complaint portal' },
+        url: 'https://portal.mpcz.in/web/',
         phone: '1912',
         howto: [
-          { en: 'Open portal.mpdiscom.co.in → Select your zone → Lodge Complaint', hi: 'portal.mpdiscom.co.in → Zone select karein → Lodge Complaint karein' },
-          { en: 'MPEZ (East): mpez.co.in | MPWZ (West): mpwz.co.in | MPCZ (Central): mpcz.co.in', hi: 'East: mpez.co.in | West: mpwz.co.in | Central: mpcz.co.in' },
-          { en: 'Enter Consumer Number from bill and complaint type', hi: 'Bill se Consumer Number enter karein aur complaint type select karein' },
+          { en: 'Dial 1912 (24×7 free) for all MP DISCOM zones', hi: '1912 dial karein (24×7) — MP ke teeno zones ke liye kaam karta hai' },
+          { en: 'MPCZ (Bhopal): portal.mpcz.in | MPEZ (Jabalpur): mpez.co.in | MPWZ (Indore): mpwz.co.in', hi: 'MPCZ (Bhopal): portal.mpcz.in | MPEZ (Jabalpur): mpez.co.in | MPWZ (Indore): mpwz.co.in' },
+          { en: 'Open your zone portal → Login with Consumer Number → Lodge Complaint', hi: 'Apne zone ka portal kholen → Consumer Number se login → Lodge Complaint karein' },
+          { en: 'WhatsApp for MPCZ: +91 755 255 1222', hi: 'MPCZ WhatsApp complaint: +91 755 255 1222' },
+        ],
+      },
+      {
+        badge: 'state',
+        name: 'MPERC — MP Electricity Regulatory Commission',
+        desc: { en: 'MP DISCOM not resolving? Escalate to MPERC CGRF', hi: 'MP DISCOM resolve nahi? MPERC CGRF mein escalate karein' },
+        url: 'https://mperc.in',
+        phone: '0755-2556574',
+        howto: [
+          { en: 'Open mperc.in → "Consumer Grievance Redressal Forum"', hi: 'mperc.in → "Consumer Grievance Redressal Forum" mein jaayein' },
+          { en: 'File with your DISCOM complaint number and documents', hi: 'DISCOM complaint number aur documents ke saath file karein' },
+          { en: 'CGRF at each DISCOM circle level — 45-day resolution mandate', hi: 'Har DISCOM circle par CGRF hai — 45 din mein resolution mandatory' },
         ],
       },
     ],
@@ -1139,18 +1695,67 @@ export const STATE_PORTALS = {
 
   // ── Kerala ────────────────────────────────────────────────────────────────
   Kerala: {
+    police: [
+      {
+        badge: 'first',
+        name: 'Kerala Police — Emergency & Helplines',
+        desc: { en: 'Dial 100 | Women: 1091 | Kerala Police Cyberdome: 0484-2722900', hi: 'Emergency: 100 | Women: 1091 | Kerala Cyberdome: 0484-2722900' },
+        url: null, phone: '100', callOnly: true,
+        howto: [
+          { en: 'Dial 100 for police emergency anywhere in Kerala', hi: 'Kerala mein police emergency ke liye 100 dial karein' },
+          { en: 'Women helpline: 1091 | Pink Police Patrol: 1515 (Kerala)', hi: 'Women helpline: 1091 | Kerala Pink Police Patrol: 1515' },
+          { en: 'Cyber crime helpline: 1930 | Cyberdome: 0484-2722900', hi: 'Cyber crime: 1930 | Cyberdome Kochi: 0484-2722900' },
+        ],
+      },
+      {
+        badge: 'first',
+        name: 'Kerala Police — Citizen Portal Online Complaint',
+        desc: { en: 'File FIR, complaint, missing person — Kerala Police citizen portal', hi: 'FIR, complaint, missing person — Kerala Police citizen portal' },
+        url: 'https://citizenportal.keralapolice.gov.in',
+        phone: '100',
+        howto: [
+          { en: 'Open citizenportal.keralapolice.gov.in → select complaint type', hi: 'citizenportal.keralapolice.gov.in kholen → complaint type select karein' },
+          { en: 'Register with mobile number → fill online complaint form', hi: 'Mobile number se register karein → online complaint form bharein' },
+          { en: 'For women safety: select "Women Complaint" — goes to Women Cell directly', hi: 'Women safety ke liye "Women Complaint" select karein — directly Women Cell ko jaata hai' },
+          { en: 'Submit → complaint number via SMS — station must respond within 72 hours', hi: 'Submit → SMS mein complaint number — station ko 72 ghante mein respond karna hota hai' },
+        ],
+      },
+      {
+        badge: 'state',
+        name: 'Kerala Police — SP / District Police HQ Escalation',
+        desc: { en: 'Station-level complaint ignored? Escalate to SP of your district', hi: 'Station complaint ignore hui? Apne district ke SP ko escalate karein' },
+        url: 'https://www.keralapolice.gov.in',
+        phone: null,
+        howto: [
+          { en: 'Open keralapolice.gov.in → "Citizens Corner" → "Grievance"', hi: 'keralapolice.gov.in → "Citizens Corner" → "Grievance" mein jaayein' },
+          { en: 'Or write to SP of your district with previous complaint number', hi: 'Ya apne district ke SP ko pichle complaint number ke saath written complaint dein' },
+          { en: 'Kerala CM\'s Grievance Cell: 0471-2333100 (Thiruvananthapuram)', hi: 'Kerala CM Grievance Cell: 0471-2333100 (Thiruvananthapuram)' },
+        ],
+      },
+    ],
     bijli: [
       {
         badge: 'first',
-        name: 'KSEB Online Consumer Complaint',
-        desc: { en: 'Kerala State Electricity Board — official online complaint portal', hi: 'Kerala electricity complaint — KSEB official portal' },
-        url: 'https://wss.kseb.in/selfservices/complaint',
+        name: 'KSEB — Consumer Self-Service Complaint Portal',
+        desc: { en: 'Kerala State Electricity Board — 24×7 helpline 1912 and online portal', hi: 'Kerala State Electricity Board — 1912 ya online complaint' },
+        url: 'https://wss.kseb.in/selfservices/showAnonymousComplaint.do',
         phone: '1912',
         howto: [
-          { en: 'Open wss.kseb.in → "Self Services" → "Complaint Registration"', hi: 'wss.kseb.in → "Self Services" → "Complaint Registration" karein' },
-          { en: 'Enter your Consumer Number from the bill', hi: 'Bill se Consumer Number enter karein' },
-          { en: 'Select complaint: Power Failure / Low Voltage / Bill / Meter', hi: 'Complaint: Power Failure / Low Voltage / Bill / Meter select karein' },
-          { en: 'KSEB aims to restore supply within 4-8 hours for outages', hi: 'KSEB 4-8 ghante mein supply restore karne ki koshish karta hai' },
+          { en: 'Dial 1912 (24×7 free) OR 1800-425-0099 — KSEB helpline', hi: '1912 dial karein (24×7 free) ya 1800-425-0099 — KSEB helpline' },
+          { en: 'Online: wss.kseb.in → "Anonymous Complaint" — no login needed', hi: 'wss.kseb.in → "Anonymous Complaint" — login ki zaroorat nahi' },
+          { en: 'Enter your Consumer Number from bill → select complaint type', hi: 'Bill se Consumer Number enter karein → complaint type select karein' },
+          { en: 'WhatsApp: +91 94960 01912 | Email: ccc@kseb.in', hi: 'WhatsApp: +91 94960 01912 | Email: ccc@kseb.in' },
+        ],
+      },
+      {
+        badge: 'state',
+        name: 'KSERC — Kerala State Electricity Regulatory Commission',
+        desc: { en: 'KSEB complaint unresolved? Escalate to KSERC CGRF', hi: 'KSEB resolve nahi? KSERC — Kerala state electricity regulator mein jaayein' },
+        url: 'https://ksercgrf.kerala.gov.in',
+        phone: '0471-2735522',
+        howto: [
+          { en: 'Open ksercgrf.kerala.gov.in → file grievance with KSEB complaint number', hi: 'ksercgrf.kerala.gov.in → KSEB complaint number ke saath grievance file karein' },
+          { en: 'CGRF (Consumer Grievance Redressal Forum) at district level', hi: 'CGRF district level par available hai — 45 din mein decision' },
         ],
       },
     ],
@@ -1172,17 +1777,68 @@ export const STATE_PORTALS = {
 
   // ── Bihar ─────────────────────────────────────────────────────────────────
   Bihar: {
+    police: [
+      {
+        badge: 'first',
+        name: 'Bihar Police — Emergency & Helplines',
+        desc: { en: 'Dial 100 | Women: 1091 | Patna City Police: 0612-2201977', hi: 'Emergency: 100 | Women: 1091 | Patna City Police: 0612-2201977' },
+        url: null, phone: '100', callOnly: true,
+        howto: [
+          { en: 'Dial 100 for police emergency anywhere in Bihar', hi: 'Bihar mein police emergency ke liye 100 dial karein' },
+          { en: 'Women helpline Bihar: 1091', hi: 'Bihar women helpline: 1091' },
+          { en: 'Bihar Anti-Corruption Helpline: 1064', hi: 'Bihar Anti-Corruption Helpline: 1064' },
+        ],
+      },
+      {
+        badge: 'first',
+        name: 'Bihar Police — Online Complaint Portal',
+        desc: { en: 'File FIR, complaint, missing person — Bihar Police official portal', hi: 'FIR, complaint, missing person — Bihar Police official portal' },
+        url: 'https://biharpolice.gov.in',
+        phone: '100',
+        howto: [
+          { en: 'Open biharpolice.gov.in → "Citizen Services" → "Online Complaint"', hi: 'biharpolice.gov.in → "Citizen Services" → "Online Complaint" karein' },
+          { en: 'Login with mobile OTP → select complaint type', hi: 'Mobile OTP se login karein → complaint type select karein' },
+          { en: 'Fill complete incident details with date, place, accused info if known', hi: 'Incident date, jagah, accused info (agar pata ho) ke saath details bharein' },
+          { en: 'Submit and note complaint number for tracking', hi: 'Submit karein aur complaint number note karein — tracking ke liye' },
+        ],
+      },
+      {
+        badge: 'state',
+        name: 'Bihar CM Helpline 15545 — Police Escalation',
+        desc: { en: 'Police not taking action? Escalate via Bihar CM Helpline 15545', hi: 'Police action nahi le rahi? Bihar CM Helpline 15545 par escalate karein' },
+        url: 'https://jansampark.bihar.gov.in',
+        phone: '15545',
+        howto: [
+          { en: 'Dial 15545 OR open jansampark.bihar.gov.in', hi: '15545 dial karein ya jansampark.bihar.gov.in kholen' },
+          { en: 'Select department: "Police" → describe complaint with station name', hi: 'Department: "Police" → station name ke saath complaint describe karein' },
+          { en: 'CM Helpline forwards to DM/SP level — response within 7 days', hi: 'CM Helpline DM/SP level par forward karta hai — 7 din mein response' },
+        ],
+      },
+    ],
     bijli: [
       {
         badge: 'first',
-        name: 'NBPDCL / SBPDCL — Bihar Bijli Complaint',
-        desc: { en: 'North/South Bihar Power Distribution — online complaint portal', hi: 'Bihar electricity complaint — NBPDCL/SBPDCL portal' },
-        url: 'https://www.nbpdcl.co.in/consumer-services.html',
+        name: 'NBPDCL — North Bihar Power Distribution Complaint',
+        desc: { en: 'NBPDCL serves North Bihar — Patna, Muzaffarpur, Darbhanga, Vaishali etc.', hi: 'NBPDCL — North Bihar: Patna, Muzaffarpur, Darbhanga ke liye' },
+        url: 'https://nbpdcl.co.in',
         phone: '1912',
         howto: [
-          { en: 'North Bihar: nbpdcl.co.in | South Bihar: sbpdcl.co.in', hi: 'North Bihar: nbpdcl.co.in | South Bihar: sbpdcl.co.in' },
-          { en: 'Go to Consumer Services → Lodge Complaint', hi: 'Consumer Services → Lodge Complaint mein jaayein' },
-          { en: 'Enter Consumer ID and describe the problem', hi: 'Consumer ID enter karein aur problem describe karein' },
+          { en: 'Dial 1912 (24×7 free) — works for both NBPDCL and SBPDCL', hi: '1912 dial karein (24×7 free) — NBPDCL aur SBPDCL dono ke liye' },
+          { en: 'NBPDCL toll-free: 1800-345-6555 | SBPDCL: 1800-345-6126', hi: 'NBPDCL toll-free: 1800-345-6555 | SBPDCL toll-free: 1800-345-6126' },
+          { en: 'Online: nbpdcl.co.in → Consumer Services → Complaint | sbpdcl.co.in for South Bihar', hi: 'North Bihar: nbpdcl.co.in → Consumer Services → Complaint | South Bihar: sbpdcl.co.in' },
+          { en: 'Enter Consumer ID from bill → select complaint type → submit', hi: 'Bill se Consumer ID enter karein → complaint type → submit karein' },
+        ],
+      },
+      {
+        badge: 'state',
+        name: 'BSPHCL CGRF — Bihar Consumer Grievance Forum',
+        desc: { en: 'DISCOM not resolving? File at CGRF — Bihar electricity regulator', hi: 'DISCOM resolve nahi? BSPHCL CGRF mein complaint karein' },
+        url: 'https://cgrf.bsphcl.co.in',
+        phone: '0612-2504891',
+        howto: [
+          { en: 'Open cgrf.bsphcl.co.in → register complaint with NBPDCL/SBPDCL reference', hi: 'cgrf.bsphcl.co.in → NBPDCL/SBPDCL reference ke saath complaint register karein' },
+          { en: 'CGRF circle offices in 11 SBPDCL + 9 NBPDCL circles', hi: 'CGRF offices 11 SBPDCL aur 9 NBPDCL circles mein hain' },
+          { en: 'Decision within 45 days — appeal to Electricity Ombudsman after', hi: '45 din mein decision — baad mein Electricity Ombudsman ko appeal karein' },
         ],
       },
     ],
@@ -1203,17 +1859,67 @@ export const STATE_PORTALS = {
 
   // ── Andhra Pradesh ────────────────────────────────────────────────────────
   'Andhra Pradesh': {
+    police: [
+      {
+        badge: 'first',
+        name: 'Andhra Pradesh Police — Emergency',
+        desc: { en: 'Dial 100 | Women: 1091 | Vijayawada City Police: 0866-2570013', hi: 'Emergency: 100 | Women: 1091 | Vijayawada City Police: 0866-2570013' },
+        url: null, phone: '100', callOnly: true,
+        howto: [
+          { en: 'Dial 100 for police emergency anywhere in Andhra Pradesh', hi: 'Andhra Pradesh mein police emergency ke liye 100 dial karein' },
+          { en: 'Women helpline AP: 1091 | SHE Teams AP (women patrol): 100', hi: 'AP women helpline: 1091 | SHE Teams AP (women patrol): 100' },
+          { en: 'Cyber crime helpline: 1930', hi: 'Cyber crime ke liye turant 1930 dial karein' },
+        ],
+      },
+      {
+        badge: 'first',
+        name: 'AP Police — Online Complaint Portal',
+        desc: { en: 'File FIR, complaint, missing person, lost article — AP Police official portal', hi: 'FIR, complaint, missing person — AP Police official portal' },
+        url: 'https://appolice.gov.in',
+        phone: '100',
+        howto: [
+          { en: 'Open appolice.gov.in → "Citizen Services" → "Online Complaint"', hi: 'appolice.gov.in → "Citizen Services" → "Online Complaint" karein' },
+          { en: 'Register with mobile OTP → select complaint type', hi: 'Mobile OTP se register karein → complaint type select karein' },
+          { en: 'Fill full incident details with time, location, description', hi: 'Time, location, full description ke saath incident details bharein' },
+          { en: 'Submit → complaint number via SMS for tracking', hi: 'Submit → SMS mein complaint number — tracking ke liye' },
+        ],
+      },
+      {
+        badge: 'state',
+        name: 'AP Police — SP Escalation / SPOC',
+        desc: { en: 'Police ignoring complaint? Escalate to SP — AP Police Grievance portal', hi: 'Complaint ignore ho rahi? SP ko escalate karein — AP Police grievance portal' },
+        url: 'https://pgr.appolice.gov.in',
+        phone: null,
+        howto: [
+          { en: 'Open pgr.appolice.gov.in → Police Grievance Redressal', hi: 'pgr.appolice.gov.in → Police Grievance Redressal mein jaayein' },
+          { en: 'Submit grievance with previous complaint details', hi: 'Pichli complaint details ke saath grievance submit karein' },
+          { en: 'Grievance is forwarded to SP of the district within 24 hours', hi: 'Grievance 24 ghante mein district ke SP ko forward hoti hai' },
+        ],
+      },
+    ],
     bijli: [
       {
         badge: 'first',
-        name: 'APEPDCL / APSPDCL — AP Bijli Complaint',
-        desc: { en: 'Andhra Pradesh Eastern/Southern Power Distribution — complaint portal', hi: 'Andhra Pradesh electricity complaint — APEPDCL/APSPDCL portal' },
-        url: 'https://www.apepdcl.in/webportal/cms-consumer-grievance.html',
+        name: 'APEPDCL — Eastern AP Power Complaint (Vizag/Rajam)',
+        desc: { en: 'APEPDCL serves East & North AP — Visakhapatnam, Srikakulam, Vizianagaram', hi: 'APEPDCL — East/North AP: Vizag, Srikakulam ke liye complaint portal' },
+        url: 'https://www.apeasternpower.com/customersComplaintRegister',
         phone: '1912',
         howto: [
-          { en: 'East/North AP: apepdcl.in | South AP (Tirupati area): apspdcl.in', hi: 'East/North AP: apepdcl.in | South AP (Tirupati): apspdcl.in' },
-          { en: 'Go to Consumer Grievance → Lodge Complaint', hi: 'Consumer Grievance → Lodge Complaint mein jaayein' },
-          { en: 'Enter Service Number from bill', hi: 'Bill se Service Number enter karein' },
+          { en: 'Dial 1912 (24×7 free) — works for both APEPDCL and APSPDCL', hi: '1912 dial karein (24×7) — APEPDCL aur APSPDCL dono ke liye' },
+          { en: 'APEPDCL (East AP): apeasternpower.com → Complaint Registration', hi: 'East AP (Vizag area): apeasternpower.com → Complaint Registration' },
+          { en: 'APSPDCL (South AP / Tirupati): apspdcl.in → Consumer Dashboard → Complaint', hi: 'South AP (Tirupati area): apspdcl.in → Consumer Dashboard → Complaint' },
+          { en: 'Enter Service Number from bill → select complaint type → submit', hi: 'Bill se Service Number enter karein → complaint type → submit karein' },
+        ],
+      },
+      {
+        badge: 'state',
+        name: 'APERC — AP Electricity Regulatory Commission',
+        desc: { en: 'DISCOM unresolved? Escalate to APERC CGRF', hi: 'DISCOM resolve nahi? APERC CGRF mein escalate karein' },
+        url: 'https://aperc.gov.in',
+        phone: '040-23491456',
+        howto: [
+          { en: 'Open aperc.gov.in → "Consumer Grievance Redressal" section', hi: 'aperc.gov.in → "Consumer Grievance Redressal" section mein jaayein' },
+          { en: 'File with APEPDCL/APSPDCL complaint number and all documents', hi: 'APEPDCL/APSPDCL complaint number aur documents ke saath file karein' },
         ],
       },
     ],
@@ -1221,17 +1927,67 @@ export const STATE_PORTALS = {
 
   // ── Telangana ─────────────────────────────────────────────────────────────
   Telangana: {
+    police: [
+      {
+        badge: 'first',
+        name: 'Telangana Police — Emergency & Helplines',
+        desc: { en: 'Dial 100 | Hyderabad City Police: 040-27852612 | Women: 1091', hi: 'Emergency: 100 | Hyderabad Police: 040-27852612 | Women: 1091' },
+        url: null, phone: '100', callOnly: true,
+        howto: [
+          { en: 'Dial 100 for police emergency anywhere in Telangana', hi: 'Telangana mein police emergency ke liye 100 dial karein' },
+          { en: 'Hyderabad City Police: 040-27852612 / 040-23214001', hi: 'Hyderabad City Police: 040-27852612 / 040-23214001' },
+          { en: 'Women helpline: 1091 | SHE Teams (women patrol Hyderabad): 100', hi: 'Women helpline: 1091 | SHE Teams Hyderabad: 100' },
+        ],
+      },
+      {
+        badge: 'first',
+        name: 'Telangana Police — Online Complaint (TSCOP)',
+        desc: { en: 'File FIR, complaint, missing person — TS Cop citizen portal Telangana', hi: 'FIR, complaint, missing person — TSCOP Telangana online portal' },
+        url: 'https://tscop.gov.in',
+        phone: '100',
+        howto: [
+          { en: 'Open tscop.gov.in OR tspolicecitizen.gov.in → select service', hi: 'tscop.gov.in ya tspolicecitizen.gov.in kholen → service select karein' },
+          { en: 'Login with mobile OTP → select: FIR / Complaint / Missing / Verification', hi: 'Mobile OTP se login → FIR / Complaint / Missing / Verification select karein' },
+          { en: 'Fill complete incident details with date, place, description', hi: 'Incident date, jagah, full description bharein' },
+          { en: 'Submit → complaint number via SMS — track at tscop.gov.in', hi: 'Submit → SMS mein complaint number — tscop.gov.in par track karein' },
+        ],
+      },
+      {
+        badge: 'state',
+        name: 'Telangana Police — SP / District Escalation',
+        desc: { en: 'Police not acting? Contact SP of your district via TS Police grievance', hi: 'Police action nahi? District ke SP ko TS Police grievance mein contact karein' },
+        url: 'https://www.tspolice.gov.in',
+        phone: null,
+        howto: [
+          { en: 'Open tspolice.gov.in → "Grievance" → submit with previous complaint', hi: 'tspolice.gov.in → "Grievance" → pichli complaint ke saath submit karein' },
+          { en: 'Or approach SP office of your district with written application', hi: 'Ya apne district ke SP office mein written application le jaayein' },
+          { en: 'For women complaints: Hyderabad SHE Teams escalation: 100', hi: 'Women complaints ke liye: Hyderabad SHE Teams escalation: 100' },
+        ],
+      },
+    ],
     bijli: [
       {
         badge: 'first',
-        name: 'TSNPDCL / TSSPDCL — Telangana Bijli Complaint',
-        desc: { en: 'TS Northern/Southern Power Distribution — complaint portal', hi: 'Telangana electricity complaint — TSNPDCL/TSSPDCL portal' },
+        name: 'TSSPDCL — South Telangana Bijli Complaint (Hyderabad)',
+        desc: { en: 'TS Southern Power Distribution — Hyderabad, Rangareddy, Nalgonda, Mahbubnagar', hi: 'TSSPDCL — Hyderabad, Rangareddy aur South Telangana ke liye' },
         url: 'https://www.tsspdcl.in/ConsumerServices.html',
         phone: '1912',
         howto: [
-          { en: 'Hyderabad/South Telangana: tsspdcl.in | North Telangana: tsnpdcl.in', hi: 'Hyderabad/South: tsspdcl.in | North Telangana: tsnpdcl.in' },
-          { en: 'Click "Consumer Services" → "Complaint Registration"', hi: '"Consumer Services" → "Complaint Registration" mein jaayein' },
-          { en: 'Enter Service Connection Number from bill', hi: 'Bill se Service Connection Number enter karein' },
+          { en: 'Dial 1912 (24×7 free) — works for both TSSPDCL and TSNPDCL', hi: '1912 dial karein (24×7) — dono Telangana DISCOMs ke liye' },
+          { en: 'Hyderabad / South Telangana: tsspdcl.in → Consumer Services → Complaint', hi: 'Hyderabad / South: tsspdcl.in → Consumer Services → Complaint' },
+          { en: 'North Telangana (Warangal/Karimnagar): tgnpdcl.com → Consumer Care → Register Complaint', hi: 'North Telangana (Warangal): tgnpdcl.com → Consumer Care → Register Complaint' },
+          { en: 'Enter Service Connection Number from bill → submit', hi: 'Bill se Service Connection Number enter karein → submit karein' },
+        ],
+      },
+      {
+        badge: 'state',
+        name: 'TSERC — Telangana State Electricity Regulatory Commission',
+        desc: { en: 'DISCOM not resolving? Escalate to TSERC CGRF', hi: 'DISCOM resolve nahi? TSERC CGRF mein escalate karein' },
+        url: 'https://tserc.gov.in',
+        phone: '040-23391547',
+        howto: [
+          { en: 'Open tserc.gov.in → "Consumer Grievance" section', hi: 'tserc.gov.in → "Consumer Grievance" section mein jaayein' },
+          { en: 'File with your DISCOM complaint number and evidence', hi: 'DISCOM complaint number aur evidence ke saath file karein' },
         ],
       },
     ],
@@ -1250,6 +2006,973 @@ export const STATE_PORTALS = {
       },
     ],
   },
+  // ── Odisha ────────────────────────────────────────────────────────────────
+  Odisha: {
+    bijli: [
+      {
+        badge: 'first',
+        name: 'TP Odisha DISCOMs — Electricity Complaint (4 Zones)',
+        desc: { en: 'Tata Power operates all 4 Odisha DISCOMs: TPCODL, TPSODL, TPWODL, TPNODL', hi: 'Odisha bijli — 4 zone DISCOMs: TPCODL/TPSODL/TPWODL/TPNODL' },
+        url: 'https://tpsodlwss.tpodisha.com/cportal/',
+        phone: '1912',
+        howto: [
+          { en: 'Dial 1912 (24×7 free) — routes to your area DISCOM automatically', hi: '1912 dial karein (24×7) — automatically aapke zone ke DISCOM par connect hoga' },
+          { en: 'Central Odisha (TPCODL): 1800 345 7122 | South (TPSODL): 1800 2026', hi: 'Central (TPCODL): 1800 345 7122 | South Odisha (TPSODL): 1800 2026' },
+          { en: 'TPSODL online: tpsodlwss.tpodisha.com/cportal/ → Register → Complaint', hi: 'TPSODL portal: tpsodlwss.tpodisha.com/cportal/ → Register → Complaint' },
+          { en: 'TPWODL / TPNODL: tpnodl.com → Customer Zone → Complaints', hi: 'TPWODL / TPNODL: tpnodl.com → Customer Zone → Complaints' },
+        ],
+      },
+      {
+        badge: 'state',
+        name: 'OERC — Odisha Electricity Regulatory Commission',
+        desc: { en: 'DISCOM not resolving? Escalate to OERC CGRF', hi: 'DISCOM resolve nahi? OERC CGRF mein escalate karein' },
+        url: 'https://oerc.gov.in',
+        phone: '0674-2561455',
+        howto: [
+          { en: 'Open oerc.gov.in → "Consumer Grievance" → CGRF complaint', hi: 'oerc.gov.in → "Consumer Grievance" → CGRF complaint bharein' },
+          { en: 'File with your DISCOM complaint number and all documents', hi: 'DISCOM complaint number aur saare documents ke saath file karein' },
+        ],
+      },
+    ],
+    police: [
+      {
+        badge: 'first',
+        name: 'Odisha Police — Emergency & Helplines',
+        desc: { en: 'Dial 100 | Women: 1091 | Bhubaneswar-Cuttack Police: 0674-2532640', hi: 'Emergency: 100 | Women: 1091 | Bhubaneswar-Cuttack Police: 0674-2532640' },
+        url: null, phone: '100', callOnly: true,
+        howto: [
+          { en: 'Dial 100 for police emergency anywhere in Odisha', hi: 'Odisha mein police emergency ke liye 100 dial karein' },
+          { en: 'Women helpline: 1091 | Mahila Police Volunteer helpline Odisha', hi: 'Women helpline: 1091 | Mahila Police Volunteer Odisha se madad lein' },
+          { en: 'Cyber crime helpline: 1930', hi: 'Cyber crime ke liye: 1930' },
+        ],
+      },
+      {
+        badge: 'first',
+        name: 'Odisha Police — Online Complaint Portal',
+        desc: { en: 'File FIR, complaint, missing person — Odisha Police official portal', hi: 'FIR, complaint, missing person — Odisha Police official portal' },
+        url: 'https://odishapolice.gov.in',
+        phone: '100',
+        howto: [
+          { en: 'Open odishapolice.gov.in → "Citizen Services" → "Online Complaint"', hi: 'odishapolice.gov.in → "Citizen Services" → "Online Complaint" karein' },
+          { en: 'Register with mobile OTP → fill complaint form completely', hi: 'Mobile OTP se register karein → complaint form completely bharein' },
+          { en: 'Submit → note complaint number from SMS', hi: 'Submit → SMS se complaint number note karein' },
+        ],
+      },
+      {
+        badge: 'state',
+        name: 'Odisha Police — SP / Grievance Escalation',
+        desc: { en: 'Complaint not addressed? Escalate to SP or Odisha CM Helpline', hi: 'Complaint address nahi hui? SP ya Odisha CM Helpline par escalate karein' },
+        url: 'https://odishapolice.gov.in',
+        phone: '14545',
+        howto: [
+          { en: 'Open odishapolice.gov.in → "Grievance" section', hi: 'odishapolice.gov.in → "Grievance" section mein jaayein' },
+          { en: 'Odisha CM Helpline: 14545 — for escalation of police inaction', hi: 'Odisha CM Helpline: 14545 — police inaction ke liye escalation' },
+          { en: 'Write to SP of your district with written complaint', hi: 'Apne district ke SP ko written complaint dein' },
+        ],
+      },
+    ],
+  },
+
+  // ── Assam ─────────────────────────────────────────────────────────────────
+  Assam: {
+    bijli: [
+      {
+        badge: 'first',
+        name: 'APDCL — Assam Power Distribution Complaint',
+        desc: { en: 'Assam Power Distribution Company — 1912 helpline and CGRF portal', hi: 'Assam electricity complaint — APDCL 1912 ya CGRF portal' },
+        url: 'https://www.apdcl.org/cgrf/noauth/fileComplaint',
+        phone: '1912',
+        howto: [
+          { en: 'Dial 1912 (24×7, within Assam free) for APDCL complaints', hi: 'Assam mein 1912 dial karein (24×7 free) — APDCL ka helpline' },
+          { en: 'Outside Assam: 0361-3126201 or 0361-2803200', hi: 'Assam se bahar: 0361-3126201 ya 0361-2803200' },
+          { en: 'Online CGRF complaint: apdcl.org/cgrf/noauth/fileComplaint', hi: 'Online CGRF complaint: apdcl.org/cgrf/noauth/fileComplaint' },
+          { en: 'WhatsApp: 7575999666 | Email: support@apdcl.org', hi: 'WhatsApp: 7575999666 | Email: support@apdcl.org' },
+        ],
+      },
+      {
+        badge: 'state',
+        name: 'AERC — Assam Electricity Regulatory Commission',
+        desc: { en: 'APDCL unresolved? Escalate to AERC CGRF', hi: 'APDCL resolve nahi? AERC CGRF mein escalate karein' },
+        url: 'https://aerc.gov.in',
+        phone: '0361-2525069',
+        howto: [
+          { en: 'Open aerc.gov.in → "Consumer Grievance Redressal" section', hi: 'aerc.gov.in → "Consumer Grievance Redressal" section mein jaayein' },
+          { en: 'File with APDCL complaint number and all supporting documents', hi: 'APDCL complaint number aur documents ke saath file karein' },
+        ],
+      },
+    ],
+    police: [
+      {
+        badge: 'first',
+        name: 'Assam Police — Emergency & Helplines',
+        desc: { en: 'Dial 100 | Women: 1091 | Guwahati City Police: 0361-2540007', hi: 'Emergency: 100 | Women: 1091 | Guwahati City Police: 0361-2540007' },
+        url: null, phone: '100', callOnly: true,
+        howto: [
+          { en: 'Dial 100 for police emergency anywhere in Assam', hi: 'Assam mein police emergency ke liye 100 dial karein' },
+          { en: 'Women helpline Assam: 1091', hi: 'Assam women helpline: 1091' },
+          { en: 'Cyber crime helpline: 1930', hi: 'Cyber crime: 1930' },
+        ],
+      },
+      {
+        badge: 'first',
+        name: 'Assam Police — Online Complaint Portal',
+        desc: { en: 'File FIR, complaint, missing person — Assam Police citizen portal', hi: 'FIR, complaint, missing person — Assam Police online portal' },
+        url: 'https://assampolice.gov.in',
+        phone: '100',
+        howto: [
+          { en: 'Open assampolice.gov.in → "Citizen Services" → "Online Complaint"', hi: 'assampolice.gov.in → "Citizen Services" → "Online Complaint" karein' },
+          { en: 'Fill complaint type, incident details, location and submit', hi: 'Complaint type, incident details, location bharein aur submit karein' },
+          { en: 'Note acknowledgment number for follow-up', hi: 'Follow-up ke liye acknowledgment number note karein' },
+        ],
+      },
+      {
+        badge: 'state',
+        name: 'Assam CM Helpline — Police Escalation',
+        desc: { en: 'Police inaction? Use Assam CM Helpline for escalation', hi: 'Police action nahi? Assam CM Helpline se escalate karein' },
+        url: 'https://assampolice.gov.in',
+        phone: '15100',
+        howto: [
+          { en: 'Dial 15100 (Assam CM Helpline) for police inaction complaints', hi: 'Assam CM Helpline: 15100 — police inaction ke liye' },
+          { en: 'Or approach SP of your district with written application', hi: 'Ya apne district ke SP ko written application dein' },
+        ],
+      },
+    ],
+  },
+
+  // ── Jharkhand ─────────────────────────────────────────────────────────────
+  Jharkhand: {
+    bijli: [
+      {
+        badge: 'first',
+        name: 'JBVNL — Jharkhand Bijli Vitran Nigam Complaint',
+        desc: { en: 'JBVNL is the sole electricity distributor in Jharkhand — 1912 helpline', hi: 'Jharkhand electricity complaint — JBVNL 1912 helpline ya portal' },
+        url: 'https://jbvnl.co.in',
+        phone: '1912',
+        howto: [
+          { en: 'Dial 1912 (24×7 free) — JBVNL Jharkhand helpline', hi: '1912 dial karein (24×7 free) — JBVNL Jharkhand ka helpline' },
+          { en: 'Toll-free alternate: 1800-123-8745', hi: 'Toll-free alternate: 1800-123-8745' },
+          { en: 'SMS complaint: Text "COMPLAINT <reason>" to 5001181912', hi: 'SMS complaint: "COMPLAINT <reason>" ko 5001181912 par bhejein' },
+          { en: 'Website: jbvnl.co.in → Consumer Services → Complaint', hi: 'jbvnl.co.in → Consumer Services → Complaint mein jaayein' },
+        ],
+      },
+      {
+        badge: 'state',
+        name: 'JSERC — Jharkhand State Electricity Regulatory Commission',
+        desc: { en: 'JBVNL not resolving? Escalate to JSERC CGRF', hi: 'JBVNL resolve nahi? JSERC CGRF mein escalate karein' },
+        url: 'https://jserc.org',
+        phone: '0651-2400741',
+        howto: [
+          { en: 'Open jserc.org → "Consumer Grievance" → CGRF complaint', hi: 'jserc.org → "Consumer Grievance" → CGRF complaint karein' },
+          { en: 'CGRF at divisional level — 45-day resolution mandate', hi: 'Divisional level par CGRF hai — 45 din mein resolve karna mandatory' },
+        ],
+      },
+    ],
+    police: [
+      {
+        badge: 'first',
+        name: 'Jharkhand Police — Emergency & Helplines',
+        desc: { en: 'Dial 100 | Women: 1091 | Ranchi City Police: 0651-2200071', hi: 'Emergency: 100 | Women: 1091 | Ranchi City Police: 0651-2200071' },
+        url: null, phone: '100', callOnly: true,
+        howto: [
+          { en: 'Dial 100 for police emergency anywhere in Jharkhand', hi: 'Jharkhand mein police emergency ke liye 100 dial karein' },
+          { en: 'Women helpline Jharkhand: 1091', hi: 'Jharkhand women helpline: 1091' },
+          { en: 'Cyber crime helpline: 1930', hi: 'Cyber crime ke liye: 1930' },
+        ],
+      },
+      {
+        badge: 'first',
+        name: 'Jharkhand Police — Online Complaint Portal',
+        desc: { en: 'File FIR, complaint, missing person — Jharkhand Police official portal', hi: 'FIR, complaint, missing person — Jharkhand Police official portal' },
+        url: 'https://jharkhandpolice.gov.in',
+        phone: '100',
+        howto: [
+          { en: 'Open jharkhandpolice.gov.in → "Citizen Services" → "Online Complaint"', hi: 'jharkhandpolice.gov.in → "Citizen Services" → "Online Complaint" karein' },
+          { en: 'Login with mobile OTP → fill incident details completely', hi: 'Mobile OTP se login → incident details completely bharein' },
+          { en: 'Submit → note complaint number for tracking', hi: 'Submit → complaint number note karein — tracking ke liye' },
+        ],
+      },
+      {
+        badge: 'state',
+        name: 'Jharkhand CM Helpline — Police Escalation',
+        desc: { en: 'Police not acting? Escalate via Jharkhand CM Helpline', hi: 'Police action nahi? Jharkhand CM Helpline se escalate karein' },
+        url: 'https://jharkhandpolice.gov.in',
+        phone: '181',
+        howto: [
+          { en: 'Dial 181 (Jharkhand CM Helpline) for police inaction', hi: 'Jharkhand CM Helpline: 181 — police inaction escalation ke liye' },
+          { en: 'Approach SP of your district with written complaint and FIR refusal proof', hi: 'District ke SP ko written complaint aur FIR refusal proof ke saath milein' },
+        ],
+      },
+    ],
+  },
+
+  // ── Chhattisgarh ──────────────────────────────────────────────────────────
+  Chhattisgarh: {
+    bijli: [
+      {
+        badge: 'first',
+        name: 'CSPDCL — Chhattisgarh State Power Distribution Complaint',
+        desc: { en: 'CSPDCL — sole electricity distributor in Chhattisgarh, 1912 helpline', hi: 'Chhattisgarh electricity complaint — CSPDCL 1912 helpline ya portal' },
+        url: 'https://cspdcl.co.in',
+        phone: '1912',
+        howto: [
+          { en: 'Dial 1912 (24×7 free) OR toll-free 1800-233-4687', hi: '1912 dial karein (24×7 free) ya toll-free 1800-233-4687' },
+          { en: 'Online: cspdcl.co.in → Consumer e-Seva → Lodge Complaint', hi: 'cspdcl.co.in → Consumer e-Seva → Lodge Complaint karein' },
+          { en: 'Enter Consumer Number from bill → describe complaint → submit', hi: 'Bill se Consumer Number enter karein → complaint describe karein → submit' },
+          { en: 'Mobile app: "URJA MITRA" for complaint tracking', hi: 'Mobile app "URJA MITRA" se complaint track karein' },
+        ],
+      },
+      {
+        badge: 'state',
+        name: 'CSERC — Chhattisgarh Electricity Regulatory Commission',
+        desc: { en: 'CSPDCL unresolved? Escalate to CSERC CGRF', hi: 'CSPDCL resolve nahi? CSERC CGRF mein escalate karein' },
+        url: 'https://cserc.gov.in',
+        phone: '0771-4058900',
+        howto: [
+          { en: 'Open cserc.gov.in → "Consumer Grievance" section', hi: 'cserc.gov.in → "Consumer Grievance" section mein jaayein' },
+          { en: 'File CGRF complaint with CSPDCL reference number', hi: 'CSPDCL reference number ke saath CGRF complaint file karein' },
+        ],
+      },
+    ],
+    police: [
+      {
+        badge: 'first',
+        name: 'Chhattisgarh Police — Emergency & Helplines',
+        desc: { en: 'Dial 100 | Women: 1091 | Raipur City Police: 0771-2234343', hi: 'Emergency: 100 | Women: 1091 | Raipur City Police: 0771-2234343' },
+        url: null, phone: '100', callOnly: true,
+        howto: [
+          { en: 'Dial 100 for police emergency anywhere in Chhattisgarh', hi: 'Chhattisgarh mein police emergency ke liye 100 dial karein' },
+          { en: 'Women helpline CG: 1091', hi: 'Chhattisgarh women helpline: 1091' },
+          { en: 'Cyber crime helpline: 1930', hi: 'Cyber crime ke liye: 1930' },
+        ],
+      },
+      {
+        badge: 'first',
+        name: 'CG Police — Online Complaint Portal',
+        desc: { en: 'File FIR, complaint, missing person — Chhattisgarh Police online', hi: 'FIR, complaint, missing person — Chhattisgarh Police online portal' },
+        url: 'https://cgpolice.gov.in',
+        phone: '100',
+        howto: [
+          { en: 'Open cgpolice.gov.in → "Citizen Services" → "Online Complaint"', hi: 'cgpolice.gov.in → "Citizen Services" → "Online Complaint" karein' },
+          { en: 'Register with mobile OTP → fill complaint details', hi: 'Mobile OTP se register karein → complaint details bharein' },
+          { en: 'Submit and note complaint reference number', hi: 'Submit karein aur complaint reference number note karein' },
+        ],
+      },
+      {
+        badge: 'state',
+        name: 'CG Police — SP Escalation',
+        desc: { en: 'FIR refused or complaint ignored? Escalate to SP of your district', hi: 'FIR refuse hui ya complaint ignore? District ke SP ko escalate karein' },
+        url: 'https://cgpolice.gov.in',
+        phone: null,
+        howto: [
+          { en: 'Open cgpolice.gov.in → "Grievance" → submit with complaint history', hi: 'cgpolice.gov.in → "Grievance" → complaint history ke saath submit karein' },
+          { en: 'Write to SP with CrPC Section 154(3) — SP must order FIR', hi: 'SP ko CrPC Section 154(3) mention karte hue likhein — SP ko FIR order karna hoga' },
+        ],
+      },
+    ],
+  },
+
+  // ── Uttarakhand ───────────────────────────────────────────────────────────
+  Uttarakhand: {
+    bijli: [
+      {
+        badge: 'first',
+        name: 'UPCL — Uttarakhand Power Corporation Complaint',
+        desc: { en: 'UPCL — sole electricity distributor in Uttarakhand, 1912 helpline', hi: 'Uttarakhand electricity complaint — UPCL 1912 helpline ya portal' },
+        url: 'https://www.upcl.org/wss/complaintredressal.jsp',
+        phone: '1912',
+        howto: [
+          { en: 'Dial 1912 (24×7 free) — UPCL Uttarakhand helpline', hi: '1912 dial karein (24×7 free) — UPCL Uttarakhand ka helpline' },
+          { en: 'General complaint: 1800-419-0405 | Power theft: 1800-180-4185', hi: 'General complaint: 1800-419-0405 | Bijli chori: 1800-180-4185' },
+          { en: 'Online: upcl.org/wss/complaintredressal.jsp → enter details', hi: 'upcl.org/wss/complaintredressal.jsp → details enter karein' },
+          { en: 'Email: customercare@upcl.org | App: Consumer Self Service', hi: 'Email: customercare@upcl.org | App: Consumer Self Service use karein' },
+        ],
+      },
+      {
+        badge: 'state',
+        name: 'UERC — Uttarakhand Electricity Regulatory Commission',
+        desc: { en: 'UPCL complaint unresolved? Escalate to UERC CGRF', hi: 'UPCL resolve nahi? UERC CGRF mein escalate karein' },
+        url: 'https://www.upcl.org/complaints-redressal-forum/',
+        phone: '0135-2710046',
+        howto: [
+          { en: 'Open upcl.org/complaints-redressal-forum/ for CGRF filing', hi: 'CGRF filing ke liye upcl.org/complaints-redressal-forum/ kholen' },
+          { en: 'File with UPCL complaint reference number and documents', hi: 'UPCL complaint reference number aur documents ke saath file karein' },
+        ],
+      },
+    ],
+    police: [
+      {
+        badge: 'first',
+        name: 'Uttarakhand Police — Emergency & Helplines',
+        desc: { en: 'Dial 100 | Women: 1091 | Dehradun City Police: 0135-2714200', hi: 'Emergency: 100 | Women: 1091 | Dehradun City Police: 0135-2714200' },
+        url: null, phone: '100', callOnly: true,
+        howto: [
+          { en: 'Dial 100 for police emergency anywhere in Uttarakhand', hi: 'Uttarakhand mein police emergency ke liye 100 dial karein' },
+          { en: 'Women helpline Uttarakhand: 1091', hi: 'Uttarakhand women helpline: 1091' },
+          { en: 'Tourist Police Helpline Uttarakhand: 1364', hi: 'Tourist Police Helpline Uttarakhand: 1364' },
+        ],
+      },
+      {
+        badge: 'first',
+        name: 'Uttarakhand Police — Online Complaint Portal',
+        desc: { en: 'File FIR, complaint, missing person — Uttarakhand Police citizen portal', hi: 'FIR, complaint, missing person — Uttarakhand Police citizen portal' },
+        url: 'https://uttarakhandpolice.uk.gov.in',
+        phone: '100',
+        howto: [
+          { en: 'Open uttarakhandpolice.uk.gov.in → "Citizen Services" → "Online Complaint"', hi: 'uttarakhandpolice.uk.gov.in → "Citizen Services" → "Online Complaint" karein' },
+          { en: 'Register with mobile → fill complaint form with full incident details', hi: 'Mobile se register karein → full incident details ke saath complaint form bharein' },
+          { en: 'Submit → complaint number via SMS for tracking', hi: 'Submit → SMS mein complaint number — tracking ke liye' },
+        ],
+      },
+      {
+        badge: 'state',
+        name: 'Uttarakhand CM Helpline — Police Escalation',
+        desc: { en: 'Police inaction? Escalate via Uttarakhand CM Helpline 1905', hi: 'Police action nahi? Uttarakhand CM Helpline 1905 par escalate karein' },
+        url: 'https://uttarakhandpolice.uk.gov.in',
+        phone: '1905',
+        howto: [
+          { en: 'Dial 1905 (Uttarakhand CM Helpline) for police escalation', hi: 'Uttarakhand CM Helpline 1905 — police escalation ke liye' },
+          { en: 'Or approach SP of your district with written application', hi: 'Ya apne district ke SP ko written application dein' },
+        ],
+      },
+    ],
+  },
+
+  // ── Himachal Pradesh ──────────────────────────────────────────────────────
+  'Himachal Pradesh': {
+    bijli: [
+      {
+        badge: 'first',
+        name: 'HPSEBL — HP State Electricity Board Complaint',
+        desc: { en: 'Himachal Pradesh State Electricity Board — 1912 helpline and portal', hi: 'HP State Electricity Board — 1912 ya portal par complaint karein' },
+        url: 'https://www.hpseb.in',
+        phone: '1912',
+        howto: [
+          { en: 'Dial 1912 (24×7 free) OR 1800-180-8060 — HPSEBL helpline', hi: '1912 dial karein (24×7 free) ya 1800-180-8060 — HPSEBL helpline' },
+          { en: 'Online: hpseb.in → Consumer Call Centre → Lodge Complaint', hi: 'hpseb.in → Consumer Call Centre → Lodge Complaint karein' },
+          { en: 'Enter Consumer Account Number from bill → describe issue → submit', hi: 'Bill se Consumer Account Number enter karein → issue describe karein → submit' },
+        ],
+      },
+      {
+        badge: 'state',
+        name: 'HPERC — HP Electricity Regulatory Commission',
+        desc: { en: 'HPSEBL not resolving? Escalate to HPERC CGRF', hi: 'HPSEBL resolve nahi? HPERC CGRF mein escalate karein' },
+        url: 'https://hperc.org',
+        phone: '0177-2624376',
+        howto: [
+          { en: 'Open hperc.org → "Consumer Grievance" → CGRF complaint', hi: 'hperc.org → "Consumer Grievance" → CGRF complaint bharein' },
+          { en: 'File with HPSEBL complaint number and supporting documents', hi: 'HPSEBL complaint number aur supporting documents ke saath file karein' },
+        ],
+      },
+    ],
+    police: [
+      {
+        badge: 'first',
+        name: 'Himachal Pradesh Police — Emergency',
+        desc: { en: 'Dial 100 | Women: 1091 | Shimla Police: 0177-2628800', hi: 'Emergency: 100 | Women: 1091 | Shimla Police: 0177-2628800' },
+        url: null, phone: '100', callOnly: true,
+        howto: [
+          { en: 'Dial 100 for police emergency anywhere in Himachal Pradesh', hi: 'HP mein police emergency ke liye 100 dial karein' },
+          { en: 'Women helpline HP: 1091', hi: 'Himachal Pradesh women helpline: 1091' },
+          { en: 'Tourist helpline HP: 1100', hi: 'Tourist helpline HP: 1100' },
+        ],
+      },
+      {
+        badge: 'first',
+        name: 'HP Police — Online Complaint Portal',
+        desc: { en: 'File FIR, complaint, missing person — Himachal Pradesh Police online', hi: 'FIR, complaint, missing person — HP Police online portal' },
+        url: 'https://hppolice.gov.in',
+        phone: '100',
+        howto: [
+          { en: 'Open hppolice.gov.in → "Citizen Services" → "Online Complaint"', hi: 'hppolice.gov.in → "Citizen Services" → "Online Complaint" karein' },
+          { en: 'Fill complaint type, incident details and submit with mobile OTP', hi: 'Complaint type, incident details bharein aur mobile OTP se submit karein' },
+          { en: 'Note complaint number for tracking', hi: 'Complaint number note karein — tracking ke liye' },
+        ],
+      },
+      {
+        badge: 'state',
+        name: 'HP Police — SP Escalation',
+        desc: { en: 'Police station complaint ignored? Escalate to SP of district', hi: 'Station complaint ignore? District ke SP ko escalate karein' },
+        url: 'https://hppolice.gov.in',
+        phone: '0177-2628800',
+        howto: [
+          { en: 'Open hppolice.gov.in → "Grievance" section', hi: 'hppolice.gov.in → "Grievance" section mein jaayein' },
+          { en: 'Write to SP with previous complaint details and FIR refusal', hi: 'SP ko previous complaint details aur FIR refusal ke saath likhein' },
+        ],
+      },
+    ],
+  },
+
+  // ── Goa ───────────────────────────────────────────────────────────────────
+  Goa: {
+    bijli: [
+      {
+        badge: 'first',
+        name: 'Goa Electricity Department — Consumer Complaint',
+        desc: { en: 'Goa Electricity Department (GED) — 1912 helpline and online portal', hi: 'Goa electricity complaint — 1912 ya GED online complaint portal' },
+        url: 'https://www.goaelectricity.gov.in',
+        phone: '1912',
+        howto: [
+          { en: 'Dial 1912 (24×7 free) OR 0832-2490800 — GED helpline', hi: '1912 dial karein (24×7 free) ya 0832-2490800 — GED Goa helpline' },
+          { en: 'Online: goaelectricity.gov.in → Consumer Grievance Registration', hi: 'goaelectricity.gov.in → Consumer Grievance Registration karein' },
+          { en: 'Enter Consumer Number from bill → select complaint type → submit', hi: 'Bill se Consumer Number enter karein → complaint type → submit karein' },
+          { en: 'WhatsApp complaint: +91 9422041912', hi: 'WhatsApp par complaint: +91 9422041912' },
+        ],
+      },
+      {
+        badge: 'state',
+        name: 'GERC — Goa Electricity Regulatory Commission',
+        desc: { en: 'GED not resolving? Escalate to GERC CGRF', hi: 'GED resolve nahi? GERC CGRF mein escalate karein' },
+        url: 'https://www.gerc.gov.in',
+        phone: '0832-2437454',
+        howto: [
+          { en: 'Open gerc.gov.in → "Consumer Grievance" section', hi: 'gerc.gov.in → "Consumer Grievance" section mein jaayein' },
+          { en: 'File CGRF complaint with GED complaint reference number', hi: 'GED complaint reference number ke saath CGRF complaint file karein' },
+        ],
+      },
+    ],
+    police: [
+      {
+        badge: 'first',
+        name: 'Goa Police — Emergency & Helplines',
+        desc: { en: 'Dial 100 | Women: 1091 | Panaji Police Station: 0832-2425255', hi: 'Emergency: 100 | Women: 1091 | Panaji Police: 0832-2425255' },
+        url: null, phone: '100', callOnly: true,
+        howto: [
+          { en: 'Dial 100 for police emergency anywhere in Goa', hi: 'Goa mein police emergency ke liye 100 dial karein' },
+          { en: 'Women helpline Goa: 1091', hi: 'Goa women helpline: 1091' },
+          { en: 'Tourist helpline Goa: 1364', hi: 'Tourist helpline Goa: 1364' },
+        ],
+      },
+      {
+        badge: 'first',
+        name: 'Goa Police — Online Complaint Portal',
+        desc: { en: 'File FIR, complaint, lost property report — Goa Police citizen services', hi: 'FIR, complaint, lost property — Goa Police online complaint portal' },
+        url: 'https://goapolice.gov.in',
+        phone: '100',
+        howto: [
+          { en: 'Open goapolice.gov.in → "Citizen Services" → "Online Complaint"', hi: 'goapolice.gov.in → "Citizen Services" → "Online Complaint" karein' },
+          { en: 'Fill complaint form with incident details and submit', hi: 'Incident details ke saath complaint form bharein aur submit karein' },
+          { en: 'Note complaint/acknowledgment number for tracking', hi: 'Complaint/acknowledgment number note karein' },
+        ],
+      },
+      {
+        badge: 'state',
+        name: 'Goa Police — SP Level Escalation',
+        desc: { en: 'Police ignoring complaint? Escalate to SP North / SP South Goa', hi: 'Complaint ignore? SP North Goa ya SP South Goa ko escalate karein' },
+        url: 'https://goapolice.gov.in',
+        phone: null,
+        howto: [
+          { en: 'Open goapolice.gov.in → "Grievance" section', hi: 'goapolice.gov.in → "Grievance" section mein jaayein' },
+          { en: 'Visit or write to SP North Goa (Panaji) or SP South Goa (Margao)', hi: 'SP North Goa (Panaji) ya SP South Goa (Margao) ko visit karein ya likhein' },
+        ],
+      },
+    ],
+  },
+
+  // ── Jammu & Kashmir ───────────────────────────────────────────────────────
+  'Jammu and Kashmir': {
+    bijli: [
+      {
+        badge: 'first',
+        name: 'JKPDD / KPDCL / JPDCL — J&K Electricity Complaint',
+        desc: { en: 'Jammu: JPDCL (1800-180-7183) | Kashmir: KPDCL (1800-180-7666)', hi: 'Jammu ke liye JPDCL | Kashmir ke liye KPDCL — alag helplines' },
+        url: 'https://kpdcl.jkpdd.net/grievance.aspx',
+        phone: '1912',
+        howto: [
+          { en: 'Dial 1912 (24×7 free) for J&K electricity complaints', hi: '1912 dial karein (24×7 free) — J&K electricity complaints ke liye' },
+          { en: 'Jammu region (JPDCL): 1800-180-7183 (toll-free)', hi: 'Jammu region (JPDCL): 1800-180-7183 (toll-free)' },
+          { en: 'Kashmir region (KPDCL): 1800-180-7666 (toll-free)', hi: 'Kashmir region (KPDCL): 1800-180-7666 (toll-free)' },
+          { en: 'Online grievance (Kashmir): kpdcl.jkpdd.net/grievance.aspx', hi: 'Online grievance (Kashmir): kpdcl.jkpdd.net/grievance.aspx' },
+        ],
+      },
+      {
+        badge: 'state',
+        name: 'JKERC — J&K Electricity Regulatory Commission',
+        desc: { en: 'JKPDD/KPDCL not resolving? Escalate to JKERC CGRF', hi: 'JKPDD resolve nahi? JKERC CGRF mein escalate karein' },
+        url: 'https://jkerc.gov.in',
+        phone: '0194-2484793',
+        howto: [
+          { en: 'Open jkerc.gov.in → "Consumer Grievance" section', hi: 'jkerc.gov.in → "Consumer Grievance" section mein jaayein' },
+          { en: 'File CGRF complaint with JKPDD/KPDCL complaint reference number', hi: 'JKPDD/KPDCL complaint reference number ke saath CGRF file karein' },
+        ],
+      },
+    ],
+    police: [
+      {
+        badge: 'first',
+        name: 'J&K Police — Emergency & Helplines',
+        desc: { en: 'Dial 100 | Women: 1091 | Srinagar: 0194-2452748 | Jammu: 0191-2520661', hi: 'Emergency: 100 | Women: 1091 | Srinagar: 0194-2452748 | Jammu: 0191-2520661' },
+        url: null, phone: '100', callOnly: true,
+        howto: [
+          { en: 'Dial 100 for police emergency anywhere in J&K', hi: 'J&K mein police emergency ke liye 100 dial karein' },
+          { en: 'Srinagar Police: 0194-2452748 | Jammu Police: 0191-2520661', hi: 'Srinagar Police: 0194-2452748 | Jammu Police: 0191-2520661' },
+          { en: 'Women helpline: 1091 | Cyber crime: 1930', hi: 'Women helpline: 1091 | Cyber crime: 1930' },
+        ],
+      },
+      {
+        badge: 'first',
+        name: 'J&K Police — Online Complaint Portal',
+        desc: { en: 'File FIR, complaint, missing person — J&K Police official portal', hi: 'FIR, complaint, missing person — J&K Police official portal' },
+        url: 'https://jkpolice.gov.in',
+        phone: '100',
+        howto: [
+          { en: 'Open jkpolice.gov.in → "Citizen Services" → "Online Complaint"', hi: 'jkpolice.gov.in → "Citizen Services" → "Online Complaint" karein' },
+          { en: 'Register with mobile OTP → fill complaint form completely', hi: 'Mobile OTP se register karein → complaint form completely bharein' },
+          { en: 'Submit → complaint number via SMS for tracking', hi: 'Submit → SMS mein complaint number — tracking ke liye' },
+        ],
+      },
+      {
+        badge: 'state',
+        name: 'J&K Police — SSP / IGP Level Escalation',
+        desc: { en: 'Complaint not addressed? Escalate to SSP or IGP of your zone', hi: 'Complaint address nahi? SSP ya IGP zone ko escalate karein' },
+        url: 'https://jkpolice.gov.in',
+        phone: null,
+        howto: [
+          { en: 'Open jkpolice.gov.in → "Grievance" section → submit with complaint history', hi: 'jkpolice.gov.in → "Grievance" → complaint history ke saath submit karein' },
+          { en: 'Visit SSP office of your district with written application', hi: 'District ke SSP office mein written application ke saath milein' },
+          { en: 'J&K LG Grievance portal: lgraj.jk.gov.in for further escalation', hi: 'J&K LG Grievance portal: lgraj.jk.gov.in — aur escalation ke liye' },
+        ],
+      },
+    ],
+  },
+
+  // ── Manipur ───────────────────────────────────────────────────────────────
+  Manipur: {
+    bijli: [
+      {
+        badge: 'first',
+        name: 'MSPDCL — Manipur State Power Distribution Complaint',
+        desc: { en: 'Manipur State Power Distribution Company — 1912 helpline', hi: 'Manipur electricity complaint — MSPDCL 1912 helpline' },
+        url: 'https://mspdcl.com',
+        phone: '1912',
+        howto: [
+          { en: 'Dial 1912 (24×7 free) — MSPDCL Manipur helpline', hi: '1912 dial karein (24×7 free) — MSPDCL Manipur helpline' },
+          { en: 'Phone: +91 7640081232 or +91 7640081238', hi: 'Phone: +91 7640081232 ya +91 7640081238' },
+          { en: 'Online: mspdcl.com → Citizen Services → Complaint', hi: 'mspdcl.com → Citizen Services → Complaint mein jaayein' },
+          { en: 'Describe your complaint with consumer number, address, and issue', hi: 'Consumer number, address aur issue ke saath complaint describe karein' },
+        ],
+      },
+    ],
+    police: [
+      {
+        badge: 'first',
+        name: 'Manipur Police — Emergency & Helplines',
+        desc: { en: 'Dial 100 | Women: 1091 | Imphal Police: 0385-2454744', hi: 'Emergency: 100 | Women: 1091 | Imphal Police: 0385-2454744' },
+        url: null, phone: '100', callOnly: true,
+        howto: [
+          { en: 'Dial 100 for police emergency anywhere in Manipur', hi: 'Manipur mein police emergency ke liye 100 dial karein' },
+          { en: 'Women helpline Manipur: 1091', hi: 'Manipur women helpline: 1091' },
+          { en: 'Cyber crime helpline: 1930', hi: 'Cyber crime ke liye: 1930' },
+        ],
+      },
+      {
+        badge: 'first',
+        name: 'Manipur Police — Online Complaint Portal',
+        desc: { en: 'File FIR, complaint — Manipur Police official portal', hi: 'FIR, complaint — Manipur Police official portal' },
+        url: 'https://manipurpolice.gov.in',
+        phone: '100',
+        howto: [
+          { en: 'Open manipurpolice.gov.in → "Citizen Services" → complaint form', hi: 'manipurpolice.gov.in → "Citizen Services" → complaint form bharein' },
+          { en: 'Fill incident details and submit with contact info', hi: 'Incident details bharein aur contact info ke saath submit karein' },
+          { en: 'Note acknowledgment for follow-up', hi: 'Follow-up ke liye acknowledgment note karein' },
+        ],
+      },
+      {
+        badge: 'state',
+        name: 'Manipur CM Helpline — Police Escalation',
+        desc: { en: 'Police ignoring complaint? Escalate via Manipur CM Office', hi: 'Complaint ignore? Manipur CM Office ke through escalate karein' },
+        url: 'https://manipurpolice.gov.in',
+        phone: '1800-345-3818',
+        howto: [
+          { en: 'Manipur toll-free helpline: 1800-345-3818', hi: 'Manipur toll-free helpline: 1800-345-3818' },
+          { en: 'Or write to SP of your district with complaint details', hi: 'Ya apne district ke SP ko complaint details ke saath likhein' },
+        ],
+      },
+    ],
+  },
+
+  // ── Tripura ───────────────────────────────────────────────────────────────
+  Tripura: {
+    bijli: [
+      {
+        badge: 'first',
+        name: 'TSECL — Tripura State Electricity Corporation Complaint',
+        desc: { en: 'TSECL — sole electricity distributor in Tripura, 1912 helpline', hi: 'Tripura electricity complaint — TSECL 1912 helpline ya portal' },
+        url: 'https://tsecl.in',
+        phone: '1912',
+        howto: [
+          { en: 'Dial 1912 (24×7 free) — TSECL Tripura helpline', hi: '1912 dial karein (24×7 free) — TSECL Tripura helpline' },
+          { en: 'Alternate: 0381-2353502 for Agartala region', hi: 'Alternate: 0381-2353502 — Agartala region ke liye' },
+          { en: 'Online: tsecl.in → Consumer Services → Lodge Complaint', hi: 'tsecl.in → Consumer Services → Lodge Complaint karein' },
+          { en: 'Mobile app: "Bidyut Bandhu" for power outage tracking', hi: 'Mobile app "Bidyut Bandhu" se outage track karein' },
+        ],
+      },
+      {
+        badge: 'state',
+        name: 'TSERC — Tripura State Electricity Regulatory Commission',
+        desc: { en: 'TSECL not resolving? Escalate to TSERC CGRF', hi: 'TSECL resolve nahi? TSERC CGRF mein escalate karein' },
+        url: 'https://tserc.gov.in',
+        phone: '0381-2354512',
+        howto: [
+          { en: 'Open tserc.gov.in → "Consumer Grievance" section', hi: 'tserc.gov.in → "Consumer Grievance" section mein jaayein' },
+          { en: 'File CGRF complaint with TSECL complaint reference number', hi: 'TSECL complaint reference number ke saath CGRF complaint file karein' },
+        ],
+      },
+    ],
+    police: [
+      {
+        badge: 'first',
+        name: 'Tripura Police — Emergency & Helplines',
+        desc: { en: 'Dial 100 | Women: 1091 | Agartala Police: 0381-2325757', hi: 'Emergency: 100 | Women: 1091 | Agartala Police: 0381-2325757' },
+        url: null, phone: '100', callOnly: true,
+        howto: [
+          { en: 'Dial 100 for police emergency anywhere in Tripura', hi: 'Tripura mein police emergency ke liye 100 dial karein' },
+          { en: 'Women helpline Tripura: 1091', hi: 'Tripura women helpline: 1091' },
+          { en: 'Cyber crime helpline: 1930', hi: 'Cyber crime ke liye: 1930' },
+        ],
+      },
+      {
+        badge: 'first',
+        name: 'Tripura Police — Online Complaint Portal',
+        desc: { en: 'File FIR, complaint, missing person — Tripura Police official portal', hi: 'FIR, complaint — Tripura Police official portal' },
+        url: 'https://tripurapolice.gov.in',
+        phone: '100',
+        howto: [
+          { en: 'Open tripurapolice.gov.in → "Citizen Services" → "Online Complaint"', hi: 'tripurapolice.gov.in → "Citizen Services" → "Online Complaint" karein' },
+          { en: 'Fill complete complaint form with incident details and submit', hi: 'Incident details ke saath complaint form bharein aur submit karein' },
+          { en: 'Note complaint number for tracking', hi: 'Complaint number note karein' },
+        ],
+      },
+      {
+        badge: 'state',
+        name: 'Tripura Police — SP Escalation',
+        desc: { en: 'Station-level complaint unresolved? Escalate to SP of district', hi: 'Station complaint unresolved? District SP ko escalate karein' },
+        url: 'https://tripurapolice.gov.in',
+        phone: null,
+        howto: [
+          { en: 'Open tripurapolice.gov.in → "Grievance" section', hi: 'tripurapolice.gov.in → "Grievance" section mein jaayein' },
+          { en: 'Write to SP of your district with previous complaint details', hi: 'District ke SP ko pichle complaint details ke saath likhein' },
+        ],
+      },
+    ],
+  },
+
+  // ── Meghalaya ─────────────────────────────────────────────────────────────
+  Meghalaya: {
+    bijli: [
+      {
+        badge: 'first',
+        name: 'MePDCL — Meghalaya Power Distribution Complaint',
+        desc: { en: 'Meghalaya Power Distribution Corporation Ltd — 1912 helpline', hi: 'Meghalaya electricity complaint — MePDCL 1912 helpline ya portal' },
+        url: 'https://mepdcl.nic.in',
+        phone: '1912',
+        howto: [
+          { en: 'Dial 1912 (24×7 free) — MePDCL Meghalaya helpline', hi: '1912 dial karein (24×7 free) — MePDCL Meghalaya helpline' },
+          { en: 'Alternate: 0364-2591932 or 0364-2591088 (Shillong)', hi: 'Alternate: 0364-2591932 ya 0364-2591088 — Shillong region' },
+          { en: 'WhatsApp: 60330 60330 for quick complaints', hi: 'WhatsApp complaint: 60330 60330' },
+          { en: 'Email: mbcccs.mepdcl@gmail.com or mepdcl.shillong@gmail.com', hi: 'Email: mbcccs.mepdcl@gmail.com ya mepdcl.shillong@gmail.com' },
+        ],
+      },
+      {
+        badge: 'state',
+        name: 'MeERC — Meghalaya Electricity Regulatory Commission',
+        desc: { en: 'MePDCL not resolving? Escalate to MeERC CGRF', hi: 'MePDCL resolve nahi? MeERC CGRF mein escalate karein' },
+        url: 'https://meerc.gov.in',
+        phone: '0364-2502001',
+        howto: [
+          { en: 'Open meerc.gov.in → "Consumer Grievance" section', hi: 'meerc.gov.in → "Consumer Grievance" section mein jaayein' },
+          { en: 'File with MePDCL complaint number and documents', hi: 'MePDCL complaint number aur documents ke saath file karein' },
+        ],
+      },
+    ],
+    police: [
+      {
+        badge: 'first',
+        name: 'Meghalaya Police — Emergency & Helplines',
+        desc: { en: 'Dial 100 | Women: 1091 | Shillong Police: 0364-2502015', hi: 'Emergency: 100 | Women: 1091 | Shillong Police: 0364-2502015' },
+        url: null, phone: '100', callOnly: true,
+        howto: [
+          { en: 'Dial 100 for police emergency anywhere in Meghalaya', hi: 'Meghalaya mein police emergency ke liye 100 dial karein' },
+          { en: 'Women helpline Meghalaya: 1091', hi: 'Meghalaya women helpline: 1091' },
+          { en: 'Cyber crime helpline: 1930', hi: 'Cyber crime ke liye: 1930' },
+        ],
+      },
+      {
+        badge: 'first',
+        name: 'Meghalaya Police — Online Complaint Portal',
+        desc: { en: 'File FIR, complaint — Meghalaya Police official portal', hi: 'FIR, complaint — Meghalaya Police official portal' },
+        url: 'https://meghalayapolice.gov.in',
+        phone: '100',
+        howto: [
+          { en: 'Open meghalayapolice.gov.in → "Citizen Services" → "Online Complaint"', hi: 'meghalayapolice.gov.in → "Citizen Services" → "Online Complaint" karein' },
+          { en: 'Fill complaint form with full incident details and submit', hi: 'Full incident details ke saath complaint form bharein aur submit karein' },
+          { en: 'Note acknowledgment number for tracking', hi: 'Acknowledgment number note karein' },
+        ],
+      },
+      {
+        badge: 'state',
+        name: 'Meghalaya Police — SP Escalation',
+        desc: { en: 'Complaint not resolved? Approach SP of East Khasi Hills / your district', hi: 'Complaint resolve nahi? District ke SP se milein' },
+        url: 'https://meghalayapolice.gov.in',
+        phone: null,
+        howto: [
+          { en: 'Open meghalayapolice.gov.in → "Grievance" section', hi: 'meghalayapolice.gov.in → "Grievance" section mein jaayein' },
+          { en: 'Approach SP of your district with written complaint', hi: 'Apne district ke SP ko written complaint dein' },
+        ],
+      },
+    ],
+  },
+
+  // ── Nagaland ──────────────────────────────────────────────────────────────
+  Nagaland: {
+    bijli: [
+      {
+        badge: 'first',
+        name: 'DoP Nagaland — Department of Power Complaint',
+        desc: { en: 'Nagaland Department of Power — 03702-240178 helpline', hi: 'Nagaland electricity complaint — DoP helpline ya email' },
+        url: 'https://nagalandpower.gov.in',
+        phone: '03702-240178',
+        howto: [
+          { en: 'Call 03702-240178 or 03702-243149 (business hours 9 AM – 5 PM)', hi: '03702-240178 ya 03702-243149 call karein (business hours 9 AM–5 PM)' },
+          { en: 'Online: nagalandpower.gov.in → Consumer Portal → Complaint', hi: 'nagalandpower.gov.in → Consumer Portal → Complaint section' },
+          { en: 'Email complaint with consumer number, area, and problem description', hi: 'Consumer number, area aur problem description ke saath email karein' },
+          { en: 'Note: 1912 may not work in Nagaland — use state-specific numbers', hi: 'Note: Nagaland mein 1912 kaam nahi karta — state numbers use karein' },
+        ],
+      },
+    ],
+    police: [
+      {
+        badge: 'first',
+        name: 'Nagaland Police — Emergency & Helplines',
+        desc: { en: 'Dial 100 | Women: 1091 | Kohima Police: 0370-2270017', hi: 'Emergency: 100 | Women: 1091 | Kohima Police: 0370-2270017' },
+        url: null, phone: '100', callOnly: true,
+        howto: [
+          { en: 'Dial 100 for police emergency anywhere in Nagaland', hi: 'Nagaland mein police emergency ke liye 100 dial karein' },
+          { en: 'Women helpline Nagaland: 1091', hi: 'Nagaland women helpline: 1091' },
+          { en: 'Cyber crime helpline: 1930', hi: 'Cyber crime ke liye: 1930' },
+        ],
+      },
+      {
+        badge: 'first',
+        name: 'Nagaland Police — Online Complaint Portal',
+        desc: { en: 'File FIR, complaint, missing person — Nagaland Police official portal', hi: 'FIR, complaint — Nagaland Police official portal' },
+        url: 'https://nagalandpolice.gov.in',
+        phone: '100',
+        howto: [
+          { en: 'Open nagalandpolice.gov.in → "Citizen Services" → "Online Complaint"', hi: 'nagalandpolice.gov.in → "Citizen Services" → "Online Complaint" karein' },
+          { en: 'Fill complaint details and submit', hi: 'Complaint details bharein aur submit karein' },
+          { en: 'Note complaint acknowledgment number', hi: 'Complaint acknowledgment number note karein' },
+        ],
+      },
+      {
+        badge: 'state',
+        name: 'Nagaland Police — SP Escalation',
+        desc: { en: 'Station-level complaint ignored? Escalate to SP of district', hi: 'Station complaint ignore? District ke SP ko escalate karein' },
+        url: 'https://nagalandpolice.gov.in',
+        phone: null,
+        howto: [
+          { en: 'Write to SP of your district with previous complaint details', hi: 'District ke SP ko pichle complaint details ke saath likhein' },
+          { en: 'Or use Nagaland CM Helpline for further escalation', hi: 'Aur escalation ke liye Nagaland CM Helpline use karein' },
+        ],
+      },
+    ],
+  },
+
+  // ── Mizoram ───────────────────────────────────────────────────────────────
+  Mizoram: {
+    bijli: [
+      {
+        badge: 'first',
+        name: 'PEDGOM — Mizoram Power & Electricity Dept Complaint',
+        desc: { en: 'Mizoram Power & Electricity Department — helpline 0389-2321650', hi: 'Mizoram electricity complaint — PEDGOM helpline ya email' },
+        url: 'https://power.mizoram.gov.in',
+        phone: '0389-2321650',
+        howto: [
+          { en: 'Call 0389-2321650 or 0389-2322174 or 0389-2310169 (Aizawl)', hi: '0389-2321650 ya 0389-2322174 ya 0389-2310169 call karein' },
+          { en: 'Online: power.mizoram.gov.in → Consumer Services → Complaint', hi: 'power.mizoram.gov.in → Consumer Services → Complaint karein' },
+          { en: 'State-specific numbers — 1912 not confirmed for Mizoram', hi: 'State-specific numbers use karein — Mizoram mein 1912 confirm nahi hai' },
+        ],
+      },
+      {
+        badge: 'state',
+        name: 'JERC (Mizoram & Manipur) — Electricity Ombudsman',
+        desc: { en: 'Joint Electricity Regulatory Commission for Mizoram & Manipur — escalation', hi: 'JERC Mizoram & Manipur — unresolved complaint escalation' },
+        url: 'https://jerclakshadweep.gov.in',
+        phone: '0389-2322200',
+        howto: [
+          { en: 'Approach JERC — Joint Electricity Regulatory Commission for Mizoram', hi: 'JERC — Joint Electricity Regulatory Commission Mizoram se contact karein' },
+          { en: 'File complaint with PEDGOM reference number and documents', hi: 'PEDGOM reference number aur documents ke saath complaint file karein' },
+        ],
+      },
+    ],
+    police: [
+      {
+        badge: 'first',
+        name: 'Mizoram Police — Emergency & Helplines',
+        desc: { en: 'Dial 100 | Women: 1091 | Aizawl Police: 0389-2336202', hi: 'Emergency: 100 | Women: 1091 | Aizawl Police: 0389-2336202' },
+        url: null, phone: '100', callOnly: true,
+        howto: [
+          { en: 'Dial 100 for police emergency anywhere in Mizoram', hi: 'Mizoram mein police emergency ke liye 100 dial karein' },
+          { en: 'Women helpline Mizoram: 1091', hi: 'Mizoram women helpline: 1091' },
+          { en: 'Cyber crime helpline: 1930', hi: 'Cyber crime ke liye: 1930' },
+        ],
+      },
+      {
+        badge: 'first',
+        name: 'Mizoram Police — Online Complaint Portal',
+        desc: { en: 'File FIR, complaint — Mizoram Police official portal', hi: 'FIR, complaint — Mizoram Police official portal' },
+        url: 'https://mizorampolice.gov.in',
+        phone: '100',
+        howto: [
+          { en: 'Open mizorampolice.gov.in → "Citizen Services" → "Online Complaint"', hi: 'mizorampolice.gov.in → "Citizen Services" → "Online Complaint" karein' },
+          { en: 'Fill incident details, contact info and submit', hi: 'Incident details, contact info bharein aur submit karein' },
+          { en: 'Note complaint number for follow-up', hi: 'Follow-up ke liye complaint number note karein' },
+        ],
+      },
+      {
+        badge: 'state',
+        name: 'Mizoram Police — SP Escalation',
+        desc: { en: 'Complaint unresolved? Escalate to SP of Aizawl / your district', hi: 'Complaint unresolved? SP Aizawl ya apne district ke SP ko escalate karein' },
+        url: 'https://mizorampolice.gov.in',
+        phone: null,
+        howto: [
+          { en: 'Open mizorampolice.gov.in → "Grievance" section', hi: 'mizorampolice.gov.in → "Grievance" section mein jaayein' },
+          { en: 'Write to SP of your district with complaint history', hi: 'District ke SP ko complaint history ke saath likhein' },
+        ],
+      },
+    ],
+  },
+
+  // ── Sikkim ────────────────────────────────────────────────────────────────
+  Sikkim: {
+    bijli: [
+      {
+        badge: 'first',
+        name: 'Sikkim Power Department — Consumer Self-Service Portal',
+        desc: { en: 'Sikkim Power Department — selfservice.powersikkim.in and helpline', hi: 'Sikkim electricity complaint — Power Dept portal ya helpline' },
+        url: 'https://selfservice.powersikkim.in',
+        phone: '03592-200500',
+        howto: [
+          { en: 'Open selfservice.powersikkim.in → Consumer Self-Service Portal', hi: 'selfservice.powersikkim.in kholen → Consumer Self-Service Portal' },
+          { en: 'Login with consumer number → select complaint type → submit', hi: 'Consumer number se login → complaint type select karein → submit' },
+          { en: 'Helpline: +91 3592-200500 (24×7)', hi: 'Helpline: +91 3592-200500 (24×7)' },
+          { en: 'Note: 1912 not confirmed for Sikkim — use state helpline above', hi: 'Note: Sikkim mein 1912 confirm nahi — upar wala state helpline use karein' },
+        ],
+      },
+      {
+        badge: 'state',
+        name: 'SERC Sikkim — State Electricity Regulatory Commission',
+        desc: { en: 'Power Dept complaint unresolved? Escalate to SERC Sikkim', hi: 'Power Dept resolve nahi? SERC Sikkim mein escalate karein' },
+        url: 'https://sercsikkim.in',
+        phone: '03592-231800',
+        howto: [
+          { en: 'Open sercsikkim.in → "Consumer Grievance" section', hi: 'sercsikkim.in → "Consumer Grievance" section mein jaayein' },
+          { en: 'File with Power Dept complaint reference and documents', hi: 'Power Dept complaint reference aur documents ke saath file karein' },
+        ],
+      },
+    ],
+    police: [
+      {
+        badge: 'first',
+        name: 'Sikkim Police — Emergency & Helplines',
+        desc: { en: 'Dial 100 | Women: 1091 | Gangtok Police: 03592-202133', hi: 'Emergency: 100 | Women: 1091 | Gangtok Police: 03592-202133' },
+        url: null, phone: '100', callOnly: true,
+        howto: [
+          { en: 'Dial 100 for police emergency anywhere in Sikkim', hi: 'Sikkim mein police emergency ke liye 100 dial karein' },
+          { en: 'Women helpline Sikkim: 1091', hi: 'Sikkim women helpline: 1091' },
+          { en: 'Tourist helpline Sikkim: 1364', hi: 'Tourist helpline Sikkim: 1364' },
+        ],
+      },
+      {
+        badge: 'first',
+        name: 'Sikkim Police — Online Complaint Portal',
+        desc: { en: 'File FIR, complaint — Sikkim Police official portal', hi: 'FIR, complaint — Sikkim Police official portal' },
+        url: 'https://sikkimpolice.gov.in',
+        phone: '100',
+        howto: [
+          { en: 'Open sikkimpolice.gov.in → "Citizen Services" → "Online Complaint"', hi: 'sikkimpolice.gov.in → "Citizen Services" → "Online Complaint" karein' },
+          { en: 'Fill complete incident details and submit', hi: 'Puri incident details bharein aur submit karein' },
+          { en: 'Note complaint reference for tracking', hi: 'Tracking ke liye complaint reference note karein' },
+        ],
+      },
+      {
+        badge: 'state',
+        name: 'Sikkim Police — SP Escalation',
+        desc: { en: 'Complaint ignored? Approach SP of East / West / South Sikkim', hi: 'Complaint ignore? East / West / South Sikkim ke SP se milein' },
+        url: 'https://sikkimpolice.gov.in',
+        phone: null,
+        howto: [
+          { en: 'Open sikkimpolice.gov.in → "Grievance" section', hi: 'sikkimpolice.gov.in → "Grievance" section mein jaayein' },
+          { en: 'Write to SP of your district — Sikkim has 4 districts', hi: 'Apne district ke SP ko likhein — Sikkim mein 4 districts hain' },
+        ],
+      },
+    ],
+  },
+
+  // ── Arunachal Pradesh ─────────────────────────────────────────────────────
+  'Arunachal Pradesh': {
+    bijli: [
+      {
+        badge: 'first',
+        name: 'Arunachal Pradesh Dept of Power — Complaint',
+        desc: { en: 'DoP Arunachal Pradesh — 1912 (limited hours) and online portal', hi: 'Arunachal Pradesh electricity complaint — DoP portal ya 1912' },
+        url: 'https://www.arpdop.gov.in',
+        phone: '1912',
+        howto: [
+          { en: 'Dial 1912 (9:30 AM – 4:00 PM, Mon–Fri) — AP Dept of Power', hi: '1912 dial karein (9:30 AM–4:00 PM, Mon-Fri) — AP Dept of Power' },
+          { en: 'Online: arpdop.gov.in → Online Complaint Form → fill and submit', hi: 'arpdop.gov.in → Online Complaint Form → fill karein aur submit karein' },
+          { en: 'Email: support@arpdop.gov.in with consumer number and issue details', hi: 'Email: support@arpdop.gov.in — consumer number aur issue ke saath' },
+        ],
+      },
+      {
+        badge: 'state',
+        name: 'APSERC — Arunachal Pradesh Electricity Regulatory Commission',
+        desc: { en: 'Dept of Power not resolving? Escalate to APSERC', hi: 'DoP resolve nahi? APSERC mein escalate karein' },
+        url: 'https://apserc.nic.in',
+        phone: '0360-2291247',
+        howto: [
+          { en: 'Open apserc.nic.in → "Consumer Grievance" → file complaint', hi: 'apserc.nic.in → "Consumer Grievance" → complaint file karein' },
+          { en: 'Include DoP complaint reference number and all correspondence', hi: 'DoP complaint reference number aur saari correspondence include karein' },
+        ],
+      },
+    ],
+    police: [
+      {
+        badge: 'first',
+        name: 'Arunachal Police — Emergency & Helplines',
+        desc: { en: 'Dial 100 | Women: 1091 | Itanagar Police: 0360-2212633', hi: 'Emergency: 100 | Women: 1091 | Itanagar Police: 0360-2212633' },
+        url: null, phone: '100', callOnly: true,
+        howto: [
+          { en: 'Dial 100 for police emergency anywhere in Arunachal Pradesh', hi: 'Arunachal Pradesh mein police emergency ke liye 100 dial karein' },
+          { en: 'Women helpline: 1091', hi: 'Women helpline: 1091' },
+          { en: 'Cyber crime helpline: 1930', hi: 'Cyber crime ke liye: 1930' },
+        ],
+      },
+      {
+        badge: 'first',
+        name: 'Arunachal Pradesh Police — Online Complaint',
+        desc: { en: 'File FIR, complaint — Arunachal Pradesh Police official portal', hi: 'FIR, complaint — Arunachal Pradesh Police official portal' },
+        url: 'https://arunachalpolice.gov.in',
+        phone: '100',
+        howto: [
+          { en: 'Open arunachalpolice.gov.in → "Citizen Services" → "Online Complaint"', hi: 'arunachalpolice.gov.in → "Citizen Services" → "Online Complaint" karein' },
+          { en: 'Fill incident details and submit with mobile OTP', hi: 'Incident details bharein aur mobile OTP se submit karein' },
+          { en: 'Note complaint number for tracking', hi: 'Complaint number note karein — tracking ke liye' },
+        ],
+      },
+      {
+        badge: 'state',
+        name: 'Arunachal Police — SP Escalation',
+        desc: { en: 'FIR refused or complaint ignored? Write to SP of your district', hi: 'FIR refuse ya complaint ignore? District ke SP ko likhein' },
+        url: 'https://arunachalpolice.gov.in',
+        phone: null,
+        howto: [
+          { en: 'Write to SP of your district with complaint history and FIR refusal proof', hi: 'SP ko complaint history aur FIR refusal proof ke saath likhein' },
+          { en: 'SP must order FIR under CrPC Section 154(3)', hi: 'SP ko CrPC Section 154(3) ke tahat FIR order karni hogi' },
+        ],
+      },
+    ],
+  },
+
 }
 
 // ─────────────────────────────────────────────────────────────────────────────

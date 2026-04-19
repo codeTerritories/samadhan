@@ -12,20 +12,15 @@ export default function Header({ onGoHome, onGoAbout, activePage }) {
     <header className="header">
       <div className="header-inner">
         {/* Logo — always goes home */}
-        <div className="logo" onClick={onGoHome} role="button" tabIndex={0}
+        <div className="logo" onClick={onGoHome} style={{ cursor: 'pointer' }} role="button" tabIndex={0}
           onKeyDown={e => e.key === 'Enter' && onGoHome()}>
-          <div className="logo-mark">
-            <span className="logo-mark-s">S</span>
-            <div className="logo-mark-tricolor">
-              <span /><span /><span />
-            </div>
+          <div className="logo-box">
+            <i className="fas fa-hands-helping" />
           </div>
           <div className="logo-text">
-            <span className="logo-name">
-              <span className="logo-sam">Sam</span><span className="logo-adhan">adhan</span>
-            </span>
-            <span className="logo-tagline">
-              {t({ en: 'समस्या → समाधान', hi: 'समस्या → समाधान' })}
+            <span className="logo-name">Sam<span>adhan</span></span>
+            <span className="logo-sub">
+              {t({ en: 'Citizen Problem Portal', hi: 'नागरिक समस्या पोर्टल' })}
             </span>
           </div>
         </div>
