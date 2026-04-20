@@ -56,7 +56,12 @@ export default function App() {
 
   const handleSearch = useCallback((q) => {
     setSearchQuery(q)
-    if (q.trim()) setActiveCat('all')
+    if (q.trim()) {
+      setActiveCat('all')
+      setTimeout(() => {
+        document.getElementById('problem-list')?.scrollIntoView({ behavior: 'smooth', block: 'start' })
+      }, 50)
+    }
   }, [])
 
   const handleCatSelect = useCallback((id) => {

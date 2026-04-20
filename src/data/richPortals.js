@@ -23,7 +23,7 @@ const CPGRAMS = {
   badge: 'last',
   name: 'CPGRAMS — Central Government Portal',
   desc: { en: 'Ministry-level grievance portal managed by DARPG', hi: 'DARPG द्वारा संचालित केंद्रीय शिकायत पोर्टल' },
-  url: 'https://pgportal.gov.in/grievance/public',
+  url: 'https://pgportal.gov.in//Home/LodgeGrievance',
   phone: null,
   howto: [
     { en: 'Go to pgportal.gov.in → click "Lodge Grievance"', hi: 'pgportal.gov.in खोलें → "Lodge Grievance" दबाएं' },
@@ -360,7 +360,7 @@ const TELECOM_NATIONAL = [
     badge: 'central',
     name: 'DoT Grievance Portal',
     desc: { en: 'Department of Telecommunications — ministry-level complaint', hi: 'Telecom Ministry में complaint दर्ज करें' },
-    url: 'https://pgportal.gov.in',
+    url: 'https://pgportal.gov.in/',
     phone: null,
     howto: [
       { en: 'Open pgportal.gov.in → Lodge Grievance', hi: 'pgportal.gov.in → Lodge Grievance पर click करें' },
@@ -419,7 +419,7 @@ const GOVT_NATIONAL = [
     badge: 'first',
     name: 'CPGRAMS — Centralized Public Grievance Portal',
     desc: { en: 'For any central government service: passport, PAN, Aadhaar, pension, ration etc.', hi: 'Passport, PAN, Aadhaar, pension, ration — किसी भी सरकारी service की complaint यहाँ' },
-    url: 'https://pgportal.gov.in/grievance/public',
+    url: 'https://pgportal.gov.in//Home/LodgeGrievance',
     phone: '1800-111-555',
     howto: [
       { en: 'Open pgportal.gov.in → click "Lodge Grievance"', hi: 'pgportal.gov.in → "Lodge Grievance" पर click करें' },
@@ -538,6 +538,549 @@ const EDU_NATIONAL = [
   CPGRAMS,
 ]
 
+// ─── CONSUMER / REFUND ────────────────────────────────────────────────────────
+const CONSUMER_NATIONAL = [
+  {
+    badge: 'first',
+    name: 'National Consumer Helpline — 1800-11-4000',
+    desc: { en: 'Free helpline for all consumer complaints — product, service, e-commerce, refund', hi: 'Product, service, e-commerce, refund — सभी consumer complaints के लिए free helpline' },
+    url: 'https://consumerhelpline.gov.in',
+    phone: '1800-11-4000',
+    howto: [
+      { en: 'Dial 1800-11-4000 (free, Mon–Sat 9am–5pm) OR open consumerhelpline.gov.in', hi: '1800-11-4000 dial करें (free, Mon–Sat 9am–5pm) या consumerhelpline.gov.in खोलें' },
+      { en: 'Click "Register Complaint" → select sector (E-Commerce / Product / Service)', hi: '"Register Complaint" → sector चुनें: E-Commerce / Product / Service' },
+      { en: 'Enter company name, describe issue with order/invoice number', hi: 'Company name, order/invoice number के साथ complaint describe करें' },
+      { en: 'Upload proof: screenshots, invoice, delivery photo, chat records', hi: 'Screenshot, invoice, delivery photo, chat records — proof upload करें' },
+      { en: 'Submit — company gets 15 days to respond, or escalate to consumer forum', hi: 'Submit करें — company को 15 दिन मिलते हैं; नहीं सुनी तो consumer forum जाएं' },
+    ],
+  },
+  {
+    badge: 'central',
+    name: 'E-DAAKHIL — Online Consumer Court Filing',
+    desc: { en: 'File consumer court case online for refund / compensation up to ₹1 crore', hi: 'Consumer court में online case दर्ज करें — ₹1 करोड़ तक refund/compensation' },
+    url: 'https://edaakhil.nic.in',
+    phone: null,
+    howto: [
+      { en: 'Open edaakhil.nic.in → Register / Login', hi: 'edaakhil.nic.in → Register / Login करें' },
+      { en: 'Click "File a Case" → select District / State / National forum based on claim amount', hi: '"File a Case" → claim amount के हिसाब से District / State / National forum चुनें' },
+      { en: 'Upload complaint document (PDF), evidence, and pay court fee online', hi: 'Complaint PDF, evidence upload करें और court fee online pay करें' },
+      { en: 'Claims up to ₹50L → District Forum | ₹50L–₹2Cr → State Commission | above → National', hi: '₹50L तक → District Forum | ₹50L–₹2Cr → State Commission | ऊपर → National' },
+    ],
+  },
+  {
+    badge: 'state',
+    name: 'State Consumer Disputes Redressal Commission',
+    desc: { en: 'Escalate from district forum — complaints above ₹50 lakh', hi: 'District forum से escalate करें — ₹50 लाख से ऊपर की complaints' },
+    url: null,
+    phone: null,
+    howto: [
+      { en: 'Search "[your state] consumer commission complaint" for state portal', hi: '"[आपका state] consumer commission complaint" search करें' },
+      { en: 'Attach District Forum order, file appeal within 30 days of order date', hi: 'District Forum order attach करें — order date से 30 दिन में appeal करें' },
+    ],
+  },
+  CPGRAMS,
+]
+
+// ─── CORRUPTION / BRIBE ───────────────────────────────────────────────────────
+const CORRUPT_NATIONAL = [
+  {
+    badge: 'first',
+    name: 'CVC Anti-Corruption Helpline — 1064',
+    desc: { en: 'Central Vigilance Commission — report bribery by central government employees', hi: 'केंद्रीय सतर्कता आयोग — central सरकारी कर्मचारी द्वारा रिश्वत की शिकायत' },
+    url: 'https://cvc.gov.in/cvcsc/index.aspx',
+    phone: '1064',
+    howto: [
+      { en: 'Dial 1064 (CVC anti-corruption helpline) OR open cvc.gov.in', hi: '1064 dial करें (CVC helpline) या cvc.gov.in खोलें' },
+      { en: 'Click "Lodge Complaint" → enter employee/department details', hi: '"Lodge Complaint" → employee और department details enter करें' },
+      { en: 'Describe the bribery incident: date, amount demanded, witness if any', hi: 'Incident describe करें: date, demanded amount, कोई witness हो तो बताएं' },
+      { en: 'Your identity is kept confidential — CVC has legal protection', hi: 'आपकी identity confidential रहती है — CVC legal protection देता है' },
+    ],
+  },
+  {
+    badge: 'central',
+    name: 'Lokpal of India — National Anti-Corruption',
+    desc: { en: 'Complaints against Group A central officers and Ministers', hi: 'Group A central officers और Ministers के खिलाफ Lokpal में complaint' },
+    url: 'https://lokpal.gov.in',
+    phone: null,
+    howto: [
+      { en: 'Open lokpal.gov.in → "Complaint Filing" section', hi: 'lokpal.gov.in → "Complaint Filing" section में जाएं' },
+      { en: 'Complaint must be sworn (affidavit) — false complaints attract penalty', hi: 'Complaint affidavit/sworn होनी चाहिए — झूठी complaint पर penalty है' },
+      { en: 'Attach all evidence: audio/video/documents showing corrupt act', hi: 'सभी evidence attach करें: audio/video/documents जो corrupt act दिखाते हों' },
+      { en: 'Lokpal can order investigation by CBI, income tax, ED', hi: 'Lokpal CBI, income tax, ED से जांच करा सकता है' },
+    ],
+  },
+  {
+    badge: 'state',
+    name: 'Lokayukta — State Anti-Corruption',
+    desc: { en: 'Corruption by state government officials — Lokayukta is the state ombudsman', hi: 'State सरकारी अधिकारियों की corruption — Lokayukta state का ombudsman है' },
+    url: null,
+    phone: null,
+    howto: [
+      { en: 'Search "[your state] Lokayukta complaint" for state portal/address', hi: '"[आपका state] Lokayukta complaint" search करें' },
+      { en: 'Prepare a written complaint with full details and evidence', hi: 'Full details और evidence के साथ written complaint तैयार करें' },
+      { en: 'Corruption by state employee? File directly at Lokayukta office or online', hi: 'State employee की corruption? Lokayukta office में या online file करें' },
+    ],
+  },
+  CPGRAMS,
+]
+
+// ─── JOB / SALARY ─────────────────────────────────────────────────────────────
+const JOB_NATIONAL = [
+  {
+    badge: 'first',
+    name: 'EPFO Helpline — 1800-118-005',
+    desc: { en: 'PF withdrawal delay, UAN, pension, employer not depositing PF — EPFO complaint', hi: 'PF withdrawal, UAN, pension, employer PF न जमा करना — EPFO complaint' },
+    url: 'https://epfigms.gov.in',
+    phone: '1800-118-005',
+    howto: [
+      { en: 'Dial 1800-118-005 (free EPFO helpline) OR open epfigms.gov.in', hi: '1800-118-005 dial करें (free) या epfigms.gov.in खोलें' },
+      { en: 'Click "Register Grievance" → login with UAN & password', hi: '"Register Grievance" → UAN & password से login करें' },
+      { en: 'Select complaint type: PF settlement / Pension / UAN activation etc.', hi: 'Complaint type चुनें: PF settlement / Pension / UAN activation आदि' },
+      { en: 'Attach: UAN, employer code, bank details proof, previous rejection if any', hi: 'UAN, employer code, bank proof, पिछला rejection attach करें' },
+    ],
+  },
+  {
+    badge: 'central',
+    name: 'Shram Suvidha Portal — Labour Complaint',
+    desc: { en: 'Salary not paid, illegal termination, no appointment letter — labour complaint', hi: 'Salary नहीं मिली, गैरकानूनी बर्खास्तगी, appointment letter नहीं — labour complaint' },
+    url: 'https://shramsuvidha.gov.in',
+    phone: '1800-180-5412',
+    howto: [
+      { en: 'Open shramsuvidha.gov.in → "Worker Facilitation Centre" → Lodge Complaint', hi: 'shramsuvidha.gov.in → "Worker Facilitation Centre" → Lodge Complaint' },
+      { en: 'Dial 1800-180-5412 for labour complaint helpline (free)', hi: '1800-180-5412 dial करें — free labour helpline है' },
+      { en: 'Select complaint: Salary / Termination / Contract violation', hi: 'Complaint चुनें: Salary / Termination / Contract violation' },
+      { en: 'Attach salary slips, appointment letter, termination letter as evidence', hi: 'Salary slips, appointment letter, termination letter attach करें' },
+    ],
+  },
+  {
+    badge: 'state',
+    name: 'State Labour Commissioner Grievance',
+    desc: { en: 'Salary dispute, workplace safety, factory complaint — state labour department', hi: 'Salary विवाद, workplace safety, factory complaint — state labour department' },
+    url: null,
+    phone: null,
+    howto: [
+      { en: 'Search "[your state] labour department grievance" for state portal', hi: '"[आपका state] labour department grievance" search करें' },
+      { en: 'File complaint with employer name, address, employment period, issue details', hi: 'Employer name, address, employment period और issue details के साथ complaint करें' },
+      { en: 'Labour commissioner can summon employer and order salary payment', hi: 'Labour commissioner employer को बुला सकता है और salary payment का order दे सकता है' },
+    ],
+  },
+  CPGRAMS,
+]
+
+// ─── HOUSING / RENT ───────────────────────────────────────────────────────────
+const HOUSING_NATIONAL = [
+  {
+    badge: 'first',
+    name: 'RERA — Real Estate Regulatory Authority',
+    desc: { en: 'Builder delay, flat possession, refund, amenities not provided — RERA complaint', hi: 'Builder delay, flat possession, refund, amenities — RERA में complaint करें' },
+    url: 'https://rera.gov.in',
+    phone: null,
+    howto: [
+      { en: 'Open rera.gov.in → select your state RERA portal', hi: 'rera.gov.in → अपना state RERA portal चुनें' },
+      { en: 'Register as complainant → Lodge Complaint against project/builder', hi: 'Complainant के रूप में register करें → Project/Builder के खिलाफ complaint करें' },
+      { en: 'Enter RERA registration number of the project (find it on builder\'s brochure)', hi: 'Project का RERA registration number enter करें — builder की brochure पर होता है' },
+      { en: 'Attach: sale agreement, payment receipts, builder\'s delay letters', hi: 'Sale agreement, payment receipts, builder के delay letters attach करें' },
+    ],
+  },
+  {
+    badge: 'central',
+    name: 'National Consumer Helpline — Housing Refund',
+    desc: { en: 'Deposit not returned, landlord issues, housing society fraud — consumer complaint', hi: 'Deposit वापस नहीं मिला, landlord, housing society fraud — consumer complaint' },
+    url: 'https://consumerhelpline.gov.in',
+    phone: '1800-11-4000',
+    howto: [
+      { en: 'Dial 1800-11-4000 OR open consumerhelpline.gov.in', hi: '1800-11-4000 dial करें या consumerhelpline.gov.in खोलें' },
+      { en: 'Select sector: Housing / Real Estate', hi: 'Sector चुनें: Housing / Real Estate' },
+      { en: 'Describe issue: deposit not returned, overcharge, illegal eviction', hi: 'Issue describe करें: deposit नहीं मिला, overcharge, illegal eviction' },
+      { en: 'Attach rent agreement, payment receipts, written communication proof', hi: 'Rent agreement, payment receipts, written communication proof attach करें' },
+    ],
+  },
+  {
+    badge: 'state',
+    name: 'Rent Control Authority / Rent Tribunal',
+    desc: { en: 'Illegal eviction, unfair rent increase, landlord dispute — Rent Court', hi: 'Illegal eviction, अनुचित किराया वृद्धि, landlord विवाद — Rent Court' },
+    url: null,
+    phone: null,
+    howto: [
+      { en: 'Search "[your state] rent control authority" for the state tribunal', hi: '"[आपका state] rent control authority" search करें' },
+      { en: 'Prepare complaint with rent agreement, notice received, payment history', hi: 'Rent agreement, notice received, payment history के साथ complaint तैयार करें' },
+      { en: 'File at Rent Control Authority — landlord must justify eviction legally', hi: 'Rent Control Authority में file करें — landlord को legally eviction justify करना होगा' },
+    ],
+  },
+  CPGRAMS,
+]
+
+// ─── DOCUMENT LOST / URGENT HELP ─────────────────────────────────────────────
+const DOCS_NATIONAL = [
+  {
+    badge: 'first',
+    name: 'UIDAI — Download e-Aadhaar instantly',
+    desc: { en: 'Aadhaar lost or damaged? Download e-Aadhaar free or order PVC card for ₹50', hi: 'Aadhaar खोया / खराब? e-Aadhaar मुफ़्त डाउनलोड करें या ₹50 में PVC कार्ड मंगाएं' },
+    url: 'https://myaadhaar.uidai.gov.in',
+    phone: '1947',
+    howto: [
+      { en: 'Open myaadhaar.uidai.gov.in → Login with Aadhaar number + mobile OTP', hi: 'myaadhaar.uidai.gov.in → Aadhaar number + mobile OTP से login करें' },
+      { en: 'Click "Download Aadhaar" — get PDF instantly (password: first 4 letters of name + birth year)', hi: '"Download Aadhaar" click करें — PDF तुरंत मिलेगा (password: नाम के पहले 4 अक्षर + जन्म वर्ष)' },
+      { en: 'For PVC card: click "Order Aadhaar PVC Card" → pay ₹50 → delivered to address', hi: 'PVC कार्ड के लिए: "Order Aadhaar PVC Card" → ₹50 दें → address पर deliver होगा' },
+      { en: 'Or call 1947 for UIDAI helpline (free, 24×7)', hi: 'या UIDAI helpline 1947 call करें (मुफ़्त, 24×7)' },
+    ],
+  },
+  {
+    badge: 'direct',
+    name: 'NSDL / UTI — Duplicate PAN Card',
+    desc: { en: 'PAN card lost? Apply for duplicate PAN online in 5 minutes', hi: 'PAN कार्ड खोया? 5 मिनट में ऑनलाइन डुप्लीकेट PAN के लिए आवेदन करें' },
+    url: 'https://onlineservices.nsdl.com/paam/endUserRegisterContact.html',
+    phone: '1800-103-0025',
+    howto: [
+      { en: 'Open onlineservices.nsdl.com → Select "Request for New PAN Card or/and Changes or Correction in PAN Data"', hi: 'onlineservices.nsdl.com खोलें → "Request for Reprint PAN Card" चुनें' },
+      { en: 'Select "Reprint of PAN Card" → enter Aadhaar and PAN number → verify OTP', hi: '"Reprint of PAN Card" → Aadhaar और PAN number enter करें → OTP verify करें' },
+      { en: 'Pay ₹50 (India delivery) → new PAN card delivered in 7-10 working days', hi: '₹50 pay करें (India delivery) → 7-10 working days में नया PAN कार्ड मिलेगा' },
+    ],
+  },
+  {
+    badge: 'central',
+    name: 'Parivahan — Duplicate Driving Licence',
+    desc: { en: 'DL lost? Apply for duplicate driving licence online via Sarathi Parivahan', hi: 'DL खोया? Sarathi Parivahan पर ऑनलाइन डुप्लीकेट DL के लिए आवेदन करें' },
+    url: 'https://sarathi.parivahan.gov.in',
+    phone: null,
+    howto: [
+      { en: 'First file FIR at police station — FIR copy is required for duplicate DL', hi: 'पहले पुलिस स्टेशन में FIR दर्ज करें — FIR कॉपी डुप्लीकेट DL के लिए ज़रूरी है' },
+      { en: 'Open sarathi.parivahan.gov.in → select your state → "Apply for Services on DL"', hi: 'sarathi.parivahan.gov.in → अपना state चुनें → "Apply for Services on DL"' },
+      { en: 'Select "Duplicate DL" → upload FIR copy, Aadhaar, Form LLD-1 → pay fee', hi: '"Duplicate DL" → FIR कॉपी, Aadhaar, Form LLD-1 upload करें → fee pay करें' },
+    ],
+  },
+  CPGRAMS,
+]
+
+// ─── EMERGENCY SITUATIONS ─────────────────────────────────────────────────────
+const EMERGENCY_NATIONAL = [
+  {
+    badge: 'first',
+    name: 'All Emergencies — 112',
+    desc: { en: 'One number for police, fire, ambulance — 24×7 pan-India', hi: 'पुलिस, अग्निशमन, एम्बुलेंस — एक नंबर, 24×7, पूरे भारत में' },
+    url: 'https://www.112.gov.in',
+    phone: '112',
+    callOnly: true,
+    howto: [
+      { en: 'Dial 112 — works on any phone, even without SIM or balance', hi: '112 dial करें — बिना SIM और balance के भी काम करता है' },
+      { en: 'State your emergency and location clearly', hi: 'अपनी emergency और location clearly बताएं' },
+      { en: 'For women in danger: 1091 | Child in danger: 1098', hi: 'महिला खतरे में: 1091 | बच्चा खतरे में: 1098' },
+    ],
+  },
+  {
+    badge: 'first',
+    name: 'Sanchar Saathi CEIR — Block Stolen Phone',
+    desc: { en: 'Report and block your stolen phone IMEI — prevents misuse', hi: 'चोरी हुआ फोन का IMEI block करें — दुरुपयोग रोकें' },
+    url: 'https://sancharsaathi.gov.in',
+    phone: '1800-110-420',
+    howto: [
+      { en: 'Open sancharsaathi.gov.in → "CEIR — Block/Trace Lost/Stolen Mobile"', hi: 'sancharsaathi.gov.in → "CEIR — Block/Trace Lost/Stolen Mobile"' },
+      { en: 'Enter IMEI (find on box or dial *#06#), FIR details, phone model', hi: 'IMEI enter करें (box पर या *#06# dial करें), FIR details, phone model' },
+      { en: 'Your phone gets blocked on all networks within 24 hours', hi: 'आपका फोन 24 घंटे में सभी networks पर block हो जाएगा' },
+    ],
+  },
+  {
+    badge: 'central',
+    name: 'TrackChild — Missing Child Portal',
+    desc: { en: 'National portal for missing children — police + NGOs + NCPCR', hi: 'लापता बच्चों के लिए राष्ट्रीय पोर्टल — पुलिस + NGO + NCPCR' },
+    url: 'https://trackchild.gov.in',
+    phone: '1098',
+    howto: [
+      { en: 'Dial 1098 (Childline) for missing child emergency', hi: 'लापता बच्चे के लिए तुरंत 1098 (Childline) dial करें' },
+      { en: 'Open trackchild.gov.in → "Report a Missing Child" with recent photo', hi: 'trackchild.gov.in → "Report a Missing Child" → हाल की फोटो के साथ report करें' },
+      { en: 'Portal notifies police + NGOs + NCPCR simultaneously', hi: 'Portal एक साथ पुलिस + NGO + NCPCR को notify करता है' },
+    ],
+  },
+  CPGRAMS,
+]
+
+// ─── GOVERNMENT SERVICE DELAY ─────────────────────────────────────────────────
+const GOVTDELAY_NATIONAL = [
+  {
+    badge: 'first',
+    name: 'CPGRAMS — Centralized Grievance Portal',
+    desc: { en: 'File complaint against any central government department for delayed service', hi: 'किसी भी केंद्रीय विभाग की देरी के लिए CPGRAMS पर शिकायत' },
+    url: 'https://pgportal.gov.in//Home/LodgeGrievance',
+    phone: '1800-111-555',
+    howto: [
+      { en: 'Open pgportal.gov.in → Lodge Grievance → Login with mobile OTP', hi: 'pgportal.gov.in → Lodge Grievance → mobile OTP से login करें' },
+      { en: 'Select the Ministry/Department causing the delay', hi: 'देरी करने वाला Ministry/Department चुनें' },
+      { en: 'Describe the service, application date, and number of days pending', hi: 'Service, application date, और कितने दिन से pending है — clearly describe करें' },
+      { en: 'Attach: application copy, acknowledgment receipt, any rejection letter', hi: 'Application copy, acknowledgment receipt, rejection letter (अगर हो) attach करें' },
+    ],
+  },
+  {
+    badge: 'state',
+    name: 'CM Helpline — State-Level Escalation',
+    desc: { en: 'Chief Minister helpline for state department delays', hi: 'राज्य विभाग की देरी के लिए CM हेल्पलाइन' },
+    url: null,
+    phone: null,
+    howto: [
+      { en: 'Key state CM helplines: UP 1076 | Rajasthan 181 | MP 181 | Haryana 1100 | Delhi 1076', hi: 'CM helplines: UP 1076 | Rajasthan 181 | MP 181 | Haryana 1100 | Delhi 1076' },
+      { en: 'Search "[your state] CM helpline number" for your state', hi: '"[आपका state] CM helpline number" search करें' },
+      { en: 'Keep your application reference number ready when calling', hi: 'Call करते समय application reference number तैयार रखें' },
+    ],
+  },
+  {
+    badge: 'central',
+    name: 'RTI — Right to Information Application',
+    desc: { en: 'File RTI to get status/reasons for any government delay', hi: 'किसी भी सरकारी देरी का कारण / status जानने के लिए RTI दाखिल करें' },
+    url: 'https://rtionline.gov.in',
+    phone: null,
+    howto: [
+      { en: 'Open rtionline.gov.in → file RTI → select Ministry/Department → pay ₹10', hi: 'rtionline.gov.in → RTI file करें → Ministry/Department चुनें → ₹10 pay करें' },
+      { en: 'Ask: "Status of application no. XXXX filed on DD/MM/YYYY and reasons for delay"', hi: 'पूछें: "Application No. XXXX dated DD/MM/YYYY की स्थिति और देरी का कारण"' },
+      { en: 'PIO must respond within 30 days — penalty ₹250/day if they don\'t', hi: 'PIO को 30 दिन में जवाब देना होगा — नहीं दिया तो ₹250/दिन penalty' },
+    ],
+  },
+  CPGRAMS,
+]
+
+// ─── LEGAL HELP ───────────────────────────────────────────────────────────────
+const LEGAL_NATIONAL = [
+  {
+    badge: 'first',
+    name: 'NALSA — Free Legal Aid Helpline 15100',
+    desc: { en: 'Free legal help for all citizens — lawyers assigned free of cost', hi: 'सभी नागरिकों के लिए निःशुल्क कानूनी सहायता — मुफ़्त में वकील मिलेगा' },
+    url: 'https://nalsa.gov.in',
+    phone: '15100',
+    howto: [
+      { en: 'Dial 15100 for free legal aid helpline (NALSA)', hi: '15100 dial करें — NALSA free legal aid helpline' },
+      { en: 'OR visit your District Legal Services Authority (DLSA) office', hi: 'या अपने जिला विधिक सेवा प्राधिकरण (DLSA) कार्यालय जाएं' },
+      { en: 'Free legal aid is a right: women, SC/ST, poor, disabled, child — all eligible', hi: 'निःशुल्क कानूनी सहायता अधिकार है — महिला, SC/ST, गरीब, दिव्यांग, बच्चा — सभी eligible' },
+      { en: 'DLSA will assign a lawyer at no cost and guide on next steps', hi: 'DLSA बिना किसी खर्च के वकील देगा और अगला कदम बताएगा' },
+    ],
+  },
+  {
+    badge: 'central',
+    name: 'Tele-Law — Free Legal Advice via Video Call',
+    desc: { en: 'Get free legal advice over video call through Common Service Centres', hi: 'Common Service Centre (CSC) के ज़रिए video call पर मुफ़्त कानूनी सलाह' },
+    url: 'https://tele-law.in',
+    phone: null,
+    howto: [
+      { en: 'Open tele-law.in → register → book a slot with a panel lawyer', hi: 'tele-law.in → register करें → panel lawyer के साथ slot book करें' },
+      { en: 'OR visit your nearest CSC (Common Service Centre) for free tele-law session', hi: 'या नज़दीकी CSC (Common Service Centre) जाएं — free tele-law session मिलेगा' },
+      { en: 'Available for property, family, labour, consumer, criminal matters', hi: 'Property, family, labour, consumer, criminal — सभी मामलों के लिए available' },
+    ],
+  },
+  {
+    badge: 'state',
+    name: 'District Legal Services Authority (DLSA)',
+    desc: { en: 'Walk-in legal help at every district court — free consultation + representation', hi: 'हर जिला न्यायालय में free legal help — free consultation + representation' },
+    url: null,
+    phone: '15100',
+    howto: [
+      { en: 'Visit the DLSA office at your district court — open weekdays 10am–5pm', hi: 'अपने जिला न्यायालय का DLSA office जाएं — weekdays 10am–5pm खुला रहता है' },
+      { en: 'Bring ID proof + all documents related to your legal issue', hi: 'ID proof + legal issue से जुड़े सभी documents लेकर जाएं' },
+      { en: 'DLSA provides free legal aid, mediation, and Lok Adalat access', hi: 'DLSA free legal aid, mediation, और Lok Adalat की सुविधा देता है' },
+    ],
+  },
+  CPGRAMS,
+]
+
+// ─── LOCAL SHOP / MARKET ISSUES ───────────────────────────────────────────────
+const LOCALSHOP_NATIONAL = [
+  {
+    badge: 'first',
+    name: 'National Consumer Helpline — 1800-11-4000',
+    desc: { en: 'Overcharging, fake product, no bill, service denied — report any shop/market issue', hi: 'Overcharging, नकली product, बिल नहीं, सेवा से मना — किसी भी दुकान / बाज़ार की शिकायत' },
+    url: 'https://consumerhelpline.gov.in',
+    phone: '1800-11-4000',
+    howto: [
+      { en: 'Dial 1800-11-4000 (free, Mon–Sat 9am–5pm) OR open consumerhelpline.gov.in', hi: '1800-11-4000 dial करें (free) या consumerhelpline.gov.in खोलें' },
+      { en: 'Select "Retail / Shop" as sector — describe overcharge or fraud', hi: '"Retail / Shop" sector चुनें — overcharge या fraud describe करें' },
+      { en: 'Keep: bill copy / photo, product photos, date and shop name/address', hi: 'रखें: bill copy / photo, product photo, date, shop name / address' },
+    ],
+  },
+  {
+    badge: 'central',
+    name: 'FSSAI — Food Safety Helpline 1800-11-2100',
+    desc: { en: 'Adulterated food, expired products, unhygienic restaurants — FSSAI complaint', hi: 'मिलावटी खाना, expired products, गंदा रेस्टोरेंट — FSSAI complaint' },
+    url: 'https://foscos.fssai.gov.in',
+    phone: '1800-11-2100',
+    howto: [
+      { en: 'Dial 1800-11-2100 (free FSSAI helpline) for adulterated food complaint', hi: 'मिलावटी खाने की शिकायत के लिए 1800-11-2100 dial करें (free)' },
+      { en: 'Open foscos.fssai.gov.in → "Grievance" → file complaint with product photo', hi: 'foscos.fssai.gov.in → "Grievance" → product photo के साथ complaint करें' },
+    ],
+  },
+  {
+    badge: 'central',
+    name: 'GST Helpline — 1800-103-4786 (No Bill / Tax Fraud)',
+    desc: { en: 'Shopkeeper not giving bill, charging extra tax, GST fraud', hi: 'दुकानदार बिल नहीं दे रहा, extra tax ले रहा, GST fraud' },
+    url: 'https://www.gst.gov.in',
+    phone: '1800-103-4786',
+    howto: [
+      { en: 'Dial 1800-103-4786 (GST helpline, free)', hi: '1800-103-4786 dial करें (GST helpline, free)' },
+      { en: 'Note: all shops with turnover >₹40L must give GST bill', hi: 'Note: ₹40 लाख से ऊपर turnover वाले सभी shops को GST bill देना ज़रूरी है' },
+    ],
+  },
+  CPGRAMS,
+]
+
+// ─── DIGITAL PAYMENT ISSUES ───────────────────────────────────────────────────
+const DIGITAL_NATIONAL = [
+  {
+    badge: 'first',
+    name: 'NPCI UPI Helpline — 1800-120-1740',
+    desc: { en: 'UPI payment stuck, failed, or deducted but not credited — NPCI dispute', hi: 'UPI payment अटकी, failed, या पैसे कटे पर नहीं पहुंचे — NPCI dispute' },
+    url: 'https://www.npci.org.in',
+    phone: '1800-120-1740',
+    howto: [
+      { en: 'Dial 1800-120-1740 (NPCI UPI helpline, free)', hi: '1800-120-1740 dial करें (NPCI UPI helpline, free)' },
+      { en: 'Also raise dispute in the UPI app: GPay → Help | PhonePe → Help | Paytm → Help', hi: 'UPI app में भी dispute raise करें: GPay → Help | PhonePe → Help | Paytm → Help' },
+      { en: 'If app doesn\'t resolve in 48 hrs, call your bank and raise chargeback', hi: 'App 48 घंटे में resolve न करे तो bank को call करें — chargeback raise करें' },
+      { en: 'Final escalation: RBI Ombudsman 14448 if bank also fails', hi: 'अंतिम विकल्प: bank भी fail हो तो RBI Ombudsman 14448' },
+    ],
+  },
+  {
+    badge: 'central',
+    name: 'RBI Ombudsman — 14448 (Digital Payments)',
+    desc: { en: 'Bank / payment app not resolving UPI / wallet / refund issues', hi: 'Bank / payment app UPI / wallet / refund resolve नहीं कर रही' },
+    url: 'https://cms.rbi.org.in',
+    phone: '14448',
+    howto: [
+      { en: 'Dial 14448 OR open cms.rbi.org.in → "File a Complaint"', hi: '14448 dial करें या cms.rbi.org.in → "File a Complaint"' },
+      { en: 'Select payment type: UPI / Wallet / Prepaid Payment Instrument', hi: 'Payment type चुनें: UPI / Wallet / Prepaid Payment Instrument' },
+      { en: 'Attach: transaction ID, bank statement showing deduction, previous complaint reference', hi: 'Transaction ID, bank statement, पिछली complaint reference attach करें' },
+    ],
+  },
+  {
+    badge: 'central',
+    name: 'National Consumer Helpline — 1800-11-4000',
+    desc: { en: 'Refund from Paytm / PhonePe / Razorpay — consumer complaint', hi: 'Paytm / PhonePe / Razorpay से refund — consumer complaint' },
+    url: 'https://consumerhelpline.gov.in',
+    phone: '1800-11-4000',
+    howto: [
+      { en: 'Dial 1800-11-4000 OR open consumerhelpline.gov.in', hi: '1800-11-4000 dial करें या consumerhelpline.gov.in खोलें' },
+      { en: 'Select sector: "E-Commerce" or "Banking / Finance"', hi: 'Sector चुनें: "E-Commerce" या "Banking / Finance"' },
+      { en: 'Attach screenshots of the transaction and refund request', hi: 'Transaction और refund request के screenshots attach करें' },
+    ],
+  },
+  CPGRAMS,
+]
+
+// ─── PERSONAL SAFETY ──────────────────────────────────────────────────────────
+const SAFETY_NATIONAL = [
+  {
+    badge: 'first',
+    name: 'Emergency — 112 / Women Safety 1091',
+    desc: { en: 'Police + women safety — available 24×7 for any personal safety emergency', hi: 'पुलिस + महिला सुरक्षा — किसी भी personal safety emergency के लिए 24×7' },
+    url: 'https://www.112.gov.in',
+    phone: '112',
+    callOnly: true,
+    howto: [
+      { en: 'Dial 112 — police, fire, ambulance all in one number', hi: '112 dial करें — पुलिस, अग्निशमन, एम्बुलेंस — सब एक नंबर में' },
+      { en: 'Women safety: 1091 | Domestic violence: 181 | Child helpline: 1098', hi: 'महिला सुरक्षा: 1091 | घरेलू हिंसा: 181 | बच्चे: 1098' },
+    ],
+  },
+  {
+    badge: 'first',
+    name: 'Cyber Crime — 1930 (Online Safety)',
+    desc: { en: 'Cyberstalking, blackmail, morphed photos, online abuse — report immediately', hi: 'Cyberstalking, blackmail, morphed photos, online abuse — तुरंत report करें' },
+    url: 'https://cybercrime.gov.in',
+    phone: '1930',
+    howto: [
+      { en: 'Dial 1930 OR open cybercrime.gov.in → "Report Cyber Crime"', hi: '1930 dial करें या cybercrime.gov.in → "Report Cyber Crime"' },
+      { en: 'Select: Cyberstalking / Online Abuse / Blackmail / Obscene material', hi: 'चुनें: Cyberstalking / Online Abuse / Blackmail / Obscene material' },
+      { en: 'Preserve evidence: screenshots, chat logs, URLs before reporting', hi: 'Evidence सुरक्षित रखें: screenshots, chat logs, URLs — report से पहले save करें' },
+    ],
+  },
+  {
+    badge: 'central',
+    name: 'NCW — National Commission for Women',
+    desc: { en: 'Women facing stalking, harassment, domestic violence, online abuse', hi: 'Stalking, harassment, घरेलू हिंसा, online abuse — NCW में complaint करें' },
+    url: 'https://ncw.nic.in/complaint-registration',
+    phone: '7827170170',
+    howto: [
+      { en: 'Open ncw.nic.in → "Complaint Registration" → fill form', hi: 'ncw.nic.in → "Complaint Registration" → form भरें' },
+      { en: 'For urgent help: call 7827170170 (One Stop Centre / Sakhi)', hi: 'Urgent help के लिए: 7827170170 call करें (One Stop Centre / Sakhi)' },
+      { en: 'Attach: screenshots, evidence, FIR copy if already filed', hi: 'Screenshots, evidence, FIR copy (अगर दर्ज हो) attach करें' },
+    ],
+  },
+  CPGRAMS,
+]
+
+// ─── INSURANCE PROBLEMS ───────────────────────────────────────────────────────
+const INSURANCE_NATIONAL = [
+  {
+    badge: 'first',
+    name: 'IRDAI Bima Bharosa — 155255',
+    desc: { en: 'Claim rejected, delay, mis-sold policy — IRDAI is the insurance regulator', hi: 'Claim reject, देरी, गलत policy — IRDAI insurance का नियामक है' },
+    url: 'https://bimabharosa.irdai.gov.in',
+    phone: '155255',
+    howto: [
+      { en: 'Dial 155255 (Bima Bharosa, free) OR open bimabharosa.irdai.gov.in', hi: '155255 dial करें (Bima Bharosa, free) या bimabharosa.irdai.gov.in खोलें' },
+      { en: 'Register complaint → select insurer → describe claim rejection / delay', hi: 'Complaint register करें → insurer चुनें → claim rejection / delay describe करें' },
+      { en: 'Attach: policy document, claim form, rejection letter, medical bills', hi: 'Policy document, claim form, rejection letter, medical bills attach करें' },
+      { en: 'Insurer must respond to IRDAI complaint within 15 days', hi: 'Insurer को IRDAI complaint का 15 दिन में जवाब देना होता है' },
+    ],
+  },
+  {
+    badge: 'central',
+    name: 'Insurance Ombudsman — Free Resolution',
+    desc: { en: 'Free, binding insurance dispute resolution — faster than court', hi: 'Free, binding insurance dispute resolution — court से तेज़' },
+    url: 'https://grievances.irdai.gov.in',
+    phone: '155255',
+    howto: [
+      { en: 'Open grievances.irdai.gov.in → find Ombudsman for your state', hi: 'grievances.irdai.gov.in → अपने state के Ombudsman को find करें' },
+      { en: 'Must first complain to insurer and wait 30 days (or get rejection)', hi: 'पहले insurer को complaint करें और 30 दिन wait करें (या rejection लें)' },
+      { en: 'Ombudsman decision is binding on insurer — free process for policyholder', hi: 'Ombudsman का decision insurer पर binding है — policyholder के लिए free process' },
+    ],
+  },
+  {
+    badge: 'central',
+    name: 'E-DAAKHIL — Consumer Court for Insurance',
+    desc: { en: 'File consumer court case for insurance fraud or mis-sold policy', hi: 'Insurance fraud या mis-sold policy के लिए consumer court case file करें' },
+    url: 'https://edaakhil.nic.in',
+    phone: null,
+    howto: [
+      { en: 'Open edaakhil.nic.in → "File a Case" → select Insurance as sector', hi: 'edaakhil.nic.in → "File a Case" → sector में Insurance चुनें' },
+      { en: 'Attach: policy, rejection letter, Ombudsman order (if any)', hi: 'Policy, rejection letter, Ombudsman order (अगर हो) attach करें' },
+    ],
+  },
+  CPGRAMS,
+]
+
+// ─── SOCIETY / LOCAL AREA ISSUES ─────────────────────────────────────────────
+const SOCIETY_NATIONAL = [
+  {
+    badge: 'first',
+    name: 'Nagar Nigam / Municipal Corporation',
+    desc: { en: 'Noise, illegal construction, encroachment, stray animals — local body complaint', hi: 'शोर, अवैध निर्माण, अतिक्रमण, आवारा जानवर — local body complaint' },
+    url: null,
+    phone: null,
+    howto: [
+      { en: 'Search "[your city] nagar nigam helpline" for local number', hi: '"[आपका शहर] nagar nigam helpline" search करें' },
+      { en: 'Many cities: dial 1533 (Swachh Bharat / municipal helpline)', hi: 'कई शहरों में 1533 dial करें (Swachh Bharat / municipal helpline)' },
+      { en: 'Also use your city\'s 311 app (BBMP, BMC, MCD, etc.) for complaints', hi: 'शहर के 311 app (BBMP, BMC, MCD आदि) से भी complaint करें' },
+      { en: 'For noise at night: call police 112 immediately', hi: 'रात में शोर के लिए: तुरंत police 112 call करें' },
+    ],
+  },
+  {
+    badge: 'central',
+    name: 'CPCB — Noise / Environment Pollution',
+    desc: { en: 'Persistent noise or environmental pollution — CPCB national helpline', hi: 'लगातार शोर या पर्यावरण प्रदूषण — CPCB national helpline' },
+    url: 'https://cpcb.nic.in',
+    phone: '1800-200-7086',
+    howto: [
+      { en: 'Dial 1800-200-7086 (CPCB, free) for pollution including noise', hi: '1800-200-7086 dial करें (CPCB, free) — noise सहित प्रदूषण के लिए' },
+      { en: 'Open cpcb.nic.in → Grievance → select Noise / Air / Solid Waste', hi: 'cpcb.nic.in → Grievance → Noise / Air / Solid Waste चुनें' },
+    ],
+  },
+  {
+    badge: 'state',
+    name: 'Collector / SDM Office — Encroachment',
+    desc: { en: 'Illegal construction or encroachment on public / your land — approach SDM', hi: 'सार्वजनिक / आपकी ज़मीन पर अवैध निर्माण या कब्ज़ा — SDM से मिलें' },
+    url: null,
+    phone: null,
+    howto: [
+      { en: 'Write a complaint to Sub-Divisional Magistrate (SDM) with photos and location', hi: 'SDM को photos और location के साथ लिखित complaint दें' },
+      { en: 'SDM has powers to order demolition of illegal construction under law', hi: 'SDM को कानून के तहत अवैध निर्माण गिराने का अधिकार है' },
+    ],
+  },
+  CPGRAMS,
+]
+
 // ─────────────────────────────────────────────────────────────────────────────
 // NATIONAL PORTALS map — indexed by category id
 // ─────────────────────────────────────────────────────────────────────────────
@@ -554,6 +1097,19 @@ export const NATIONAL_PORTALS = {
   govt:      GOVT_NATIONAL,
   env:       ENV_NATIONAL,
   edu:       EDU_NATIONAL,
+  consumer:  CONSUMER_NATIONAL,
+  corrupt:   CORRUPT_NATIONAL,
+  job:       JOB_NATIONAL,
+  housing:   HOUSING_NATIONAL,
+  docs:      DOCS_NATIONAL,
+  emergency: EMERGENCY_NATIONAL,
+  govtdelay: GOVTDELAY_NATIONAL,
+  legal:     LEGAL_NATIONAL,
+  localshop: LOCALSHOP_NATIONAL,
+  digital:   DIGITAL_NATIONAL,
+  safety:    SAFETY_NATIONAL,
+  insurance: INSURANCE_NATIONAL,
+  society:   SOCIETY_NATIONAL,
 }
 
 // ─────────────────────────────────────────────────────────────────────────────
@@ -4233,7 +4789,7 @@ export const STATE_PORTALS = {
         badge: 'state',
         name: 'Mizoram CPGRAMS / State Grievance — Garbage Escalation',
         desc: { en: 'ULB not acting? Use Mizoram state grievance or CPGRAMS for escalation', hi: 'ULB action nahi? Mizoram state grievance ya CPGRAMS se escalate karein' },
-        url: 'https://pgportal.gov.in',
+        url: 'https://pgportal.gov.in/',
         phone: '0389-2322200',
         howto: [
           { en: 'State grievance: mizoram.gov.in → Citizen Services → Lodge Grievance', hi: 'mizoram.gov.in → Citizen Services → Lodge Grievance karein' },

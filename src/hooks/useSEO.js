@@ -5,9 +5,9 @@ const BASE = 'https://www.samadhanportal.in'
 // Per-page SEO config — title, description, OG, canonical all differ
 const PAGES = {
   home: {
-    title: 'Samadhan Portal — India Civic Helpline | Bijli Pani Sadak Police',
+    title: 'Samadhan — India Civic Helpline | Bijli Pani Sadak Police',
     description:
-      'Samadhan: official helplines for electricity (1912), water (1916), roads (1033), police (100) & 10 more categories — all 30 Indian states. Free, bilingual, no login.',
+      'Official helplines for electricity (1912), water (1916), roads (1033), police (100) & 10 more — all 30 Indian states. Free, bilingual, no login.',
     ogTitle: "Samadhan Portal — India's #1 Civic Helpline Aggregator",
     ogDescription:
       'Bijli gul? Pani band? FIR dena hai? — Exact helpline & official complaint portal for every problem, every Indian state. Free, bilingual EN+HI.',

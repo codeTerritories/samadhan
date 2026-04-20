@@ -10,8 +10,8 @@
          Desc   : 153 chars — includes real numbers (proof), action word,
                   bilingual signal — all increase CTR from SERP
     ═══════════════════════════════════════════════════════════════════ -->
-    <title>Samadhan Portal — India Civic Helpline | Bijli Pani Sadak Police</title>
-    <meta name="description" content="Samadhan: official helplines for electricity (1912), water (1916), roads (1033), police (100) &amp; 10 more categories — all 30 Indian states. Free, bilingual, no login." />
+    <title>Samadhan — India Civic Helpline | Bijli Pani Sadak Police</title>
+    <meta name="description" content="Official helplines for electricity (1912), water (1916), roads (1033), police (100) &amp; 10 more — all 30 Indian states. Free, bilingual, no login." />
 
     <!-- Extended keyword set: English + Hindi transliterations + state names
          Google largely ignores meta keywords but Bing, Yahoo still use them -->
@@ -130,6 +130,29 @@
     <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700&family=Noto+Sans+Devanagari:wght@300;400;500;600;700&display=swap" rel="stylesheet" />
 
     <!-- Font Awesome is bundled locally via npm — no CDN dependency -->
+
+    <!-- ═══════════════════════════════════════════════════════════════════
+         CRITICAL CSS — inlined so the first paint matches the final layout.
+         Prevents Flash of Unstyled Content (FOUC): body background, header
+         dark bg, and base reset are applied before any external file loads.
+    ═══════════════════════════════════════════════════════════════════ -->
+    <style>
+      *,*::before,*::after{box-sizing:border-box;margin:0;padding:0}
+      html{font-size:16px;scroll-behavior:smooth}
+      body{
+        font-family:'Inter','Noto Sans Devanagari',system-ui,sans-serif;
+        background:
+          radial-gradient(circle at 1px 1px,rgba(180,160,100,.10) 1px,transparent 0) 0 0/22px 22px,
+          #F5F3EC;
+        color:#0F172A;
+        line-height:1.6;
+        overflow-x:hidden;
+        -webkit-font-smoothing:antialiased
+      }
+      .app{display:flex;flex-direction:column;min-height:100vh}
+      .header{position:sticky;top:0;z-index:100;background:#071525;border-bottom:1px solid rgba(255,255,255,.08)}
+      #root{min-height:100vh}
+    </style>
 
     <!-- ═══════════════════════════════════════════════════════════════════
          STRUCTURED DATA / JSON-LD
@@ -374,7 +397,7 @@
           <li><strong>Consumer Helpline:</strong> 1800-11-4000</li>
           <li><strong>Women Helpline:</strong> 1091 | Child Helpline: 1098</li>
         </ul>
-        <p>This site requires JavaScript. Please enable JavaScript to use the full portal, or visit <a href="https://pgportal.gov.in">pgportal.gov.in</a> to file a national grievance directly.</p>
+        <p>This site requires JavaScript. Please enable JavaScript to use the full portal, or visit <a href="https://pgportal.gov.in/">pgportal.gov.in</a> to file a national grievance directly.</p>
         <p><a href="https://www.samadhanportal.in/about">About Samadhan Portal</a></p>
       </main>
     </noscript>
@@ -385,7 +408,7 @@
          to index immediately. React replaces this on mount (~100 ms).
          DO NOT REMOVE — this is what gets indexed in Google.
     ═══════════════════════════════════════════════════════════════════ -->
-    <div id="root"><div style="font-family:system-ui,Arial,sans-serif;max-width:760px;margin:0 auto;padding:16px 16px 40px;color:#111827">
+    <div id="root"><!--prerender:start--><div style="font-family:system-ui,Arial,sans-serif;max-width:760px;margin:0 auto;padding:16px 16px 40px;color:#111827">
 
       <!-- Header -->
       <header style="display:flex;align-items:center;gap:12px;padding:12px 0 20px;border-bottom:1px solid #e5e7eb;margin-bottom:24px">
@@ -491,7 +514,7 @@
           &nbsp;·&nbsp; All information is sourced from official government websites. Free, no login required.
         </p>
       </main>
-    </div></div>
+    </div><!--prerender:end--></div>
     <script type="module" src="/src/main.jsx"></script>
   </body>
 </html>

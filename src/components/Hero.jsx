@@ -2,14 +2,14 @@ import React from 'react'
 import { useLang } from '../context/LangContext'
 
 const QUICK_TAGS = [
-  { en: 'No electricity',  hi: 'बिजली नहीं',  cat: 'bijli'  },
-  { en: 'No water',        hi: 'पानी नहीं',    cat: 'pani'   },
-  { en: 'Garbage',         hi: 'कचरा',         cat: 'safai'  },
-  { en: 'UPI Fraud',       hi: 'UPI फ्रॉड',    cat: 'bank'   },
-  { en: 'Broken road',     hi: 'सड़क टूटी',    cat: 'sadak'  },
-  { en: 'FIR / Police',    hi: 'FIR / पुलिस',  cat: 'police' },
-  { en: 'Aadhaar',         hi: 'आधार',          cat: 'govt'   },
-  { en: 'Ration',          hi: 'राशन',           cat: 'govt'   },
+  { en: 'Salary not paid',    hi: 'वेतन नहीं मिला',   cat: 'job'      },
+  { en: 'UPI Fraud',          hi: 'UPI फ्रॉड',         cat: 'bank'     },
+  { en: 'FIR not registered', hi: 'FIR नहीं लिखी',    cat: 'police'   },
+  { en: 'No electricity',     hi: 'बिजली नहीं',        cat: 'bijli'    },
+  { en: 'No water',           hi: 'पानी नहीं',          cat: 'pani'     },
+  { en: 'Refund not given',   hi: 'रिफंड नहीं मिला',   cat: 'consumer' },
+  { en: 'Aadhaar issue',      hi: 'आधार समस्या',        cat: 'docs'     },
+  { en: 'Garbage not picked', hi: 'कचरा नहीं उठा',     cat: 'safai'    },
 ]
 
 const PROBLEM_ICONS = [

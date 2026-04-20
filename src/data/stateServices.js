@@ -15,7 +15,7 @@ export const NATIONAL = {
       { number: '1912', label: 'National DISCOM 24/7 Helpline', free: true },
     ],
     links: [
-      { label: 'CPGRAMS – National Grievance Portal', url: 'https://pgportal.gov.in', note: 'For unresolved complaints' },
+      { label: 'CPGRAMS – National Grievance Portal', url: 'https://pgportal.gov.in/', note: 'For unresolved complaints' },
       { label: 'National Consumer Helpline', url: 'https://consumerhelpline.gov.in', note: '1915 or 1800-11-4000' },
       { label: 'Forum of Regulators (Electricity)', url: 'https://www.forumofregulators.gov.in', note: '' },
     ],
@@ -26,7 +26,7 @@ export const NATIONAL = {
     ],
     links: [
       { label: 'Jal Jeevan Mission Complaint', url: 'https://ejalshakti.gov.in/jjmreport/JJMIndia.aspx', note: '' },
-      { label: 'CPGRAMS – National Grievance Portal', url: 'https://pgportal.gov.in', note: 'For unresolved complaints' },
+      { label: 'CPGRAMS – National Grievance Portal', url: 'https://pgportal.gov.in/', note: 'For unresolved complaints' },
     ],
   },
   sadak: {
@@ -35,7 +35,7 @@ export const NATIONAL = {
     ],
     links: [
       { label: 'NHAI Complaint Portal', url: 'https://nhai.gov.in/complaint', note: '' },
-      { label: 'CPGRAMS Complaint', url: 'https://pgportal.gov.in', note: '' },
+      { label: 'CPGRAMS Complaint', url: 'https://pgportal.gov.in/', note: '' },
     ],
   },
   police: {
@@ -45,7 +45,7 @@ export const NATIONAL = {
     ],
     links: [
       { label: 'National Cyber Crime Reporting Portal', url: 'https://cybercrime.gov.in', note: 'Also for online fraud' },
-      { label: 'CPGRAMS – National Grievance Portal', url: 'https://pgportal.gov.in', note: '' },
+      { label: 'CPGRAMS – National Grievance Portal', url: 'https://pgportal.gov.in/', note: '' },
     ],
   },
   bank: {
@@ -65,7 +65,7 @@ export const NATIONAL = {
     ],
     links: [
       { label: 'Ayushman Bharat Complaint', url: 'https://pmjay.gov.in/pm-jan-arogya-yojana/grievance-redressal', note: '' },
-      { label: 'CPGRAMS – Health Grievance', url: 'https://pgportal.gov.in', note: '' },
+      { label: 'CPGRAMS – Health Grievance', url: 'https://pgportal.gov.in/', note: '' },
     ],
   },
 }
@@ -436,7 +436,7 @@ export const STATE_SERVICES = {
       ],
       links: [
         { label: 'Meeseva – AP Unified Complaint Portal', url: 'https://meeseva.ap.gov.in', note: '' },
-        { label: 'CPGRAMS', url: 'https://pgportal.gov.in', note: 'For unresolved water issues' },
+        { label: 'CPGRAMS', url: 'https://pgportal.gov.in/', note: 'For unresolved water issues' },
       ],
     },
   },
