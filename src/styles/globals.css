@@ -778,11 +778,62 @@ input  { font-family: var(--font); }
 /* No results */
 .no-results {
   text-align: center;
-  padding: 48px 20px;
+  padding: 40px 20px 48px;
   color: var(--text3);
 }
-.no-results i { font-size: 40px; margin-bottom: 12px; opacity: .35; display: block; }
-.no-results p { font-size: 15px; }
+.no-results-icon { font-size: 44px; margin-bottom: 14px; opacity: .3; }
+.no-results-title { font-size: 18px; font-weight: 700; color: var(--text2); margin: 0 0 6px; }
+.no-results-sub   { font-size: 14px; color: var(--text3); margin: 0 0 24px; }
+
+.no-results-suggest {
+  background: #f0fdf4;
+  border: 1.5px dashed #6ee7b7;
+  border-radius: 14px;
+  padding: 18px 20px 20px;
+  max-width: 420px;
+  margin: 0 auto;
+}
+.nrs-label {
+  font-size: 13px;
+  color: var(--text2);
+  margin: 0 0 12px;
+  display: flex;
+  align-items: center;
+  gap: 7px;
+  justify-content: center;
+}
+.nrs-label i { color: #1D9E75; }
+.nrs-btn {
+  display: inline-flex;
+  align-items: center;
+  gap: 8px;
+  background: var(--green);
+  color: #fff;
+  font-size: 14px;
+  font-weight: 600;
+  padding: 11px 20px;
+  border-radius: 10px;
+  cursor: pointer;
+  border: none;
+  font-family: var(--font);
+  transition: background var(--transition), transform var(--transition);
+}
+.nrs-btn:hover { background: #178a64; transform: translateY(-1px); }
+.nrs-arrow { font-size: 11px; margin-left: 2px; }
+
+/* Contact section scroll offset (sticky header clearance) */
+#contact { scroll-margin-top: 72px; }
+
+/* Form highlight pulse when pre-filled from no-results redirect */
+@keyframes form-pulse {
+  0%   { box-shadow: 0 0 0 0 rgba(29,158,117,0); }
+  30%  { box-shadow: 0 0 0 6px rgba(29,158,117,.25); }
+  100% { box-shadow: 0 0 0 0 rgba(29,158,117,0); }
+}
+.contact-form.form-prefilled {
+  animation: form-pulse 1.8s ease-out forwards;
+  border-radius: 14px;
+}
 
 
 /* ─────────────────────────────────────────────────────────── */
@@ -996,6 +1047,85 @@ input  { font-family: var(--font); }
 }
 .chat-send.active:hover { background: var(--green-d); }
 .chat-send:disabled { cursor: not-allowed; }
+
+/* ── Trust ribbon ── */
+.chat-trust-ribbon {
+  background: #EBF8F2;
+  border-bottom: 1px solid #C3E6D9;
+  padding: 6px 14px;
+  font-size: 11px; font-weight: 600;
+  color: #0e7a5a;
+  display: flex; align-items: center; gap: 6px;
+  flex-shrink: 0;
+}
+.chat-trust-ribbon i { font-size: 10px; }
+
+/* ── Verified badge in header ── */
+.chat-hd-verified {
+  display: inline-flex; align-items: center; gap: 3px;
+  margin-left: 5px;
+  font-size: 10px; font-weight: 600;
+  color: #4ade80;
+  vertical-align: middle;
+}
+.chat-hd-verified i { font-size: 10px; }
+.chat-hd-dot {
+  display: inline-block;
+  width: 6px; height: 6px;
+  background: #4ade80; border-radius: 50%;
+  margin-right: 4px;
+  animation: chatDotPulse 2s ease-in-out infinite;
+}
+@keyframes chatDotPulse {
+  0%, 100% { opacity: 1; }
+  50%       { opacity: .4; }
+}
+
+/* ── Bubble column (message + source badge) ── */
+.chat-bubble-col {
+  display: flex; flex-direction: column; gap: 3px;
+  max-width: 82%;
+}
+.chat-msg-wrap.user .chat-bubble-col { align-items: flex-end; }
+
+/* Override old max-width on .chat-msg — bubble-col handles it now */
+.chat-msg { max-width: 100%; }
+
+/* ── Source attribution badge ── */
+.chat-source {
+  display: inline-flex; align-items: center; gap: 4px;
+  font-size: 10.5px; font-weight: 500;
+  color: #0e7a5a;
+  background: #EBF8F2;
+  border: 1px solid #C3E6D9;
+  border-radius: 6px;
+  padding: 2px 7px;
+  white-space: nowrap;
+  overflow: hidden;
+  text-overflow: ellipsis;
+  max-width: 260px;
+}
+.chat-source i { font-size: 9px; color: #1D9E75; }
+
+/* ── Clickable links inside bot messages ── */
+.chat-link {
+  color: #1565C0;
+  text-decoration: underline;
+  word-break: break-all;
+  font-weight: 500;
+}
+.chat-link:hover { color: #0D47A1; }
+
+/* ── Footer disclaimer ── */
+.chat-footer {
+  padding: 7px 14px;
+  border-top: 1px solid var(--border);
+  font-size: 10.5px; color: var(--text4);
+  background: #FAFBFC;
+  text-align: center;
+  flex-shrink: 0;
+}
+.chat-footer i { color: #1D9E75; }
 
 
 /* ─────────────────────────────────────────────────────────── */

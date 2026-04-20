@@ -1,5 +1,5 @@
 import React from 'react'
-import { useState, useRef } from 'react'
+import { useState, useRef, useEffect } from 'react'
 import emailjs from '@emailjs/browser'
 import { useLang } from '../context/LangContext'
 
@@ -49,13 +49,26 @@ const HOW_STEPS = [
   { n: '04', en: 'Samadhan never stores your data or takes any fee', hi: 'समाधान कभी आपका डेटा नहीं रखता और कोई शुल्क नहीं लेता' },
 ]
 
-export default function AboutPage() {
+export default function AboutPage({ prefillMessage = '' }) {
   const { t } = useLang()
   const formRef = useRef(null)
 
   const [form, setForm]   = useState({ name: '', email: '', type: 'suggestion', message: '' })
   const [status, setStatus] = useState('idle') // idle | loading | success | error
   const [errors, setErrors] = useState({})
+
+  // When navigated from "no results" — pre-fill form and highlight it
+  useEffect(() => {
+    if (prefillMessage) {
+      setForm(f => ({ ...f, message: prefillMessage, type: 'newproblem' }))
+      setStatus('idle')
+      // Give a moment for scroll to reach the section, then pulse the form
+      setTimeout(() => {
+        formRef.current?.classList.add('form-prefilled')
+        setTimeout(() => formRef.current?.classList.remove('form-prefilled'), 1800)
+      }, 400)
+    }
+  }, [prefillMessage])
 
   const set = (k, v) => {
     setForm(f => ({ ...f, [k]: v }))

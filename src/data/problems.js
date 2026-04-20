@@ -455,38 +455,39 @@ export const PROBLEMS = [
   },
   {
     id:'police-consumer', cat:'police',
-    en:{ title:'Consumer fraud / product cheating',  sub:'Consumer forum eDaakhil — free online filing' },
-    hi:{ title:'उपभोक्ता धोखाधड़ी / खरीदी में ठगी', sub:'उपभोक्ता फोरम eDaakhil — मुफ़्त ऑनलाइन दाखिल' },
+    en:{ title:'Consumer fraud / product cheating',  sub:'National Consumer Helpline 1800-11-4000 — first step' },
+    hi:{ title:'उपभोक्ता धोखाधड़ी / खरीदी में ठगी', sub:'राष्ट्रीय उपभोक्ता हेल्पलाइन 1800-11-4000 — पहला कदम' },
     type:'redirect', tags:['consumer','fraud','cheating','dhoka','product','complaint','thagi'],
     steps:[
-      { level:'central', action:'web',  en:'eDaakhil — File Consumer Court Complaint',            hi:'eDaakhil — उपभोक्ता अदालत शिकायत दाखिल करें',         contact:'https://edaakhil.nic.in' },
-      { level:'central', action:'call', en:'National Consumer Helpline',                           hi:'राष्ट्रीय उपभोक्ता हेल्पलाइन',                        contact:'1800-11-4000' },
-      { level:'local',   action:'visit',en:'District Consumer Disputes Redressal Forum',           hi:'जिला उपभोक्ता विवाद निवारण फोरम',                      contact:null },
-      POLICE_112, CPGRAMS,
+      { level:'local',   action:'call', en:'National Consumer Helpline — 1800-11-4000 (free)',    hi:'राष्ट्रीय उपभोक्ता हेल्पलाइन — 1800-11-4000 (मुफ़्त)', contact:'1800-11-4000' },
+      { level:'local',   action:'web',  en:'consumerhelpline.gov.in — file complaint online',     hi:'consumerhelpline.gov.in — ऑनलाइन शिकायत दर्ज करें',   contact:'https://consumerhelpline.gov.in' },
+      { level:'local',   action:'visit',en:'District Consumer Disputes Redressal Forum',          hi:'जिला उपभोक्ता विवाद निवारण फोरम',                      contact:null },
+      { level:'central', action:'web',  en:'eDaakhil — File Consumer Court Case Online',          hi:'eDaakhil — उपभोक्ता अदालत में ऑनलाइन केस दाखिल करें', contact:'https://edaakhil.nic.in' },
+      CPGRAMS,
     ],
   },
   {
     id:'police-missing', cat:'police',
-    en:{ title:'Missing person report',              sub:'Act fast — call 112 + file online report' },
-    hi:{ title:'कोई गुम हो गया है',                  sub:'जल्दी करें — 112 कॉल + ऑनलाइन रिपोर्ट' },
+    en:{ title:'Missing person report',              sub:'Act fast — call 112 + file at police station' },
+    hi:{ title:'कोई गुम हो गया है',                  sub:'जल्दी करें — 112 कॉल + पुलिस स्टेशन में रिपोर्ट' },
     type:'urgent', tags:['police','missing','gum','kho','person','baccha','child','lost'],
     steps:[
       POLICE_112,
-      { level:'local',   action:'visit',en:'Visit nearest police station — file missing report',  hi:'नजदीकी पुलिस स्टेशन — मिसिंग रिपोर्ट दर्ज करें',    contact:null },
-      { level:'central', action:'web',  en:'Track the Missing Child Portal',                      hi:'ट्रैक द मिसिंग चाइल्ड पोर्टल',                        contact:'https://trackthemissingchild.gov.in' },
-      { level:'central', action:'call', en:'Child Helpline (for missing children)',                hi:'बाल हेल्पलाइन (बच्चों के लिए)',                        contact:'1098' },
+      { level:'local',   action:'call', en:'Child Helpline — 1098 (if missing person is a child)', hi:'चाइल्ड हेल्पलाइन — 1098 (बच्चा लापता हो तो)',         contact:'1098' },
+      { level:'local',   action:'visit',en:'Nearest police station — file Missing Person Report', hi:'नज़दीकी पुलिस स्टेशन — लापता व्यक्ति रिपोर्ट दर्ज करें', contact:null },
+      { level:'central', action:'web',  en:'TrackChild Portal — national missing child portal',   hi:'TrackChild पोर्टल — राष्ट्रीय लापता बच्चे पोर्टल',    contact:'https://trackchild.gov.in' },
       CPGRAMS,
     ],
   },
   {
     id:'police-cyber', cat:'police',
-    en:{ title:'Cyber crime / online cheating',      sub:'1930 + cybercrime.gov.in immediately' },
-    hi:{ title:'साइबर अपराध / ऑनलाइन ठगी',          sub:'1930 + cybercrime.gov.in तुरंत' },
+    en:{ title:'Cyber crime / online cheating',      sub:'Call 1930 immediately — report within 24 hrs for best results' },
+    hi:{ title:'साइबर अपराध / ऑनलाइन ठगी',          sub:'तुरंत 1930 कॉल करें — 24 घंटे में रिपोर्ट करें' },
     type:'urgent', tags:['cyber','crime','online','fraud','cheating','hacking','thagi','internet'],
     steps:[
-      { level:'central', action:'call', en:'Cyber Fraud Helpline',                                hi:'साइबर फ्रॉड हेल्पलाइन',                               contact:'1930' },
-      { level:'central', action:'web',  en:'Cybercrime.gov.in — File Complaint',                  hi:'Cybercrime.gov.in — शिकायत दर्ज करें',                contact:'https://cybercrime.gov.in' },
-      { level:'local',   action:'visit',en:'Nearest Cyber Cell / Police Station',                 hi:'नजदीकी साइबर सेल / पुलिस स्टेशन',                    contact:null },
+      { level:'local',   action:'call', en:'Cyber Crime Helpline — 1930 (call immediately, 24×7)', hi:'साइबर क्राइम हेल्पलाइन — 1930 (तुरंत call करें, 24×7)', contact:'1930' },
+      { level:'local',   action:'web',  en:'Cybercrime.gov.in — File Complaint Online',           hi:'Cybercrime.gov.in — ऑनलाइन शिकायत दर्ज करें',         contact:'https://cybercrime.gov.in' },
+      { level:'local',   action:'visit',en:'Nearest Cyber Cell / Police Station — file FIR',      hi:'नज़दीकी साइबर सेल / पुलिस स्टेशन — FIR दर्ज करें',   contact:null },
       CPGRAMS,
     ],
   },
@@ -595,14 +596,14 @@ export const PROBLEMS = [
   // ══════════════════════════════════════════════════════════════════════
   {
     id:'transport-train', cat:'transport',
-    en:{ title:'Train complaint / Rail Madad',       sub:'Rail Madad app or helpline 139' },
-    hi:{ title:'ट्रेन की शिकायत / रेल मदद',          sub:'रेल मदद ऐप या हेल्पलाइन 139' },
+    en:{ title:'Train complaint / Rail Madad',       sub:'Rail Madad helpline 139 or app — instant on-train complaint' },
+    hi:{ title:'ट्रेन की शिकायत / रेल मदद',          sub:'रेल मदद हेल्पलाइन 139 या ऐप — तुरंत शिकायत' },
     type:'redirect', tags:['transport','train','railway','irctc','ticket','rail','complaint'],
     steps:[
-      { level:'local',   action:'call', en:'Rail Madad Helpline',                                  hi:'रेल मदद हेल्पलाइन',                                    contact:'139' },
-      { level:'central', action:'app',  en:'Rail Madad App',                                       hi:'रेल मदद ऐप',                                           contact:'https://railmadad.indianrailways.gov.in' },
-      { level:'central', action:'web',  en:'PG Portal — Railway Ministry',                         hi:'PG पोर्टल — रेलवे मंत्रालय',                           contact:'https://pgportal.gov.in/Home/LodgeGrievance' },
-      { level:'central', action:'web',  en:'IRCTC Customer Care',                                  hi:'IRCTC कस्टमर केयर',                                    contact:'https://www.irctc.co.in' },
+      { level:'local',   action:'call', en:'Rail Madad Helpline — 139 (24×7, while on train)',     hi:'रेल मदद हेल्पलाइन — 139 (24×7, ट्रेन में हों तो)',     contact:'139' },
+      { level:'direct',  action:'web',  en:'IRCTC Customer Care — for booking / ticket issues',   hi:'IRCTC कस्टमर केयर — बुकिंग / टिकट की समस्या के लिए', contact:'https://www.irctc.co.in/nget/help-and-support' },
+      { level:'direct',  action:'app',  en:'Rail Madad App / Website — file complaint online',    hi:'रेल मदद ऐप / वेबसाइट — ऑनलाइन शिकायत दर्ज करें',    contact:'https://railmadad.indianrailways.gov.in' },
+      { level:'central', action:'web',  en:'PG Portal — Railway Ministry (unresolved after 7 days)', hi:'PG पोर्टल — रेलवे मंत्रालय (7 दिन में हल न हो तो)', contact:'https://pgportal.gov.in' },
       CPGRAMS,
     ],
   },
@@ -816,6 +817,76 @@ export const PROBLEMS = [
   },
 
   // ══════════════════════════════════════════════════════════════════════
+  //  RATION / PDS
+  // ══════════════════════════════════════════════════════════════════════
+  {
+    id:'ration-not-received', cat:'ration',
+    en:{ title:'Ration not received from fair price shop', sub:'Complain to District Supply Officer — 14445' },
+    hi:{ title:'उचित मूल्य दुकान से राशन नहीं मिला',      sub:'जिला आपूर्ति अधिकारी को शिकायत करें — 14445' },
+    type:'hybrid', helpline:'14445',
+    tags:['ration','nahi','mila','food','anaj','chawal','gehu','PDS','FPS','shop','dealer'],
+    steps:[
+      { level:'local',   action:'visit',en:'Visit FPS dealer first — demand ration + note refusal in writing', hi:'FPS डीलर के पास जाएं — राशन मांगें + मना करने पर लिखित नोट लें', contact:null },
+      { level:'local',   action:'call', en:'District Supply Officer (DSO) — 14445 (National Food Helpline)', hi:'जिला आपूर्ति अधिकारी (DSO) — 14445 (राष्ट्रीय खाद्य हेल्पलाइन)', contact:'14445' },
+      { level:'state',   action:'web',  en:'State Food & Civil Supplies Grievance Portal',               hi:'राज्य खाद्य एवं नागरिक आपूर्ति शिकायत पोर्टल',      contact:null, note:{en:'Search "[your state] food supply grievance portal"',hi:'"[आपका राज्य] खाद्य आपूर्ति शिकायत पोर्टल" खोजें'} },
+      { level:'central', action:'web',  en:'NFSA — Check your entitlement & beneficiary status',         hi:'NFSA — अपना अधिकार और लाभार्थी स्थिति जांचें',       contact:'https://nfsa.gov.in' },
+      CPGRAMS, RTI,
+    ],
+  },
+  {
+    id:'ration-card-new', cat:'ration',
+    en:{ title:'New ration card — how to apply',     sub:'Apply through state PDS portal or CSC' },
+    hi:{ title:'नया राशन कार्ड कैसे बनवाएं',          sub:'राज्य PDS पोर्टल या CSC के ज़रिए आवेदन करें' },
+    type:'redirect',
+    tags:['ration','card','new','naya','apply','banaana','banwaana','PDS','NFSA','APL','BPL'],
+    steps:[
+      { level:'state',   action:'web',  en:'State Food Department Portal — apply for new ration card',  hi:'राज्य खाद्य विभाग पोर्टल — नए राशन कार्ड के लिए आवेदन', contact:null, note:{en:'Search "[your state] ration card apply online"',hi:'"[आपका राज्य] ration card apply online" खोजें'} },
+      { level:'local',   action:'visit',en:'Visit nearest CSC (Common Service Centre) for assisted application', hi:'नज़दीकी CSC (कॉमन सर्विस सेंटर) — सहायता से आवेदन', contact:null },
+      { level:'local',   action:'visit',en:'District Supply / Food Office — physical application form', hi:'जिला आपूर्ति / खाद्य कार्यालय — भौतिक आवेदन फॉर्म',  contact:null },
+      { level:'central', action:'call', en:'National Food Helpline — 14445',                             hi:'राष्ट्रीय खाद्य हेल्पलाइन — 14445',                  contact:'14445' },
+    ],
+  },
+  {
+    id:'ration-dealer-fraud', cat:'ration',
+    en:{ title:'FPS dealer fraud / overcharging',    sub:'Dealer diverting stock or charging more than MSP' },
+    hi:{ title:'FPS डीलर धोखाधड़ी / ज़्यादा पैसे',   sub:'डीलर स्टॉक बेच रहा है या MSP से ज़्यादा ले रहा है' },
+    type:'hybrid', helpline:'14445',
+    tags:['ration','dealer','fraud','overcharge','dhoka','zyada','paisa','stock','divert','FPS','corruption'],
+    steps:[
+      { level:'local',   action:'call', en:'National Food Helpline — 14445 (report dealer fraud)', hi:'राष्ट्रीय खाद्य हेल्पलाइन — 14445 (डीलर धोखाधड़ी)', contact:'14445' },
+      { level:'local',   action:'visit',en:'District Supply Officer — written complaint against dealer', hi:'जिला आपूर्ति अधिकारी — डीलर के खिलाफ लिखित शिकायत', contact:null },
+      { level:'state',   action:'web',  en:'State PDS Grievance / Vigilance Portal',                   hi:'राज्य PDS शिकायत / सतर्कता पोर्टल',                  contact:null },
+      CPGRAMS, RTI,
+    ],
+  },
+  {
+    id:'ration-quantity-less', cat:'ration',
+    en:{ title:'Less quantity given than entitlement', sub:'NFSA entitlement check + DSO complaint' },
+    hi:{ title:'अधिकार से कम राशन दिया जा रहा है',    sub:'NFSA अधिकार जांचें + DSO को शिकायत' },
+    type:'hybrid', helpline:'14445',
+    tags:['ration','quantity','less','kam','gehu','chawal','anaj','entitlement','nfsa','rights'],
+    steps:[
+      { level:'central', action:'web',  en:'NFSA Portal — verify your monthly grain entitlement',     hi:'NFSA पोर्टल — अपना मासिक अनाज अधिकार सत्यापित करें', contact:'https://nfsa.gov.in' },
+      { level:'local',   action:'call', en:'National Food Helpline — 14445',                           hi:'राष्ट्रीय खाद्य हेल्पलाइन — 14445',                  contact:'14445' },
+      { level:'local',   action:'visit',en:'District Supply Officer — complaint with ration slip proof', hi:'जिला आपूर्ति अधिकारी — राशन पर्ची प्रमाण के साथ',  contact:null },
+      CPGRAMS, RTI,
+    ],
+  },
+  {
+    id:'ration-card-correction', cat:'ration',
+    en:{ title:'Ration card name / detail correction', sub:'Update name, add member, surrender — state PDS portal' },
+    hi:{ title:'राशन कार्ड में नाम / विवरण सुधार',    sub:'नाम अपडेट, सदस्य जोड़ें, सरेंडर — राज्य PDS पोर्टल' },
+    type:'redirect',
+    tags:['ration','card','name','correction','sudhar','update','member','add','family','duplicate','surrender'],
+    steps:[
+      { level:'state',   action:'web',  en:'State PDS Portal — correction / member addition online',  hi:'राज्य PDS पोर्टल — ऑनलाइन सुधार / सदस्य जोड़ें',    contact:null, note:{en:'Search "[your state] ration card correction online"',hi:'"[आपका राज्य] ration card correction online" खोजें'} },
+      { level:'local',   action:'visit',en:'District Food / Supply Office — submit correction form',  hi:'जिला खाद्य / आपूर्ति कार्यालय — सुधार फॉर्म जमा करें', contact:null },
+      { level:'local',   action:'visit',en:'Nearest CSC — assisted ration card update service',       hi:'नज़दीकी CSC — सहायता से राशन कार्ड अपडेट',           contact:null },
+      { level:'central', action:'call', en:'National Food Helpline — 14445',                           hi:'राष्ट्रीय खाद्य हेल्पलाइन — 14445',                  contact:'14445' },
+    ],
+  },
+
+  // ══════════════════════════════════════════════════════════════════════
   //  TELECOM
   // ══════════════════════════════════════════════════════════════════════
   {
@@ -879,13 +950,13 @@ export const PROBLEMS = [
   },
   {
     id:'telecom-lost-mobile', cat:'telecom',
-    en:{ title:'Lost / stolen mobile — block IMEI',  sub:'Sanchar Saathi — block your phone immediately' },
-    hi:{ title:'मोबाइल खो गया / चोरी हुआ — IMEI ब्लॉक', sub:'संचार साथी — तुरंत अपना फोन ब्लॉक करें' },
+    en:{ title:'Lost / stolen mobile — block IMEI',  sub:'File FIR first, then block IMEI on Sanchar Saathi' },
+    hi:{ title:'मोबाइल खो गया / चोरी हुआ — IMEI ब्लॉक', sub:'पहले FIR दर्ज करें, फिर Sanchar Saathi पर IMEI ब्लॉक' },
     type:'urgent', tags:['telecom','mobile','lost','stolen','imei','block','phone','kho','chori'],
     steps:[
-      { level:'central', action:'web',  en:'Sanchar Saathi — CEIR: Block Stolen Mobile',         hi:'संचार साथी — CEIR: चोरी मोबाइल ब्लॉक',               contact:'https://sancharsaathi.gov.in' },
       POLICE_112,
-      { level:'local',   action:'visit',en:'File FIR at nearest police station',                  hi:'नजदीकी पुलिस स्टेशन में FIR दर्ज करें',               contact:null },
+      { level:'local',   action:'visit',en:'File FIR at nearest police station (FIR copy needed to block IMEI)', hi:'नज़दीकी पुलिस स्टेशन — FIR दर्ज करें (IMEI block के लिए FIR copy ज़रूरी)', contact:null },
+      { level:'central', action:'web',  en:'Sanchar Saathi CEIR — Block IMEI using FIR details', hi:'Sanchar Saathi CEIR — FIR details से IMEI ब्लॉक करें', contact:'https://sancharsaathi.gov.in/CEIR' },
       CPGRAMS,
     ],
   },
@@ -1829,6 +1900,91 @@ export const PROBLEMS = [
       { level:'local',   action:'visit',en:'RWA (Resident Welfare Association) — raise parking issue', hi:'RWA — पार्किंग समस्या उठाएं',                      contact:null },
     ],
   },
+  // ══════════════════════════════════════════════════════════════════════
+  //  PETROLEUM / GAS / LPG
+  // ══════════════════════════════════════════════════════════════════════
+  {
+    id:'petro-lpg-not-delivered', cat:'petro',
+    en:{ title:'LPG cylinder not delivered',             sub:'Complaint to oil company + Ministry helpline' },
+    hi:{ title:'LPG सिलेंडर डिलीवरी नहीं हुई',          sub:'Oil company + Ministry हेल्पलाइन पर शिकायत' },
+    type:'hybrid', helpline:'1906',
+    tags:['lpg','gas','cylinder','delivery','nahi','aayi','booking','domestic gas','rasoi gas'],
+    steps:[
+      { level:'local',   action:'call', en:'LPG Emergency & Delivery Helpline — 1906 (24×7)',    hi:'LPG Emergency & Delivery Helpline — 1906 (24×7)',       contact:'1906' },
+      { level:'direct',  action:'web',  en:'My LPG Portal — check booking & delivery status',    hi:'My LPG Portal — booking और delivery status check करें', contact:'https://mylpg.in' },
+      { level:'direct',  action:'web',  en:'IOCL Grievance — indane.co.in → Consumer Services',  hi:'IOCL Grievance — indane.co.in → Consumer Services',     contact:'https://indane.co.in' },
+      { level:'central', action:'web',  en:'Ministry of Petroleum PGMS — pgms.petroleum.nic.in', hi:'पेट्रोलियम मंत्रालय PGMS — pgms.petroleum.nic.in',       contact:'https://pgms.petroleum.nic.in' },
+      CPGRAMS,
+    ],
+  },
+  {
+    id:'petro-gas-leak', cat:'petro',
+    en:{ title:'LPG / PNG gas leak emergency',           sub:'Call fire brigade + gas company immediately' },
+    hi:{ title:'LPG / PNG गैस लीक — आपात स्थिति',        sub:'फायर ब्रिगेड + गैस कंपनी को तुरंत call करें' },
+    type:'call', helpline:'101',
+    tags:['gas leak','gas','lpg','png','smell','aanch','fire','blast','leakage','tutna','pipe','emergency'],
+    steps:[
+      { level:'local',   action:'call', en:'🚨 Fire Brigade — 101 (EMERGENCY — call first!)',    hi:'🚨 Fire Brigade — 101 (EMERGENCY — पहले call करें!)',    contact:'101' },
+      { level:'local',   action:'call', en:'LPG Emergency Helpline — 1906 (oil company)',        hi:'LPG Emergency Helpline — 1906 (oil company)',           contact:'1906' },
+      { level:'local',   action:'call', en:'Police Emergency — 112',                             hi:'Police Emergency — 112',                               contact:'112' },
+      { level:'direct',  action:'web',  en:'Piped Natural Gas (IGL/MGL/GAIL): call operator',   hi:'Piped Natural Gas (IGL/MGL/GAIL): operator को call',    contact:null, note:{en:'IGL: 1800-102-0708 | MGL: 1800-266-9090 | GAIL: 1800-180-9090',hi:'IGL: 1800-102-0708 | MGL: 1800-266-9090 | GAIL: 1800-180-9090'} },
+    ],
+  },
+  {
+    id:'petro-lpg-subsidy', cat:'petro',
+    en:{ title:'LPG subsidy not credited (PAHAL)',        sub:'Check DBTL status and file complaint' },
+    hi:{ title:'LPG सब्सिडी नहीं मिली (PAHAL)',          sub:'DBTL status check करें और शिकायत दर्ज करें' },
+    type:'hybrid', helpline:'1906',
+    tags:['lpg','subsidy','pahal','dbtl','bank','account','nahi mili','credit','gas subsidy'],
+    steps:[
+      { level:'local',   action:'call', en:'LPG Helpline — 1906 (check subsidy status)',         hi:'LPG Helpline — 1906 (subsidy status check)',            contact:'1906' },
+      { level:'direct',  action:'web',  en:'My LPG Portal — verify bank account & PAHAL status', hi:'My LPG Portal — bank account और PAHAL status verify',   contact:'https://mylpg.in' },
+      { level:'direct',  action:'web',  en:'IOCL subsidy query — OMC customer portal',           hi:'IOCL subsidy query — OMC customer portal',              contact:'https://indane.co.in' },
+      { level:'central', action:'web',  en:'Ministry of Petroleum PGMS grievance portal',        hi:'पेट्रोलियम मंत्रालय PGMS शिकायत पोर्टल',                contact:'https://pgms.petroleum.nic.in' },
+      CPGRAMS,
+    ],
+  },
+  {
+    id:'petro-pump-fraud', cat:'petro',
+    en:{ title:'Petrol pump fraud — wrong meter / overcharging', sub:'Ministry helpline + state weights & measures' },
+    hi:{ title:'पेट्रोल पंप धोखाधड़ी — गलत मीटर / ज़्यादा पैसे', sub:'Ministry helpline + राज्य माप-तोल विभाग' },
+    type:'hybrid', helpline:'1800-233-3555',
+    tags:['petrol pump','fraud','overcharge','wrong meter','fuel','petrol','diesel','cheating','nozzle'],
+    steps:[
+      { level:'local',   action:'call', en:'Petroleum Ministry Helpline — 1800-233-3555 (IOCL)', hi:'पेट्रोलियम मंत्रालय Helpline — 1800-233-3555 (IOCL)',  contact:'1800-233-3555' },
+      { level:'local',   action:'visit',en:'District Legal Metrology (Weights & Measures) office', hi:'जिला कानूनी माप-तोल (Legal Metrology) कार्यालय जाएं', contact:null },
+      { level:'direct',  action:'web',  en:'Ministry of Petroleum PGMS — pgms.petroleum.nic.in', hi:'पेट्रोलियम मंत्रालय PGMS पोर्टल',                       contact:'https://pgms.petroleum.nic.in' },
+      { level:'central', action:'web',  en:'Consumer Helpline — 1915 or consumerhelpline.gov.in', hi:'Consumer Helpline — 1915 या consumerhelpline.gov.in',   contact:'https://consumerhelpline.gov.in' },
+      CPGRAMS,
+    ],
+  },
+  {
+    id:'petro-cng-png', cat:'petro',
+    en:{ title:'CNG / PNG (piped gas) complaint',         sub:'IGL / MGL / GAIL city gas helpline + PNGRB' },
+    hi:{ title:'CNG / PNG (पाइप्ड गैस) की शिकायत',        sub:'IGL / MGL / GAIL city gas helpline + PNGRB' },
+    type:'hybrid',
+    tags:['cng','png','piped gas','igl','mgl','gail','indraprastha gas','gas pipe','connection','pressure'],
+    steps:[
+      { level:'local',   action:'call', en:'City Gas Helplines: IGL 1800-102-0708 | MGL 1800-266-9090 | GAIL 1800-180-9090', hi:'City Gas: IGL 1800-102-0708 | MGL 1800-266-9090 | GAIL 1800-180-9090', contact:'1800-102-0708' },
+      { level:'direct',  action:'web',  en:'PNGRB Consumer Grievance — pngrb.gov.in',             hi:'PNGRB उपभोक्ता शिकायत — pngrb.gov.in',                  contact:'https://pngrb.gov.in' },
+      { level:'central', action:'web',  en:'Ministry of Petroleum PGMS — pgms.petroleum.nic.in', hi:'पेट्रोलियम मंत्रालय PGMS पोर्टल',                       contact:'https://pgms.petroleum.nic.in' },
+      CPGRAMS,
+    ],
+  },
+  {
+    id:'petro-adulteration', cat:'petro',
+    en:{ title:'Fuel adulteration / quality complaint',   sub:'BIS + state Quality Control + Ministry helpline' },
+    hi:{ title:'ईंधन में मिलावट / गुणवत्ता की शिकायत',    sub:'BIS + राज्य Quality Control + Ministry helpline' },
+    type:'hybrid', helpline:'1800-11-3333',
+    tags:['adulteration','milawat','quality','fuel','petrol','diesel','kerosene','low quality','fake fuel'],
+    steps:[
+      { level:'local',   action:'call', en:'BIS Consumer Helpline — 1800-11-3333 (fuel quality)', hi:'BIS Consumer Helpline — 1800-11-3333 (fuel quality)',   contact:'1800-11-3333' },
+      { level:'local',   action:'visit',en:'District Inspector of Explosives / Quality Control',   hi:'जिला Explosives Inspector / Quality Control office जाएं', contact:null },
+      { level:'direct',  action:'web',  en:'Ministry of Petroleum PGMS — pgms.petroleum.nic.in', hi:'पेट्रोलियम मंत्रालय PGMS पोर्टल',                       contact:'https://pgms.petroleum.nic.in' },
+      CPGRAMS,
+    ],
+  },
+
   {
     id:'society-stray', cat:'society',
     en:{ title:'Stray animal / dog bite issue',          sub:'Municipal corporation + animal welfare board' },

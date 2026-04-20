@@ -3,13 +3,16 @@ import { useState, useRef, useEffect } from 'react'
 import { useLang } from '../context/LangContext'
 import { CHAT_REPLIES, DEFAULT_REPLY } from '../data/chatReplies'
 
+// ── Quick chips ───────────────────────────────────────────────
 const QUICK_CHIPS = [
-  { en: 'UPI money stolen',    hi: 'UPI पैसे गए' },
-  { en: 'No electricity',      hi: 'बिजली नहीं है' },
-  { en: 'Water not coming',    hi: 'पानी नहीं आया' },
-  { en: 'How to file FIR',     hi: 'FIR कैसे करें' },
-  { en: 'Garbage not picked',  hi: 'कचरा नहीं उठा' },
-  { en: 'Ration not received', hi: 'राशन नहीं मिला' },
+  { en: 'UPI money stolen',      hi: 'UPI पैसे गए'         },
+  { en: 'No electricity',        hi: 'बिजली नहीं है'        },
+  { en: 'How to file FIR',       hi: 'FIR कैसे करें'        },
+  { en: 'Ration not received',   hi: 'राशन नहीं मिला'       },
+  { en: 'Salary not paid',       hi: 'वेतन नहीं मिला'       },
+  { en: 'Refund not given',      hi: 'रिफंड नहीं मिला'      },
+  { en: 'Document lost',         hi: 'दस्तावेज़ खोया'        },
+  { en: 'Builder not giving flat', hi: 'Builder flat नहीं दे रहा' },
 ]
 
 // ── Levenshtein distance ──────────────────────────────────────
@@ -32,20 +35,16 @@ function levenshtein(a, b) {
   return row[b.length]
 }
 
-// ── Fuzzy match: tolerates 1-2 character typos ───────────────
+// ── Fuzzy match ───────────────────────────────────────────────
 function fuzzyMatch(input, keywords) {
-  // Normalize: lowercase, remove extra spaces, strip punctuation
   const norm = input.toLowerCase().replace(/[^\w\s\u0900-\u097F]/g, ' ').trim()
   const tokens = norm.split(/\s+/).filter(t => t.length > 0)
 
   return keywords.some(keyword => {
     const kw = keyword.toLowerCase()
-    // 1. Direct substring match (fastest)
     if (norm.includes(kw)) return true
-    // 2. Token-by-token fuzzy match (handles typos)
     return tokens.some(tok => {
       if (tok.length < 3 || kw.length < 3) return tok === kw
-      // allow 1 error for short words, 2 for longer
       const threshold = kw.length <= 5 ? 1 : 2
       return levenshtein(tok, kw) <= threshold
     })
@@ -54,10 +53,54 @@ function fuzzyMatch(input, keywords) {
 
 function getReply(msg, lang) {
   const match = CHAT_REPLIES.find(r => fuzzyMatch(msg, r.keys))
-  return match ? match[lang] : DEFAULT_REPLY[lang]
+  if (match) return { text: match[lang], source: match.source }
+  return { text: DEFAULT_REPLY[lang], source: DEFAULT_REPLY.source }
 }
 
-// ── Typing indicator component ────────────────────────────────
+// ── Parse URLs into clickable links ──────────────────────────
+// Splits text by https:// URLs and returns an array of string/link nodes
+function parseLinks(text) {
+  const URL_RE = /(https?:\/\/[^\s\)\],]+)/g
+  const parts = []
+  let lastIndex = 0
+  let match
+
+  URL_RE.lastIndex = 0
+  while ((match = URL_RE.exec(text)) !== null) {
+    if (match.index > lastIndex) {
+      parts.push({ type: 'text', value: text.slice(lastIndex, match.index) })
+    }
+    parts.push({ type: 'link', value: match[1] })
+    lastIndex = URL_RE.lastIndex
+  }
+  if (lastIndex < text.length) {
+    parts.push({ type: 'text', value: text.slice(lastIndex) })
+  }
+  return parts
+}
+
+function BotText({ text }) {
+  const parts = parseLinks(text)
+  return (
+    <>
+      {parts.map((p, i) =>
+        p.type === 'link'
+          ? <a
+              key={i}
+              href={p.value}
+              target="_blank"
+              rel="noopener noreferrer"
+              className="chat-link"
+            >
+              {p.value.replace(/^https?:\/\//, '')}
+            </a>
+          : <React.Fragment key={i}>{p.value}</React.Fragment>
+      )}
+    </>
+  )
+}
+
+// ── Typing dots ───────────────────────────────────────────────
 function TypingDots() {
   return (
     <div className="chat-msg bot typing-indicator">
@@ -66,20 +109,22 @@ function TypingDots() {
   )
 }
 
+// ── Main component ────────────────────────────────────────────
 export default function ChatAssistant() {
   const { lang, t } = useLang()
-  const [open,    setOpen]    = useState(false)
-  const [typing,  setTyping]  = useState(false)
-  const [msgs,    setMsgs]    = useState([
+  const [open,      setOpen]      = useState(false)
+  const [typing,    setTyping]    = useState(false)
+  const [chipsVisible, setChipsVisible] = useState(true)
+  const [msgs,   setMsgs]   = useState([
     {
       from: 'bot',
       text: {
-        en: "Namaste! I'm Samadhan Sahayak 🙏\n\nDescribe your problem in plain words — Hindi or English, even with spelling mistakes. I'll guide you to the right helpline or portal.",
-        hi: 'नमस्ते! मैं समाधान सहायक हूं 🙏\n\nसाधारण शब्दों में समस्या बताएं — हिंदी या English में, spelling गलत हो तो भी चलेगा। मैं सही helpline या portal तक पहुंचाऊंगा।',
+        en: "Namaste! I'm Samadhan Sahayak 🙏\n\nDescribe your problem in plain words — Hindi or English. I'll guide you to the exact government helpline or portal.\n\nTry: \"UPI fraud\", \"bijli nahi\", \"FIR kaise kare\", \"ration nahi mila\"…",
+        hi: "नमस्ते! मैं समाधान सहायक हूं 🙏\n\nसाधारण शब्दों में अपनी समस्या बताएं — हिंदी या English में। मैं सही सरकारी helpline या portal तक पहुंचाऊंगा।\n\nTry करें: \"UPI fraud\", \"बिजली नहीं\", \"FIR कैसे करें\", \"राशन नहीं मिला\"…",
       },
     },
   ])
-  const [input,   setInput]   = useState('')
+  const [input,  setInput]  = useState('')
   const bottomRef = useRef(null)
   const inputRef  = useRef(null)
 
@@ -96,11 +141,13 @@ export default function ChatAssistant() {
     if (!text) return
     setMsgs(prev => [...prev, { from: 'user', text }])
     setInput('')
+    setChipsVisible(false)
     setTyping(true)
     setTimeout(() => {
       setTyping(false)
-      setMsgs(prev => [...prev, { from: 'bot', text: getReply(text, lang) }])
-    }, 900)
+      const reply = getReply(text, lang)
+      setMsgs(prev => [...prev, { from: 'bot', text: reply.text, source: reply.source }])
+    }, 850)
   }
 
   return (
@@ -125,25 +172,39 @@ export default function ChatAssistant() {
 
       {/* ── Chat window ── */}
       {open && (
-        <div className="chat-window" id="chat">
+        <div className="chat-window" id="chat" role="dialog" aria-label="Samadhan Help Chat">
 
           {/* Header */}
           <div className="chat-hd">
             <div className="chat-av">
-              <i className="fas fa-robot" />
+              <i className="fas fa-shield-alt" />
               <span className="chat-av-dot" />
             </div>
             <div className="chat-hd-body">
               <div className="chat-hd-title">
                 {t({ en: 'Samadhan Sahayak', hi: 'समाधान सहायक' })}
+                <span className="chat-hd-verified">
+                  <i className="fas fa-check-circle" />
+                  {t({ en: ' Verified', hi: ' Verified' })}
+                </span>
               </div>
               <div className="chat-hd-status">
-                {t({ en: '● Online — Hindi & English', hi: '● Online — हिंदी & English' })}
+                <span className="chat-hd-dot" />
+                {t({ en: 'Official Gov Sources · Hindi & English', hi: 'सरकारी स्रोत · Hindi & English' })}
               </div>
             </div>
             <button className="chat-close" onClick={() => setOpen(false)} aria-label="Close">
               <i className="fas fa-times" />
             </button>
+          </div>
+
+          {/* Trust ribbon */}
+          <div className="chat-trust-ribbon">
+            <i className="fas fa-lock" />
+            {t({
+              en: 'All helplines & portals are official government sources',
+              hi: 'सभी helplines और portals आधिकारिक सरकारी स्रोत हैं',
+            })}
           </div>
 
           {/* Messages */}
@@ -152,29 +213,45 @@ export default function ChatAssistant() {
               <div key={i} className={`chat-msg-wrap ${m.from}`}>
                 {m.from === 'bot' && (
                   <div className="chat-msg-av">
-                    <i className="fas fa-robot" />
+                    <i className="fas fa-shield-alt" />
                   </div>
                 )}
-                <div className={`chat-msg ${m.from}`}>
-                  {typeof m.text === 'object' ? t(m.text) : m.text}
+                <div className="chat-bubble-col">
+                  <div className={`chat-msg ${m.from}`}>
+                    {m.from === 'bot' && typeof m.text === 'string'
+                      ? <BotText text={m.text} />
+                      : typeof m.text === 'object'
+                        ? <BotText text={t(m.text)} />
+                        : m.text
+                    }
+                  </div>
+                  {m.from === 'bot' && m.source && (
+                    <div className="chat-source">
+                      <i className="fas fa-check-circle" />
+                      {m.source}
+                    </div>
+                  )}
                 </div>
               </div>
             ))}
             {typing && (
               <div className="chat-msg-wrap bot">
                 <div className="chat-msg-av">
-                  <i className="fas fa-robot" />
+                  <i className="fas fa-shield-alt" />
                 </div>
-                <TypingDots />
+                <div className="chat-bubble-col">
+                  <TypingDots />
+                </div>
               </div>
             )}
             <div ref={bottomRef} />
           </div>
 
-          {/* Quick chips */}
-          <div className="chat-chips-wrap">
+          {/* Quick chips — hidden after first user message */}
+          {chipsVisible && <div className="chat-chips-wrap">
             <div className="chat-chips-label">
-              {t({ en: 'Quick topics:', hi: 'जल्दी पूछें:' })}
+              <i className="fas fa-bolt" />
+              {t({ en: ' Common problems:', hi: ' आम समस्याएं:' })}
             </div>
             <div className="chat-chips">
               {QUICK_CHIPS.map((c, i) => (
@@ -183,7 +260,7 @@ export default function ChatAssistant() {
                 </button>
               ))}
             </div>
-          </div>
+          </div>}
 
           {/* Input row */}
           <div className="chat-inp-row">
@@ -195,6 +272,7 @@ export default function ChatAssistant() {
               onChange={e => setInput(e.target.value)}
               onKeyDown={e => e.key === 'Enter' && !typing && send()}
               disabled={typing}
+              autoComplete="off"
             />
             <button
               className={`chat-send ${input.trim() ? 'active' : ''}`}
@@ -204,6 +282,15 @@ export default function ChatAssistant() {
             >
               <i className="fas fa-paper-plane" />
             </button>
+          </div>
+
+          {/* Footer disclaimer */}
+          <div className="chat-footer">
+            <i className="fas fa-info-circle" />
+            {t({
+              en: ' For life-threatening emergencies, always call 112 / 108 directly.',
+              hi: ' जानलेवा आपात स्थिति में सीधे 112 / 108 call करें।',
+            })}
           </div>
 
         </div>

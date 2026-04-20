@@ -23,7 +23,7 @@ const PROBLEM_ICONS = [
   { icon: 'fa-signal',        color: '#0891B2', bg: '#ECFEFF', en: 'Telecom',     hi: 'मोबाइल',      cat: 'telecom' },
 ]
 
-export default function Hero({ onSearch, onCatSelect }) {
+export default function Hero({ onSearch, onSearchSubmit, onCatSelect }) {
   const { lang, t } = useLang()
 
   const handleQuickTag = (cat) => {
@@ -97,11 +97,12 @@ export default function Hero({ onSearch, onCatSelect }) {
                 hi: 'समस्या खोजें… जैसे बिजली, पानी, FIR, पासपोर्ट',
               })}
               onChange={e => onSearch(e.target.value)}
+              onKeyDown={e => e.key === 'Enter' && onSearchSubmit()}
             />
           </div>
           <button
             className="search-go"
-            onClick={() => document.getElementById('services')?.scrollIntoView({ behavior: 'smooth' })}
+            onClick={onSearchSubmit}
           >
             {t({ en: 'Search', hi: 'खोजें' })}
           </button>

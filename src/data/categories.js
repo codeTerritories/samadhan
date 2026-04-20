@@ -26,4 +26,6 @@ export const CATEGORIES = [
   { id: 'safety',    en: 'Personal Safety',  hi: 'व्यक्तिगत सुरक्षा',  icon: 'fa-user-shield',   color: '#9D174D', bg: '#FDF2F8', stroke: '#831843' },
   { id: 'insurance', en: 'Insurance',        hi: 'बीमा / क्लेम',       icon: 'fa-file-contract', color: '#047857', bg: '#D1FAE5', stroke: '#065F46' },
   { id: 'society',   en: 'Society / Area',   hi: 'सोसाइटी / क्षेत्र',  icon: 'fa-city',          color: '#6B7280', bg: '#F3F4F6', stroke: '#374151' },
+  { id: 'ration',    en: 'Ration / PDS',     hi: 'राशन / PDS',          icon: 'fa-basket-shopping', color: '#B45309', bg: '#FEF3C7', stroke: '#92400E' },
+  { id: 'petro',     en: 'Petroleum / Gas',  hi: 'पेट्रोल / गैस / LPG', icon: 'fa-gas-pump',        color: '#DC2626', bg: '#FEE2E2', stroke: '#991B1B' },
 ]

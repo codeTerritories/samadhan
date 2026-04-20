@@ -26,10 +26,11 @@ function getInitialPage() {
 }
 
 export default function App() {
-  const [page, setPage]           = useState(getInitialPage)
-  const [activeCat, setActiveCat] = useState('all')
+  const [page, setPage]               = useState(getInitialPage)
+  const [activeCat, setActiveCat]     = useState('all')
   const [searchQuery, setSearchQuery] = useState('')
   const [highlightList, setHighlightList] = useState(false)
+  const [contactPrefill, setContactPrefill] = useState('')
 
   // Update document meta tags and browser URL whenever page changes
   useSEO(page)
@@ -40,8 +41,21 @@ export default function App() {
   }, [])
 
   const goAbout = useCallback(() => {
+    setContactPrefill('')
     setPage('about')
     window.scrollTo({ top: 0, behavior: 'instant' })
+  }, [])
+
+  const handleSuggestProblem = useCallback((query) => {
+    const msg = query
+      ? `I couldn't find help for: "${query}"\n\nPlease add this problem to Samadhan.`
+      : ''
+    setContactPrefill(msg)
+    setPage('about')
+    window.scrollTo({ top: 0, behavior: 'instant' })
+    setTimeout(() => {
+      document.getElementById('contact')?.scrollIntoView({ behavior: 'smooth', block: 'start' })
+    }, 200)
   }, [])
 
   // Handle browser back/forward navigation
@@ -54,14 +68,17 @@ export default function App() {
     return () => window.removeEventListener('popstate', handlePopState)
   }, [])
 
+  // Live filter — updates results as user types, no scroll
   const handleSearch = useCallback((q) => {
     setSearchQuery(q)
-    if (q.trim()) {
-      setActiveCat('all')
-      setTimeout(() => {
-        document.getElementById('problem-list')?.scrollIntoView({ behavior: 'smooth', block: 'start' })
-      }, 50)
-    }
+    if (q.trim()) setActiveCat('all')
+  }, [])
+
+  // Called only on button click or Enter — scroll to results
+  const handleSearchSubmit = useCallback(() => {
+    setTimeout(() => {
+      document.getElementById('problem-list')?.scrollIntoView({ behavior: 'smooth', block: 'start' })
+    }, 50)
   }, [])
 
   const handleCatSelect = useCallback((id) => {
@@ -88,17 +105,17 @@ export default function App() {
 
           {page === 'about' ? (
             <>
-              <AboutPage />
+              <AboutPage prefillMessage={contactPrefill} />
               <Footer />
             </>
           ) : (
             <>
-              <Hero onSearch={handleSearch} onCatSelect={handleCatSelect} />
+              <Hero onSearch={handleSearch} onSearchSubmit={handleSearchSubmit} onCatSelect={handleCatSelect} />
               <EmergencyBanner />
               <LocationBanner />
               <main className="main-content" id="services" aria-label="Civic problem categories and helplines">
                 <CategoryGrid activeCat={activeCat} onSelect={handleCatSelect} />
-                <ProblemList  activeCat={activeCat} searchQuery={searchQuery} highlight={highlightList} />
+                <ProblemList  activeCat={activeCat} searchQuery={searchQuery} highlight={highlightList} onSuggestProblem={handleSuggestProblem} />
               </main>
               <Footer />
             </>

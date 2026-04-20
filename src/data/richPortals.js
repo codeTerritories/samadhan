@@ -1041,6 +1041,47 @@ const INSURANCE_NATIONAL = [
   CPGRAMS,
 ]
 
+// ─── RATION / PDS ────────────────────────────────────────────────────────────
+const RATION_NATIONAL = [
+  {
+    badge: 'first',
+    name: 'National Food Helpline — 14445',
+    desc: { en: 'Ration not received, dealer fraud, quantity short, card problem — call free', hi: 'राशन नहीं मिला, डीलर धोखाधड़ी, कम मात्रा, कार्ड समस्या — मुफ़्त call करें' },
+    url: 'https://nfsa.gov.in',
+    phone: '14445',
+    howto: [
+      { en: 'Dial 14445 — free National Food Security helpline, available all days', hi: '14445 dial करें — मुफ़्त राष्ट्रीय खाद्य सुरक्षा हेल्पलाइन, सभी दिन' },
+      { en: 'Describe complaint: dealer name, FPS ID, what was denied and on which date', hi: 'Complaint बताएं: dealer नाम, FPS ID, क्या नहीं मिला और किस तारीख को' },
+      { en: 'For entitlement check: open nfsa.gov.in → "Beneficiary Details"', hi: 'अधिकार check के लिए: nfsa.gov.in → "Beneficiary Details" खोलें' },
+    ],
+  },
+  {
+    badge: 'direct',
+    name: 'State PDS Portal — Grievance & Status',
+    desc: { en: 'Each state has its own PDS portal for ration card status, complaint, and correction', hi: 'हर राज्य का अपना PDS पोर्टल — राशन कार्ड status, शिकायत और सुधार के लिए' },
+    url: null,
+    phone: null,
+    howto: [
+      { en: 'Search "[your state] ration card grievance portal"', hi: '"[आपका राज्य] ration card grievance portal" search करें' },
+      { en: 'Key portals: UP fcs.up.gov.in | Bihar epds.bihar.gov.in | MP rationmitra.nic.in | Raj food.raj.nic.in | Maharashtra mahafood.gov.in', hi: 'UP: fcs.up.gov.in | Bihar: epds.bihar.gov.in | MP: rationmitra.nic.in | Raj: food.raj.nic.in | Maha: mahafood.gov.in' },
+      { en: 'Login with ration card number → check status, file complaint, or update details', hi: 'Ration card number से login → status check करें, complaint करें या details update करें' },
+    ],
+  },
+  {
+    badge: 'state',
+    name: 'District Supply Officer (DSO) — Dealer Complaint',
+    desc: { en: 'FPS dealer not giving ration or overcharging — DSO can cancel dealer licence', hi: 'FPS डीलर राशन नहीं दे रहा या ज़्यादा पैसे ले रहा — DSO dealer का licence रद्द कर सकते हैं' },
+    url: null,
+    phone: null,
+    howto: [
+      { en: 'Visit District Supply / Food Office — file written complaint against the FPS dealer', hi: 'जिला आपूर्ति / खाद्य कार्यालय जाएं — FPS dealer के खिलाफ लिखित शिकायत दें' },
+      { en: 'Carry: ration card, ration slip, proof of denial or overcharge', hi: 'लेकर जाएं: राशन कार्ड, राशन पर्ची, मना करने या अधिक पैसे का प्रमाण' },
+      { en: 'DSO can suspend or cancel dealer licence — effective deterrent', hi: 'DSO dealer का licence निलंबित या रद्द कर सकते हैं — प्रभावी कार्रवाई' },
+    ],
+  },
+  CPGRAMS,
+]
+
 // ─── SOCIETY / LOCAL AREA ISSUES ─────────────────────────────────────────────
 const SOCIETY_NATIONAL = [
   {
@@ -1081,6 +1122,46 @@ const SOCIETY_NATIONAL = [
   CPGRAMS,
 ]
 
+// ─── PETROLEUM / GAS / LPG ───────────────────────────────────────────────────
+const PETRO_NATIONAL = [
+  {
+    badge: 'first',
+    name: 'LPG Emergency & Booking Helpline — 1906',
+    desc: { en: 'Cylinder not delivered, gas leak, booking issue, PAHAL subsidy — call free 24×7', hi: 'सिलेंडर डिलीवरी नहीं, गैस लीक, बुकिंग समस्या, PAHAL सब्सिडी — free 24×7 call' },
+    url: 'https://mylpg.in',
+    phone: '1906',
+    howto: [
+      { en: 'Dial 1906 — free national LPG helpline, available 24×7 for all oil companies (IOCL/BPCL/HPCL)', hi: '1906 dial करें — free national LPG helpline, 24×7, सभी oil companies (IOCL/BPCL/HPCL)' },
+      { en: 'For gas leak: first call Fire Brigade 101, then 1906 — turn off cylinder regulator immediately', hi: 'Gas leak के लिए: पहले Fire Brigade 101, फिर 1906 — cylinder regulator तुरंत बंद करें' },
+      { en: 'Check booking/delivery status at mylpg.in — enter your LPG ID', hi: 'mylpg.in पर booking/delivery status check करें — LPG ID enter करें' },
+    ],
+  },
+  {
+    badge: 'direct',
+    name: 'Ministry of Petroleum PGMS Portal',
+    desc: { en: 'Petrol pump fraud, fuel quality, LPG, CNG/PNG complaints — central grievance system', hi: 'Petrol pump fraud, fuel quality, LPG, CNG/PNG शिकायतें — central grievance system' },
+    url: 'https://pgms.petroleum.nic.in',
+    phone: '1800-233-3555',
+    howto: [
+      { en: 'Visit pgms.petroleum.nic.in → Register Grievance → select category', hi: 'pgms.petroleum.nic.in → Register Grievance → category चुनें' },
+      { en: 'IOCL helpline: 1800-233-3555 | BPCL: 1800-22-4344 | HPCL: 1800-253-3555', hi: 'IOCL: 1800-233-3555 | BPCL: 1800-22-4344 | HPCL: 1800-253-3555' },
+      { en: 'Petrol pump fraud: note pump name, location, date, amount — needed for complaint', hi: 'Petrol pump fraud: pump नाम, location, date, amount नोट करें — complaint के लिए जरूरी' },
+    ],
+  },
+  {
+    badge: 'state',
+    name: 'City Gas Helplines — CNG / PNG',
+    desc: { en: 'CNG/PNG pressure, billing, or connection issue — call your city gas operator', hi: 'CNG/PNG pressure, billing, या connection समस्या — city gas operator को call' },
+    url: 'https://pngrb.gov.in',
+    phone: null,
+    howto: [
+      { en: 'IGL (Delhi/NCR): 1800-102-0708 | MGL (Mumbai): 1800-266-9090 | GAIL Gas: 1800-180-9090', hi: 'IGL (Delhi/NCR): 1800-102-0708 | MGL (Mumbai): 1800-266-9090 | GAIL: 1800-180-9090' },
+      { en: 'Unresolved? File with PNGRB (Petroleum & Natural Gas Regulatory Board) at pngrb.gov.in', hi: 'Resolve नहीं हुआ? PNGRB पर file करें: pngrb.gov.in' },
+    ],
+  },
+  CPGRAMS,
+]
+
 // ─────────────────────────────────────────────────────────────────────────────
 // NATIONAL PORTALS map — indexed by category id
 // ─────────────────────────────────────────────────────────────────────────────
@@ -1110,6 +1191,8 @@ export const NATIONAL_PORTALS = {
   safety:    SAFETY_NATIONAL,
   insurance: INSURANCE_NATIONAL,
   society:   SOCIETY_NATIONAL,
+  ration:    RATION_NATIONAL,
+  petro:     PETRO_NATIONAL,
 }
 
 // ─────────────────────────────────────────────────────────────────────────────
