@@ -43,23 +43,21 @@ export default function LocationBanner() {
   return (
     <div className="loc-bar loc-bar-ask">
       <div className="loc-bar-inner">
-        {/* Top row: icon + text + dismiss (stays in one row on mobile) */}
-        <div className="loc-bar-top-row">
-          <div className="loc-ask-icon"><i className="fas fa-location-arrow" /></div>
-          <div className="loc-ask-body">
-            <p className="loc-ask-title">
-              {t({ en: 'Enable location for local helplines', hi: 'स्थानीय हेल्पलाइन के लिए लोकेशन दें' })}
-            </p>
-            <p className="loc-ask-sub">
-              {t({ en: 'Get your state DISCOM, Jal Board & local numbers.', hi: 'राज्य का DISCOM, जल बोर्ड और स्थानीय नंबर पाएं।' })}
-            </p>
-          </div>
-          <button className="loc-dismiss" onClick={() => setDismissed(true)} aria-label="Dismiss">
-            <i className="fas fa-times" />
-          </button>
+
+        {/* Icon */}
+        <div className="loc-ask-icon"><i className="fas fa-location-arrow" /></div>
+
+        {/* Text */}
+        <div className="loc-ask-body">
+          <p className="loc-ask-title">
+            {t({ en: 'Enable location for local helplines', hi: 'स्थानीय हेल्पलाइन के लिए लोकेशन दें' })}
+          </p>
+          <p className="loc-ask-sub">
+            {t({ en: 'Get your state DISCOM, Jal Board & local numbers.', hi: 'राज्य का DISCOM, जल बोर्ड और स्थानीय नंबर पाएं।' })}
+          </p>
         </div>
 
-        {/* Action buttons row */}
+        {/* Action buttons */}
         <div className="loc-ask-actions">
           {status === 'loading' ? (
             <span className="loc-loading"><i className="fas fa-circle-notch fa-spin" /></span>
@@ -80,6 +78,12 @@ export default function LocationBanner() {
             </span>
           )}
         </div>
+
+        {/* Dismiss — always top-right */}
+        <button className="loc-dismiss" onClick={() => setDismissed(true)} aria-label="Dismiss">
+          <i className="fas fa-times" />
+        </button>
+
       </div>
 
       {showPicker && (

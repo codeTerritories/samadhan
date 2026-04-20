@@ -379,7 +379,119 @@
       </main>
     </noscript>
 
-    <div id="root"></div>
+    <!-- ═══════════════════════════════════════════════════════════════════
+         STATIC PRE-RENDER  (SEO wave-1 content)
+         Googlebot crawls HTML before executing JS. This gives it real text
+         to index immediately. React replaces this on mount (~100 ms).
+         DO NOT REMOVE — this is what gets indexed in Google.
+    ═══════════════════════════════════════════════════════════════════ -->
+    <div id="root"><div style="font-family:system-ui,Arial,sans-serif;max-width:760px;margin:0 auto;padding:16px 16px 40px;color:#111827">
+
+      <!-- Header -->
+      <header style="display:flex;align-items:center;gap:12px;padding:12px 0 20px;border-bottom:1px solid #e5e7eb;margin-bottom:24px">
+        <strong style="font-size:20px;color:#1D9E75">Samadhan Portal</strong>
+        <span style="font-size:13px;color:#6b7280">— India's Civic Complaint Helpline</span>
+      </header>
+
+      <!-- Hero -->
+      <main>
+        <h1 style="font-size:28px;font-weight:800;color:#0f172a;line-height:1.25;margin:0 0 12px">
+          Every Civic Problem — One Website.<br>
+          <span style="color:#1D9E75">Bijli · Pani · Sadak · Police · Bank</span>
+        </h1>
+        <p style="font-size:15px;color:#374151;line-height:1.65;margin:0 0 28px;max-width:600px">
+          Find the exact official helpline number and complaint portal for any government problem — electricity, water, roads, police, banking, health, telecom and more — for all 30 Indian states. Free, bilingual (English + हिंदी), no login required.
+        </p>
+
+        <!-- Key helplines prominent -->
+        <section aria-label="Key national helplines" style="background:#f0fdf4;border:1px solid #bbf7d0;border-radius:12px;padding:16px 20px;margin-bottom:28px">
+          <h2 style="font-size:15px;font-weight:700;color:#065f46;margin:0 0 12px">
+            📞 Key National Helplines — Call Free, 24×7
+          </h2>
+          <ul style="list-style:none;margin:0;padding:0;display:grid;grid-template-columns:repeat(auto-fill,minmax(220px,1fr));gap:8px">
+            <li style="font-size:14px;color:#1f2937"><strong style="color:#059669">1912</strong> — Electricity / Bijli (DISCOM)</li>
+            <li style="font-size:14px;color:#1f2937"><strong style="color:#059669">1916</strong> — Water Supply / Pani (Jal Board)</li>
+            <li style="font-size:14px;color:#1f2937"><strong style="color:#059669">100</strong> — Police Emergency</li>
+            <li style="font-size:14px;color:#1f2937"><strong style="color:#059669">112</strong> — All Emergencies</li>
+            <li style="font-size:14px;color:#1f2937"><strong style="color:#059669">1033</strong> — Road / NHAI Pothole</li>
+            <li style="font-size:14px;color:#1f2937"><strong style="color:#059669">1969</strong> — Garbage / Swachh Bharat</li>
+            <li style="font-size:14px;color:#1f2937"><strong style="color:#059669">1930</strong> — Cyber Crime / UPI Fraud</li>
+            <li style="font-size:14px;color:#1f2937"><strong style="color:#059669">14448</strong> — Banking Ombudsman (RBI)</li>
+            <li style="font-size:14px;color:#1f2937"><strong style="color:#059669">1800-11-4000</strong> — Consumer Helpline</li>
+            <li style="font-size:14px;color:#1f2937"><strong style="color:#059669">14445</strong> — Ration / PDS Complaint</li>
+            <li style="font-size:14px;color:#1f2937"><strong style="color:#059669">1091</strong> — Women Safety Helpline</li>
+            <li style="font-size:14px;color:#1f2937"><strong style="color:#059669">1098</strong> — Child Helpline</li>
+          </ul>
+        </section>
+
+        <!-- Categories -->
+        <section aria-label="Problem categories" style="margin-bottom:28px">
+          <h2 style="font-size:18px;font-weight:700;color:#0f172a;margin:0 0 14px">All Problem Categories</h2>
+          <ul style="list-style:none;margin:0;padding:0;display:grid;grid-template-columns:repeat(auto-fill,minmax(200px,1fr));gap:10px">
+            <li style="background:#fef9ee;border:1px solid #fde68a;border-radius:10px;padding:12px 14px">
+              <strong style="font-size:14px;color:#92400e">⚡ Electricity (Bijli)</strong>
+              <p style="font-size:12px;color:#6b7280;margin:4px 0 0">Power cut, bill dispute, meter fault, connection — 1912</p>
+            </li>
+            <li style="background:#ecfdf5;border:1px solid #6ee7b7;border-radius:10px;padding:12px 14px">
+              <strong style="font-size:14px;color:#065f46">💧 Water Supply (Pani)</strong>
+              <p style="font-size:12px;color:#6b7280;margin:4px 0 0">No water, contamination, tanker, Jal Board — 1916</p>
+            </li>
+            <li style="background:#eff6ff;border:1px solid #bfdbfe;border-radius:10px;padding:12px 14px">
+              <strong style="font-size:14px;color:#1e40af">🛣 Roads (Sadak)</strong>
+              <p style="font-size:12px;color:#6b7280;margin:4px 0 0">Potholes, broken road, NHAI highway — 1033</p>
+            </li>
+            <li style="background:#f0fdf4;border:1px solid #bbf7d0;border-radius:10px;padding:12px 14px">
+              <strong style="font-size:14px;color:#166534">🗑 Sanitation (Safai)</strong>
+              <p style="font-size:12px;color:#6b7280;margin:4px 0 0">Garbage not collected, open drain, Swachh Bharat — 1969</p>
+            </li>
+            <li style="background:#fef2f2;border:1px solid #fca5a5;border-radius:10px;padding:12px 14px">
+              <strong style="font-size:14px;color:#991b1b">🚔 Police / Law</strong>
+              <p style="font-size:12px;color:#6b7280;margin:4px 0 0">FIR, complaint, cybercrime — 100 | Cyber 1930</p>
+            </li>
+            <li style="background:#f5f3ff;border:1px solid #ddd6fe;border-radius:10px;padding:12px 14px">
+              <strong style="font-size:14px;color:#5b21b6">🏦 Banking / Finance</strong>
+              <p style="font-size:12px;color:#6b7280;margin:4px 0 0">UPI fraud, bank complaint, RBI ombudsman — 14448</p>
+            </li>
+            <li style="background:#fff7ed;border:1px solid #fed7aa;border-radius:10px;padding:12px 14px">
+              <strong style="font-size:14px;color:#9a3412">❤️ Health</strong>
+              <p style="font-size:12px;color:#6b7280;margin:4px 0 0">Hospital complaint, ambulance, Ayushman Bharat — 104</p>
+            </li>
+            <li style="background:#ecfeff;border:1px solid #a5f3fc;border-radius:10px;padding:12px 14px">
+              <strong style="font-size:14px;color:#155e75">📱 Telecom</strong>
+              <p style="font-size:12px;color:#6b7280;margin:4px 0 0">Mobile/internet complaint, TRAI, broadband — 1800-110-420</p>
+            </li>
+            <li style="background:#eff6ff;border:1px solid #bfdbfe;border-radius:10px;padding:12px 14px">
+              <strong style="font-size:14px;color:#1e3a8a">🏛 Government Services</strong>
+              <p style="font-size:12px;color:#6b7280;margin:4px 0 0">Aadhaar, PAN, ration card, passport, CPGRAMS</p>
+            </li>
+            <li style="background:#f0fdf4;border:1px solid #bbf7d0;border-radius:10px;padding:12px 14px">
+              <strong style="font-size:14px;color:#14532d">🌿 Environment</strong>
+              <p style="font-size:12px;color:#6b7280;margin:4px 0 0">Pollution, noise, illegal construction — CPCB</p>
+            </li>
+            <li style="background:#fdf4ff;border:1px solid #e9d5ff;border-radius:10px;padding:12px 14px">
+              <strong style="font-size:14px;color:#6b21a8">🎓 Education</strong>
+              <p style="font-size:12px;color:#6b7280;margin:4px 0 0">School complaint, scholarship, RTE — 14425</p>
+            </li>
+            <li style="background:#f8fafc;border:1px solid #e2e8f0;border-radius:10px;padding:12px 14px">
+              <strong style="font-size:14px;color:#334155">🚌 Transport</strong>
+              <p style="font-size:12px;color:#6b7280;margin:4px 0 0">Bus, train, auto/taxi complaint — IRCTC, RTO</p>
+            </li>
+          </ul>
+        </section>
+
+        <!-- States -->
+        <section aria-label="States covered" style="margin-bottom:28px">
+          <h2 style="font-size:18px;font-weight:700;color:#0f172a;margin:0 0 10px">State-specific Helplines — All 30 States</h2>
+          <p style="font-size:13px;color:#6b7280;line-height:1.6;margin:0 0 10px">Samadhan Portal covers state-specific complaint portals for Uttar Pradesh, Maharashtra, Delhi, Karnataka, Tamil Nadu, Gujarat, Rajasthan, Madhya Pradesh, Bihar, West Bengal, Andhra Pradesh, Telangana, Odisha, Punjab, Haryana, Jharkhand, Assam, Himachal Pradesh, Uttarakhand, Chhattisgarh, Kerala, Goa, Jammu &amp; Kashmir, Manipur, Tripura, Meghalaya, Nagaland, Mizoram, Sikkim, Arunachal Pradesh.</p>
+        </section>
+
+        <!-- About link -->
+        <p style="font-size:13px;color:#6b7280">
+          <a href="/about" style="color:#1D9E75;font-weight:600">About Samadhan Portal</a>
+          &nbsp;·&nbsp; All information is sourced from official government websites. Free, no login required.
+        </p>
+      </main>
+    </div></div>
     <script type="module" src="/src/main.jsx"></script>
   </body>
 </html>
