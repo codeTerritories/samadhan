@@ -5,7 +5,7 @@ import { PROBLEMS } from '../data/problems'
 import { CATEGORIES } from '../data/categories'
 import ProblemRow from './ProblemRow'
 
-export default function ProblemList({ activeCat, searchQuery }) {
+export default function ProblemList({ activeCat, searchQuery, highlight }) {
   const { lang, t } = useLang()
 
   const filtered = useMemo(() => {
@@ -30,7 +30,7 @@ export default function ProblemList({ activeCat, searchQuery }) {
   const catName = CATEGORIES.find(c => c.id === activeCat) || CATEGORIES[0]
 
   return (
-    <div className="prob-section" id="services">
+    <div className={`prob-section${highlight ? ' highlighted' : ''}`} id="problem-list">
       <div className="prob-hd">
         <span className="prob-hd-title">
           {activeCat === 'all'

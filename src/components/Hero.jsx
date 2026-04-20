@@ -2,33 +2,32 @@ import React from 'react'
 import { useLang } from '../context/LangContext'
 
 const QUICK_TAGS = [
-  { en: 'No electricity',  hi: 'बिजली नहीं',  query: 'bijli nahi' },
-  { en: 'No water',        hi: 'पानी नहीं',    query: 'pani nahi' },
-  { en: 'Garbage',         hi: 'कचरा',         query: 'kachra' },
-  { en: 'UPI Fraud',       hi: 'UPI फ्रॉड',    query: 'upi fraud' },
-  { en: 'Broken road',     hi: 'सड़क टूटी',    query: 'sadak tuta' },
-  { en: 'FIR / Police',    hi: 'FIR / पुलिस',  query: 'fir police' },
-  { en: 'Aadhaar',         hi: 'आधार',          query: 'aadhaar' },
-  { en: 'Ration',          hi: 'राशन',           query: 'ration' },
+  { en: 'No electricity',  hi: 'बिजली नहीं',  cat: 'bijli'  },
+  { en: 'No water',        hi: 'पानी नहीं',    cat: 'pani'   },
+  { en: 'Garbage',         hi: 'कचरा',         cat: 'safai'  },
+  { en: 'UPI Fraud',       hi: 'UPI फ्रॉड',    cat: 'bank'   },
+  { en: 'Broken road',     hi: 'सड़क टूटी',    cat: 'sadak'  },
+  { en: 'FIR / Police',    hi: 'FIR / पुलिस',  cat: 'police' },
+  { en: 'Aadhaar',         hi: 'आधार',          cat: 'govt'   },
+  { en: 'Ration',          hi: 'राशन',           cat: 'govt'   },
 ]
 
 const PROBLEM_ICONS = [
-  { icon: 'fa-bolt',          color: '#EF9F27', bg: '#FAEEDA', en: 'Electricity', hi: 'बिजली'   },
-  { icon: 'fa-tint',          color: '#1D9E75', bg: '#E1F5EE', en: 'Water',       hi: 'पानी'    },
-  { icon: 'fa-road',          color: '#378ADD', bg: '#E6F1FB', en: 'Roads',       hi: 'सड़क'    },
-  { icon: 'fa-trash',         color: '#639922', bg: '#EAF3DE', en: 'Garbage',     hi: 'कचरा'    },
-  { icon: 'fa-shield-alt',    color: '#E24B4A', bg: '#FCEBEB', en: 'Police',      hi: 'पुलिस'  },
-  { icon: 'fa-university',    color: '#7F77DD', bg: '#EEEDFE', en: 'Banking',     hi: 'बैंक'    },
-  { icon: 'fa-heartbeat',     color: '#D85A30', bg: '#FAECE7', en: 'Health',      hi: 'स्वास्थ्य' },
-  { icon: 'fa-signal',        color: '#0891B2', bg: '#ECFEFF', en: 'Telecom',     hi: 'मोबाइल'  },
+  { icon: 'fa-bolt',          color: '#EF9F27', bg: '#FAEEDA', en: 'Electricity', hi: 'बिजली',       cat: 'bijli'   },
+  { icon: 'fa-tint',          color: '#1D9E75', bg: '#E1F5EE', en: 'Water',       hi: 'पानी',        cat: 'pani'    },
+  { icon: 'fa-road',          color: '#378ADD', bg: '#E6F1FB', en: 'Roads',       hi: 'सड़क',        cat: 'sadak'   },
+  { icon: 'fa-trash',         color: '#639922', bg: '#EAF3DE', en: 'Garbage',     hi: 'कचरा',        cat: 'safai'   },
+  { icon: 'fa-shield-alt',    color: '#E24B4A', bg: '#FCEBEB', en: 'Police',      hi: 'पुलिस',       cat: 'police'  },
+  { icon: 'fa-university',    color: '#7F77DD', bg: '#EEEDFE', en: 'Banking',     hi: 'बैंक',        cat: 'bank'    },
+  { icon: 'fa-heartbeat',     color: '#D85A30', bg: '#FAECE7', en: 'Health',      hi: 'स्वास्थ्य',  cat: 'health'  },
+  { icon: 'fa-signal',        color: '#0891B2', bg: '#ECFEFF', en: 'Telecom',     hi: 'मोबाइल',      cat: 'telecom' },
 ]
 
-export default function Hero({ onSearch }) {
+export default function Hero({ onSearch, onCatSelect }) {
   const { lang, t } = useLang()
 
-  const handleQuickTag = (query) => {
-    onSearch(query)
-    document.getElementById('services')?.scrollIntoView({ behavior: 'smooth', block: 'start' })
+  const handleQuickTag = (cat) => {
+    onCatSelect(cat)
   }
 
   return (
@@ -73,10 +72,10 @@ export default function Hero({ onSearch }) {
             <div
               key={i}
               className="hpi-item"
-              onClick={() => handleQuickTag(p.en.toLowerCase())}
+              onClick={() => handleQuickTag(p.cat)}
               role="button"
               tabIndex={0}
-              onKeyDown={e => e.key === 'Enter' && handleQuickTag(p.en.toLowerCase())}
+              onKeyDown={e => e.key === 'Enter' && handleQuickTag(p.cat)}
             >
               <div className="hpi-icon" style={{ background: p.bg }}>
                 <i className={`fas ${p.icon}`} style={{ color: p.color }} />
@@ -111,7 +110,7 @@ export default function Hero({ onSearch }) {
         {/* Quick tags */}
         <div className="quick-tags">
           {QUICK_TAGS.map(tag => (
-            <button key={tag.query} className="quick-tag" onClick={() => handleQuickTag(tag.query)}>
+            <button key={tag.cat + tag.en} className="quick-tag" onClick={() => handleQuickTag(tag.cat)}>
               {t(tag)}
             </button>
           ))}

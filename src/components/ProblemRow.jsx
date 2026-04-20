@@ -101,6 +101,15 @@ export default function ProblemRow({ problem }) {
             </div>
           )}
 
+          {/* Guide banner — shown above portal list */}
+          <div className="portal-guide-banner">
+            <i className="fas fa-layer-group" />
+            <div className="pgb-text">
+              <strong>{t({ en: 'Complaint portals below — follow in order', hi: 'नीचे शिकायत पोर्टल हैं — क्रम में follow करें' })}</strong>
+              <span>{t({ en: 'Start from Portal 1. Not resolved in 7 days? Move to Portal 2, then 3.', hi: 'पोर्टल 1 से शुरू करें। 7 दिन में हल न हो? पोर्टल 2, फिर 3 पर जाएं।' })}</span>
+            </div>
+          </div>
+
           {/* Portal cards */}
           {portals.map((portal, idx) => {
             const badgeMeta = BADGE_META[portal.badge] || BADGE_META.last
@@ -115,10 +124,7 @@ export default function ProblemRow({ problem }) {
                     <span className="esc-line" />
                     <span className="esc-text">
                       <i className="fas fa-arrow-up" />
-                      {t({
-                        en: 'IF NOT RESOLVED ABOVE — ESCALATE HERE',
-                        hi: 'AGAR UPAR SE RESOLVE NA HO — ESCALATE YAHAN',
-                      })}
+                      {t({ en: 'Still not resolved? Escalate here', hi: 'अभी हल नहीं हुआ? यहाँ escalate करें' })}
                     </span>
                     <span className="esc-line" />
                   </div>
@@ -127,56 +133,48 @@ export default function ProblemRow({ problem }) {
                 {/* Portal card */}
                 <div className="portal-card">
 
-                  {/* Card header: number + name + badge */}
-                  <div className="pc-header">
-                    <span className="pc-num">{idx + 1}</span>
-                    <div className="pc-title-wrap">
-                      <span className="pc-name">{portal.name}</span>
-                      <span className={`pc-badge ${badgeMeta.cls}`}>
-                        {t(badgeMeta)}
-                      </span>
-                    </div>
+                  {/* Top row: Step pill + badge */}
+                  <div className="pc-top-row">
+                    <span className="pc-step-pill">
+                      {t({ en: `Portal ${idx + 1}`, hi: `पोर्टल ${idx + 1}` })}
+                    </span>
+                    <span className={`pc-badge ${badgeMeta.cls}`}>
+                      {t(badgeMeta)}
+                    </span>
+                  </div>
+
+                  {/* Portal name */}
+                  <h3 className="pc-name">{portal.name}</h3>
+
+                  {/* Resolve-chance bar */}
+                  <div className="pc-weight">
+                    <span className="pc-weight-dots">
+                      {[1,2,3,4,5].map(d => (
+                        <span key={d} className="pc-weight-dot"
+                          style={d <= badgeMeta.weight ? { background: badgeMeta.weightColor } : {}} />
+                      ))}
+                    </span>
+                    <span className="pc-weight-value" style={{ color: badgeMeta.weightColor }}>
+                      {t(badgeMeta.weightLabel)}
+                    </span>
+                    <span className="pc-weight-suffix">
+                      {t({ en: 'chance of resolution', hi: 'हल होने की संभावना' })}
+                    </span>
                   </div>
 
                   {/* Description */}
                   <p className="pc-desc">{t(portal.desc)}</p>
-
-                  {/* URL box with copy */}
-                  {portal.url && (
-                    <div className="pc-url-box">
-                      <i className="fas fa-globe pc-url-icon" />
-                      <span className="pc-url-text">{portal.url.replace(/^https?:\/\//, '')}</span>
-                      <button
-                        className={`pc-copy-btn${copied === idx ? ' copied' : ''}`}
-                        onClick={e => { e.stopPropagation(); copyUrl(portal.url, idx) }}
-                        title={t({ en: 'Copy URL', hi: 'URL copy करें' })}
-                      >
-                        <i className={`fas ${copied === idx ? 'fa-check' : 'fa-copy'}`} />
-                        <span>{copied === idx ? t({ en: 'Copied!', hi: 'Copied!' }) : t({ en: 'Copy', hi: 'Copy' })}</span>
-                      </button>
-                    </div>
-                  )}
-
-                  {/* Phone (call-only or supplemental) */}
-                  {portal.phone && portal.callOnly && (
-                    <div className="pc-callonly-note">
-                      <i className="fas fa-info-circle" />
-                      {t({ en: 'This service is call-only — no website available', hi: 'यह service सिर्फ call करने से मिलती है — कोई website नहीं' })}
-                    </div>
-                  )}
 
                   {/* How-to steps */}
                   {portal.howto?.length > 0 && (
                     <div className="pc-howto">
                       <div className="pc-howto-title">
                         <i className="fas fa-list-ol" />
-                        {t({ en: 'What to do on screen', hi: 'Screen pe kya karna hai' })}
+                        {t({ en: 'How to complain:', hi: 'शिकायत कैसे करें:' })}
                       </div>
                       <ol className="pc-howto-list">
                         {portal.howto.map((step, si) => (
-                          <li key={si} className="pc-howto-item">
-                            {t(step)}
-                          </li>
+                          <li key={si} className="pc-howto-item">{t(step)}</li>
                         ))}
                       </ol>
                     </div>
@@ -185,28 +183,33 @@ export default function ProblemRow({ problem }) {
                   {/* Action buttons */}
                   <div className="pc-actions">
                     {portal.url && (
-                      <a
-                        href={portal.url}
-                        target="_blank"
-                        rel="noopener noreferrer"
-                        className="pc-btn-primary"
-                        onClick={e => e.stopPropagation()}
-                      >
+                      <a href={portal.url} target="_blank" rel="noopener noreferrer"
+                        className="pc-btn-primary" onClick={e => e.stopPropagation()}>
                         <i className="fas fa-external-link-alt" />
-                        {t({ en: 'Open Portal', hi: 'Direct link kholo' })}
+                        {t({ en: 'Open Complaint Website', hi: 'शिकायत वेबसाइट खोलें' })}
                       </a>
                     )}
                     {portal.phone && (
-                      <a
-                        href={`tel:${portal.phone.replace(/\s/g, '')}`}
-                        className="pc-btn-call"
-                        onClick={e => e.stopPropagation()}
-                      >
+                      <a href={`tel:${portal.phone.replace(/\s/g, '')}`}
+                        className="pc-btn-call" onClick={e => e.stopPropagation()}>
                         <i className="fas fa-phone-alt" />
-                        {portal.phone}
+                        {t({ en: 'Call', hi: 'कॉल करें' })} {portal.phone}
                       </a>
                     )}
                   </div>
+
+                  {/* Website URL — small secondary line */}
+                  {portal.url && (
+                    <div className="pc-url-line">
+                      <i className="fas fa-globe" />
+                      <span>{portal.url.replace(/^https?:\/\//, '')}</span>
+                      <button className={`pc-copy-btn${copied === idx ? ' copied' : ''}`}
+                        onClick={e => { e.stopPropagation(); copyUrl(portal.url, idx) }}>
+                        <i className={`fas ${copied === idx ? 'fa-check' : 'fa-copy'}`} />
+                        {copied === idx ? t({ en: 'Copied!', hi: 'Copied!' }) : t({ en: 'Copy', hi: 'Copy' })}
+                      </button>
+                    </div>
+                  )}
 
                 </div>
               </div>

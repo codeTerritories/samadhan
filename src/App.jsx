@@ -29,6 +29,7 @@ export default function App() {
   const [page, setPage]           = useState(getInitialPage)
   const [activeCat, setActiveCat] = useState('all')
   const [searchQuery, setSearchQuery] = useState('')
+  const [highlightList, setHighlightList] = useState(false)
 
   // Update document meta tags and browser URL whenever page changes
   useSEO(page)
@@ -61,10 +62,16 @@ export default function App() {
   const handleCatSelect = useCallback((id) => {
     setActiveCat(id)
     setSearchQuery('')
+    setHighlightList(false)
     const inp = document.getElementById('hero-search')
     if (inp) inp.value = ''
     setTimeout(() => {
-      document.getElementById('services')?.scrollIntoView({ behavior: 'smooth', block: 'start' })
+      document.getElementById('problem-list')?.scrollIntoView({ behavior: 'smooth', block: 'start' })
+      // Small extra delay so scroll finishes before highlight fires
+      setTimeout(() => {
+        setHighlightList(true)
+        setTimeout(() => setHighlightList(false), 1800)
+      }, 400)
     }, 50)
   }, [])
 
@@ -81,12 +88,12 @@ export default function App() {
             </>
           ) : (
             <>
-              <Hero onSearch={handleSearch} />
+              <Hero onSearch={handleSearch} onCatSelect={handleCatSelect} />
               <EmergencyBanner />
               <LocationBanner />
               <main className="main-content" id="services" aria-label="Civic problem categories and helplines">
                 <CategoryGrid activeCat={activeCat} onSelect={handleCatSelect} />
-                <ProblemList  activeCat={activeCat} searchQuery={searchQuery} />
+                <ProblemList  activeCat={activeCat} searchQuery={searchQuery} highlight={highlightList} />
               </main>
               <Footer />
             </>

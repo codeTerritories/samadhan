@@ -11,11 +11,11 @@
 // }
 
 export const BADGE_META = {
-  first:   { en: 'Try here first',        hi: 'Sabse pehle yahan',       cls: 'badge-first'   },
-  direct:  { en: 'Direct call only',      hi: 'Sirf call karein',        cls: 'badge-direct'  },
-  state:   { en: 'State escalation',      hi: 'State level escalation',  cls: 'badge-state'   },
-  central: { en: 'Central escalation',    hi: 'Central escalation',      cls: 'badge-central' },
-  last:    { en: 'Last resort — national',hi: 'Antim upay — national',   cls: 'badge-last'    },
+  first:   { en: 'Try here first',        hi: 'Sabse pehle yahan',       cls: 'badge-first',   weight: 5, weightColor: '#10B981', weightLabel: { en: 'Very High',   hi: 'बहुत अधिक'  } },
+  direct:  { en: 'Direct call only',      hi: 'Sirf call karein',        cls: 'badge-direct',  weight: 4, weightColor: '#F59E0B', weightLabel: { en: 'High',        hi: 'अधिक'       } },
+  state:   { en: 'State escalation',      hi: 'State level escalation',  cls: 'badge-state',   weight: 3, weightColor: '#3B82F6', weightLabel: { en: 'Medium',      hi: 'मध्यम'      } },
+  central: { en: 'Central escalation',    hi: 'Central escalation',      cls: 'badge-central', weight: 2, weightColor: '#8B5CF6', weightLabel: { en: 'Low',         hi: 'कम'         } },
+  last:    { en: 'Last resort — national',hi: 'Antim upay — national',   cls: 'badge-last',    weight: 1, weightColor: '#94A3B8', weightLabel: { en: 'Last Resort', hi: 'अंतिम विकल्प'} },
 }
 
 // ─── Shared reusable portals ──────────────────────────────────────────────────
